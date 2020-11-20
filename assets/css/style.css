@@ -2288,6 +2288,10 @@ p:last-of-type {
 	margin-bottom: 50px;
 }
 
+.positionRelative {
+	position: relative;
+}
+
 .topBottomMargin50 {
 	margin-top: 50px;
 	margin-bottom: 50px;
