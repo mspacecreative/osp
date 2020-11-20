@@ -183,6 +183,9 @@
 	.row.gutterSpaceWide > .col:last-of-type, .row.gutterSpaceWider > .col:last-of-type, .col:last-of-type {
 		padding-bottom: 0;
 	}
+	.mapContainer {
+		height: 350px;
+	}
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
