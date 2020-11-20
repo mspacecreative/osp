@@ -1,0 +1,290 @@
+@media (min-width: 48em) {
+	.container {
+		width: 100%;
+	}
+	.shrinkLogo {
+		margin: 0;
+	}
+	footer .col:nth-child(2n+1):nth-last-child(-n+2),
+	.photoGrid .col:nth-child(2n+1):nth-last-child(-n+2),
+	.row.gutterSpaceWider > .col:nth-child(2n+1):nth-last-child(-n+2),
+	.photoGrid li:nth-child(2n+1):nth-last-child(-n+2),
+	.photoGrid .col:nth-child(2n+1):nth-last-child(-n+2) ~ .col,
+	footer .col:nth-child(2n+1):nth-last-child(-n+2) ~ .col,
+	.photoGrid li:nth-child(2n+1):nth-last-child(-n+2) ~ li,
+	.row.gutterSpaceWider > .col:nth-child(2n+1):nth-last-child(-n+2) ~ .col {
+	   margin-bottom: 0;
+	   padding-bottom: 0;
+	}
+}
+
+@media (max-width: 64em) {
+	.contentPortals .row:nth-of-type(2) .col:nth-of-type(2) {
+		order: 1;
+	}
+	.fitPortal::before, .fitPortal::after {
+		height: 80px;
+	}
+}
+
+@media (max-width: 48em) {
+	.topMarginMobile50 {
+		margin-top: 50px;
+	}
+}
+
+@media (min-width: 64em) {
+	.container {
+		width: 100%;
+	}
+	.borderRight {
+		border-right: 1px solid #c9c9c9;
+	}
+	.cosLogo {
+		margin-left: 50px;
+	}
+	
+	.shrinkLogo {
+		//margin: auto;
+	}
+	.heroCollage {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: auto;
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 175px;
+		z-index: 1;
+	}
+	.footerLogos .col:nth-child(3n+1):nth-last-child(-n+3),
+	.footerLogos .col:nth-child(3n+1):nth-last-child(-n+3) ~ .col {
+	   margin-bottom: 0;
+	   padding-bottom: 0;
+	}
+}
+
+@media (min-width: 75em) {
+	.container {
+		width: 100%;
+	}
+}
+
+@media (max-width: 980px) {
+	.heroContent h1 {
+		font-size: 32px;
+		//LEGACY STYLE
+		//max-width: 450px;
+	}
+	.offsetBg {
+		height: 80%;
+	}
+	.cosLogo {
+		order: -1;
+		margin-bottom: 0;
+	}
+	.cta {
+		padding: 4em;
+	}
+	.section, .topBottomPadding {
+		padding-top: 4em;
+		padding-bottom: 4em;
+	}
+	.topPadding {
+		padding-top: 4em;
+	}
+	.bottotmPadding {
+		padding-bottom: 4em;
+	}
+	.owl-item {
+		flex: 0 0 50%!important;
+		max-width: 50%;
+	}
+	.display-medium-item {
+		flex-direction: column;
+	}
+	.display-medium-item a > .medium-image {
+		height: 200px!important;
+	}
+	nav {
+		display: none;
+		position: absolute;
+	    top: calc(100% + 2em);
+	    background-color: #fff;
+	    width: 100%;
+	    left: 0;
+		padding: 1em;
+	}
+	.menuOverlay {
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		top: 120px;
+		left: 0;
+		background-color: rgba(0, 0, 0, .85);
+		opacity: 0;
+		visibility: hidden;
+		transition: 0.25s ease-in-out;
+	}
+	.menuOpen .menuOverlay {
+		opacity: 1;
+		visibility: visible;
+		transition: 0.25s ease-in-out;
+	}
+	.scroll nav {
+		top: calc(100% + 0.75em);
+	}
+	.scroll .menuOverlay {
+		top: 63px;
+	}
+	nav ul {
+		display: block;
+	}
+	nav li a {
+		color: #333;
+	}
+	.hamburger {
+		display: block;
+	}
+	.angledTopdBottom .innerContainer {
+	    padding-top: 1em;
+	    padding-bottom: 1em;
+	}
+	.heroContent {
+		// LEGACY STYLE
+		//padding: 130px 0 0;
+	}
+	.inlineButtons li {
+		flex-basis: 100%;
+		margin: 0 0 25px;
+	}
+	.inlineButtons li:last-of-type {
+		margin: 0;
+	}
+	.heroCollage {
+		position: relative;
+		width: 100%;
+		height: auto;
+		//display: flex;
+		//justify-content: flex-end;
+		//margin-top: 175px;
+		z-index: 1;
+	}
+	.logo {
+		width: 150px;
+	}
+	footer {
+		background-size: 60%;
+	}
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+	.heroContent h1 {
+		font-size: 52px;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.heroCollage img {
+		margin-left: auto;
+		width: 80%;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+	.heroContent h1 {
+	    font-size: 40px;
+	    // LEGACY STYLE
+		//max-width: 500px;
+	}
+	.heroCollage {
+		top:  50px;
+	}
+	.heroCollage img {
+	    width: 55%;
+	}
+	.overlaidText {
+		font-size: 18px;
+		height: 70px;
+	}
+}
+
+@media (max-width: 450px) {
+	.social_footer {
+		justify-content: flex-start;
+		margin-bottom: 25px;
+		order: -1;
+	}
+	.smallFooterLogo {
+		padding: 20px 10px;
+	}
+	.shrinkLogo {
+		padding: 20px;
+	}
+	.fitPortal::before, .fitPortal::after {
+		height: 50px;
+	}
+	.photoGrid li img {
+		padding: 1em;
+	}
+	.photoGrid li {
+	    min-height: 100px;
+	    max-height: 100px;
+	}
+	.photoGrid .shrinkLogo img {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.row.gutterSpaceWider {
+		margin-left: -.5rem;
+		margin-right: -.5rem;
+	}
+	.row.gutterSpaceWider > .col {
+		padding-left: .5rem;
+		padding-right: .5rem;
+	}
+	.owl-item {
+		flex: 0 0 100%!important;
+		max-width: 100%;
+	}
+	.carousel {
+		padding: 0;
+	}
+	.carousel .slick-prev, .carousel .slick-next {
+		display: none!important;
+	}
+	.carousel .slick-dots {
+		width: 100%;
+	}
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+	.social_footer {
+		justify-content: flex-start;
+		margin-bottom: 25px;
+		order: -1;
+	}
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+	footer {
+		background-size: 50%;
+	}
+}
+
+@media (min-width: 1441px) {
+	.heroContent {
+		height: 100%;
+		margin-bottom: 0;
+		align-items: center;
+	}
+}
+
+@media (min-width: 1920px) {
+	.heroCollage {
+		width: 80%;
+		right: 15em;
+	}
+}

@@ -1,0 +1,22 @@
+.cta {
+	//background: radial-gradient(circle at bottom left, #818181, #424242);
+	background-color: #424242;
+	padding: 6em;
+	position: relative;
+	overflow: hidden;
+}
+/*
+.cta::before {
+	position: absolute;
+	content: "";
+	width: 250px;
+	height: 500px;
+	position: absolute;
+	z-index: 1;
+	background-repeat: no-repeat;
+	opacity: .5;
+	top: 100%;
+	margin-top: -250px;
+	background-image: ;
+}
+*/

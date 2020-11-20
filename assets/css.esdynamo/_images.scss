@@ -1,0 +1,139 @@
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	width: 100%;
+}
+.smallFooterLogo, .footerLogos .size-medium {
+	padding: 20px 0;
+	max-width: 150px;
+}
+.shrinkLogo {
+	max-width: 90px;
+}
+
+.cosLogo, .cosLogo .size-medium {
+	max-width: 120px;
+	margin-bottom: 25px;
+}
+
+.contentPortal {
+	position: relative;
+	min-height: 300px;
+	max-height: 300px;
+	overflow: hidden;
+}
+.fitPortal {
+	position: relative;
+	min-height: 300px;
+	background: $brandBlue url(../img/textures/just-waves-blue.png);
+}
+.fitPortal {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	min-height: 350px;
+	position: relative;
+}
+.fitPortal::after {
+	background: url(../img/textures/fit-point.svg);
+    right: 0;
+    background-position: bottom right;
+}
+.fitPortal::before {
+	background: url(../img/textures/fit-point-left.svg);
+    left: 0;
+    background-position: bottom left;
+}
+.fitPortal::before, .fitPortal::after {
+	position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+	content: "";
+}
+.fitPortal > h3 {
+	flex-basis: 100%;
+	margin-top: auto;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+.fitPortal > h3 ~ a {
+	margin-bottom: auto;
+}
+.contentPortal a {
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.contentPortal img {
+	object-fit: cover;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+// SHRINK LOGO
+.photoGrid .shrinkLogo img {
+	max-width: 200px;
+	margin: auto;
+}
+.photoGrid .shrinkLogo {
+	max-width: 100%;
+	padding: 10px 0;
+}
+
+// PHOTO GRID
+.photoGrid {
+	display: flex;
+	list-style: none;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+}
+.photoGrid a:hover img {
+	filter: grayscale(1);
+	transition: 0.25s ease-in-out;
+}
+.photoGrid a img {
+	transition: 0.25s ease-in-out;
+}
+.photoGrid li {
+	flex-basis: 50%;
+	margin-bottom: 25px;
+}
+.photoGrid li img {
+	padding: 2em;
+	max-width: 250px;
+    margin: auto;
+}
+.photoGrid li:nth-child(odd) {
+	border-right: 1px solid #c9c9c9;
+}
+
+.photoGrid li:nth-child(2n+1):nth-last-child(-n+2), .photoGrid li:nth-child(2n+1):nth-last-child(-n+2) ~ li {
+	border-bottom: none;
+}
+
+.photoGrid li {
+	margin-bottom: 0;
+	padding-top: 1em;
+}
+.photoGrid li {
+	position: relative;
+	min-height: 150px;
+	max-height: 150px;
+}
+.photoGrid li {
+	border-bottom: 1px solid #c9c9c9;
+}

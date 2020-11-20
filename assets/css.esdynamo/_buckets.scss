@@ -1,0 +1,14 @@
+#buckets a:hover .overlaidText {
+	//height: 265px;
+	transition: height 0.5s ease-in-out;
+}
+#buckets .colInner {
+	overflow: hidden;
+}
+#buckets .colInner {
+	transition: 0.5s ease-in-out;
+}
+#buckets .colInner:hover {
+	transition: 0.5s ease-in-out;
+	//box-shadow: 0 0 25px #999;
+}

@@ -1,0 +1,37 @@
+.wpcf7 input, .wpcf7 textarea {
+	font-size: 14px;
+	font-family: inherit;
+	padding: 1em;
+	border: 1px solid #c9c9c9;
+	width: 100%;
+}
+.wpcf7-form {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -.5rem;
+	margin-left: -.5rem;
+	margin-top: 50px;
+}
+.wpcf7 p {
+	flex-basis: 33.333%;
+	padding-left: .5rem;
+	padding-right: .5rem;
+	max-width: 50%;
+}
+.wpcf7 .formTextArea {
+	flex-basis: 100%;
+	max-width: 100%;
+}
+.wpcf7 p.formSubmitButton {
+	width: auto;
+	flex-basis: unset;
+	max-width: none;
+	
+}
+.wpcf7-submit {
+	background-color: $brandBlue;
+	color: #fff;
+	border: none;
+	text-transform: uppercase;
+	font-weight: 600;
+}

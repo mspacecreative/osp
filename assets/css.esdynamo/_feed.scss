@@ -1,0 +1,12 @@
+.cardContainer {
+	box-shadow: 0 0 10px #999;
+	background-color: $brandLightGrey;
+}
+.offsetBg {
+	position: absolute;
+	background-image: url(../img/textures/just-waves-blue.png);
+	height: 65%;
+	width: 100%;
+	left: 0;
+	top: 0;
+}

@@ -1,0 +1,96 @@
+.button {
+	display: inline-block;
+	padding: 0.75em 1.5em;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: $brandGrey;
+	font-weight: 600;
+	text-decoration: none;
+	margin-top: 30px;
+}
+.button.blue {
+	background-color: $brandBlue;
+	transition: 0.25s ease-in-out;
+}
+.button.blue:hover {
+	background-color: #000;
+	transition: 0.25s ease-in-out;
+}
+.button.light {
+	border: 2px solid #fff;
+	background-color: transparent;
+	transition: 0.25s ease-in-out;
+}
+.button.light:hover {
+	transition: 0.25s ease-in-out;
+	background-color: #fff;
+	color: $brandBlue;
+}
+a {
+	color: $brandBlue;
+	text-decoration: none;
+}
+.button.blue, .tabRow a {
+	color: #fff;
+}
+
+.arrowsRight {
+	position: relative;
+}
+.arrowsRight::after {
+	content: "\f101";
+	font-family: fontAwesome;
+	margin-left: 5px;
+	font-size: 22px;
+}
+.inlineButtons {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.inlineButtons li {
+	margin-right: 30px;
+}
+.readMore, .text-right {
+	position: relative;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 18px;
+	align-self: flex-start;
+	padding-right: 30px;
+	display: inline-block;
+	margin-top: 15px;
+	transition: 0.25s ease-in-out;
+}
+.readMore:hover, .text-right:hover {
+	transition: 0.25s ease-in-out;
+	color: #000;
+}
+.offsetCarousel .readMore {
+	margin-top: auto;
+}
+.offsetCarousel .colInner {
+	display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.readMore::after, .text-right::after {
+	content: "";
+	background-image: url(../img/icons/arrow-right-2c.svg);
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 10px;
+	background-position: right;
+	position: absolute;
+	margin-left: 5px;
+	top: 7px;
+	right: 0;
+	transition: 0.25s ease-in-out;
+	background-size: 200%;
+}
+.readMore:hover::after, .text-right:hover::after {
+	background-position: left;
+	transition: 0.25s ease-in-out;
+}

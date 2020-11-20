@@ -1,0 +1,33 @@
+.mapContainer {
+	position: relative;
+	width: 100%;
+	height: 450px;
+}
+.mapContainer::before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: "";
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .65);
+	z-index: 1;
+}
+.mapContainer::after {
+	position: absolute;
+	content: "FPO";
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #fff;
+	font-size: 100px;
+	z-index: 2;
+	font-weight: 900;
+}
+.mapContainer iframe {
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}

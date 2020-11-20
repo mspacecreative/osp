@@ -1,0 +1,114 @@
+header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	padding: 2em 0;
+	transition: 0.5s ease-in-out;
+}
+header.scroll {
+	background-color: rgba(255, 255, 255, .9);
+	transition: 0.5s ease-in-out;
+	padding: 0.75em 0;
+}
+.brandingColor {
+	fill: $brandBlue;
+	transition: 0.5s ease-in-out;
+}
+.home .brandingColor {
+	fill: #fff;
+	transition: 0.5s ease-in-out;
+}
+.scroll .brandingColor {
+	fill: $brandBlue;
+	transition: 0.5s ease-in-out;
+}
+header > .innerContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.logo {
+	width: 250px;
+	position: relative;
+	left: -15px;
+	transition: 0.5s ease-in-out;
+}
+.scroll .logo {
+	width: 100px;
+	transition: 0.5s ease-in-out;
+}
+nav {
+	
+}
+nav ul {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	align-items: center;
+}
+nav li {
+	margin-left: 30px;
+}
+nav li a {
+	text-decoration: none;
+	color: #333;
+	font-weight: 600;
+	display: block;
+	padding: 0.5em;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+.home nav li a {
+	color: #fff;
+}
+.scroll nav li a {
+	color: #333;
+}
+
+// HAMBURGER MENU
+.hamburger {
+	transform: translateX(0);
+	transition: 0.5s ease-in-out;
+	z-index: 999999;
+	outline: none;
+	padding: 0;
+	margin-left: 10px;
+	display: none;
+}
+.hamburger.is-active:hover, .hamburger:hover {
+	opacity: 1;
+}
+.hamburger-box {
+	width: 25px;
+	height: 25px;
+	vertical-align: middle;
+}
+.hamburger-inner, .hamburger--spin .hamburger-inner::before, .hamburger--spin .hamburger-inner::after {
+	background-color: #000;
+	width: 25px;
+	height: 2px;
+	transition: 0.25s ease-in-out;
+}
+.menuToggle:hover .hamburger-inner, 
+.menuToggle:hover .hamburger-inner::before, 
+.menuToggle:hover .hamburger-inner::after,
+.menuToggle:hover .hamburger.is-active .hamburger-inner,
+.menuToggle:hover .hamburger.is-active .hamburger-inner::before, 
+.menuToggle:hover .hamburger.is-active .hamburger-inner::after {
+	background-color: $brandBlue;
+	transition: 0.25s ease-in-out;
+}
+.hamburger-inner {
+	margin-top: -1px;
+}
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
+	background-color: #000;
+}
+.hamburger-inner::before {
+	top: -7px;
+}
+.hamburger-inner::after {
+	bottom: -7px;
+}
