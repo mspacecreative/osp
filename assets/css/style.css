@@ -648,9 +648,8 @@ table {
 	background-color: #fff;
 }
 
-.quoteContent {
+.quoteContent p {
 	font-size: 20px;
-	line-height: 1.5em;
 }
 
 .testimonialAuthor {
