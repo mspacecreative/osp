@@ -3168,6 +3168,11 @@ footer.section {
 	.carousel .slick-dots {
 		width: 100%;
 	}
+	
+	.wpcf7 p {
+		flex-basis: 100%;
+		max-width: 100%;
+	}
 }
 
 @media (max-width: 850px) and (orientation: landscape) {
