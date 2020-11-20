@@ -1,24 +1,11 @@
 <?php get_header(); ?>
-
-	<main role="main" aria-label="Content">
-		<!-- section -->
-		<section>
-
-			<!-- article -->
-			<article id="post-404">
-
-				<h1><?php esc_html_e( 'Page not found', 'html5blank' ); ?></h1>
-				<h2>
-					<a href="<?php echo esc_url( home_url() ); ?>"><?php esc_html_e( 'Return home?', 'html5blank' ); ?></a>
-				</h2>
-
-			</article>
-			<!-- /article -->
-
-		</section>
-		<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
+<div class="contentWrap">
+	<div class="innerContainer w1080 topPadding4">
+		<h1 class="postTitle"><?php esc_html_e( 'Page not found' ); ?></h1>
+		<h2>
+		 	<a href="<?php esc_url( home_url() ); ?>"><?php esc_html_e( 'Return home?' ); ?></a>
+		</h2>
+	</div>
+</div>
 
 <?php get_footer(); ?>
