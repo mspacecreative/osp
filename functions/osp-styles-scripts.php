@@ -14,6 +14,9 @@ function sona_styles()
     wp_register_style('sona-styles', get_template_directory_uri() . '/assets/css/style.css', array(), null, 'all');
     wp_enqueue_style('sona-styles');
     
+    wp_register_style('google-font', 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap', array(), null, 'all');
+    wp_enqueue_style('google-font');
+    
     wp_register_style('typekit', 'https://use.typekit.net/nqa2hgd.css', array(), null, 'all');
     wp_enqueue_style('typekit');
     
