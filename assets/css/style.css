@@ -2290,6 +2290,7 @@ p:last-of-type {
 
 .positionRelative {
 	position: relative;
+	z-index: 1;
 }
 
 .topBottomMargin50 {
