@@ -130,6 +130,12 @@
 			</a>
 		</div>
 		<!-- /logo -->
+		
+		<button class="hamburger hamburger--spin" type="button">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>
 	
 		<!-- nav -->
 		<nav class="nav" role="navigation">

@@ -3017,7 +3017,7 @@ footer.section {
 		display: block;
 	}
 	
-	nav li a {
+	nav li a, .home nav li a {
 		color: #333;
 	}
 	
