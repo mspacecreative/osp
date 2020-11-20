@@ -3070,6 +3070,10 @@ footer.section {
 	.mapContainer {
 		height: 350px;
 	}
+	
+	.contentPortals .row.gutterSpaceWide > .col:last-of-type, .contentPortals .row.gutterSpaceWider > .col:last-of-type, .contentPortals .col:last-of-type {
+		padding-bottom: 1rem;
+	}
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
