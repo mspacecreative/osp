@@ -24,21 +24,13 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 
 <?php elseif ( $blockanchor && $offsetlayout ): ?>
 <section id="<?php echo $blockanchor ?>" class="positionRelative topBottomPadding">
-	<?php if ( $reverse ) : ?>
-	<div class="innerContainer innerContainerOffset right">
-	<?php else : ?>
-	<div class="innerContainer innerContainerOffset left">
-	<?php endif; ?>
-
-<?php elseif ( $offsetlayout ): ?>
-<section class="positionRelative topBottomPadding">
 	<?php 
 	if ( $reverse ) : 
 	if( have_rows('right_column') ):
 		while( have_rows('right_column') ): the_row();
 			$img = get_sub_field('image');
 			if ( !empty( $img ) ): ?>
-			<div class="innerContainer topBottomPadding innerContainerOffset left" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
+			<div class="innerContainerOffset left" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
 			<?php
 			endif;
 		endwhile;
@@ -49,7 +41,33 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 		while( have_rows('right_column') ): the_row();
 			$img = get_sub_field('image');
 			if ( !empty( $img ) ): ?>
-			<div class="innerContainer topBottomPadding innerContainerOffset right" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
+			<div class="innerContainerOffset right" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
+			<?php
+			endif;
+		endwhile;
+	endif;
+	endif; ?>
+
+<?php elseif ( $offsetlayout ): ?>
+<section class="positionRelative topBottomPadding">
+	<?php 
+	if ( $reverse ) : 
+	if( have_rows('right_column') ):
+		while( have_rows('right_column') ): the_row();
+			$img = get_sub_field('image');
+			if ( !empty( $img ) ): ?>
+			<div class="innerContainerOffset left" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
+			<?php
+			endif;
+		endwhile;
+	endif;
+	
+	else :
+	if( have_rows('right_column') ):
+		while( have_rows('right_column') ): the_row();
+			$img = get_sub_field('image');
+			if ( !empty( $img ) ): ?>
+			<div class="innerContainerOffset right" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
 			<?php
 			endif;
 		endwhile;
