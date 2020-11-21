@@ -39,7 +39,7 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 <section id="<?php echo $blockanchor ?>">
 
 <?php else : ?>
-<section class="section">
+<section class="positionRelative">
 
 <?php endif;
 
@@ -59,7 +59,7 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 	<div class="innerContainer w1080">
 		<div class="container">
 	<?php else : ?>
-	<div class="innerContainer">
+	<div class="innerContainer topBottomPadding">
 		<div class="container">
 	<?php endif; ?>
 		
