@@ -8,13 +8,13 @@ get_header(); ?>
 	$titlewidth = get_field('title_row_width');
 	if ( $titlewidth === '1080' ) {
 	echo '
-	<div class="innerContainer w1080 topPadding4">';
+	<div class="innerContainer w1080 section4">';
 	 } elseif ( $titlewidth === '850' ) {
 	echo '
-	<div class="innerContainer w850 topPadding4">';
+	<div class="innerContainer w850 section4">';
 	} else {
 	echo '
-	<div class="innerContainer topPadding4">';
+	<div class="innerContainer section4">';
 	}
 	echo '<h1 class="postTitle bottomMargin50">' . $title . '</h1>';
 
