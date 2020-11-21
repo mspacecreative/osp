@@ -2251,6 +2251,10 @@ p:last-of-type {
 	padding-bottom: 0;
 }
 
+.darkGreyBg {
+	background-color: #424242;
+}
+
 .col {
 	padding-bottom: 1rem;
 }
