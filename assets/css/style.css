@@ -2465,6 +2465,10 @@ p:last-of-type {
 	background-position: left;
 }
 
+.innerContainer.innerContainerOffset.right {
+	background-position: right;
+}
+
 .innerContainerOffset::before, .innerContainerOffset.right::before {
 	height: 100%;
 	width: 30%;
@@ -2474,7 +2478,7 @@ p:last-of-type {
 	top: 0;
 }
 
-.innerContainerOffset.left::before {
+.innerContainerOffset::before {
 	left: 0;
 }
 

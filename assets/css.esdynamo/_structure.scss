@@ -248,6 +248,9 @@
 .innerContainer.innerContainerOffset.left {
 	background-position: left;
 }
+.innerContainer.innerContainerOffset.right {
+	background-position: right;
+}
 .innerContainerOffset::before, .innerContainerOffset.right::before {
 	height: 100%;
     width: 30%;
@@ -256,7 +259,7 @@
 	content: "";
     top: 0;
 }
-.innerContainerOffset.left::before {
+.innerContainerOffset::before {
 	left: 0;
 }
 .innerContainerOffset.right::before {
