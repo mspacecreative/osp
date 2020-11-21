@@ -25,9 +25,9 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 <?php elseif ( $blockanchor && $offsetlayout ): ?>
 <section id="<?php echo $blockanchor ?>" class="positionRelative topBottomPadding">
 	<?php if ( $reverse ) : ?>
-	<div class="innerContainer topBottomPadding innerContainerOffset right">
+	<div class="innerContainer innerContainerOffset right">
 	<?php else : ?>
-	<div class="innerContainer topBottomPadding innerContainerOffset left">
+	<div class="innerContainer innerContainerOffset left">
 	<?php endif; ?>
 
 <?php elseif ( $offsetlayout ): ?>
