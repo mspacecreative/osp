@@ -2505,6 +2505,11 @@ p:last-of-type {
 	display: none;
 }
 
+.innerContainerOffset > .innerContainer {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 header {
 	position: fixed;
 	width: 100%;
