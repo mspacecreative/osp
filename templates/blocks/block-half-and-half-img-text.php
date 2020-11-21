@@ -47,15 +47,15 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 	<div class="innerContainer topPadding w1080">
 	<?php elseif ( $narrow && $spacing === 'bottom' ): ?>
 	<div class="innerContainer bottomPadding w1080">
-	<?php elsef ( $narrow && $spacing === 'both' ): ?>
+	<?php elseif ( $narrow && $spacing === 'both' ): ?>
 	<div class="innerContainer topBottomPadding w1080">
 	<?php elseif ( $spacing === 'top' ): ?>
 	<div class="innerContainer topPadding">
 	<?php elseif ( $spacing === 'bottom' ): ?>
 	<div class="innerContainer bottomPadding">
-	<?php elsef ( $spacing === 'both' ): ?>
+	<?php elseif ( $spacing === 'both' ): ?>
 	<div class="innerContainer topBottomPadding">
-	<?php elsef ( $narrow ): ?>
+	<?php elseif ( $narrow ): ?>
 	<div class="innerContainer w1080">
 		<div class="container">
 	<?php else : ?>
