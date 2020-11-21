@@ -2474,7 +2474,7 @@ p:last-of-type {
 	top: 0;
 }
 
-.innerContainerOffset::before {
+.innerContainerOffset.left::before {
 	left: 0;
 }
 
