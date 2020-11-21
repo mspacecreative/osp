@@ -2900,7 +2900,7 @@ footer.section {
 		margin-top: 50px;
 	}
 	
-	.row.gutterSpaceWider > .col.bottomMarginMobile, .row.gutterSpaceWide > .col.bottomMarginMobile, .row > .col.bottomMarginMobile {
+	.row.gutterSpaceWider > .bottomMarginMobile.col, .row.gutterSpaceWide > .bottomMarginMobile.col, .row > .bottomMarginMobile.col {
 		padding-bottom: 2em;
 	}
 }
