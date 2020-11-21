@@ -30,7 +30,7 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 		while( have_rows('right_column') ): the_row();
 			$img = get_sub_field('image');
 			if ( !empty( $img ) ): ?>
-			<div class="innerContainerOffset left" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
+			<div class="innerContainerOffset topBottomPadding left" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
 			<?php
 			endif;
 		endwhile;
@@ -41,7 +41,7 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 		while( have_rows('right_column') ): the_row();
 			$img = get_sub_field('image');
 			if ( !empty( $img ) ): ?>
-			<div class="innerContainerOffset right" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
+			<div class="innerContainerOffset topBottomPadding right" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
 			<?php
 			endif;
 		endwhile;
@@ -56,7 +56,7 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 		while( have_rows('right_column') ): the_row();
 			$img = get_sub_field('image');
 			if ( !empty( $img ) ): ?>
-			<div class="innerContainerOffset left" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
+			<div class="innerContainerOffset topBottomPadding left" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
 			<?php
 			endif;
 		endwhile;
@@ -67,7 +67,7 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 		while( have_rows('right_column') ): the_row();
 			$img = get_sub_field('image');
 			if ( !empty( $img ) ): ?>
-			<div class="innerContainerOffset right" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
+			<div class="innerContainerOffset topBottomPadding right" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
 			<?php
 			endif;
 		endwhile;
