@@ -275,7 +275,12 @@
 }
 .col.offsetContentContainer {
 	background-color: #fff;
-    padding: 2em!important;
+}
+.right.col.offsetContentContainer {
+	padding: 3em 3em 3em 2em!important;
+}
+.left.col.offsetContentContainer {
+	padding: 3em 2em 3em 3em!important;
 }
 .innerContainerOffset .offsetImageContainer {
 	display: none;
