@@ -23,7 +23,7 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 <section id="<?php echo $blockanchor ?>" class="section darkbg light">
 
 <?php elseif ( $blockanchor && $offsetlayout ): ?>
-<section id="<?php echo $blockanchor ?>" class="positionRelative topBottomPadding">
+<section id="<?php echo $blockanchor ?>" class="positionRelative section4">
 	<?php 
 	if ( $reverse ) : 
 	if( have_rows('right_column') ):
@@ -49,7 +49,7 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 	endif; ?>
 
 <?php elseif ( $offsetlayout ): ?>
-<section class="positionRelative topBottomPadding">
+<section class="positionRelative section4">
 	<?php 
 	if ( $reverse ) : 
 	if( have_rows('right_column') ):
