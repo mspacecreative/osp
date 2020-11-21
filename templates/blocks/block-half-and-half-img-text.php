@@ -203,6 +203,8 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 				<div class="col-lg-10 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetContentContainer">
 				<?php elseif ( $colratio == 'one-quarter-three-quarter' ): ?>
 				<div class="col-lg-2 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetContentContainer">
+				<?php elseif ( $offsetlayout ): ?>
+				<div class="col-lg-6 bottomMarginMobile col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
 				<?php else : ?>
 				<div class="col-lg-6 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetContentContainer">
 				<?php endif;
