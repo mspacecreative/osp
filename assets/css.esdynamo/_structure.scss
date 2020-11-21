@@ -260,10 +260,10 @@
     top: 0;
 }
 .innerContainerOffset::before {
-	left: 0;
+	right: 0;
 }
 .innerContainerOffset.right::before {
-	right: 0;
+	left: 0;
 }
 .innerContainer.innerContainerOffset.right {
 	background-position: right;
