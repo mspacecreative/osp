@@ -5,17 +5,6 @@
 	.shrinkLogo {
 		margin: 0;
 	}
-	footer .col:nth-child(2n+1):nth-last-child(-n+2),
-	.photoGrid .col:nth-child(2n+1):nth-last-child(-n+2),
-	.row.gutterSpaceWider > .col:nth-child(2n+1):nth-last-child(-n+2),
-	.photoGrid li:nth-child(2n+1):nth-last-child(-n+2),
-	.photoGrid .col:nth-child(2n+1):nth-last-child(-n+2) ~ .col,
-	footer .col:nth-child(2n+1):nth-last-child(-n+2) ~ .col,
-	.photoGrid li:nth-child(2n+1):nth-last-child(-n+2) ~ li,
-	.row.gutterSpaceWider > .col:nth-child(2n+1):nth-last-child(-n+2) ~ .col {
-	   margin-bottom: 0;
-	   padding-bottom: 0;
-	}
 }
 
 @media (max-width: 64em) {
@@ -36,6 +25,17 @@
 @media (min-width: 64em) {
 	.container {
 		width: 100%;
+	}
+	footer .col:nth-child(2n+1):nth-last-child(-n+2),
+	.photoGrid .col:nth-child(2n+1):nth-last-child(-n+2),
+	.row.gutterSpaceWider > .col:nth-child(2n+1):nth-last-child(-n+2),
+	.photoGrid li:nth-child(2n+1):nth-last-child(-n+2),
+	.photoGrid .col:nth-child(2n+1):nth-last-child(-n+2) ~ .col,
+	footer .col:nth-child(2n+1):nth-last-child(-n+2) ~ .col,
+	.photoGrid li:nth-child(2n+1):nth-last-child(-n+2) ~ li,
+	.row.gutterSpaceWider > .col:nth-child(2n+1):nth-last-child(-n+2) ~ .col {
+	   margin-bottom: 0;
+	   padding-bottom: 0;
 	}
 	.borderRight {
 		border-right: 1px solid #c9c9c9;
