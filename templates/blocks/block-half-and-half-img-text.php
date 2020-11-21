@@ -104,7 +104,7 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 	<div class="innerContainer w1080">
 		<div class="container">
 	<?php else : ?>
-	<div class="innerContainer topBottomPadding">
+	<div class="innerContainer">
 		<div class="container">
 	<?php endif; ?>
 		
