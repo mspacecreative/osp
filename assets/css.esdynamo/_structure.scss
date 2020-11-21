@@ -231,3 +231,46 @@
 .lightGreyBg {
 	background-color: $brandLightGrey;
 }
+
+// OFFSET LAYOUT
+.innerContainer.innerContainerOffset.left, .innerContainer.innerContainerOffset.right {
+	max-width: 1600px;
+	padding-left: 0;
+	padding-right: 0;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-right: 0;
+}
+.innerContainer.innerContainerOffset.left {
+	background-position: left;
+}
+.innerContainerOffset::before, .innerContainerOffset.right::before {
+	height: 100%;
+    width: 30%;
+    background-color: #fff;
+    position: absolute;
+	content: "";
+    top: 0;
+}
+.innerContainerOffset::before {
+	left: 0;
+}
+.innerContainerOffset.right::before {
+	right: 0;
+}
+.innerContainer.innerContainerOffset.right {
+	background-position: right;
+}
+.innerContainerOffset .row {
+	max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;;
+}
+.innerContainerOffset .offsetContentContainer {
+	background-color: #fff;
+    padding: 2em;
+}
+.innerContainerOffset .offsetImageContainer {
+	display: none;
+}

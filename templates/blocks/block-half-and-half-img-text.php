@@ -13,6 +13,8 @@ $colratio = get_field('column_ratio');
 $removeBulletSpacing = get_field('remove_spacing_between_bullet_points');
 $gutters = get_field('gutter_space');
 $spacing = get_field('vertical_spacing');
+$offsetlayout = get_field('offset_layout');
+$featuredimg = get_field('background_image');
 
 if ( $blockanchor && $bgcolor == 'light' ): ?>
 <section id="<?php echo $blockanchor ?>" class="section lightGreyBg">
@@ -20,14 +22,38 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 <?php elseif ( $blockanchor && $bgcolor == 'dark' ): ?>
 <section id="<?php echo $blockanchor ?>" class="section darkbg light">
 
-<?php elseif ( $blockanchor ): ?>
-<section id="<?php echo $blockanchor ?>">
+<?php elseif ( $blockanchor && $offsetlayout ): ?>
+<section id="<?php echo $blockanchor ?>" class="positionRelative topBottomPadding">
+	<?php if ( $reverse ) : ?>
+	<div class="innerContainer topBottomPadding innerContainerOffset right">
+	<?php else : ?>
+	<div class="innerContainer topBottomPadding innerContainerOffset left">
+	<?php endif; ?>
 
-<?php elseif ( $blockanchor && $bgcolor == 'light' ): ?>
-<section id="<?php echo $blockanchor ?>" class="section lightGreyBg">
-
-<?php elseif ( $blockanchor && $bgcolor == 'dark' ): ?>
-<section id="<?php echo $blockanchor ?>" class="section darkGreyBg light">
+<?php elseif ( $offsetlayout ): ?>
+<section class="positionRelative topBottomPadding">
+	<?php 
+	if ( $reverse ) : 
+	if( have_rows('right_column') ):
+		while( have_rows('right_column') ): the_row();
+			$img = get_sub_field('image');
+			if ( !empty( $img ) ): ?>
+			<div class="innerContainer topBottomPadding innerContainerOffset left" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
+			<?php
+			endif;
+		endwhile;
+	endif;
+	?>
+	<?php else :
+	if( have_rows('right_column') ):
+		while( have_rows('right_column') ): the_row();
+			$img = get_sub_field('image');
+			if ( !empty( $img ) ): ?>
+			<div class="innerContainer topBottomPadding innerContainerOffset right" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
+			<?php
+			endif;
+		endwhile;
+	endif; ?>
 
 <?php elseif ( $bgcolor == 'light' ): ?>
 <section class="section lightGreyBg">
@@ -147,19 +173,19 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 				$contenttype = get_sub_field('content_type');
 		 		
 		 		if ( $colratio == 'three-fifth-two-fifth' ): ?>
-				<div class="col-lg-7 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
+				<div class="col-lg-7 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetContentContainer">
 				<?php elseif ( $colratio == 'two-fifth-three-fifth' ): ?>
-				<div class="col-lg-5 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
+				<div class="col-lg-5 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetContentContainer">
 				<?php elseif ( $colratio == 'two-third-one-third' ): ?>
-				<div class="col-lg-8 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
+				<div class="col-lg-8 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetContentContainer">
 				<?php elseif ( $colratio == 'one-third-two-third' ): ?>
-				<div class="col-lg-4 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
+				<div class="col-lg-4 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetContentContainer">
 				<?php elseif ( $colratio == 'three-quarter-one-quarter' ): ?>
-				<div class="col-lg-10 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
+				<div class="col-lg-10 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetContentContainer">
 				<?php elseif ( $colratio == 'one-quarter-three-quarter' ): ?>
-				<div class="col-lg-2 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
+				<div class="col-lg-2 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetContentContainer">
 				<?php else : ?>
-				<div class="col-lg-6 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
+				<div class="col-lg-6 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetContentContainer">
 				<?php endif;
 				
 					if ( $contenttype == 'carousel' ): ?>
@@ -264,19 +290,19 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 		 		$contentrightcol = get_sub_field('content_right_col');
 				
 				if ( $colratio == 'three-fifth-two-fifth' ): ?>
-				<div class="col-lg-5 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
+				<div class="col-lg-5 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetImageContainer">
 				<?php elseif ( $colratio == 'two-fifth-three-fifth' ): ?>
-				<div class="col-lg-7 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
+				<div class="col-lg-7 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetImageContainer">
 				<?php elseif ( $colratio == 'two-third-one-third' ): ?>
-				<div class="col-lg-4 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
+				<div class="col-lg-4 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetImageContainer">
 				<?php elseif ( $colratio == 'one-third-two-third' ): ?>
-				<div class="col-lg-8 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
+				<div class="col-lg-8 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetImageContainer">
 				<?php elseif ( $colratio == 'three-quarter-one-quarter' ): ?>
-				<div class="col-lg-2 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
+				<div class="col-lg-2 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetImageContainer">
 				<?php elseif ( $colratio == 'one-quarter-three-quarter' ): ?>
-				<div class="col-lg-10 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
+				<div class="col-lg-10 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetImageContainer">
 				<?php else : ?>
-				<div class="col-lg-6 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
+				<div class="col-lg-6 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetImageContainer">
 				<?php endif;
 				
 					if ( $contenttype == 'carousel' ): ?>
