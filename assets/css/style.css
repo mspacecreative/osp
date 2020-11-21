@@ -1240,6 +1240,10 @@ h3 {
 	line-height: 1.25em;
 }
 
+menu, ol, ul {
+	padding: 0 0 0 18px;
+}
+
 .contentPortal h3, .fitPortal h3 {
 	margin-top: 0;
 }
