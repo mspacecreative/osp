@@ -2489,9 +2489,9 @@ p:last-of-type {
 	margin-right: auto;
 }
 
-.innerContainerOffset .row.gutterSpaceWider > innerContainerOffset .col.offsetContentContainer, innerContainerOffset .row.gutterSpaceWide > .col.offsetContentContainer, .row > .col.offsetContentContainer {
+.col.offsetContentContainer {
 	background-color: #fff;
-	padding: 2em;
+	padding: 2em !important;
 }
 
 .innerContainerOffset .offsetImageContainer {
