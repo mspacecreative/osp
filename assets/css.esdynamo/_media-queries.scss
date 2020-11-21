@@ -24,11 +24,12 @@
 		margin-top: 50px;
 	}
 	.innerContainerOffset {
-		background-image: unset;
+		background-image: none;
 	}
 	.offsetLayout .innerContainerOffset .offsetImageContainer {
 		display: flex;
 		order: -1;
+		padding: 0!important;
 	}
 	.offsetLayout .col.offsetContentContainer {
 		margin: -100px auto 0;

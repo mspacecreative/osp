@@ -2974,12 +2974,13 @@ footer.section {
 	}
 	
 	.innerContainerOffset {
-		background-image: unset;
+		background-image: none;
 	}
 	
 	.offsetLayout .innerContainerOffset .offsetImageContainer {
 		display: flex;
 		order: -1;
+		padding: 0;
 	}
 	
 	.offsetLayout .col.offsetContentContainer {
