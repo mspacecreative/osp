@@ -12,6 +12,7 @@ $narrow = get_field('narrow_row');
 $colratio = get_field('column_ratio');
 $removeBulletSpacing = get_field('remove_spacing_between_bullet_points');
 $gutters = get_field('gutter_space');
+$spacing = get_field('vertical_spacing');
 
 if ( $blockanchor && $bgcolor == 'light' ): ?>
 <div id="<?php echo $blockanchor ?>" class="section lightGreyBg">
@@ -20,36 +21,45 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 <div id="<?php echo $blockanchor ?>" class="section darkbg light">
 
 <?php elseif ( $blockanchor ): ?>
-<div id="<?php echo $blockanchor ?>" class="section lightGreyBg">
+<div id="<?php echo $blockanchor ?>">
 
 <?php elseif ( $blockanchor && $bgcolor == 'light' ): ?>
 <div id="<?php echo $blockanchor ?>" class="section lightGreyBg">
 
 <?php elseif ( $blockanchor && $bgcolor == 'dark' ): ?>
-<div id="<?php echo $blockanchor ?>" class="section darkbg light">
+<div id="<?php echo $blockanchor ?>" class="section darkGreyBg light">
 
 <?php elseif ( $bgcolor == 'light' ): ?>
 <div class="section lightGreyBg">
 
 <?php elseif ( $bgcolor == 'dark' ): ?>
-<div class="section darkbg light">
-
-<?php elseif ( $bgcolor == 'dark' ): ?>
-<div class="section darkbg light">
+<div class="section darkGreyBg light">
 
 <?php elseif ( $blockanchor ): ?>
-<div id="<?php echo $blockanchor ?>" class="section lightGreyBg">
+<div id="<?php echo $blockanchor ?>">
 
 <?php else : ?>
 <div class="section">
 
 <?php endif;
 
- 	if ( $narrow ): ?>
-	<div class="innerContainer no-top-bottom-padding w1080">
+ 	if ( $narrow && $spacing === 'top' ): ?>
+	<div class="innerContainer topPadding w1080">
+	<?php elseif ( $narrow && $spacing === 'bottom' ): ?>
+	<div class="innerContainer bottomPadding w1080">
+	<?php elsef ( $narrow && $spacing === 'both' ): ?>
+	<div class="innerContainer topBottomPadding w1080">
+	<?php elseif ( $spacing === 'top' ): ?>
+	<div class="innerContainer topPadding">
+	<?php elseif ( $spacing === 'bottom' ): ?>
+	<div class="innerContainer bottomPadding">
+	<?php elsef ( $spacing === 'both' ): ?>
+	<div class="innerContainer topBottomPadding">
+	<?php elsef ( $narrow ): ?>
+	<div class="innerContainer w1080">
 		<div class="container">
 	<?php else : ?>
-	<div class="innerContainer no-top-bottom-padding">
+	<div class="innerContainer">
 		<div class="container">
 	<?php endif; ?>
 		
