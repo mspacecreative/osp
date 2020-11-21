@@ -639,6 +639,16 @@ table {
 	background-repeat: no-repeat;
 }
 
+.testimonialContainer::after {
+	height: 30px;
+	width: 15px;
+	position: absolute;
+	top: -15px;
+	left: 5px;
+	z-index: 1;
+	background-color: #fff;
+}
+
 .testimonialContainer .col {
 	padding-bottom: 0;
 }
