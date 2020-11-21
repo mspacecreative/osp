@@ -43,8 +43,8 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 			endif;
 		endwhile;
 	endif;
-	?>
-	<?php else :
+	
+	else :
 	if( have_rows('right_column') ):
 		while( have_rows('right_column') ): the_row();
 			$img = get_sub_field('image');
@@ -53,6 +53,7 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 			<?php
 			endif;
 		endwhile;
+	endif;
 	endif; ?>
 
 <?php elseif ( $bgcolor == 'light' ): ?>
