@@ -2893,15 +2893,15 @@ footer.section {
 	.fitPortal::before, .fitPortal::after {
 		height: 80px;
 	}
+	
+	.row.gutterSpaceWider > .bottomMarginMobile.col, .row.gutterSpaceWide > .bottomMarginMobile.col, .row > .bottomMarginMobile.col {
+		padding-bottom: 2em;
+	}
 }
 
 @media (max-width: 48em) {
 	.topMarginMobile50 {
 		margin-top: 50px;
-	}
-	
-	.row.gutterSpaceWider > .bottomMarginMobile.col, .row.gutterSpaceWide > .bottomMarginMobile.col, .row > .bottomMarginMobile.col {
-		padding-bottom: 2em;
 	}
 }
 
