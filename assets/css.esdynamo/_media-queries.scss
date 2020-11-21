@@ -37,6 +37,9 @@
 	   margin-bottom: 0;
 	   padding-bottom: 0;
 	}
+	.row.gutterSpaceWider > .col.bottomMarginMobile, .row.gutterSpaceWide > .col.bottomMarginMobile, .row > .col.bottomMarginMobile {
+		padding-bottom: 2em;
+	}
 	.borderRight {
 		border-right: 1px solid #c9c9c9;
 	}
