@@ -2251,7 +2251,7 @@ p:last-of-type {
 	padding-bottom: 0;
 }
 
-.darkGreyBg {
+.section.darkGreyBg, .darkGreyBg {
 	background-color: #424242;
 }
 

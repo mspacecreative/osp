@@ -20,7 +20,7 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 <section id="<?php echo $blockanchor ?>" class="section lightGreyBg">
 
 <?php elseif ( $blockanchor && $bgcolor == 'dark' ): ?>
-<section id="<?php echo $blockanchor ?>" class="section darkbg light">
+<section id="<?php echo $blockanchor ?>" class="section darkGreyBg light">
 
 <?php elseif ( $blockanchor && $offsetlayout ): ?>
 <section id="<?php echo $blockanchor ?>" class="positionRelative section3 offsetLayout">
