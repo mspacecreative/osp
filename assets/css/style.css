@@ -2264,6 +2264,11 @@ p:last-of-type {
 	padding-top: 4em;
 }
 
+.section3 {
+	padding-bottom: 3em;
+	padding-top: 3em;
+}
+
 .bottomPadding {
 	padding-bottom: 6em;
 }
