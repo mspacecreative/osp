@@ -23,6 +23,18 @@
 	.topMarginMobile50 {
 		margin-top: 50px;
 	}
+	.innerContainerOffset {
+		background-image: unset;
+	}
+	.offsetLayout .innerContainerOffset .offsetImageContainer {
+		display: flex;
+		order: -1;
+	}
+	.offsetLayout .col.offsetContentContainer {
+		margin: -100px auto 0;
+		flex-basis: 90%;
+		padding: 2.5em!important;
+	}
 }
 
 @media (min-width: 64em) {
