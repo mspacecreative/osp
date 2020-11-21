@@ -259,7 +259,7 @@
 	content: "";
     top: 0;
 }
-.innerContainerOffset::before {
+.innerContainerOffset.left::before {
 	right: 0;
 }
 .innerContainerOffset.right::before {
