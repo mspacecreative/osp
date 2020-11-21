@@ -647,6 +647,7 @@ table {
 	left: 5px;
 	z-index: 1;
 	background-color: #fff;
+	content: "";
 }
 
 .testimonialContainer .col {
