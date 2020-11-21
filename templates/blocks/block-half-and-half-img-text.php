@@ -39,7 +39,7 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 <section id="<?php echo $blockanchor ?>">
 
 <?php else : ?>
-<section>
+<section class="section">
 
 <?php endif;
 
