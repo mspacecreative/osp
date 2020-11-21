@@ -15,31 +15,31 @@ $gutters = get_field('gutter_space');
 $spacing = get_field('vertical_spacing');
 
 if ( $blockanchor && $bgcolor == 'light' ): ?>
-<div id="<?php echo $blockanchor ?>" class="section lightGreyBg">
+<section id="<?php echo $blockanchor ?>" class="section lightGreyBg">
 
 <?php elseif ( $blockanchor && $bgcolor == 'dark' ): ?>
-<div id="<?php echo $blockanchor ?>" class="section darkbg light">
+<section id="<?php echo $blockanchor ?>" class="section darkbg light">
 
 <?php elseif ( $blockanchor ): ?>
-<div id="<?php echo $blockanchor ?>">
+<section id="<?php echo $blockanchor ?>">
 
 <?php elseif ( $blockanchor && $bgcolor == 'light' ): ?>
-<div id="<?php echo $blockanchor ?>" class="section lightGreyBg">
+<section id="<?php echo $blockanchor ?>" class="section lightGreyBg">
 
 <?php elseif ( $blockanchor && $bgcolor == 'dark' ): ?>
-<div id="<?php echo $blockanchor ?>" class="section darkGreyBg light">
+<section id="<?php echo $blockanchor ?>" class="section darkGreyBg light">
 
 <?php elseif ( $bgcolor == 'light' ): ?>
-<div class="section lightGreyBg">
+<section class="section lightGreyBg">
 
 <?php elseif ( $bgcolor == 'dark' ): ?>
-<div class="section darkGreyBg light">
+<section class="section darkGreyBg light">
 
 <?php elseif ( $blockanchor ): ?>
-<div id="<?php echo $blockanchor ?>">
+<section id="<?php echo $blockanchor ?>">
 
 <?php else : ?>
-<div class="section">
+<section>
 
 <?php endif;
 
@@ -377,4 +377,4 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 			</div>
 		</div>
 	</div>
-</div>
+</section>
