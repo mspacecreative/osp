@@ -2489,7 +2489,7 @@ p:last-of-type {
 	margin-right: auto;
 }
 
-.innerContainerOffset .offsetContentContainer {
+.row.gutterSpaceWider > .col.offsetContentContainer, .row.gutterSpaceWide > .col.offsetContentContainer, .row > .col.offsetContentContainer {
 	background-color: #fff;
 	padding: 2em;
 }
