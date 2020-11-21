@@ -2899,6 +2899,10 @@ footer.section {
 	.topMarginMobile50 {
 		margin-top: 50px;
 	}
+	
+	.row.gutterSpaceWider > .col.bottomMarginMobile, .row.gutterSpaceWide > .col.bottomMarginMobile, .row > .col.bottomMarginMobile {
+		padding-bottom: 2em;
+	}
 }
 
 @media (min-width: 64em) {
@@ -2909,10 +2913,6 @@ footer.section {
 	footer .col:nth-child(2n+1):nth-last-child(-n+2), .photoGrid .col:nth-child(2n+1):nth-last-child(-n+2), .row.gutterSpaceWider > .col:nth-child(2n+1):nth-last-child(-n+2), .photoGrid li:nth-child(2n+1):nth-last-child(-n+2), .photoGrid .col:nth-child(2n+1):nth-last-child(-n+2) ~ .col, footer .col:nth-child(2n+1):nth-last-child(-n+2) ~ .col, .photoGrid li:nth-child(2n+1):nth-last-child(-n+2) ~ li, .row.gutterSpaceWider > .col:nth-child(2n+1):nth-last-child(-n+2) ~ .col {
 		margin-bottom: 0;
 		padding-bottom: 0;
-	}
-	
-	.row.gutterSpaceWider > .col.bottomMarginMobile, .row.gutterSpaceWide > .col.bottomMarginMobile, .row > .col.bottomMarginMobile {
-		padding-bottom: 2em;
 	}
 	
 	.borderRight {
