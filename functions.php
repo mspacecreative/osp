@@ -383,7 +383,7 @@ add_filter( 'excerpt_length', 'osp_custom_excerpt_length', 999 );
 // add more link to excerpt
 function osp_custom_excerpt_more($more) {
    global $post;
-   return '... <br /><a class="readMore" href="' . get_permalink($post->ID) . '">' . __('Read more', 'osp') . '</a>';
+   return '... <br /><br /><a class="readMore" href="' . get_permalink($post->ID) . '">' . __('Read more', 'osp') . '</a>';
 }
 add_filter('excerpt_more', 'osp_custom_excerpt_more');
 
