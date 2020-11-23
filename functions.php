@@ -360,7 +360,7 @@ function html5_blank_view_article($more)
 */
 
 // custom excerpt length
-function osp_excerpt($length_callback = '', $more_callback = '')
+function osp_custom_excerpt($length_callback = '', $more_callback = '')
 {
     global $post;
     if (function_exists($length_callback)) {
