@@ -507,6 +507,10 @@ table {
 	color: #38C3E1;
 }
 
+.sidebar h5 {
+	margin: 10px 0 0;
+}
+
 .cardContainer.whiteBg, whiteBg {
 	background-color: #fff;
 }
