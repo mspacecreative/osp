@@ -14,6 +14,7 @@
 	
 	<?php else : ?>
 	<div class="innerContainer section4">
+	<?php endif; ?>
 	
 		<h1 class="postTitle bottomMargin50"><?php the_title(); ?></h1>';
 		<span class="date"><?php the_date( 'Y-m-d' ); ?></span>
