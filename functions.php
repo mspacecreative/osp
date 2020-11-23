@@ -372,7 +372,7 @@ function osp_custom_excerpt($length_callback = '', $more_callback = '')
     $output = get_the_excerpt();
     $output = apply_filters('wptexturize', $output);
     $output = apply_filters('convert_chars', $output);
-    $output = '<p>' . $output . '</p>';
+    $output = $output;
     echo $output;
 }
 function osp_custom_excerpt_length( $length ) {
@@ -383,7 +383,7 @@ add_filter( 'excerpt_length', 'osp_custom_excerpt_length', 999 );
 // add more link to excerpt
 function osp_custom_excerpt_more($more) {
    global $post;
-   return '... <p style="margin: 0;"><a class="readMore" href="' . get_permalink($post->ID) . '">' . __('Read more', 'osp') . '</a></p>';
+   return '... <a class="readMore" href="' . get_permalink($post->ID) . '">' . __('Read more', 'osp') . '</a>';
 }
 add_filter('excerpt_more', 'osp_custom_excerpt_more');
 
