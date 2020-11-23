@@ -525,6 +525,10 @@ table {
 	box-shadow: 0 0 10px #999;
 }
 
+.yrc-item-title {
+	margin-top: 10px;
+}
+
 .evenbriteEvents {
 	margin: 50px auto;
 }
