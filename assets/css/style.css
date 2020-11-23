@@ -491,7 +491,7 @@ table {
 	padding-bottom: 0;
 }
 
-.cardGrid .row .row, .cardGrid .row .row .col, .cardGrid .row .row .col .colInner {
+.cardGrid .row, .cardGrid .row .col, .cardGrid .row .col .colInner {
 	height: 100%;
 }
 
