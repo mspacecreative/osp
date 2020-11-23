@@ -7,7 +7,7 @@
 		
 			<?php while (have_posts()) : the_post(); ?>
 			
-			<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12">
+			<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12 cardContainer">
 			
 				<div class="row">
 					
@@ -33,7 +33,7 @@
 					
 							<!-- post details -->
 							<h4 class="date">
-								<?php echo date( 'F j, Y' ); ?><?php esc_html_e(' &nbsp;| &nbsp;'); ?><?php the_category(', '); ?>
+								<?php echo the_date( 'F j, Y' ); ?><?php esc_html_e(' &nbsp;| &nbsp;'); ?><?php the_category(', '); ?>
 							</h4>
 							<!-- /post details -->
 					
