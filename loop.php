@@ -3,7 +3,7 @@
 	<!-- article -->
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<div class="row gutterSpaceWide">
+		<div class="row gutterSpaceWide cardGrid">
 		
 			<?php while (have_posts()) : the_post(); ?>
 			

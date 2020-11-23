@@ -4,3 +4,6 @@
 .col .col {
 	padding-bottom: 0;
 }
+.cardGrid .row .row, .cardGrid .row .row .col, .cardGrid .row .row .col .colInner {
+	height: 100%;
+}
