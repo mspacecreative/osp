@@ -487,6 +487,10 @@ table {
 	background-color: #fff;
 }
 
+.col .col {
+	padding-bottom: 0;
+}
+
 .tabAnswer {
 	display: none;
 	padding: 2em 2em 1em;
@@ -1251,7 +1255,7 @@ h2 {
 }
 
 .grey {
-	color: #424242;
+	color: #999;
 }
 
 .fullSpanCTA h2 ~ ul > li > .button {
