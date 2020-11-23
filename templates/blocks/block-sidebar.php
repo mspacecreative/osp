@@ -2,8 +2,11 @@
 $sidebar = get_field('sidebar');
 
 switch ( $sidebar ) {
-	case 'eventbrite':
+	case 'eventbrite-events':
 		$result = 'eventbrite-events';
+		break;
+	case 'eventbrite-all-events':
+		$result = 'eventbrite-all-events';
 		break;
 	default:
 		$result = 'eventbrite-events';
