@@ -16,6 +16,9 @@ h2 {
 .cardContainer h2 {
 	font-size: 24px;
 }
+.grey {
+	color: $brandGrey;
+}
 .fullSpanCTA h2 ~ ul > li > .button {
 	margin-top: 0;
 }
