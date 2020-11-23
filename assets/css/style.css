@@ -496,6 +496,10 @@ table {
 	box-shadow: none;
 }
 
+.sidebar .row.gutterSpaceWide > .col {
+	padding-bottom: 0;
+}
+
 .cardContainer.whiteBg, whiteBg {
 	background-color: #fff;
 }

@@ -32,6 +32,7 @@
 			</div>
 			<div class="col col-lg-4 col-md-4 col-sm-12 col-xs-12 sidebar">
 				<?php echo $featuredimg ?>
+				<h3>Recent posts</h3>
 				<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-blog')) ?>
 			</div>
 			<?php endwhile; ?>
