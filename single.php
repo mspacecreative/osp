@@ -19,7 +19,7 @@
 		<div class="row">
 			<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">
 				<h1 class="postTitle bottomMargin50"><?php the_title(); ?></h1>
-				<span class="date"><?php esc_html_e('Posted on '); ?><?php echo date( 'F j, Y' ); ?></span>
+				<h4 class="date bottomMargin50"><?php esc_html_e('Posted on '); ?><?php echo date( 'F j, Y' ); ?></h4>
 			</div>
 		</div>
 
