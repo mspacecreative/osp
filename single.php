@@ -26,10 +26,9 @@
 		<?php if ( have_posts() ) : ?>
 		<div class="row gutterSpaceWide">
 		 	<?php while ( have_posts() ) : the_post();
-		 	$content = get_the_content();
-			$featuredimg = get_the_post_thumbnail( get_the_ID(), 'large' ); ?>
+		 	$featuredimg = get_the_post_thumbnail( get_the_ID(), 'large' ); ?>
 			<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">
-				<?php echo $content; ?>
+				<?php the_content(); ?>
 			</div>
 			<div class="col col-lg-4 col-md-4 col-sm-12 col-xs-12">
 				<?php echo $featuredimg ?>
