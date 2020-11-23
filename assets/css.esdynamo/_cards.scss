@@ -21,5 +21,10 @@
 	flex-direction: column;
 }
 .cardGrid .colInner p:last-of-type {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+}
+.cardGrid .colInner p:last-of-type a.readMore {
 	margin-top: auto;
 }
