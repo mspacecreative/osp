@@ -8,7 +8,7 @@
 	// EVENTBRITE CARDS
 	$('.eaw-li').each(function() {
 		$(this).children().wrapAll('<div class="innerCardContainer"></div>');
-		$(this).children('.eaw-title, .eaw-time').wrapAll('<div class="colInner"></div>');
+		$(this).find('.innerCardContainer').children('.eaw-title, .eaw-time').wrapAll('<div class="colInner"></div>');
 	});
 	
 	// MEDIUM TWEAKS
