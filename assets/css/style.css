@@ -492,7 +492,7 @@ table {
 	max-width: 100%;
 }
 
-.sidebar .cardGrid .colInner {
+.sidebar .cardGrid .col .colInner {
 	box-shadow: none;
 	padding: 0 0 1.5em;
 	margin-bottom: 1.5em;
@@ -503,7 +503,7 @@ table {
 	padding-bottom: 0;
 }
 
-.sidebar .cardGrid .colInner:last-of-type {
+.sidebar .cardGrid .col:last-of-type .colInner {
 	padding-bottom: 0;
 	margin-bottom: 0;
 	border-bottom: none;
