@@ -529,6 +529,10 @@ table {
 	margin-top: 10px;
 }
 
+#yrc-shell-0 .yrc-pagination {
+	display: none;
+}
+
 .evenbriteEvents {
 	margin: 50px auto;
 }
