@@ -8,7 +8,7 @@ switch ( $sidebar ) {
 	default:
 		$result = 'eventbrite-events';
 } ?>
-<section class="section">
+<section>
 	<div class="innerContainer">
 		<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar( $result )) ?>
 	</div>
