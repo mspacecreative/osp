@@ -7,7 +7,7 @@
 		
 			<?php while (have_posts()) : the_post(); ?>
 			
-			<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12 cardContainer">
+			<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12 cardContainer whiteBg">
 			
 				<div class="row">
 					
@@ -18,11 +18,13 @@
 							<?php the_post_thumbnail( array( 120, 120 ) ); // Declare pixel size you need inside the array. ?>
 						</a>
 					</div>
-					<?php endif; ?>
 					<!-- /post thumbnail -->
 					
 					<div class="col col-lg-9 col-md-9 col-sm-12 col-xs-12">
-						
+					<?php else : ?>
+					<div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<?php endif; ?>
+					
 						<div class="colInner">
 			
 							<!-- post title -->
