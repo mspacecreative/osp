@@ -8,7 +8,7 @@ function my_custom_styles( $init_array ) {
         array(  
             'title' => 'CTA Button',  
             'inline' => 'a',  
-            'classes' => 'button dark',
+            'classes' => 'button dark blue',
             'wrapper' => true,
         ),  
         array(  
