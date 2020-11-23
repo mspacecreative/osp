@@ -48,13 +48,13 @@
 				</div>
 				
 			</div>
+			
+			<?php endwhile; ?>
 		
 		</div>
 
 	</article>
 	<!-- /article -->
-
-<?php endwhile; ?>
 
 <?php else : ?>
 
