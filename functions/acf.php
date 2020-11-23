@@ -331,15 +331,15 @@ function my_acf_init() {
 			'supports'			=> array( 'mode' => false ),
 		));
 		
-		// register brand grid / carousel
+		// register sidebar block
 		acf_register_block(array(
-			'name'				=> 'feed-grid',
-			'title'				=> __('Custom Feed Block'),
-			'description'		=> __('Feeds custom content for specific post type'),
+			'name'				=> 'sidebar',
+			'title'				=> __('Sidebar Widget Block'),
+			'description'		=> __('Pulls in content from specified sidebar widget'),
 			'render_callback'	=> 'my_acf_block_render_callback',
 			'category'			=> 'formatting',
 			'icon'				=> 'images-alt',
-			'keywords'			=> array( 'custom content', 'feed' ),
+			'keywords'			=> array( 'widget', 'sidebar' ),
 			'mode'				=> 'edit',
 			'supports'			=> array( 'mode' => false ),
 		));

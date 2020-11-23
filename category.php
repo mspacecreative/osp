@@ -24,6 +24,4 @@
 	</div>
 </div>
 
-<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('eventbrite-events')) ?>
-
 <?php get_footer(); ?>
