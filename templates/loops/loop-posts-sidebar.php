@@ -1,6 +1,6 @@
 <?php 
 $args = array( 
-	'post_type' => 'post',
+	'post_type' => 'posts',
 	'posts_per_page'=> 5, 
 	'post__not_in' => array( $post->ID )
 );
