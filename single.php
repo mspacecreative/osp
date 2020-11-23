@@ -17,7 +17,7 @@
 	<?php endif; ?>
 	
 		<h1 class="postTitle bottomMargin50"><?php the_title(); ?></h1>';
-		<span class="date"><?php esc_html_e('Posted on ') echo the_date( 'Y-m-d' ); ?></span>
+		<span class="date"><?php esc_html_e('Posted on ') date( 'Y-m-d' ); ?></span>
 
 		<?php if ( have_posts() ) : ?>
 		<div class="row gutterSpaceWide">
