@@ -18,11 +18,7 @@ get_header(); ?>
 	}
 	echo '<h1 class="postTitle bottomMargin50">' . $title . '</h1>';
 	echo '
-	<span class="date">
-		<time datetime="' . the_time( 'Y-m-d' ) the_time( 'H:i' ) . '">' . 
-			the_date() the_time() . '
-		</time>
-	</span>';
+	<span class="date">' . the_date( 'Y-m-d' ) . '</span>';
 
 		if ( have_posts() ) : ?>
 		<div class="row gutterSpaceWide">
