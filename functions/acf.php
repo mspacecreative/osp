@@ -334,7 +334,7 @@ function my_acf_init() {
 		// register sidebar block
 		acf_register_block(array(
 			'name'				=> 'sidebar',
-			'title'				=> __('Sidebar Widget Block'),
+			'title'				=> __('Widget Block'),
 			'description'		=> __('Pulls in content from specified sidebar widget'),
 			'render_callback'	=> 'my_acf_block_render_callback',
 			'category'			=> 'formatting',

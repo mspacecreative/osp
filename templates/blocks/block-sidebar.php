@@ -8,6 +8,8 @@ switch ( $sidebar ) {
 	case 'eventbrite-all-events':
 		$result = 'eventbrite-all-events';
 		break;
+	case 'blog':
+		$result = 'sidebar-blog';
 	default:
 		$result = 'eventbrite-events';
 } ?>

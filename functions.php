@@ -99,7 +99,7 @@ if (function_exists('register_sidebar'))
     register_sidebar(array(
         'name' => __('Blog Sidebar', 'osp'),
         'description' => __('Content for blog sidebar', 'osp'),
-        'id' => 'widget-area-1',
+        'id' => 'sidebar-blog',
         'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
@@ -111,83 +111,6 @@ if (function_exists('register_sidebar'))
         'name' => __('News Sidebar', 'osp'),
         'description' => __('Content for news sidebar', 'osp'),
         'id' => 'sidebar-news',
-        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-    
-    // Define Team Sidebar
-    register_sidebar(array(
-        'name' => __('Team Sidebar', 'osp'),
-        'description' => __('Content for team sidebar', 'osp'),
-        'id' => 'sidebar-team',
-        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-    
-    // Define Product Sidebar
-    register_sidebar(array(
-        'name' => __('Product Sidebar', 'osp'),
-        'description' => __('Content for product sidebar', 'osp'),
-        'id' => 'sidebar-product',
-        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-    
-    // Define Product Sidebar
-    register_sidebar(array(
-        'name' => __('Partners Sidebar', 'osp'),
-        'description' => __('Content for partner sidebar', 'osp'),
-        'id' => 'sidebar-partners',
-        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-    
-    // Define Management Team Sidebar
-    register_sidebar(array(
-        'name' => __('Management Team', 'osp'),
-        'description' => __('Content for management team sidebar', 'osp'),
-        'id' => 'sidebar-management-team',
-        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-    
-    // Define osp Board Sidebar
-    register_sidebar(array(
-        'name' => __('osp Board', 'osp'),
-        'description' => __('Content for osp Board sidebar', 'osp'),
-        'id' => 'sidebar-osp-board',
-        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-    
-    // Define Core Team Sidebar
-    register_sidebar(array(
-        'name' => __('Core Team', 'osp'),
-        'description' => __('Content for core team sidebar', 'osp'),
-        'id' => 'sidebar-core-team',
-        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-    
-    // Define Scientific Advisory Board Sidebar
-    register_sidebar(array(
-        'name' => __('Scientific Advisory Board', 'osp'),
-        'description' => __('Content for Scientific Advisory Board sidebar', 'osp'),
-        'id' => 'sidebar-scientific-advisory',
         'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
