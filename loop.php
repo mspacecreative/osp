@@ -33,7 +33,7 @@
 					
 							<!-- post details -->
 							<h4 class="date">
-								<?php echo the_date( 'F j, Y' ); ?><?php esc_html_e(' &nbsp;| &nbsp;'); ?><?php the_category(', '); ?>
+								<?php echo the_time( 'F j, Y' ); ?><?php esc_html_e(' &nbsp;| &nbsp;'); ?><?php the_category(', '); ?>
 							</h4>
 							<!-- /post details -->
 					
