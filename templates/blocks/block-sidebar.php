@@ -10,6 +10,18 @@ switch ( $sidebar ) {
 } ?>
 <section>
 	<div class="innerContainer">
-		<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar( $result )) ?>
+		<?php 
+		$intro = get_field('intro_content');
+		$outro = get_field('outro_content');
+		
+		if ( $intro ) {
+			echo $intro;
+		}
+		
+		if(!function_exists('dynamic_sidebar') || !dynamic_sidebar( $result ))
+		
+		if ( $outro ) {
+			echo $outro;
+		} ?>
 	</div>
 </section>
