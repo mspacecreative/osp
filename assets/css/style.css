@@ -497,6 +497,13 @@ table {
 
 .cardGrid h2 {
 	margin-bottom: 0;
+	color: #000;
+	transition: 0.25s ease-in-out;
+}
+
+.cardGrid h2:hover {
+	transition: 0.25s ease-in-out;
+	color: #38C3E1;
 }
 
 .cardGrid .colInner {
@@ -2775,14 +2782,11 @@ a {
 	text-transform: uppercase;
 	font-weight: 600;
 	font-size: 18px;
+	margin-top: 15px;
 	align-self: flex-start;
 	padding-right: 30px;
 	display: inline-block;
 	transition: 0.25s ease-in-out;
-}
-
-.text-right {
-	margin-top: 15px;
 }
 
 .readMore:hover, .text-right:hover {

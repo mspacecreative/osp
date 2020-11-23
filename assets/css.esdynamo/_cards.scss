@@ -9,6 +9,12 @@
 }
 .cardGrid h2 {
 	margin-bottom: 0;
+	color: #000;
+	transition: 0.25s ease-in-out;
+}
+.cardGrid h2:hover {
+	transition: 0.25s ease-in-out;
+	color: $brandBlue;
 }
 .cardGrid .colInner {
 	display: flex;
