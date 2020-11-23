@@ -483,7 +483,7 @@ table {
 	font-weight: 600;
 }
 
-.widget_recent_entries {
+.widget_recent_entries h3 {
 	display: none;
 }
 
