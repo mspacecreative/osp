@@ -94,7 +94,7 @@ function recentPosts5() {
 		get_template_part('templates/loops/loop-posts-sidebar');
 	return ob_get_clean();
 }
-add_shortcode( 'recent_posts', 'recentPosts5' );
+add_shortcode( 'recent_posts_5', 'recentPosts5' );
 
 // BLOG SIDEBAR LOOP TEAM
 function loopTeam($atts) {

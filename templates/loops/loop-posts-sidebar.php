@@ -1,11 +1,13 @@
 <?php 
 $args = array( 
-	'post_type' => 'posts',
+	'post_type' => 'post',
 	'posts_per_page'=> 5, 
 	'post__not_in' => array( $post->ID )
 );
 $arr_posts = new WP_Query( $args ); ?>
 	
+<?php if ( $arr_posts->have_posts() ) : ?>
+
 <div class="row gutterSpaceWide cardGrid">
 		
 	<?php while ( $arr_posts->have_posts() ) : $arr_posts->the_post(); ?>
@@ -41,4 +43,5 @@ $arr_posts = new WP_Query( $args ); ?>
 	<?php endwhile; ?>
 	
 </div>	
-<?php wp_reset_query(); ?>
+<?php endif; 
+wp_reset_query(); ?>
