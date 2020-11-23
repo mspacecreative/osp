@@ -487,6 +487,15 @@ table {
 	display: none;
 }
 
+.sidebar .cardGrid .col {
+	flex-basis: 100%;
+	max-width: 100%;
+}
+
+.sidebar .cardGrid .colInner {
+	box-shadow: none;
+}
+
 .cardContainer.whiteBg, whiteBg {
 	background-color: #fff;
 }
