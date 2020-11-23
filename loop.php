@@ -34,9 +34,9 @@
 							<!-- /post title -->
 					
 							<!-- post details -->
-							<h4 class="date">
+							<p class="date">
 								<?php echo the_time( 'F j, Y' ); ?><?php esc_html_e(' &nbsp;| &nbsp;'); ?><?php the_category(', '); ?>
-							</h4>
+							</p>
 							<!-- /post details -->
 					
 							<p><?php osp_custom_excerpt('osp_index'); ?></p>

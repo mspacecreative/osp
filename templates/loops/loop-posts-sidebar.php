@@ -17,14 +17,14 @@ $arr_posts = new WP_Query( $args ); ?>
 
 				<!-- post title -->
 				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-					<h2><?php the_title(); ?></h2>
+					<h4><?php the_title(); ?></h4>
 				</a>
 				<!-- /post title -->
 		
 				<!-- post details -->
-				<h4 class="date">
+				<p class="date">
 					<?php echo the_time( 'F j, Y' ); ?><?php esc_html_e(' &nbsp;| &nbsp;'); ?><?php the_category(', '); ?>
-				</h4>
+				</p>
 				<!-- /post details -->
 		
 				<a class="readMore" href="<?php the_permalink(); ?>"><?php esc_html_e('Read more', 'osp'); ?></a>
