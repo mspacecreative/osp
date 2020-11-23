@@ -88,6 +88,14 @@ function eventbriteEvents() {
 }
 add_shortcode( 'eventbrite_events', 'eventbriteEvents' );
 
+// LOOP 5 RECENT POSTS FROM BLOG
+function recentPosts() {
+	ob_start();
+		get_template_part('templates/loops/loop-posts-sidebar');
+	return ob_get_clean();
+}
+add_shortcode( 'recent_posts', 'recentPosts' );
+
 // BLOG SIDEBAR LOOP TEAM
 function loopTeam($atts) {
 	ob_start();
