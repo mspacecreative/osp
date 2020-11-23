@@ -1,71 +1,46 @@
-<?php get_header(); ?>
+<?php
+get_header(); ?>
 
-	<main role="main" aria-label="Content">
-	<!-- section -->
-	<section>
+<div class="contentWrap">
 
-	<?php if ( have_posts() ) : while (have_posts() ) : the_post(); ?>
+	<?php
+	$title = get_the_title();
+	$titlewidth = get_field('title_row_width');
+	if ( $titlewidth === '1080' ) {
+	echo '
+	<div class="innerContainer w1080 section4">';
+	 } elseif ( $titlewidth === '850' ) {
+	echo '
+	<div class="innerContainer w850 section4">';
+	} else {
+	echo '
+	<div class="innerContainer section4">';
+	}
+	echo '<h1 class="postTitle bottomMargin50">' . $title . '</h1>';
+	echo '
+	<span class="date">
+		<time datetime="' . the_time( 'Y-m-d' ) the_time( 'H:i' ) . '">' . 
+			the_date() the_time() . '
+		</time>
+	</span>';
 
-		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		if ( have_posts() ) : ?>
+		<div class="row gutterSpaceWide">
+		 	<?php while ( have_posts() ) : the_post();
+		 	$content = get_the_content();
+			$featuredimg = get_the_post_thumbnail( get_the_ID(), 'large' ); ?>
+			<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">
+				<?php echo $content; ?>
+			</div>
+			<div class="col col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<?php echo $featuredimg ?>
+			</div>
+			<?php endwhile; ?>
+		</div>
+		<?php
+		endif;
+	echo '
+	</div
+</div>';
 
-			<!-- post thumbnail -->
-			<?php if ( has_post_thumbnail() ) : // Check if Thumbnail exists. ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-					<?php the_post_thumbnail(); // Fullsize image for the single post. ?>
-				</a>
-			<?php endif; ?>
-			<!-- /post thumbnail -->
-
-			<!-- post title -->
-			<h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-			</h1>
-			<!-- /post title -->
-
-			<!-- post details -->
-			<span class="date">
-				<time datetime="<?php the_time( 'Y-m-d' ); ?> <?php the_time( 'H:i' ); ?>">
-					<?php the_date(); ?> <?php the_time(); ?>
-				</time>
-			</span>
-			<span class="author"><?php esc_html_e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php if ( comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' ) ); ?></span>
-			<!-- /post details -->
-
-			<?php the_content(); // Dynamic Content. ?>
-
-			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>' ); // Separated by commas with a line break at the end. ?>
-
-			<p><?php esc_html_e( 'Categorised in: ', 'html5blank' ); the_category( ', ' ); // Separated by commas. ?></p>
-
-			<p><?php esc_html_e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
-
-			<?php edit_post_link(); // Always handy to have Edit Post Links available. ?>
-
-			<?php comments_template(); ?>
-
-		</article>
-		<!-- /article -->
-
-	<?php endwhile; ?>
-
-	<?php else : ?>
-
-		<!-- article -->
-		<article>
-
-			<h1><?php esc_html_e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
-
-		</article>
-		<!-- /article -->
-
-	<?php endif; ?>
-
-	</section>
-	<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+get_footer(); ?>
