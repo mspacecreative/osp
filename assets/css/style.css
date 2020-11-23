@@ -500,6 +500,11 @@ table {
 	padding-bottom: 0;
 }
 
+.sidebar a > h4:hover {
+	transition: 0.25s ease-in-out;
+	color: #38C3E1;
+}
+
 .cardContainer.whiteBg, whiteBg {
 	background-color: #fff;
 }
@@ -1359,6 +1364,10 @@ h3, h3 > a {
 
 h4 {
 	font-size: 20px;
+}
+
+.darkHeading, .darkHeading > a {
+	color: #424242;
 }
 
 menu, ol, ul {

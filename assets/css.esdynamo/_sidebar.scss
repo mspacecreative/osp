@@ -11,3 +11,7 @@
 .sidebar .row.gutterSpaceWide > .col {
 	padding-bottom: 0;
 }
+.sidebar a > h4:hover {
+	transition: 0.25s ease-in-out;
+	color: $brandBlue;
+}

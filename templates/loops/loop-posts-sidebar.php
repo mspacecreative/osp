@@ -17,7 +17,7 @@ $arr_posts = new WP_Query( $args ); ?>
 
 				<!-- post title -->
 				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-					<h4><?php the_title(); ?></h4>
+					<h5 class="darkHeading"><?php the_title(); ?></h5>
 				</a>
 				<!-- /post title -->
 		
