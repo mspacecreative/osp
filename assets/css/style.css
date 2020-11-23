@@ -2745,8 +2745,11 @@ a {
 	align-self: flex-start;
 	padding-right: 30px;
 	display: inline-block;
-	margin-top: 15px;
 	transition: 0.25s ease-in-out;
+}
+
+.text-right {
+	margin-top: 15px;
 }
 
 .readMore:hover, .text-right:hover {
