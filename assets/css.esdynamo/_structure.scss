@@ -113,9 +113,9 @@
 
 .contentWrap {
 	margin-top: 155px;
-	max-width: 1600px;
-    margin-right: auto;
-    margin-left: auto;
+	//max-width: 1600px;
+    //margin-right: auto;
+    //margin-left: auto;
 }
 .para-block-wrap {
 	max-width: 1280px;
@@ -246,6 +246,10 @@
 }
 
 // OFFSET LAYOUT
+.offsetLayout {
+	max-width: 1600px;
+    margin: auto;
+}
 .offsetLayout .innerContainer.innerContainerOffset.left, .innerContainer.innerContainerOffset.right {
 	max-width: 1600px;
 	padding-left: 0;

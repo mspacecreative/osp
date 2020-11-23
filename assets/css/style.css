@@ -2335,9 +2335,6 @@ p:last-of-type {
 
 .contentWrap {
 	margin-top: 155px;
-	max-width: 1600px;
-	margin-right: auto;
-	margin-left: auto;
 }
 
 .para-block-wrap {
@@ -2476,6 +2473,11 @@ p:last-of-type {
 
 .lightGreyBg {
 	background-color: #f5f5f5;
+}
+
+.offsetLayout {
+	max-width: 1600px;
+	margin: auto;
 }
 
 .offsetLayout .innerContainer.innerContainerOffset.left, .innerContainer.innerContainerOffset.right {
