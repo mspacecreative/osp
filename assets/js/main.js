@@ -6,7 +6,9 @@
 	}
 	
 	// EVENTBRITE CARDS
-	$('.eaw-title, .eaw-time').wrapAll('<div class="colInner"></div>');
+	$('.eaw-li').each(function() {
+		$(this).children('.eaw-title, .eaw-time').wrapAll('<div class="colInner"></div>');
+	});
 	
 	// MEDIUM TWEAKS
 	$('.display-medium-title').each(function() {
