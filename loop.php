@@ -18,16 +18,12 @@
 		<!-- /post title -->
 
 		<!-- post details -->
-		<span class="date">
-			<time datetime="<?php the_time( 'Y-m-d' ); ?> <?php the_time( 'H:i' ); ?>">
-				<?php the_date(); ?> <?php the_time(); ?>
-			</time>
-		</span>
-		<span class="author"><?php esc_html_e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-		<span class="comments"><?php if ( comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' ) ); ?></span>
+		<h4 class="date bottomMargin50">
+			<?php esc_html_e('Posted on '); ?><?php echo date( 'F j, Y' ); ?><?php esc_html_e(' &nbsp;| &nbsp;'); ?><?php the_category(', '); ?>
+		</h4>
 		<!-- /post details -->
 
-		<?php html5wp_excerpt( 'html5wp_index' ); // Build your custom callback length in functions.php. ?>
+		<?php the_excerpt(); // Build your custom callback length in functions.php. ?>
 
 		<?php edit_post_link(); ?>
 
@@ -40,7 +36,7 @@
 
 	<!-- article -->
 	<article>
-		<h2><?php esc_html_e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+		<h2><?php esc_html_e( 'Sorry, nothing to display.', 'osp' ); ?></h2>
 	</article>
 	<!-- /article -->
 
