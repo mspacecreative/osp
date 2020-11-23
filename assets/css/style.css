@@ -533,6 +533,10 @@ table {
 	display: none;
 }
 
+.news-events #yrc-shell-0 .yrc-video:nth-of-type(5), .news-events #yrc-shell-0 .yrc-video:nth-of-type(6), .news-events #yrc-shell-0 .yrc-video:nth-of-type(7), .news-events #yrc-shell-0 .yrc-video:nth-of-type(8) {
+	display: none;
+}
+
 .evenbriteEvents {
 	margin: 50px auto;
 }
