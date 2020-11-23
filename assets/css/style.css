@@ -507,8 +507,12 @@ table {
 	color: #38C3E1;
 }
 
-.sidebar h5 {
-	margin: 10px 0 0;
+.cardGrid h5 {
+	margin: 10px 0;
+}
+
+.cardGrid h4 {
+	margin: 0 0 10px;
 }
 
 .cardContainer.whiteBg, whiteBg {
