@@ -1,26 +1,24 @@
-<?php
-get_header(); ?>
+<?php get_header(); ?>
 
 <div class="contentWrap">
 
 	<?php
 	$title = get_the_title();
 	$titlewidth = get_field('title_row_width');
-	if ( $titlewidth === '1080' ) {
-	echo '
-	<div class="innerContainer w1080 section4">';
-	 } elseif ( $titlewidth === '850' ) {
-	echo '
-	<div class="innerContainer w850 section4">';
-	} else {
-	echo '
-	<div class="innerContainer section4">';
-	}
-	echo '<h1 class="postTitle bottomMargin50">' . $title . '</h1>';
-	echo '
-	<span class="date">' . the_date( 'Y-m-d' ) . '</span>';
+	
+	if ( $titlewidth === '1080' ) : ?>
+	<div class="innerContainer w1080 section4">
+	
+	<?php elseif ( $titlewidth === '850' ) : ?>
+	<div class="innerContainer w850 section4">
+	
+	<?php else : ?>
+	<div class="innerContainer section4">
+	
+		<h1 class="postTitle bottomMargin50"><?php the_title(); ?></h1>';
+		<span class="date"><?php the_date( 'Y-m-d' ); ?></span>
 
-		if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 		<div class="row gutterSpaceWide">
 		 	<?php while ( have_posts() ) : the_post();
 		 	$content = get_the_content();
@@ -34,9 +32,8 @@ get_header(); ?>
 			<?php endwhile; ?>
 		</div>
 		<?php
-		endif;
-	echo '
-	</div
-</div>';
+		endif; ?>
+	</div>
+</div>
 
-get_footer(); ?>
+<?php get_footer(); ?>
