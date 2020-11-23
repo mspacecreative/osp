@@ -10,6 +10,7 @@ switch ( $sidebar ) {
 		break;
 	case 'blog':
 		$result = 'sidebar-blog';
+		break;
 	default:
 		$result = 'eventbrite-events';
 } ?>
