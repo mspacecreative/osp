@@ -483,6 +483,10 @@ table {
 	font-weight: 600;
 }
 
+.widget_recent_entries {
+	display: none;
+}
+
 .cardContainer.whiteBg, whiteBg {
 	background-color: #fff;
 }
