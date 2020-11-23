@@ -521,6 +521,10 @@ table {
 	margin-top: auto;
 }
 
+.innerCardContainer {
+	box-shadow: 0 0 10px #999;
+}
+
 .evenbriteEvents {
 	margin: 50px auto;
 }
