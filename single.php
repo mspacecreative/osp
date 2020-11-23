@@ -16,8 +16,12 @@
 	<div class="innerContainer section4">
 	<?php endif; ?>
 	
-		<h1 class="postTitle bottomMargin50"><?php the_title(); ?></h1>';
-		<span class="date"><?php esc_html_e('Posted on ') date( 'Y-m-d' ); ?></span>
+		<div class="row">
+			<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">
+				<h1 class="postTitle bottomMargin50"><?php the_title(); ?></h1>';
+				<span class="date"><?php echo date( 'Y-m-d' ); ?></span>
+			</div>
+		</div>
 
 		<?php if ( have_posts() ) : ?>
 		<div class="row gutterSpaceWide">
