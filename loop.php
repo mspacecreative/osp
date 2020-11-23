@@ -11,26 +11,24 @@
 			
 				<div class="row">
 					
-					<div class="col col-lg-3 col-md-3 col-sm-12 col-xs-12">
-			
 					<!-- post thumbnail -->
 					<?php if ( has_post_thumbnail() ) : // Check if thumbnail exists. ?>
+					<div class="col col-lg-3 col-md-3 col-sm-12 col-xs-12">
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 							<?php the_post_thumbnail( array( 120, 120 ) ); // Declare pixel size you need inside the array. ?>
 						</a>
+					</div>
 					<?php endif; ?>
 					<!-- /post thumbnail -->
-					
-					</div>
 					
 					<div class="col col-lg-9 col-md-9 col-sm-12 col-xs-12">
 						
 						<div class="colInner">
 			
 							<!-- post title -->
-							<h2>
-								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-							</h2>
+							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+								<h2><?php the_title(); ?></h2>
+							</a>
 							<!-- /post title -->
 					
 							<!-- post details -->
