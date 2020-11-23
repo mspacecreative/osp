@@ -362,6 +362,12 @@ function html5_blank_view_article($more)
 // custom excerpt length
 function osp_custom_excerpt_length( $length ) {
    return 20;
+   
+   $output = get_the_excerpt();
+   $output = apply_filters('wptexturize', $output);
+   $output = apply_filters('convert_chars', $output);
+   $output = '<p>' . $output . '</p>';
+   echo $output;
 }
 add_filter( 'excerpt_length', 'osp_custom_excerpt_length', 999 );
 
