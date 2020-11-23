@@ -543,8 +543,8 @@ table {
 .evenbriteEvents ul > li {
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
-	flex-basis: 50%;
-	max-width: 50%;
+	flex-basis: 33.33333333%;
+	max-width: 33.33333333%;
 }
 
 .tabAnswer {
