@@ -9,6 +9,10 @@
 	box-shadow: none;
 	padding: 0;
 }
+.sidebar a > h4 {
+	transition: 0.25s ease-in-out;
+	margin-bottom: 0;
+}
 .sidebar a > h4:hover {
 	transition: 0.25s ease-in-out;
 	color: $brandBlue;
