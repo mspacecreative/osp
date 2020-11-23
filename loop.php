@@ -37,7 +37,7 @@
 							</h4>
 							<!-- /post details -->
 					
-							<?php the_excerpt(); ?>
+							<?php osp_custom_excerpt('osp_index'); ?>
 							
 						</div>
 					

@@ -360,14 +360,23 @@ function html5_blank_view_article($more)
 */
 
 // custom excerpt length
+function osp_excerpt($length_callback = '', $more_callback = '')
+{
+    global $post;
+    if (function_exists($length_callback)) {
+        add_filter('excerpt_length', $length_callback);
+    }
+    if (function_exists($more_callback)) {
+        add_filter('excerpt_more', $more_callback);
+    }
+    $output = get_the_excerpt();
+    $output = apply_filters('wptexturize', $output);
+    $output = apply_filters('convert_chars', $output);
+    $output = '<p>' . $output . '</p>';
+    echo $output;
+}
 function osp_custom_excerpt_length( $length ) {
    return 20;
-   
-   $output = get_the_excerpt();
-   $output = apply_filters('wptexturize', $output);
-   $output = apply_filters('convert_chars', $output);
-   $output = '<p>' . $output . '</p>';
-   echo $output;
 }
 add_filter( 'excerpt_length', 'osp_custom_excerpt_length', 999 );
 
