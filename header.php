@@ -18,6 +18,14 @@
 	</head>
 	<body <?php body_class(); ?>>
 		
+		<!-- fixed background image -->
+		<?php 
+		$bgimg = get_field('fixed_background_image', 'options');
+		if ( $bgimg ) {
+			echo '<div class="fixedBgImg" style="background: url(' . $bgimg . ') no-repeat center center fixed;"></div>';
+		} ?>
+		<!-- / fixed background image -->
+		
 		<!-- wrapper -->
 		<div class="wrapper">
 			

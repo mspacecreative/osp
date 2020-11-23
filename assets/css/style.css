@@ -2428,8 +2428,10 @@ p:last-of-type {
 }
 
 .faqs {
-	background: url(../img/ocean-bg.jpg) no-repeat center center fixed;
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
 }
 
 .faqs::before {
@@ -2935,6 +2937,15 @@ img {
 
 .photoGrid li {
 	border-bottom: 1px solid #c9c9c9;
+}
+
+.fixedBgImg {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	top: 0;
+	left: 0;
 }
 
 #buckets a:hover .overlaidText {

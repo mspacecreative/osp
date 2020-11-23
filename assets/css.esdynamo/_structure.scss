@@ -198,8 +198,10 @@
 
 // FAQs
 .faqs {
-	background: url(../img/ocean-bg.jpg) no-repeat center center fixed;
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
 }
 .faqs::before {
 	position: absolute;

@@ -379,3 +379,16 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page( 'Theme Settings' );
 	
 }
+
+// GET BACKGROUND IMAGE FROM FAQs BLOCK
+function fixedBackgroundImage() {
+    $content = get_the_content( false, false, 46 );
+	$blocks = parse_blocks( $content );
+	foreach ( $blocks as $block ) {
+		if ( $block['blockName'] === 'acf/faqs' ) {
+			$url = $block['attrs']['data']['background_image'];
+			$result = '<div class="fixedBgImg" style="background: url(' . $url . ') no-repeat center center fixed;"></div>';
+		}
+	}
+	echo $result;
+}
