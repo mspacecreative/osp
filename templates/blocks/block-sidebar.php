@@ -18,7 +18,7 @@ switch ( $sidebar ) {
 			echo $intro;
 		}
 		
-		if(!function_exists('dynamic_sidebar') || !dynamic_sidebar( $result ))
+		if(!function_exists('dynamic_sidebar') || !dynamic_sidebar( $result ));
 		
 		if ( $outro ) {
 			echo $outro;
