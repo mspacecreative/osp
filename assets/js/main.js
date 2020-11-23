@@ -5,6 +5,9 @@
 		$('.display-medium-item').find('.medium-image').css('height', cardHeight);
 	}
 	
+	// EVENTBRITE CARDS
+	$('.eaw-title, .eaw-time').wrapAll('<div class="colInner"></div>');
+	
 	// MEDIUM TWEAKS
 	$('.display-medium-title').each(function() {
 		var titles = $(this),
