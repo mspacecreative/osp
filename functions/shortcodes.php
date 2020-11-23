@@ -86,7 +86,7 @@ function eventbriteEvents() {
 		get_template_part('templates/eventbrite');
 	return ob_get_clean();
 }
-add_shortcode( 'events', 'eventbriteEvents' );
+add_shortcode( 'eventbrite_events', 'eventbriteEvents' );
 
 // BLOG SIDEBAR LOOP TEAM
 function loopTeam($atts) {
