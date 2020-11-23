@@ -7,3 +7,13 @@
 .cardGrid .row, .cardGrid .row .col, .cardGrid .row .col .colInner {
 	height: 100%;
 }
+.cardGrid h2 {
+	margin-bottom: 0;
+}
+.cardGrid .colInner {
+	display: flex;
+	flex-direction: column;
+}
+.cardGrid .colInner p:last-of-type {
+	margin-top: auto;
+}
