@@ -30,7 +30,7 @@
 			<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">
 				<?php the_content(); ?>
 			</div>
-			<div class="col col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="col col-lg-4 col-md-4 col-sm-12 col-xs-12 sidebar">
 				<?php echo $featuredimg ?>
 				<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-blog')) ?>
 			</div>
