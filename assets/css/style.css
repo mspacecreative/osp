@@ -527,6 +527,14 @@ table {
 	margin: 0 0 10px;
 }
 
+.sidebar .cardGrid h5 {
+	margin: 10px 0 0;
+}
+
+.sidebar .cardGrid h4 {
+	margin: 15px 0;
+}
+
 .cardContainer.whiteBg, whiteBg {
 	background-color: #fff;
 }
