@@ -116,6 +116,17 @@ if (function_exists('register_sidebar'))
         'before_title' => '<h3>',
         'after_title' => '</h3>'
     ));
+
+    // Define Page Sidebar
+    register_sidebar(array(
+        'name' => __('Page Sidebar', 'osp'),
+        'description' => __('Content for page sidebar', 'osp'),
+        'id' => 'sidebar-page',
+        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
     
     // Define Footer Area 1
     register_sidebar(array(

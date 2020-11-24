@@ -30,7 +30,7 @@ switch ( $spacing ) {
 } ?>
 <section>
 	<?php if ( $padding ): ?>
-	<div class="innerContainer<?php esc_html_e(' '); echo $padding ?>">
+	<div class="innerContainer <?php echo $padding ?>">
 	<?php else : ?>
 	<div class="innerContainer">
 	<?php endif; ?>
