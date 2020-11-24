@@ -607,6 +607,20 @@ table {
 	margin-bottom: 10px;
 }
 
+@media (max-width: 64em) {
+	.evenbriteEvents ul > li {
+		flex-basis: 50%;
+		max-width: 50%;
+	}
+}
+
+@media (max-width: 48em) {
+	.evenbriteEvents ul > li {
+		flex-basis: 100%;
+		max-width: 100%;
+	}
+}
+
 .tabAnswer {
 	display: none;
 	padding: 2em 2em 1em;
