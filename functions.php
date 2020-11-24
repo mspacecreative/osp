@@ -121,7 +121,7 @@ if (function_exists('register_sidebar'))
     register_sidebar(array(
         'name' => __('Page Sidebar', 'osp'),
         'description' => __('Content for page sidebar', 'osp'),
-        'id' => 'sidebar-page',
+        'id' => 'sidebar-on-page',
         'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
