@@ -343,6 +343,19 @@ function my_acf_init() {
 			'mode'				=> 'edit',
 			'supports'			=> array( 'mode' => false ),
 		));
+		
+		// register sidebar block
+		acf_register_block(array(
+			'name'				=> 'feed-grid',
+			'title'				=> __('Feed Grid Block'),
+			'description'		=> __('Pulls in content from CPTs and displays it in a grid'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'images-alt',
+			'keywords'			=> array( 'custom post type', 'feed' ),
+			'mode'				=> 'edit',
+			'supports'			=> array( 'mode' => false ),
+		));
 
 	}
 }
