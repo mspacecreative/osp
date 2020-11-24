@@ -597,6 +597,11 @@ table {
 	padding-right: 1.5rem;
 	flex-basis: 33.33333333%;
 	max-width: 33.33333333%;
+	padding-bottom: 1.5rem;
+}
+
+.evenbriteEvents ul > li:last-of-type {
+	padding-bottom: 0;
 }
 
 .evenbriteEvents .innerCardContainer {
