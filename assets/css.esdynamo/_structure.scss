@@ -151,6 +151,9 @@
 	padding-left: 2.5rem;
 	padding-bottom: 5rem;
 }
+.col .row.gutterSpaceDefault > .col {
+	padding-bottom: 1rem;
+}
 
 .nolColBottomPadding > .col {
 	padding-bottom: 0;
