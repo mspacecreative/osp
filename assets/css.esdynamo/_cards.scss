@@ -43,7 +43,15 @@
 	margin-left: -.5rem;
 	margin-right: -.5rem;
 }
-.news-and-events .evenbriteEvents ul > li {
-	padding-left: .5rem;
-	padding-left: .5rem;
+@media (min-width: 64em) {
+	.news-and-events .evenbriteEvents ul {
+		margin-left: -.5rem!important;
+		margin-right: -.5rem!important;
+	}
+	.news-and-events .evenbriteEvents ul > li {
+		padding-left: .5rem!important;
+		padding-left: .5rem!important;
+		flex-basis: 50%!important;
+		max-width: 50%!important;
+	}
 }
