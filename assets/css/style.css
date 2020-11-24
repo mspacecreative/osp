@@ -2569,6 +2569,10 @@ p:last-of-type {
 	padding-bottom: 1rem;
 }
 
+.page-template-page-sidebar .contentWrap > .innerContainer:nth-of-type(2) {
+	padding: 0;
+}
+
 .nolColBottomPadding > .col {
 	padding-bottom: 0;
 }
