@@ -1582,7 +1582,7 @@ p:last-of-type {
 	justify-content: flex-end;
 }
 
-.postTitle {
+.postTitle span {
 	font-size: 18px;
 	text-transform: uppercase;
 	display: block;

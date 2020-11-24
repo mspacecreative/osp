@@ -16,7 +16,7 @@
 	<div class="innerContainer section4">
 	<?php endif; ?>
 	
-		<h1><span class="grey postTitle"><?php esc_html_e( 'Category ', 'osp' ); ?></span><?php single_cat_title(); ?></h1>
+		<h1 class="postTitle"><span class="grey"><?php esc_html_e( 'Category ', 'osp' ); ?></span><?php single_cat_title(); ?></h1>
 		
 		<?php get_template_part( 'loop' );
 		get_template_part( 'pagination' ); ?>
