@@ -35,11 +35,11 @@ if ( have_posts() ) {
 	echo '
 	<div class="innerContainer">
 		<div class="row">
-			<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">'; 
+			<div class="col col-lg-9 col-md-9 col-sm-12 col-xs-12">'; 
 				echo the_content();
 			echo '
 			</div>
-			<div class="col col-lg-4 col-md-4 col-sm-12 col-xs-12">';
+			<div class="col col-lg-3 col-md-3 col-sm-12 col-xs-12">';
 				echo get_sidebar('page');
 			echo '
 			</div>
