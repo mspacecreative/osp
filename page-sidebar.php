@@ -34,7 +34,7 @@ if ( have_posts() ) {
 	 	
 	echo '
 	<div class="innerContainer">
-		<div class="row">
+		<div class="row gutterSpaceWide">
 			<div class="col col-lg-9 col-md-9 col-sm-12 col-xs-12">'; 
 				echo the_content();
 			echo '
