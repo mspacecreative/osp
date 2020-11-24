@@ -535,7 +535,7 @@ table {
 	margin: 0;
 }
 
-.sidebar .col .row.gutterSpaceDefault > .col {
+.sidebar.col .row.gutterSpaceDefault > .col {
 	padding-bottom: 0;
 }
 
