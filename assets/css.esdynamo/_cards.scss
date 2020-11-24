@@ -31,3 +31,11 @@
 .innerCardContainer {
 	box-shadow: 0 0 10px #999;
 }
+
+// NEWS AND EVENTS CARD STYLES
+.news-and-events .display-medium-item {
+	flex-direction: column;
+}
+.news-and-events #display-medium-owl-demo .medium-image {
+	height: 200px;
+}
