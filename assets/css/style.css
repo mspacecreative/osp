@@ -600,10 +600,6 @@ table {
 	padding-bottom: 1.5rem;
 }
 
-.evenbriteEvents ul > li:last-of-type {
-	padding-bottom: 0;
-}
-
 .evenbriteEvents .innerCardContainer {
 	height: 100%;
 }
@@ -3199,7 +3195,7 @@ footer.section {
 		width: 100%;
 	}
 	
-	footer .col:nth-child(3n+1):nth-last-child(-n+3), .photoGrid .col:nth-child(3n+1):nth-last-child(-n+3), .row.gutterSpaceWider > .col:nth-child(3n+1):nth-last-child(-n+3), .row.gutterSpaceWide > .col:nth-child(3n+1):nth-last-child(-n+3), .photoGrid li:nth-child(3n+1):nth-last-child(-n+3), .photoGrid .col:nth-child(3n+1):nth-last-child(-n+3) ~ .col, footer .col:nth-child(3n+1):nth-last-child(-n+3) ~ .col, .photoGrid li:nth-child(3n+1):nth-last-child(-n+3) ~ li, .row.gutterSpaceWider > .col:nth-child(3n+1):nth-last-child(-n+3) ~ .col, .row.gutterSpaceWide > .col:nth-child(3n+1):nth-last-child(-n+3) ~ .col {
+	footer .col:nth-child(3n+1):nth-last-child(-n+3), .photoGrid .col:nth-child(3n+1):nth-last-child(-n+3), .row.gutterSpaceWider > .col:nth-child(3n+1):nth-last-child(-n+3), .row.gutterSpaceWide > .col:nth-child(3n+1):nth-last-child(-n+3), .evenbriteEvents ul > li:nth-child(3n+1):nth-last-child(-n+3), .photoGrid li:nth-child(3n+1):nth-last-child(-n+3), .photoGrid .col:nth-child(3n+1):nth-last-child(-n+3) ~ .col, footer .col:nth-child(3n+1):nth-last-child(-n+3) ~ .col, .photoGrid li:nth-child(3n+1):nth-last-child(-n+3) ~ li, .row.gutterSpaceWider > .col:nth-child(3n+1):nth-last-child(-n+3) ~ .col, .row.gutterSpaceWide > .col:nth-child(3n+1):nth-last-child(-n+3) ~ .col, .evenbriteEvents ul > li:nth-child(3n+1):nth-last-child(-n+3) ~ li {
 		margin-bottom: 0;
 		padding-bottom: 0;
 	}
