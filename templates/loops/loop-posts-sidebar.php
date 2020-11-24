@@ -8,7 +8,7 @@ $arr_posts = new WP_Query( $args ); ?>
 	
 <?php if ( $arr_posts->have_posts() ) : ?>
 
-<div class="row gutterSpaceWide cardGrid">
+<div class="row gutterSpaceDefault cardGrid">
 			
 		<?php while ( $arr_posts->have_posts() ) : $arr_posts->the_post(); ?>
 			

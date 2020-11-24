@@ -573,7 +573,7 @@ table {
 	margin-top: 10px;
 }
 
-#yrc-shell-0 .yrc-pagination, #yrc-shell-0 .yrc-video-date, .news-and-events #yrc-shell-0 .yrc-video:nth-of-type(5), .news-and-events #yrc-shell-0 .yrc-video:nth-of-type(6), .news-and-events #yrc-shell-0 .yrc-video:nth-of-type(7), .news-and-events #yrc-shell-0 .yrc-video:nth-of-type(8) {
+#yrc-shell-0 .yrc-pagination, #yrc-shell-0 .yrc-video-date, .news-and-events #yrc-shell-0 .yrc-video:nth-of-type(4), .news-and-events #yrc-shell-0 .yrc-video:nth-of-type(5), .news-and-events #yrc-shell-0 .yrc-video:nth-of-type(6), .news-and-events #yrc-shell-0 .yrc-video:nth-of-type(7), .news-and-events #yrc-shell-0 .yrc-video:nth-of-type(8) {
 	display: none;
 }
 
