@@ -577,11 +577,6 @@ table {
 	height: 200px;
 }
 
-.news-and-events .evenbriteEvents ul {
-	margin-left: -.5rem;
-	margin-right: -.5rem;
-}
-
 @media (min-width: 64em) {
 	.news-and-events .evenbriteEvents ul {
 		margin-left: -0.5rem !important;
@@ -589,7 +584,7 @@ table {
 	}
 	
 	.news-and-events .evenbriteEvents ul > li {
-		padding-left: 0.5rem !important;
+		padding-right: 0.5rem !important;
 		padding-left: 0.5rem !important;
 		flex-basis: 50% !important;
 		max-width: 50% !important;
