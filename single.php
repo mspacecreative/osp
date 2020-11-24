@@ -24,7 +24,7 @@
 		</div>
 
 		<?php if ( have_posts() ) : ?>
-		<div class="row gutterSpaceWide">
+		<div class="row gutterSpaceWider">
 		 	<?php while ( have_posts() ) : the_post();
 		 	$featuredimg = get_the_post_thumbnail( get_the_ID(), 'large' ); ?>
 			<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">

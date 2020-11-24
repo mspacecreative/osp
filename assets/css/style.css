@@ -549,6 +549,7 @@ table {
 
 .sidebar h3 {
 	margin-bottom: 30px;
+	color: #999;
 }
 
 .cardContainer.whiteBg, whiteBg {
@@ -1579,6 +1580,13 @@ p:last-of-type {
 .social_footer {
 	display: flex;
 	justify-content: flex-end;
+}
+
+.postTitle {
+	font-size: 18px;
+	text-transform: uppercase;
+	display: block;
+	line-height: 1.5em;
 }
 
 .container, .container-fluid {
