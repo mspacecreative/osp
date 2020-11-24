@@ -15,32 +15,37 @@ switch ( $titlewidth ) {
 	
 	default:
 		$width = '';
-}
+} ?>
+
+<div class="contentWrap">
+
+<?php 
+$title = get_the_title();
+echo '
+	<div class="innerContainer section4 ' . $width . '">
+	 		
+	 	<h1 class="postTitle">' . $title . '</h1>
+			
+	</div>';
 
 if ( have_posts() ) {
  	while ( have_posts() ) { 
-	 	the_post();
+	the_post();
 	 	
-	 	$title = get_the_title();
-	 	echo '
-	 	<div class="contentWrap">
-	 	
-	 		<div class="innerContainer section4 ' . $width . '">
-	 		
-	 			<h1 class="postTitle">' . $title . '</h1>
-			
+	echo '
+	<div class="innerContainer">
+		<div class="row">
+			<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">' . 
+				the_content() . '
 			</div>
-			
-			<div class="row">
-				<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">' . 
-					the_content() . '
-				</div>
-				<div class="col col-lg-4 col-md-4 col-sm-12 col-xs-12">' .
-					get_sidebar('sidebar-page') . '
-				</div>
+			<div class="col col-lg-4 col-md-4 col-sm-12 col-xs-12">' .
+				get_sidebar('sidebar-page') . '
 			</div>
-		</div>';
+		</div>
+	</div>';
 	}
-}
+} ?>
 
-get_footer(); ?>
+</div>
+
+<?php get_footer(); ?>
