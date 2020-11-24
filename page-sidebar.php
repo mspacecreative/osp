@@ -40,7 +40,7 @@ if ( have_posts() ) {
 			echo '
 			</div>
 			<div class="col col-lg-4 col-md-4 col-sm-12 col-xs-12">';
-				echo get_sidebar('sidebar-page');
+				echo get_sidebar('page');
 			echo '
 			</div>
 		</div>
