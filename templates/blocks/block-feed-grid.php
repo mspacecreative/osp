@@ -15,7 +15,7 @@ if ( $loop->have_posts() ) : ?>
 		if ( $heading ) {
 			echo '<h2 class="light">' . $heading . '</h2>';
 		} ?>
-		<div class="row gutterSpaceWide">
+		<div class="row gutterSpaceWide feedGrid">
 		<?php while ( $loop->have_posts() ) : $loop->the_post();
 		$featuredimg = get_the_post_thumbnail( get_the_ID(), 'card-feature' );
 		$title = get_the_title();
