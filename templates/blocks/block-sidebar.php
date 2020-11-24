@@ -29,7 +29,11 @@ switch ( $spacing ) {
 		$padding = '';
 } ?>
 <section>
+	<?php if ( $padding ): ?>
 	<div class="innerContainer<?php esc_html_e(' '); echo $padding ?>">
+	<?php else : ?>
+	<div class="innerContainer">
+	<?php endif; ?>
 		<?php 
 		$intro = get_field('intro_content');
 		$outro = get_field('outro_content');
