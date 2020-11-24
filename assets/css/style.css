@@ -532,7 +532,19 @@ table {
 }
 
 .sidebar .cardGrid h4 {
-	margin: 15px 0;
+	margin: 0;
+}
+
+.sidebar .col .row.gutterSpaceDefault > .col {
+	padding-bottom: 0;
+}
+
+.sidebar .cardGrid .colInner {
+	height: auto;
+}
+
+.sidebar .cardGrid .readMore {
+	margin-top: 15px;
 }
 
 .cardContainer.whiteBg, whiteBg {
