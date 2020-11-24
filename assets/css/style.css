@@ -627,6 +627,8 @@ table {
 
 #yrc-shell-0 .yrc-item-title {
 	margin-top: 10px;
+	white-space: unset;
+	text-overflow: unset;
 }
 
 #yrc-shell-0 .yrc-pagination, #yrc-shell-0 .yrc-video-date, .news-and-events #yrc-shell-0 .yrc-video:nth-of-type(4), .news-and-events #yrc-shell-0 .yrc-video:nth-of-type(5), .news-and-events #yrc-shell-0 .yrc-video:nth-of-type(6), .news-and-events #yrc-shell-0 .yrc-video:nth-of-type(7), .news-and-events #yrc-shell-0 .yrc-video:nth-of-type(8) {
