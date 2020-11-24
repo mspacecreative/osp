@@ -603,6 +603,10 @@ table {
 	margin: 50px auto 15px;
 }
 
+.news-and-events .evenbriteEvents {
+	margin-top: 30px;
+}
+
 .evenbriteEvents ul {
 	padding: 0;
 	list-style: none;
