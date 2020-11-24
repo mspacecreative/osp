@@ -574,6 +574,10 @@ table {
 	box-shadow: 0 0 10px #d9d9d9;
 }
 
+.news-and-events .cardGrid h5 {
+	margin: 10px 0 20px;
+}
+
 .news-and-events .display-medium-item {
 	flex-direction: column;
 }

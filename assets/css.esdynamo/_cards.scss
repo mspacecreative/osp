@@ -37,6 +37,10 @@
 }
 
 // NEWS AND EVENTS CARD STYLES
+.news-and-events .cardGrid h5 {
+	margin: 10px 0 20px;
+}
+
 .news-and-events .display-medium-item {
 	flex-direction: column;
 }
