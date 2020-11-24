@@ -22,6 +22,8 @@
 }
 .evenbriteEvents .innerCardContainer {
 	height: 100%;
+	display: flex;
+    flex-direction: column;
 }
 .evenbriteEvents .colInner {
 	display: flex;

@@ -1,5 +1,6 @@
 <?php
 $sidebar = get_field('sidebar');
+$spacing = get_field('vertical_spacing');
 
 switch ( $sidebar ) {
 	case 'eventbrite-events':
@@ -13,9 +14,22 @@ switch ( $sidebar ) {
 		break;
 	default:
 		$result = 'eventbrite-events';
+}
+switch ( $spacing ) {
+	case 'top':
+		$padding = 'topPadding';
+		break;
+	case 'bottom':
+		$padding = 'bottomPadding';
+		break;
+	case 'both':
+		$padding = 'topBottomPadding';
+		break;
+	default:
+		$padding = '';
 } ?>
 <section>
-	<div class="innerContainer">
+	<div class="innerContainer <?php echo $padding ?>">
 		<?php 
 		$intro = get_field('intro_content');
 		$outro = get_field('outro_content');
