@@ -547,6 +547,10 @@ table {
 	margin-top: 15px;
 }
 
+.sidebar h3 {
+	margin-bottom: 30px;
+}
+
 .cardContainer.whiteBg, whiteBg {
 	background-color: #fff;
 }
