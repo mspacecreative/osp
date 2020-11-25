@@ -3259,7 +3259,7 @@ footer.section {
 	}
 	
 	.row.gutterSpaceWider > .bottomMarginMobile.col, .row.gutterSpaceWide > .bottomMarginMobile.col, .row > .bottomMarginMobile.col {
-		padding-bottom: 2em;
+		padding-bottom: 4em;
 	}
 }
 
