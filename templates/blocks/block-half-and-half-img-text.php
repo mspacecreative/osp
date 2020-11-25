@@ -189,7 +189,7 @@ elseif ( $blockanchor ): ?>
 				<?php elseif ( $anchor ): ?>
 				<div id="<?php echo $anchor ?>" class="col-lg-6 bottomMarginMobile col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
 				<?php else : ?>
-				<div class="<?php echo $colwidth ?> col-md-6 col-sm-12 col-xs-12 col bottomMarginMobile offsetContentContainer">
+				<div class="<?php echo $colwidth ?> col-md-6 col-sm-6 col-xs-12 col bottomMarginMobile offsetContentContainer">
 				<?php endif;
 				
 					if ( $contenttype == 'carousel' ): ?>
@@ -328,7 +328,7 @@ elseif ( $blockanchor ): ?>
 				<?php elseif ( $anchor ): ?>
 				<div id="<?php echo $anchor ?>" class="col-lg-6 bottomMarginMobile col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
 				<?php else : ?>
-				<div class="<?php echo $colwidth ?> col-md-6 col-sm-12 col-xs-12 col bottomMarginMobile offsetContentContainer">
+				<div class="<?php echo $colwidth ?> col-md-6 col-sm-6 col-xs-12 col bottomMarginMobile offsetContentContainer">
 				<?php endif;
 				
 					if ( $contenttype == 'carousel' ): ?>
