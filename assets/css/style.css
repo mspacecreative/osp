@@ -3196,6 +3196,7 @@ img {
 	flex-basis: 100%;
 	max-width: 100%;
 	border-right: none;
+	min-height: auto;
 }
 
 .about-us .photoGrid li:last-of-type img {
