@@ -154,6 +154,7 @@ elseif ( $blockanchor ): ?>
 			
 				if( have_rows('left_column') ):
 		 		while( have_rows('left_column') ): the_row();
+		 		$anchor = get_sub_field('anchor');
 		 		$icon = get_sub_field('icon');
 		 		$iconsize = 'thumbnail';
 		 		$heading = get_sub_field('heading');
@@ -185,6 +186,8 @@ elseif ( $blockanchor ): ?>
 		 		
 		 		if ( $offsetlayout ): ?>
 				<div class="col-lg-6 bottomMarginMobile col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
+				<?php elseif ( $anchor ): ?>
+				<div id="<?php echo $anchor ?>" class="col-lg-6 bottomMarginMobile col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
 				<?php else : ?>
 				<div class="<?php echo $colwidth ?> col-md-6 col-sm-12 col-xs-12 col bottomMarginMobile offsetContentContainer">
 				<?php endif;
@@ -290,6 +293,7 @@ elseif ( $blockanchor ): ?>
 				
 				<?php if( have_rows('right_column') ):
 		 		while( have_rows('right_column') ): the_row();
+		 		$anchor = get_sub_field('anchor');
 		 		$icon = get_sub_field('icon');
 		 		$iconsize = 'thumbnail';
 		 		$contenttype = get_sub_field('content_type');
@@ -321,6 +325,8 @@ elseif ( $blockanchor ): ?>
 				
 				if ( $offsetlayout ): ?>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col bottomMarginMobile offsetContentContainer">
+				<?php elseif ( $anchor ): ?>
+				<div id="<?php echo $anchor ?>" class="col-lg-6 bottomMarginMobile col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
 				<?php else : ?>
 				<div class="<?php echo $colwidth ?> col-md-6 col-sm-12 col-xs-12 col bottomMarginMobile offsetContentContainer">
 				<?php endif;
