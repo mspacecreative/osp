@@ -13,3 +13,10 @@
 	left: 0;
 	top: 0;
 }
+
+.owl-controls {
+	display: none!important;
+}
+.owl-carousel .owl-item {
+	float: none;
+}

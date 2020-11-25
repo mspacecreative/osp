@@ -759,6 +759,14 @@ table {
 	top: 0;
 }
 
+.owl-controls {
+	display: none !important;
+}
+
+.owl-carousel .owl-item {
+	float: none;
+}
+
 .display-medium-subtitle {
 	display: none;
 }
