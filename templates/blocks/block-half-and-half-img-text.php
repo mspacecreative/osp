@@ -154,6 +154,8 @@ elseif ( $blockanchor ): ?>
 			
 				if( have_rows('left_column') ):
 		 		while( have_rows('left_column') ): the_row();
+		 		$icon = get_sub_field('icon');
+		 		$iconsize = 'thumbnail';
 		 		$heading = get_sub_field('heading');
 				$content = get_sub_field('content');
 				$contenttype = get_sub_field('content_type');
@@ -245,6 +247,10 @@ elseif ( $blockanchor ): ?>
 					
 					<?php else :
 					
+					if ( $icon ) {
+						echo '<div class="iconContainer">' . wp_get_attachment_image( $icon, $iconsize ) . '</div>';
+					}
+					
 					if ( $heading ) {
 						echo '<h3>' . $heading . '</h3>';
 					}
@@ -284,6 +290,8 @@ elseif ( $blockanchor ): ?>
 				
 				<?php if( have_rows('right_column') ):
 		 		while( have_rows('right_column') ): the_row();
+		 		$icon = get_sub_field('icon');
+		 		$iconsize = 'thumbnail';
 		 		$contenttype = get_sub_field('content_type');
 		 		$heading = get_sub_field('heading_right_col');
 		 		$contentrightcol = get_sub_field('content_right_col');
@@ -374,6 +382,10 @@ elseif ( $blockanchor ): ?>
 					<?php endif; ?>
 					
 					<?php elseif ( $contenttype == 'content' ):
+					
+					if ( $icon ) {
+						echo '<div class="iconContainer">' . wp_get_attachment_image( $icon, $iconsize ) . '</div>';
+					}
 					
 					if ( $heading ) {
 						echo '<h3>' . $heading . '</h3>';
