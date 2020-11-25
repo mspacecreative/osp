@@ -3201,6 +3201,12 @@ img {
 	left: 0;
 }
 
+.iconContainer {
+	width: 50px;
+	height: 50px;
+	margin-bottom: 25px;
+}
+
 #buckets a:hover .overlaidText {
 	transition: height 0.5s ease-in-out;
 }
