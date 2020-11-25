@@ -16,197 +16,175 @@ $spacing = get_field('vertical_spacing');
 $offsetlayout = get_field('offset_layout');
 $featuredimg = get_field('background_image');
 
-if ( $blockanchor && $bgcolor == 'light' ): ?>
-<section id="<?php echo $blockanchor ?>" class="section lightGreyBg">
+switch ( $bgcolor ) {
+	case 'light':
+		$shade = 'section lightGreyBg';
+		break;
+	case 'dark': 
+		$shade = 'section darkGreyBg light';
+		break;
+	default:
+		$shade = '';
+}
 
-<?php elseif ( $blockanchor && $bgcolor == 'dark' ): ?>
-<section id="<?php echo $blockanchor ?>" class="section darkGreyBg light">
+switch ( $aligncolumns ) {
+	case 'top':
+		$position = 'top-lg top-md';
+		break;
+	case 'middle':
+		$position = 'middle-lg middle-md';
+		break;
+	case 'bottom':
+		$position = 'bottom-lg bottom-md';
+		break;
+	default:
+		$position = '';
+}
 
-<?php elseif ( $blockanchor && $offsetlayout ): ?>
+switch ( $headingalignment ) {
+	case 'center':
+		$align = 'class="text-align-center"';
+		break;
+	case 'right':
+		$align = 'class="text-align-right"';
+		break;
+	default:
+		$align = '';
+}
+
+switch ( $spacing ) {
+	case 'top':
+		$padding = 'topPadding';
+		break;
+	case 'bottom':
+		$padding = 'bottomPadding';
+		break;
+	case 'both':
+		$padding = 'topBottomPadding';
+		break;
+	default:
+		$padding = '';
+}
+
+if ( $blockanchor && $offsetlayout ): ?>
 <section id="<?php echo $blockanchor ?>" class="positionRelative section3 offsetLayout">
 	<?php 
-	if ( $reverse ) : 
 	if( have_rows('right_column') ):
 		while( have_rows('right_column') ): the_row();
 			$img = get_sub_field('image');
-			if ( !empty( $img ) ): ?>
-			<div class="innerContainerOffset topBottomPadding left" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
-			<?php
+			if ( $reverse ) :
+				if ( !empty( $img ) ): ?>
+				<div class="innerContainerOffset topBottomPadding left" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
+				<?php
+				endif;
+			else :
+				if ( !empty( $img ) ): ?>
+				<div class="innerContainerOffset topBottomPadding right" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
+				<?php
+				endif;
 			endif;
 		endwhile;
 	endif;
 	
-	else :
-	if( have_rows('right_column') ):
-		while( have_rows('right_column') ): the_row();
-			$img = get_sub_field('image');
-			if ( !empty( $img ) ): ?>
-			<div class="innerContainerOffset topBottomPadding right" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
-			<?php
-			endif;
-		endwhile;
-	endif;
-	endif; ?>
-
-<?php elseif ( $offsetlayout ): ?>
+elseif ( $offsetlayout ): ?>
 <section class="positionRelative section3 offsetLayout">
 	<?php 
-	if ( $reverse ) : 
 	if( have_rows('right_column') ):
 		while( have_rows('right_column') ): the_row();
 			$img = get_sub_field('image');
-			if ( !empty( $img ) ): ?>
-			<div class="innerContainerOffset topBottomPadding left" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
-			<?php
+			if ( $reverse ) :
+				if ( !empty( $img ) ): ?>
+				<div class="innerContainerOffset topBottomPadding left" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
+				<?php
+				endif;
+			else :
+				if ( !empty( $img ) ): ?>
+				<div class="innerContainerOffset topBottomPadding right" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
+				<?php
+				endif;
 			endif;
 		endwhile;
 	endif;
-	
-	else :
-	if( have_rows('right_column') ):
-		while( have_rows('right_column') ): the_row();
-			$img = get_sub_field('image');
-			if ( !empty( $img ) ): ?>
-			<div class="innerContainerOffset topBottomPadding right" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
-			<?php
-			endif;
-		endwhile;
-	endif;
-	endif; ?>
 
-<?php elseif ( $bgcolor == 'light' ): ?>
-<section class="section lightGreyBg">
-
-<?php elseif ( $bgcolor == 'dark' ): ?>
-<section class="section darkGreyBg light">
-
-<?php elseif ( $blockanchor ): ?>
-<section id="<?php echo $blockanchor ?>">
+elseif ( $blockanchor ): ?>
+<section id="<?php echo $blockanchor ?>" class="<?php echo $shade ?>">
 
 <?php else : ?>
-<section class="positionRelative">
+<section class="positionRelative <?php echo $shade ?>">
 
 <?php endif;
 
- 	if ( $narrow && $spacing === 'top' ): ?>
-	<div class="innerContainer topPadding w1080">
-	<?php elseif ( $narrow && $spacing === 'bottom' ): ?>
-	<div class="innerContainer bottomPadding w1080">
-	<?php elseif ( $narrow && $spacing === 'both' ): ?>
-	<div class="innerContainer topBottomPadding w1080">
-	<?php elseif ( $spacing === 'top' ): ?>
-	<div class="innerContainer topPadding">
-	<?php elseif ( $spacing === 'bottom' ): ?>
-	<div class="innerContainer bottomPadding">
-	<?php elseif ( $spacing === 'both' ): ?>
-	<div class="innerContainer topBottomPadding">
-	<?php elseif ( $narrow ): ?>
-	<div class="innerContainer w1080">
+	if ( $narrow ): ?>
+	<div class="innerContainer w1080 <?php echo $padding ?>">
 		<div class="container">
 	<?php else : ?>
-	<div class="innerContainer">
+	<div class="innerContainer <?php echo $padding ?>">
 		<div class="container">
-	<?php endif; ?>
-		
-			<?php 
-			if ( $rowheading && $headingalignment == 'center' ) {
-				echo '<h2 class="text-align-center">' . $rowheading . '</h2>';
-			} elseif ( $rowheading && $headingalignment == 'right' ) {
-				echo '<h2 class="text-align-right">' . $rowheading . '</h2>';
-			} elseif ( $rowheading ) {
-				echo '<h2>' . $rowheading . '</h2>';
+	<?php endif;
+			
+			if ( $rowheading ) {
+				echo '<h2 ' . $align . '>' . $rowheading . '</h2>';
 			}
 			
-			if ( $gutters == 'none' ): ?>
-				
-			<?php if ( $aligncolumns == 'top' && $reverse ): ?>
-			<div class="row relativePositioning noGutters top-lg top-md reverse">
-			<?php elseif ( $aligncolumns == 'middle' && $reverse ): ?>
-			<div class="row relativePositioning noGutters middle-lg middle-md reverse">
-			<?php elseif ( $aligncolumns == 'bottom' && $reverse ): ?>
-			<div class="row relativePositioning noGutters bottom-lg bottom-md reverse">
-			<?php elseif ( $aligncolumns == 'top' && $reverse ): ?>
-			<div class="row relativePositioning noGutters top-lg top-md reverse">
-			<?php elseif ( $aligncolumns == 'top' ): ?>
-			<div class="row relativePositioning noGutters top-lg top-md">
-			<?php elseif ( $aligncolumns == 'middle' ): ?>
-			<div class="row relativePositioning noGutters middle-lg middle-md">
-			<?php elseif ( $aligncolumns == 'bottom' ): ?>
-			<div class="row relativePositioning noGutters bottom-lg bottom-md">
-			<?php elseif ( $reverse ): ?>
-			<div class="row relativePositioning noGutters reverse">
+			if ( $gutters == 'none' ):
+			
+			if ( $reverse ): ?>
+			<div class="row relativePositioning noGutters reverse <?php echo $position ?>">
 			<?php else : ?>
-			<div class="row relativePositioning noGutters">
-			<?php endif; ?>
+			<div class="row relativePositioning noGutters <?php echo $position ?>">
+			<?php endif;
 			
-			<?php elseif ( $gutters == 'default' ): ?>
+			elseif ( $gutters == 'default' ):
 			
-			<?php if ( $aligncolumns == 'top' && $reverse ): ?>
-			<div class="row relativePositioning gutterSpaceWide top-lg top-md reverse">
-			<?php elseif ( $aligncolumns == 'middle' && $reverse ): ?>
-			<div class="row relativePositioning gutterSpaceWide middle-lg middle-md reverse">
-			<?php elseif ( $aligncolumns == 'bottom' && $reverse ): ?>
-			<div class="row relativePositioning gutterSpaceWide bottom-lg bottom-md reverse">
-			<?php elseif ( $aligncolumns == 'top' && $reverse ): ?>
-			<div class="row relativePositioning gutterSpaceWide top-lg top-md reverse">
-			<?php elseif ( $aligncolumns == 'top' ): ?>
-			<div class="row relativePositioning gutterSpaceWide top-lg top-md">
-			<?php elseif ( $aligncolumns == 'middle' ): ?>
-			<div class="row relativePositioning gutterSpaceWide middle-lg middle-md">
-			<?php elseif ( $aligncolumns == 'bottom' ): ?>
-			<div class="row relativePositioning gutterSpaceWide bottom-lg bottom-md">
-			<?php elseif ( $reverse ): ?>
-			<div class="row relativePositioning gutterSpaceWide reverse">
+			if ( $reverse ): ?>
+			<div class="row relativePositioning gutterSpaceWide reverse <?php echo $position ?>">
 			<?php else : ?>
-			<div class="row relativePositioning gutterSpaceWide">
-			<?php endif; ?>
+			<div class="row relativePositioning gutterSpaceWide <?php echo $position ?>">
+			<?php endif;
 			
+			else :
+			
+			if ( $reverse ): ?>
+			<div class="row relativePositioning gutterSpaceWider reverse <?php echo $position ?>">
 			<?php else : ?>
+			<div class="row relativePositioning gutterSpaceWide <?php echo $position ?>">
+			<?php endif;
 			
-			<?php if ( $aligncolumns == 'top' && $reverse ): ?>
-			<div class="row relativePositioning gutterSpaceWider top-lg top-md reverse">
-			<?php elseif ( $aligncolumns == 'middle' && $reverse ): ?>
-			<div class="row relativePositioning gutterSpaceWider middle-lg middle-md reverse">
-			<?php elseif ( $aligncolumns == 'bottom' && $reverse ): ?>
-			<div class="row relativePositioning gutterSpaceWider bottom-lg bottom-md reverse">
-			<?php elseif ( $aligncolumns == 'top' && $reverse ): ?>
-			<div class="row relativePositioning gutterSpaceWider top-lg top-md reverse">
-			<?php elseif ( $aligncolumns == 'top' ): ?>
-			<div class="row relativePositioning gutterSpaceWider top-lg top-md">
-			<?php elseif ( $aligncolumns == 'middle' ): ?>
-			<div class="row relativePositioning gutterSpaceWider middle-lg middle-md">
-			<?php elseif ( $aligncolumns == 'bottom' ): ?>
-			<div class="row relativePositioning gutterSpaceWider bottom-lg bottom-md">
-			<?php elseif ( $reverse ): ?>
-			<div class="row relativePositioning gutterSpaceWider reverse">
-			<?php else : ?>
-			<div class="row relativePositioning gutterSpaceWider">
-			<?php endif; ?>
+			endif;
 			
-			<?php endif; ?>
-				
-				<?php if( have_rows('left_column') ):
+				if( have_rows('left_column') ):
 		 		while( have_rows('left_column') ): the_row();
 		 		$heading = get_sub_field('heading');
 				$content = get_sub_field('content');
 				$contenttype = get_sub_field('content_type');
 		 		
-		 		if ( $colratio == 'three-fifth-two-fifth' ): ?>
-				<div class="col-lg-7 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetContentContainer">
-				<?php elseif ( $colratio == 'two-fifth-three-fifth' ): ?>
-				<div class="col-lg-5 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetContentContainer">
-				<?php elseif ( $colratio == 'two-third-one-third' ): ?>
-				<div class="col-lg-8 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetContentContainer">
-				<?php elseif ( $colratio == 'one-third-two-third' ): ?>
-				<div class="col-lg-4 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetContentContainer">
-				<?php elseif ( $colratio == 'three-quarter-one-quarter' ): ?>
-				<div class="col-lg-10 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetContentContainer">
-				<?php elseif ( $colratio == 'one-quarter-three-quarter' ): ?>
-				<div class="col-lg-2 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetContentContainer">
-				<?php elseif ( $offsetlayout ): ?>
+		 		switch ( $colratio ) {
+					case 'three-fifth-two-fifth':
+						$colwidth = 'col-lg-7';
+						break;
+					case 'two-fifth-three-fifth':
+						$colwidth = 'col-lg-5';
+						break;
+					case 'two-third-one-third':
+						$colwidth = 'col-lg-8';
+						break;
+					case 'one-third-two-third':
+						$colwidth = 'col-lg-4';
+						break;
+					case 'three-quarter-one-quarter':
+						$colwidth = 'col-lg-10';
+						break;
+					case 'one-quarter-three-quarter':
+						$colwidth = 'col-lg-2';
+						break;
+					default:
+						$colwidth = 'col-lg-6';
+				}
+		 		
+		 		if ( $offsetlayout ): ?>
 				<div class="col-lg-6 bottomMarginMobile col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
 				<?php else : ?>
-				<div class="col-lg-6 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetContentContainer">
+				<div class="bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetContentContainer <?php echo $colwidth ?>">
 				<?php endif;
 				
 					if ( $contenttype == 'carousel' ): ?>
@@ -310,20 +288,33 @@ if ( $blockanchor && $bgcolor == 'light' ): ?>
 		 		$heading = get_sub_field('heading_right_col');
 		 		$contentrightcol = get_sub_field('content_right_col');
 				
-				if ( $colratio == 'three-fifth-two-fifth' ): ?>
-				<div class="col-lg-5 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetImageContainer">
-				<?php elseif ( $colratio == 'two-fifth-three-fifth' ): ?>
-				<div class="col-lg-7 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetImageContainer">
-				<?php elseif ( $colratio == 'two-third-one-third' ): ?>
-				<div class="col-lg-4 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetImageContainer">
-				<?php elseif ( $colratio == 'one-third-two-third' ): ?>
-				<div class="col-lg-8 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetImageContainer">
-				<?php elseif ( $colratio == 'three-quarter-one-quarter' ): ?>
-				<div class="col-lg-2 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetImageContainer">
-				<?php elseif ( $colratio == 'one-quarter-three-quarter' ): ?>
-				<div class="col-lg-10 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetImageContainer">
+				switch ( $colratio ) {
+					case 'three-fifth-two-fifth':
+						$colwidth = 'col-lg-5';
+						break;
+					case 'two-fifth-three-fifth':
+						$colwidth = 'col-lg-7';
+						break;
+					case 'two-third-one-third':
+						$colwidth = 'col-lg-4';
+						break;
+					case 'one-third-two-third':
+						$colwidth = 'col-lg-8';
+						break;
+					case 'three-quarter-one-quarter':
+						$colwidth = 'col-lg-2';
+						break;
+					case 'one-quarter-three-quarter':
+						$colwidth = 'col-lg-10';
+						break;
+					default:
+						$colwidth = 'col-lg-6';
+				}
+				
+				if ( $offsetlayout ): ?>
+				<div class="col-lg-6 bottomMarginMobile col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
 				<?php else : ?>
-				<div class="col-lg-6 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetImageContainer">
+				<div class="bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col offsetContentContainer <?php echo $colwidth ?>">
 				<?php endif;
 				
 					if ( $contenttype == 'carousel' ): ?>
