@@ -3192,6 +3192,16 @@ img {
 	border-bottom: 1px solid #c9c9c9;
 }
 
+.about-us .photoGrid li:last-of-type {
+	flex-basis: 100%;
+	max-width: 100%;
+	border-right: none;
+}
+
+.about-us .photoGrid li:last-of-type img {
+	max-width: 400px;
+}
+
 .fixedBgImg {
 	position: fixed;
 	height: 100%;
