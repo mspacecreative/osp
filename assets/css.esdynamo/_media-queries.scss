@@ -38,6 +38,16 @@
 		flex-basis: 90%;
 		padding: 2.5em 2.5em 0!important;
 	}
+	.bottomPadding {
+	    padding-bottom: 4em;
+	}
+	.topPadding {
+	    padding-top: 4em;
+	}
+	.topBottomPadding {
+	    padding-top: 4em;
+		padding-bottom: 4em;
+	}
 }
 
 @media (min-width: 64em) {
