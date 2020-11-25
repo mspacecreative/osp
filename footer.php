@@ -17,7 +17,7 @@
 									
 								if( $images ): ?>
 								
-								<div class="row center-lg center-md center-sm center-xs middle-lg middle-md middle-sm middle-xs footerLogos">
+								<div class="row middle-lg middle-md middle-sm middle-xs footerLogos">
 									
 									<?php 
 									foreach( $images as $image ):

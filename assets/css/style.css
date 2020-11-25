@@ -3515,12 +3515,22 @@ footer.section {
 		order: -1;
 	}
 	
+	.row.footerLogos .col:last-child {
+		flex-basis: 41.66666667%;
+		max-width: 41.66666667%;
+	}
+	
+	.row.footerLogos .col:last-child img {
+		max-width: 100%;
+	}
+	
 	.smallFooterLogo {
 		padding: 20px 10px;
 	}
 	
 	.shrinkLogo {
 		padding: 20px;
+		max-width: 120px;
 	}
 	
 	.fitPortal::before, .fitPortal::after {
