@@ -829,11 +829,9 @@ table {
 	flex: 0 0 66%;
 }
 
-/*
-.mediumPostsContainer .col .col {
+.news-and-events .mediumPostsContainer .col .col {
 	padding-bottom: 1rem;
 }
-*/
 
 #display-medium-owl-demo .medium-image {
 	height: 100%;
