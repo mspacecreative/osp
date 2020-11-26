@@ -1,7 +1,8 @@
 (function ($) {
 
 	// SEARCH BAR
-	$('.searchIcon').click(function() {
+	$('.searchIcon').click(function(e) {
+		e.preventDefault();
 		$(this).next().toggleClass('reveal');
 		$(this).prev().toggleClass('hide');
 		$(this).toggleClass('hide');
