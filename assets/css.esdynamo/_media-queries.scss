@@ -259,7 +259,7 @@
 	    right: 0;
 	    background: #fff;
 	    z-index: 999999;
-	    padding: 1em 0;
+	    padding: 2em 0;
 	    top: 0;
 	}
 	/*
@@ -279,6 +279,7 @@
 	}
 	.mobileOnly {
 		top: 0;
+		right: 1em;
 	}
 }
 
