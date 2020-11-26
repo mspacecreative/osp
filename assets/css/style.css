@@ -2965,7 +2965,6 @@ nav li a {
 	width: 100%;
 	top: 0;
 	bottom: 0;
-	display: table;
 	height: 100%;
 	transform: translateY(-65px);
 	right: 4em;
@@ -3761,6 +3760,7 @@ footer.section {
 		transform: translateY(-65px);
 		right: 4em;
 		max-width: 500px;
+		display: table;
 	}
 }
 
