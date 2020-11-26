@@ -131,11 +131,13 @@ nav li a {
     bottom: 0;
     display: table;
     height: 100%;
+	transform: translateY(-65px);
 }
 .searchBarContainer.reveal {
 	opacity: 1;
 	visibility: visible;
 	transition: 0.25s ease-in-out;
+	transform: translateY(0);
 }
 #ajaxsearchlite1 {
 	display: table-cell;
