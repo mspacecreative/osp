@@ -3029,6 +3029,12 @@ div.asl_w .probox .promagnifier, div.asl_r.vertical {
 	top: 95px !important;
 }
 
+.searchIcon.mobileOnly {
+	top: 0;
+	right: 0;
+	background-position: top center;
+}
+
 .button {
 	display: inline-block;
 	padding: 0.75em 1.5em;
@@ -3693,11 +3699,6 @@ footer.section {
 		width: 90%;
 		margin: auto;
 		display: block;
-	}
-	
-	.mobileOnly {
-		top: 0;
-		right: 0;
 	}
 }
 
