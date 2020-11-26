@@ -3042,6 +3042,11 @@ div.asl_w .probox .promagnifier, div.asl_r.vertical {
 	top: 95px !important;
 }
 
+.scroll .closeIcon {
+	right: -2em;
+	top: .75em;
+}
+
 .searchIcon.mobileOnly {
 	top: 0;
 	right: 0;
