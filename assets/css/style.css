@@ -3718,6 +3718,11 @@ footer.section {
 		margin: auto;
 		display: block;
 	}
+	
+	.scroll .closeIcon, .closeIcon {
+		right: 1em;
+		top: .25em;
+	}
 }
 
 @media (min-width: 981px) {
