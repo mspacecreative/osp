@@ -12,6 +12,7 @@
 	});
 	
 	// MEDIUM TWEAKS
+	/*
 	$('.display-medium-title').each(function() {
 		var titles = $(this),
 		$target = $(this).parent();
@@ -32,6 +33,7 @@
 		var items = $(this).find('p');
 		items.wrapAll('<div class="mediumContent"></div>');
 	});
+	*/
 	
 	// ACCORDION FUNCTIONALITY
 	$('.tabRow > a').click(function(e) {
