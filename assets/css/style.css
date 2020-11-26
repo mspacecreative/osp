@@ -3267,6 +3267,7 @@ row.imageStripContainer {
 	height: 100%;
 	padding-right: .25rem;
 	padding-left: .25rem;
+	padding-bottom: 0;
 }
 
 .imageStripInner {
