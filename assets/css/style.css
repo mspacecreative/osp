@@ -2992,11 +2992,11 @@ nav {
 
 #ajaxsearchlite1 .probox, div.asl_w .probox {
 	width: 100%;
-	background: #424242;
+	background: #424242 !important;
 }
 
 div.asl_w .probox .promagnifier {
-	background: #38C3E1;
+	background: #38C3E1 !important;
 }
 
 .searchIcon.hide {
