@@ -123,6 +123,7 @@ nav li a {
 	transition: 0.5s ease-in-out;
 	opacity: 1;
 	visibility: visible;
+	background-position: bottom center;
 }
 .searchBarContainer {
 	opacity: 0;
@@ -166,13 +167,15 @@ nav li a {
 div.asl_w .probox .promagnifier, div.asl_r.vertical {
 	background: $brandBlue!important;
 }
-.searchIcon {
+.searchIcon, .closeIcon {
 	background-image: url(../img/icons/magnifying-glass.svg);
 	background-size: 100%;
 	background-repeat: no-repeat;
 	transition: 0.5s ease-in-out;
-	background-position: bottom center;
 	transition: 0.5s ease-in-out;
+}
+.closeIcon {
+	background-position: top center;
 }
 /*
 .searchIcon.hide {
