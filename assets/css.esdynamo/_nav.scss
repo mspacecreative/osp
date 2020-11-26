@@ -123,32 +123,35 @@ nav li a {
 .searchBarContainer {
 	opacity: 0;
 	visibility: hidden;
-	transition: 0.75s ease-in-out;
+	transition: 0.5s ease-in-out;
 	position: absolute;
     width: 100%;
-    left: 0;
     top: 0;
     bottom: 0;
     display: table;
     height: 100%;
 	transform: translateY(-65px);
+	right: 4em;
+    width: 100%;
+    max-width: 500px;
+    width: calc(100% - 6em);
 }
 nav.hide {
 	transform: translateY(65px);
-	transition: 0.75s ease-in-out;
+	transition: 0.5s ease-in-out;
 	opacity: 0;
 	visibility: hidden;
 }
 nav {
 	transform: translateY(0);
-	transition: 0.75s ease-in-out;
+	transition: 0.5s ease-in-out;
 	opacity: 1;
 	visibility: visible;
 }
 .searchBarContainer.reveal {
 	opacity: 1;
 	visibility: visible;
-	transition: 0.75s ease-in-out;
+	transition: 0.5s ease-in-out;
 	transform: translateY(0);
 }
 #ajaxsearchlite1 {
@@ -159,7 +162,20 @@ nav {
 	background: none!important;
 }
 #ajaxsearchlite1 .probox, div.asl_w .probox {
-	max-width: 500px;
-    float: right;
-    width: 90%;
+	width: 100%;
+}
+.searchIcon.hide {
+	background-image: url(../img/icons/close.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.searchIcon.hide svg {
+	opacity: 0;
+	transition: 0.5s ease-in-out;
+	visibility: hidden;
+}
+.searchIcon svg {
+	opacity: 1;
+	transition: 0.5s ease-in-out;
+	visibility: visible;
 }

@@ -4,6 +4,7 @@
 	$('.searchIcon').click(function() {
 		$(this).next().toggleClass('reveal');
 		$(this).prev().toggleClass('hide');
+		$(this).toggleClass('hide');
 	});
 	
 	function calcCardHeight() {
