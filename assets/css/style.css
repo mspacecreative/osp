@@ -2965,7 +2965,7 @@ nav li a {
 	vertical-align: middle;
 }
 
-#ajaxsearchlite1 div.asl_w {
+#ajaxsearchlite1.asl_w {
 	background: none !important;
 }
 
