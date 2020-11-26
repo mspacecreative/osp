@@ -2995,9 +2995,16 @@ nav {
 }
 
 .searchIcon.hide {
-	background-image: url(../img/icons/close.png);
+	background-position: top center;
+	transition: 0.5s ease-in-out;
+}
+
+.searchIcon {
+	background-image: url(../img/icons/magnifying-glass.svg);
 	background-size: 100%;
 	background-repeat: no-repeat;
+	transition: 0.5s ease-in-out;
+	background-position: bottom center;
 	transition: 0.5s ease-in-out;
 }
 
