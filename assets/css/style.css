@@ -2963,25 +2963,9 @@ nav li a {
 	transition: 0.5s ease-in-out;
 	position: absolute;
 	width: 100%;
-	top: 0;
-	bottom: 0;
-	height: 100%;
 	transform: translateY(-65px);
-	right: 0;
-	width: 100%;
-	max-width: 500px;
-	width: calc(100% - 6em);
-}
-
-.searchBarContainer {
-	opacity: 0;
-	visibility: hidden;
-	transition: 0.5s ease-in-out;
-	position: absolute;
-	width: 100%;
 	top: 0;
 	bottom: 0;
-	display: table;
 	height: 100%;
 	right: 0;
 }
@@ -3757,7 +3741,6 @@ footer.section {
 	}
 	
 	.searchBarContainer {
-		transform: translateY(-65px);
 		right: 4em;
 		max-width: 500px;
 		display: table;
