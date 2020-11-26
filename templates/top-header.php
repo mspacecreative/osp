@@ -162,6 +162,7 @@
 			</a>
 		</div>
 		<div class="searchBarContainer">
+			<div class="searchIcon hide mobileOnly"><a href="#"></a></div>
 			<?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
 		</div>
 		<!-- / search icon -->

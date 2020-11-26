@@ -262,23 +262,32 @@
 	    padding: 1em 0;
 	    top: 0;
 	}
+	/*
 	.searchIcon.hide {
 		top: -1em;
 	    right: 1em;
 		z-index: 9999999;
 	}
+	*/
 	.searchIcon {
 		right: 5em;
 	}
 	#ajaxsearchlite1 {
 		width: 90%;
 		margin: auto;
+		display: block;
+	}
+	.mobileOnly {
+		top: 0;
 	}
 }
 
 @media (min-width: 981px) {
 	nav {
 		margin-right: 60px;
+	}
+	.mobileOnly {
+		display: none;
 	}
 	nav.hide {
 		transform: translateY(65px);

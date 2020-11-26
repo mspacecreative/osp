@@ -7,6 +7,11 @@
 		$(this).prev().toggleClass('hide');
 		$(this).toggleClass('hide');
 	});
+	$('.mobileOnly').click(function(e) {
+		e.preventDefault();
+		$(this).parent().toggleClass('reveal');
+		$(this).parent().prev().toggleClass('hide');
+	});
 	
 	function calcCardHeight() {
 		var cardHeight = $('.display-medium-item').height();
