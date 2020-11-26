@@ -8,12 +8,6 @@
 	.colInnerMed .col-lg-4 {
 		padding-right: 0;
 	}
-	.news-and-events .colInnerMed .col-lg-8 {
-	    padding-left: .5rem;
-	}
-	.news-and-events .colInnerMed .col-lg-4 {
-	    padding-right: .5rem;
-	}
 	.colInnerMed .col-lg-8 {
 		padding-left: 0;
 	}
@@ -29,6 +23,12 @@
 	.row.gutterSpaceWider > .bottomMarginMobile.col, .row.gutterSpaceWide > .bottomMarginMobile.col, .row > .bottomMarginMobile.col {
 		//padding-bottom: 2em;
 		padding-bottom: 4em;
+	}
+	.news-and-events .colInnerMed .col-lg-8 {
+	    padding-left: .5rem;
+	}
+	.news-and-events .colInnerMed .col-lg-4 {
+	    padding-right: .5rem;
 	}
 }
 
