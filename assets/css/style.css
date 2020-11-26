@@ -3769,3 +3769,13 @@ footer.section {
 		right: 15em;
 	}
 }
+
+@media (min-width: 451px) {
+	.colInnerMed .col-lg-4 {
+		padding-right: 0;
+	}
+	
+	.colInnerMed .col-lg-8 {
+		padding-left: 0;
+	}
+}
