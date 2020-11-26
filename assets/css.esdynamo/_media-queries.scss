@@ -254,11 +254,40 @@
 	.contentPortals .row.gutterSpaceWide > .col:last-of-type, .contentPortals .row.gutterSpaceWider > .col:last-of-type, .contentPortals .col:last-of-type {
 		padding-bottom: 1rem;
 	}
+	.searchBarContainer.reveal {
+		width: 100%;
+	    right: 0;
+	    background: #fff;
+	    z-index: 999999;
+	    padding: 1em 0;
+	    top: 0;
+	}
+	.searchIcon.hide {
+		top: -1em;
+	    right: 1em;
+		z-index: 9999999;
+	}
+	#ajaxsearchlite1 {
+		width: 90%;
+		margin: auto;
+	}
 }
 
 @media (min-width: 981px) {
 	nav {
 		margin-right: 60px;
+	}
+	nav.hide {
+		transform: translateY(65px);
+		transition: 0.5s ease-in-out;
+		opacity: 0;
+		visibility: hidden;
+	}
+	nav {
+		transform: translateY(0);
+		transition: 0.5s ease-in-out;
+		opacity: 1;
+		visibility: visible;
 	}
 }
 
