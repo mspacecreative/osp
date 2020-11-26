@@ -1,11 +1,16 @@
 (function ($) {
 
 	// SEARCH BAR
+	if ( $('.searchIcon').css('right') === '2em' ) {
+		$('.searchIcon').click(function(e) {
+			e.preventDefault();
+			$(this).toggleClass('hide');
+		});
+	}
 	$('.searchIcon').click(function(e) {
 		e.preventDefault();
 		$(this).next().toggleClass('reveal');
 		$(this).prev().toggleClass('hide');
-		$(this).toggleClass('hide');
 	});
 	$('.mobileOnly').click(function(e) {
 		e.preventDefault();
