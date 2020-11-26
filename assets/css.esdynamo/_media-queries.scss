@@ -339,6 +339,10 @@
 	.imageStripContainer .col:last-of-type {
 		display: none;
 	}
+	.imageStripContainer .col {
+		flex-basis: 50%;
+		max-width: 50%;
+	}
 }
 
 @media (max-width: 850px) and (orientation: landscape) {
