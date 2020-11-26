@@ -256,6 +256,12 @@
 	}
 }
 
+@media (min-width: 981px) {
+	nav {
+		margin-right: 60px;
+	}
+}
+
 @media (min-width: 768px) and (orientation: portrait) {
 	.heroContent h1 {
 		font-size: 52px;

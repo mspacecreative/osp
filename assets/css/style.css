@@ -2939,6 +2939,8 @@ nav li a {
 .searchIcon {
 	width: 20px;
 	height: 20px;
+	position: absolute;
+	right: 2em;
 }
 
 .searchBarContainer {
@@ -3613,6 +3615,12 @@ footer.section {
 	
 	.contentPortals .row.gutterSpaceWide > .col:last-of-type, .contentPortals .row.gutterSpaceWider > .col:last-of-type, .contentPortals .col:last-of-type {
 		padding-bottom: 1rem;
+	}
+}
+
+@media (min-width: 981px) {
+	nav {
+		margin-right: 60px;
 	}
 }
 
