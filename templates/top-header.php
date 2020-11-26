@@ -131,6 +131,18 @@
 		</div>
 		<!-- /logo -->
 		
+		<button class="hamburger hamburger--spin" type="button">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>
+	
+		<!-- nav -->
+		<nav class="nav" role="navigation">
+			<?php osp_nav(); ?>
+		</nav>
+		<!-- /nav -->
+		
 		<!-- search icon -->
 		<div class="searchIcon">
 			<svg version="1.1" id="magnifyingGlass" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -151,18 +163,6 @@
 			<?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
 		</div>
 		<!-- / search icon -->
-		
-		<button class="hamburger hamburger--spin" type="button">
-			<span class="hamburger-box">
-				<span class="hamburger-inner"></span>
-			</span>
-		</button>
-	
-		<!-- nav -->
-		<nav class="nav" role="navigation">
-			<?php osp_nav(); ?>
-		</nav>
-		<!-- /nav -->
 	
 	</div>
 	<!-- / INNER CONTAINER -->
