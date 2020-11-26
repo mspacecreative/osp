@@ -136,10 +136,14 @@ nav li a {
 nav.hide {
 	transform: translateY(65px);
 	transition: 0.75s ease-in-out;
+	opacity: 0;
+	visibility: hidden;
 }
 nav {
 	transform: translateY(0);
 	transition: 0.75s ease-in-out;
+	opacity: 1;
+	visibility: visible;
 }
 .searchBarContainer.reveal {
 	opacity: 1;
