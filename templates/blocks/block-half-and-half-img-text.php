@@ -324,7 +324,7 @@ elseif ( $blockanchor ): ?>
 				}
 				
 				if ( $offsetlayout ): ?>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col bottomMarginMobile offsetContentContainer">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col bottomMarginMobile offsetContentContainer hideOnDesktop">
 				<?php elseif ( $anchor ): ?>
 				<div id="<?php echo $anchor ?>" class="col-lg-6 bottomMarginMobile col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
 				<?php else : ?>
