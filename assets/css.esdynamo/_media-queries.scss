@@ -24,12 +24,6 @@
 		//padding-bottom: 2em;
 		padding-bottom: 4em;
 	}
-	.news-and-events .colInnerMed .col-lg-8 {
-	    padding-left: .5rem;
-	}
-	.news-and-events .colInnerMed .col-lg-4 {
-	    padding-right: .5rem;
-	}
 }
 
 @media (max-width: 48em) {
@@ -126,6 +120,12 @@
 	}
 	.hideOnDesktop {
 		display: none;
+	}
+	.news-and-events .colInnerMed .col-lg-8 {
+	    padding-left: .5rem;
+	}
+	.news-and-events .colInnerMed .col-lg-4 {
+	    padding-right: .5rem;
 	}
 }
 
