@@ -1,7 +1,7 @@
 (function ($) {
 
 	// SEARCH BAR
-	if ( $('.searchIcon').css('right') === '2em' ) {
+	if ( $('.searchIcon').css('right') === '5em' ) {
 		$('.searchIcon').click(function(e) {
 			e.preventDefault();
 			$(this).toggleClass('hide');
