@@ -640,6 +640,10 @@ table {
 	text-overflow: unset;
 }
 
+#yrc-shell-0 .yrc-core {
+	text-align: left;
+}
+
 .evenbriteEvents {
 	margin: 50px auto 15px;
 }
