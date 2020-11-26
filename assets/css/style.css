@@ -3008,16 +3008,20 @@ nav {
 	transition: 0.5s ease-in-out;
 }
 
+/*
 .searchIcon.hide svg {
 	opacity: 0;
 	transition: 0.5s ease-in-out;
 	visibility: hidden;
 }
+*/
 
-.searchIcon svg {
-	opacity: 1;
-	transition: 0.5s ease-in-out;
-	visibility: visible;
+.searchIcon a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
 }
 
 .button {
