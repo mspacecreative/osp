@@ -3411,6 +3411,7 @@ footer.section {
 	.news-and-events .colInnerMed .col-lg-8 {
 		flex-basis: 100%;
 		max-width: 100%;
+		height: calc(100% - 200px);
 	}
 	
 	.news-and-events .colInnerMed .col-lg-4 {
