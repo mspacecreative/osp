@@ -3672,6 +3672,11 @@ footer.section {
 		margin-bottom: 25px;
 		order: -1;
 	}
+	
+	.heroContent {
+		align-items: flex-end;
+		padding-bottom: 50px;
+	}
 }
 
 @media (max-width: 1024px) and (orientation: landscape) {
