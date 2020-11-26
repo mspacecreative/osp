@@ -2945,6 +2945,34 @@ nav li a {
 	opacity: 0;
 	visibility: hidden;
 	transition: 0.25s ease-in-out;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	display: table;
+	height: 100%;
+}
+
+.reaveal.searchBarContainer {
+	opacity: 1;
+	visibility: visible;
+	transition: 0.25s ease-in-out;
+}
+
+#ajaxsearchlite1 {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#ajaxsearchlite1 div.asl_w {
+	background: none;
+}
+
+#ajaxsearchlite1 .probox, div.asl_w .probox {
+	max-width: 500px;
+	float: right;
+	width: 90%;
 }
 
 .button {

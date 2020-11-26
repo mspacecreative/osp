@@ -1,5 +1,11 @@
 (function ($) {
 
+	// SEARCH BAR
+	$('.searchIcon').click(function() {
+		$(this).next().toggleClass('reveal');
+		$(this).prev().fadeToggle();
+	});
+	
 	function calcCardHeight() {
 		var cardHeight = $('.display-medium-item').height();
 		$('.display-medium-item').find('.medium-image').css('height', cardHeight);
