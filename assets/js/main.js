@@ -1,21 +1,18 @@
 (function ($) {
 
 	// SEARCH BAR
-	if ( $('.searchIcon').css('right') === '5em' ) {
-		$('.searchIcon').click(function(e) {
+	$('.searchIcon').click(function(e) {
+		if ( $('.searchIcon').css('right') === '2em' ) {
 			e.preventDefault();
 			$(this).toggleClass('hide');
-		});
-	}
-	$('.searchIcon').click(function(e) {
-		e.preventDefault();
+		}
 		$(this).next().toggleClass('reveal');
 		$(this).prev().toggleClass('hide');
 	});
 	$('.mobileOnly').click(function(e) {
 		e.preventDefault();
 		$(this).parent().toggleClass('reveal');
-		$(this).parent().prev().toggleClass('hide');
+		//$(this).parent().prev().toggleClass('hide');
 	});
 	
 	function calcCardHeight() {
