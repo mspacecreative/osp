@@ -119,6 +119,10 @@ nav li a {
 	height: 20px;
 	position: absolute;
 	right: 2em;
+	transform: translateY(0);
+	transition: 0.5s ease-in-out;
+	opacity: 1;
+	visibility: visible;
 }
 .searchBarContainer {
 	opacity: 0;
@@ -135,6 +139,12 @@ nav li a {
     width: 100%;
     max-width: 500px;
     width: calc(100% - 6em);
+}
+.searchIcon.hide {
+	transform: translateY(-65px);
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.5s ease-in-out;
 }
 .searchBarContainer.reveal {
 	opacity: 1;
@@ -156,10 +166,6 @@ nav li a {
 div.asl_w .probox .promagnifier, div.asl_r.vertical {
 	background: $brandBlue!important;
 }
-.searchIcon.hide {
-	background-position: top center;
-	transition: 0.5s ease-in-out;
-}
 .searchIcon {
 	background-image: url(../img/icons/magnifying-glass.svg);
 	background-size: 100%;
@@ -169,6 +175,10 @@ div.asl_w .probox .promagnifier, div.asl_r.vertical {
 	transition: 0.5s ease-in-out;
 }
 /*
+.searchIcon.hide {
+	background-position: top center;
+	transition: 0.5s ease-in-out;
+}
 .searchIcon.hide svg {
 	opacity: 0;
 	transition: 0.5s ease-in-out;

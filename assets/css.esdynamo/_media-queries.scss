@@ -279,16 +279,13 @@
 	}
 	.mobileOnly {
 		top: 0;
-		right: 1em;
+		right: 0;
 	}
 }
 
 @media (min-width: 981px) {
 	nav {
 		margin-right: 60px;
-	}
-	.mobileOnly {
-		display: none;
 	}
 	nav.hide {
 		transform: translateY(65px);

@@ -2941,6 +2941,10 @@ nav li a {
 	height: 20px;
 	position: absolute;
 	right: 2em;
+	transform: translateY(0);
+	transition: 0.5s ease-in-out;
+	opacity: 1;
+	visibility: visible;
 }
 
 .searchBarContainer {
@@ -2958,6 +2962,13 @@ nav li a {
 	width: 100%;
 	max-width: 500px;
 	width: calc(100% - 6em);
+}
+
+.searchIcon.hide {
+	transform: translateY(-65px);
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.5s ease-in-out;
 }
 
 .searchBarContainer.reveal {
@@ -2985,11 +2996,6 @@ div.asl_w .probox .promagnifier, div.asl_r.vertical {
 	background: #38C3E1 !important;
 }
 
-.searchIcon.hide {
-	background-position: top center;
-	transition: 0.5s ease-in-out;
-}
-
 .searchIcon {
 	background-image: url(../img/icons/magnifying-glass.svg);
 	background-size: 100%;
@@ -3000,6 +3006,10 @@ div.asl_w .probox .promagnifier, div.asl_r.vertical {
 }
 
 /*
+.searchIcon.hide {
+	background-position: top center;
+	transition: 0.5s ease-in-out;
+}
 .searchIcon.hide svg {
 	opacity: 0;
 	transition: 0.5s ease-in-out;
@@ -3687,17 +3697,13 @@ footer.section {
 	
 	.mobileOnly {
 		top: 0;
-		right: 1em;
+		right: 0;
 	}
 }
 
 @media (min-width: 981px) {
 	nav {
 		margin-right: 60px;
-	}
-	
-	.mobileOnly {
-		display: none;
 	}
 	
 	nav.hide {

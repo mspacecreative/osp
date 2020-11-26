@@ -2,17 +2,14 @@
 
 	// SEARCH BAR
 	$('.searchIcon').click(function(e) {
-		if ( $('.searchIcon').css('right') === '2em' ) {
-			e.preventDefault();
-			$(this).toggleClass('hide');
-		}
+		e.preventDefault();
+		$(this).toggleClass('hide');
 		$(this).next().toggleClass('reveal');
 		$(this).prev().toggleClass('hide');
 	});
 	$('.mobileOnly').click(function(e) {
 		e.preventDefault();
 		$(this).parent().toggleClass('reveal');
-		//$(this).parent().prev().toggleClass('hide');
 	});
 	
 	function calcCardHeight() {
