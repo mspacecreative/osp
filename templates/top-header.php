@@ -131,6 +131,10 @@
 		</div>
 		<!-- /logo -->
 		
+		<!-- search icon -->
+		<?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
+		<!-- / search icon -->
+		
 		<button class="hamburger hamburger--spin" type="button">
 			<span class="hamburger-box">
 				<span class="hamburger-inner"></span>
