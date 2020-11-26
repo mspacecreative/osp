@@ -3,7 +3,7 @@
 	// SEARCH BAR
 	$('.searchIcon').click(function() {
 		$(this).next().toggleClass('reveal');
-		$(this).prev().fadeToggle();
+		$(this).prev().toggleClass('hide');
 	});
 	
 	function calcCardHeight() {

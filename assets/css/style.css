@@ -2946,7 +2946,7 @@ nav li a {
 .searchBarContainer {
 	opacity: 0;
 	visibility: hidden;
-	transition: 0.25s ease-in-out;
+	transition: 0.75s ease-in-out;
 	position: absolute;
 	width: 100%;
 	left: 0;
@@ -2957,10 +2957,20 @@ nav li a {
 	transform: translateY(-65px);
 }
 
+nav.hide {
+	transform: translateY(-65px);
+	transition: 0.75s ease-in-out;
+}
+
+nav {
+	transform: translateY(0);
+	transition: 0.75s ease-in-out;
+}
+
 .searchBarContainer.reveal {
 	opacity: 1;
 	visibility: visible;
-	transition: 0.25s ease-in-out;
+	transition: 0.75s ease-in-out;
 	transform: translateY(0);
 }
 
