@@ -356,6 +356,19 @@ function my_acf_init() {
 			'mode'				=> 'edit',
 			'supports'			=> array( 'mode' => false ),
 		));
+		
+		// register image strip block
+		acf_register_block(array(
+			'name'				=> 'image-strip',
+			'title'				=> __('Image Strip Block'),
+			'description'		=> __('Displays a horizontal array of up to three images'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'images-alt',
+			'keywords'			=> array( 'gallery', 'image' ),
+			'mode'				=> 'edit',
+			'supports'			=> array( 'mode' => false ),
+		));
 
 	}
 }

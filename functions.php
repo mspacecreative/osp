@@ -18,6 +18,7 @@ if (function_exists('add_theme_support'))
     add_image_size( 'sidebar', 200, 200, true );
     add_image_size( 'card-feature', 600, 338, array('center', 'center') );
     add_image_size( 'team-member', 400, 400, array('center', 'top') );
+    add_image_size( 'photo-strip', 1080, 607.5, array('center', 'center') );
 
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');
