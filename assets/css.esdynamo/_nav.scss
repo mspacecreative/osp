@@ -114,7 +114,7 @@ nav li a {
 }
 
 // SEARCH BAR
-.searchIcon {
+.searchIcon, .closeIcon {
 	width: 20px;
 	height: 20px;
 	position: absolute;
@@ -123,6 +123,8 @@ nav li a {
 	transition: 0.5s ease-in-out;
 	opacity: 1;
 	visibility: visible;
+}
+.searchIcon {
 	background-position: bottom center;
 }
 .searchBarContainer {
