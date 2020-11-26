@@ -8,7 +8,7 @@ $width = get_field('content_width');
 if ( $bgimg ):
 
 	if ( $blockanchor && $bgimgoverlay == 'dark' ): ?>
-	<div id="<?php echo $blockanchor ?>" class="bg-img-cover dark-overlay content-section" style="background-image: url(<?php echo $bgimg ?>);">
+	<section id="<?php echo $blockanchor ?>" class="bg-img-cover dark-overlay content-section" style="background-image: url(<?php echo $bgimg ?>);">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -16,10 +16,10 @@ if ( $bgimg ):
 		<?php endif;
 			include('includes/section-content-loop.php'); ?>
 		</div>
-	</div>
+	</section>
 	
 	<?php elseif ( $blockanchor && $bgimgoverlay == 'light' ): ?>
-	<div id="<?php echo $blockanchor ?>" class="bg-img-cover light-overlay content-section" style="background-image: url(<?php echo $bgimg ?>);">
+	<section id="<?php echo $blockanchor ?>" class="bg-img-cover light-overlay content-section" style="background-image: url(<?php echo $bgimg ?>);">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -27,10 +27,10 @@ if ( $bgimg ):
 		<?php endif;
 			include('includes/section-content-loop.php'); ?>
 		</div>
-	</div>
+	</section>
 	
 	<?php elseif ( $bgimgoverlay == 'dark' ): ?>
-	<div class="bg-img-cover dark-overlay content-section" style="background-image: url(<?php echo $bgimg ?>);">
+	<section class="bg-img-cover dark-overlay content-section" style="background-image: url(<?php echo $bgimg ?>);">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -38,10 +38,10 @@ if ( $bgimg ):
 		<?php endif;
 			include('includes/section-content-loop.php'); ?>
 		</div>
-	</div>
+	</section>
 	
 	<?php elseif ( $bgimgoverlay == 'light' ): ?>
-	<div class="bg-img-cover light-overlay content-section" style="background-image: url(<?php echo $bgimg ?>);">
+	<section class="bg-img-cover light-overlay content-section" style="background-image: url(<?php echo $bgimg ?>);">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -49,10 +49,10 @@ if ( $bgimg ):
 		<?php endif;
 			include('includes/section-content-loop.php'); ?>
 		</div>
-	</div>
+	</section>
 	
 	<?php elseif ( $blockanchor ): ?>
-	<div id="<?php echo $blockanchor ?>" class="bg-img-cover dark-overlay content-section" style="background-image: url(<?php echo $bgimg ?>);">
+	<section id="<?php echo $blockanchor ?>" class="bg-img-cover dark-overlay content-section" style="background-image: url(<?php echo $bgimg ?>);">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -60,10 +60,10 @@ if ( $bgimg ):
 		<?php endif;
 			include('includes/section-content-loop.php'); ?>
 		</div>
-	</div>
+	</section>
 	
 	<?php else : ?>
-	<div class="bg-img-cover content-section" style="background-image: url(<?php echo $bgimg ?>);">
+	<section class="bg-img-cover content-section" style="background-image: url(<?php echo $bgimg ?>);">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -71,13 +71,13 @@ if ( $bgimg ):
 		<?php endif;
 			include('includes/section-content-loop.php'); ?>
 		</div>
-	</div>
+	</section>
 	<?php endif;
 	
 elseif ( $bgcolor == 'light' ):
 	
 	if ( $blockanchor ) : ?>
-	<div id="<?php echo $blockanchor ?>" class="lightGreyBg content-section">
+	<section id="<?php echo $blockanchor ?>" class="lightGreyBg content-section">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -85,10 +85,10 @@ elseif ( $bgcolor == 'light' ):
 		<?php endif;
 			include('includes/section-content-loop.php'); ?>
 		</div>
-	</div>
+	</section>
 	
 	<?php else : ?>
-	<div class="lightGreyBg content-section">
+	<section class="lightGreyBg content-section">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -96,13 +96,13 @@ elseif ( $bgcolor == 'light' ):
 		<?php endif;
 			include('includes/section-content-loop.php'); ?>
 		</div>
-	</div>
+	</section>
 	<?php endif;
 	
 elseif ( $bgcolor == 'dark' ):
 	
 	if ( $blockanchor ) : ?>
-	<div id="<?php echo $blockanchor ?>" class="darkbg content-section light">
+	<section id="<?php echo $blockanchor ?>" class="darkbg content-section light">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -110,10 +110,10 @@ elseif ( $bgcolor == 'dark' ):
 		<?php endif;
 			include('includes/section-content-loop.php'); ?>
 		</div>
-	</div>
+	</section>
 	
 	<?php else : ?>
-	<div class="darkbg content-section light">
+	<section class="darkbg content-section light">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -121,13 +121,13 @@ elseif ( $bgcolor == 'dark' ):
 		<?php endif;
 			include('includes/section-content-loop.php'); ?>
 		</div>
-	</div>
+	</section>
 	<?php endif;
 	
 else : 
 	
 	if ( $blockanchor ) : ?>
-	<div id="<?php echo $blockanchor ?>" class="content-section">
+	<section id="<?php echo $blockanchor ?>" class="content-section">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -135,10 +135,10 @@ else :
 		<?php endif;
 			include('includes/section-content-loop.php'); ?>
 		</div>
-	</div>
+	</section>
 	
 	<?php else : ?>
-	<div class="content-section">
+	<section class="content-section">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -146,7 +146,7 @@ else :
 		<?php endif;
 			include('includes/section-content-loop.php'); ?>
 		</div>
-	</div>
+	</section>
 	<?php endif;
 
 endif; ?>
