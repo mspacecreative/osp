@@ -1,21 +1,46 @@
-.display-medium-subtitle {
-	display: none;
-}
 .display-medium-title {
 	font-size: 20px;
 	font-weight: 600;
+	margin: 0;
 }
 #display-medium-owl-demo .details-title {
 	border-bottom: 0;
 }
-.display-medium-item {
+.display-medium-item .colInnerMed {
 	display: flex;
-	//flex-wrap: wrap;
 	box-shadow: 0 0 10px #d9d9d9;
 	height: 100%;
+	flex-basis: 100%;
+}
+.colInnerMed .row, .mediumContent {
+	height: 100%;
+}
+.colInnerMed .container {
+	margin: 0;
+	width: 100%;
+}
+.mediumContent p:last-of-type {
+	margin-top: auto;
+}
+.colInnerMed img {
+	object-fit: cover;
+	height: 100%;
+}
+.colInnerMed .medPortrait {
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+.medPortrait a {
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 .display-medium-item a {
 	flex: 0 0 34%;
+	margin: 0;
 }
 .mediumContent {
 	flex: 0 0 66%;
@@ -31,6 +56,9 @@
 .owl-carousel .owl-wrapper-outer {
 	overflow: visible;
 }
+.display-medium-date-read {
+	margin: 15px 0;
+}
 .owl-wrapper {
 	display: flex!important;
 	//width: 1500px!important;
@@ -45,14 +73,11 @@
 	width: auto!important;
 	max-width: 33.333%;
 }
-.display-medium-date span {
-	display: none;
-}
+/*
 .display-medium-date-read ~ p {
 	margin-top: auto;
 }
 
-/*
 #insightsAndStories .innerContainer {
 	margin-right: 0;
 	padding-right: 0;

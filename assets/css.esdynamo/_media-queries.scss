@@ -5,6 +5,12 @@
 	.shrinkLogo {
 		margin: 0;
 	}
+	.colInnerMed .col-lg-4 {
+		padding-right: 0;
+	}
+	.colInnerMed .col-lg-8 {
+		padding-left: 0;
+	}
 }
 
 @media (max-width: 64em) {
@@ -318,6 +324,15 @@
 		width: 100%;
 	}
 	.wpcf7 p {
+		flex-basis: 100%;
+		max-width: 100%;
+	}
+	.colInnerMed .medPortrait {
+		height: 250px;
+		flex-basis: 100%;
+		max-width: 100%;
+	}
+	.colInnerMed .col.medContent {
 		flex-basis: 100%;
 		max-width: 100%;
 	}
