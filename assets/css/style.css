@@ -2936,6 +2936,17 @@ nav li a {
 	bottom: -7px;
 }
 
+.searchIcon {
+	width: 15px;
+	height: 15px;
+}
+
+.searchBarContainer {
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.25s ease-in-out;
+}
+
 .button {
 	display: inline-block;
 	padding: 0.75em 1.5em;

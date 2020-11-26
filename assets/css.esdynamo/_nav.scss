@@ -112,3 +112,14 @@ nav li a {
 .hamburger-inner::after {
 	bottom: -7px;
 }
+
+// SEARCH BAR
+.searchIcon {
+	width: 15px;
+	height: 15px;
+}
+.searchBarContainer {
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.25s ease-in-out;
+}
