@@ -304,6 +304,9 @@
 	    max-width: 500px;
 		display: table;
 	}
+	.searchIcon.hide {
+		transform: translateY(65px);
+	}
 }
 
 @media (min-width: 768px) and (orientation: portrait) {

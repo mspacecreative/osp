@@ -2971,7 +2971,6 @@ nav li a {
 }
 
 .searchIcon.hide {
-	transform: translateY(65px);
 	opacity: 0;
 	visibility: hidden;
 	transition: 0.5s ease-in-out;
@@ -3744,6 +3743,10 @@ footer.section {
 		right: 4em;
 		max-width: 500px;
 		display: table;
+	}
+	
+	.searchIcon.hide {
+		transform: translateY(65px);
 	}
 }
 
