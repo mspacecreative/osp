@@ -2965,7 +2965,7 @@ nav li a {
 }
 
 .searchIcon.hide {
-	transform: translateY(-65px);
+	transform: translateY(65px);
 	opacity: 0;
 	visibility: hidden;
 	transition: 0.5s ease-in-out;
