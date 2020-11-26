@@ -2995,7 +2995,7 @@ nav {
 	background: #424242 !important;
 }
 
-div.asl_w .probox .promagnifier {
+div.asl_w .probox .promagnifier, div.asl_r.vertical {
 	background: #38C3E1 !important;
 }
 
@@ -3027,6 +3027,10 @@ div.asl_w .probox .promagnifier {
 	left: 0;
 	height: 100%;
 	width: 100%;
+}
+
+#ajaxsearchliteres1 {
+	top: 95px !important;
 }
 
 .button {
