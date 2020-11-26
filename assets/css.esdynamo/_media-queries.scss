@@ -299,6 +299,12 @@
 		opacity: 1;
 		visibility: visible;
 	}
+	.searchBarContainer {
+		transform: translateY(-65px);
+		right: 4em;
+	    max-width: 500px;
+	    width: calc(100% - 6em);
+	}
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
