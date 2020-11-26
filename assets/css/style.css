@@ -2958,7 +2958,7 @@ nav li a {
 }
 
 nav.hide {
-	transform: translateY(-65px);
+	transform: translateY(65px);
 	transition: 0.75s ease-in-out;
 }
 
