@@ -3030,7 +3030,7 @@ div.asl_w .probox .promagnifier, div.asl_r.vertical {
 }
 */
 
-.searchIcon a {
+.searchIcon a, .closeIcon a {
 	position: absolute;
 	top: 0;
 	left: 0;
