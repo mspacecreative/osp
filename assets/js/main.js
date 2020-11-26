@@ -7,9 +7,10 @@
 		$(this).next().toggleClass('reveal');
 		$(this).prev().toggleClass('hide');
 	});
-	$('.mobileOnly').click(function(e) {
+	$('.closeIcon').click(function(e) {
 		e.preventDefault();
 		$(this).parent().toggleClass('reveal');
+		$(this).parent().prev().toggleClass('hide');
 	});
 	
 	function calcCardHeight() {

@@ -118,14 +118,18 @@ nav li a {
 	width: 20px;
 	height: 20px;
 	position: absolute;
-	right: 2em;
 	transform: translateY(0);
 	transition: 0.5s ease-in-out;
 	opacity: 1;
 	visibility: visible;
 }
+.closeIcon {
+	right: 0;
+	top: 0;
+}
 .searchIcon {
 	background-position: bottom center;
+	right: 2em;
 }
 .searchBarContainer {
 	opacity: 0;
