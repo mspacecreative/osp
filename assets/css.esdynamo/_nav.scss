@@ -130,7 +130,7 @@ nav li a {
     display: table;
     height: 100%;
 }
-.reaveal.searchBarContainer {
+.searchBarContainer.reveal {
 	opacity: 1;
 	visibility: visible;
 	transition: 0.25s ease-in-out;
@@ -140,7 +140,7 @@ nav li a {
     vertical-align: middle;
 }
 #ajaxsearchlite1 div.asl_w {
-	background: none;
+	background: none!important;
 }
 #ajaxsearchlite1 .probox, div.asl_w .probox {
 	max-width: 500px;
