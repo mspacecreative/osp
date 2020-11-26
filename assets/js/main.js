@@ -11,6 +11,7 @@
 		e.preventDefault();
 		$(this).parent().toggleClass('reveal');
 		$(this).parent().prev().toggleClass('hide');
+		$(this).parent().prev().prev().toggleClass('hide');
 	});
 	
 	function calcCardHeight() {
