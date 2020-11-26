@@ -54,9 +54,6 @@
 	    padding-top: 4em;
 		padding-bottom: 4em;
 	}
-	.imageStripContainer .col:last-of-type {
-		display: none;
-	}
 }
 
 @media (min-width: 64em) {
@@ -338,6 +335,9 @@
 	.colInnerMed .col.medContent {
 		flex-basis: 100%;
 		max-width: 100%;
+	}
+	.imageStripContainer .col:last-of-type {
+		display: none;
 	}
 }
 
