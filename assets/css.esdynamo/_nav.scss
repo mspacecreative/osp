@@ -163,6 +163,10 @@ nav {
 }
 #ajaxsearchlite1 .probox, div.asl_w .probox {
 	width: 100%;
+	background: $brandGrey;
+}
+div.asl_w .probox .promagnifier {
+	background: $brandBlue;
 }
 .searchIcon.hide {
 	background-position: top center;
