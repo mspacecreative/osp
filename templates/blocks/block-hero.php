@@ -33,23 +33,40 @@
 	</div>
 </div>
 	
-<!-- HERO CAROUSEL -->
+<!-- HERO CAROUSEL / HERO VIDEO -->
 <?php 
+$layout = get_field('layout');
+$link = get_sub_field('link');
+$linkOgg = get_sub_field('ogg_link');
+$linkWebM = get_sub_field('webm_link');
 $images = get_field('gallery');
 $size = 'full';
 
+if ( $layout === 'video' ) : ?>
+<div class="videoContainer">
+	<video src="<?php echo $link ?>" poster="<?php echo $poster ?>" playsinline muted loop autoplay>
+		<source src="<?php echo $link ?>" type="video/mp4" />
+		<source src="<?php echo $linkOgg ?>" type="video/ogg" />
+		<source src="<?php echo $linkWebM ?>" type="video/webm" />
+	</video>
+</div>
+<?php
+
+else :
+
 if ( $images ) : ?>
 	
-	<div class="carouselContainer">
-		<div class="carousel">
+<div class="carouselContainer">
+	<div class="carousel">
 		  		
-		  	<?php foreach( $images as $image_id ) : ?>
-		  	<div>
-		  		<?php echo wp_get_attachment_image( $image_id, $size ); ?>
-		  	</div>
-		  	<?php endforeach; ?>
-		  	
+		<?php foreach( $images as $image_id ) : ?>
+		<div>
+			<?php echo wp_get_attachment_image( $image_id, $size ); ?>
 		</div>
+		<?php endforeach; ?>
+		  	
 	</div>
+</div>
 	
-<?php endif; ?>
+<?php endif;
+endif; ?>
