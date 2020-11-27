@@ -2844,6 +2844,11 @@ section.credits {
 	background-color: transparent;
 }
 
+.innerPadding {
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
 header {
 	position: fixed;
 	width: 100%;

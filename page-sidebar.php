@@ -22,7 +22,7 @@ switch ( $titlewidth ) {
 <?php 
 $title = get_the_title();
 echo '
-	<section>
+	<section class="innerPadding">
 		<div class="innerContainer section4 ' . $width . '">
 		 		
 		 	<h1 class="postTitle">' . $title . '</h1>
@@ -35,7 +35,7 @@ if ( have_posts() ) {
 	the_post();
 	 	
 	echo '
-	<section>
+	<section class="innerPadding">
 		<div class="innerContainer">
 			<div class="row gutterSpaceWide">
 				<div class="col col-lg-9 col-md-9 col-sm-12 col-xs-12">'; 
