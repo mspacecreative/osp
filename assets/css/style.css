@@ -2840,6 +2840,10 @@ section {
 	position: relative;
 }
 
+section.credits {
+	background-color: transparent;
+}
+
 header {
 	position: fixed;
 	width: 100%;
