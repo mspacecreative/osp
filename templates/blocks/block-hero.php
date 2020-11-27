@@ -91,7 +91,8 @@ if ( $images ) : ?>
 	</div>
 </div>
 
-<?php 
+<?php endif;
+
 else :
 
 if ( $images ) : ?>
