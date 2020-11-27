@@ -1,5 +1,4 @@
-<?php
-get_header(); ?>
+<?php get_header(); ?>
 
 <div class="contentWrap">';
 	<div class="innerContainer w1080 section4">
@@ -10,4 +9,6 @@ get_header(); ?>
 	 	
 	</div>
 </div>
+
+<?php get_footer(); ?>
 
