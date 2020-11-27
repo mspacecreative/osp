@@ -3590,11 +3590,13 @@ footer.section {
 	}
 }
 
+/*
 @media (max-width: 75em) {
 	.section.faqs, .section {
 		background-attachment: scroll;
 	}
 }
+*/
 
 @media (max-width: 980px) {
 	.heroContent h1, h1 {
