@@ -16,7 +16,7 @@ add_filter( 'render_block', 'wrap_classic_block', 10, 2 );
 add_filter( 'render_block', function( $block_content, $block ) {
     // Target core/* and core-embed/* blocks.
     if ( preg_match( '~^core/|core-embed/~', $block['blockName'] ) ) {
-       $block_content = sprintf( '<div class="para-block-wrap">%s</div>', $block_content );
+       $block_content = sprintf( '<section><div class="para-block-wrap">%s</div></section>', $block_content );
     }
     return $block_content;
 }, PHP_INT_MAX - 1, 2 );
