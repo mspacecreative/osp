@@ -3486,6 +3486,10 @@ footer.section {
 		padding-top: 4em;
 		padding-bottom: 4em;
 	}
+	
+	.row.gutterSpaceWider > .bottomMarginMobile.col, .row.gutterSpaceWide > .bottomMarginMobile.col, .row > .bottomMarginMobile.col {
+		padding-bottom: 1em;
+	}
 }
 
 @media (min-width: 64em) {
