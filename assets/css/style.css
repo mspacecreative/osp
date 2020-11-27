@@ -3804,11 +3804,18 @@ footer.section {
 	.searchBarContainer {
 		right: 4em;
 		max-width: 500px;
-		display: table;
+		display: flex;
+		align-items: center;
 	}
 	
 	.searchIcon.hide {
 		transform: translateY(65px);
+	}
+	
+	.closeIcon {
+		margin-left: 15px;
+		position: relative;
+		top: auto;
 	}
 }
 

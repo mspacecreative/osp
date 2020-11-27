@@ -162,8 +162,8 @@
 			</a>
 		</div>
 		<div class="searchBarContainer">
-			<div class="closeIcon"><a href="#"></a></div>
 			<?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
+			<div class="closeIcon"><a href="#"></a></div>
 		</div>
 		<!-- / search icon -->
 	
