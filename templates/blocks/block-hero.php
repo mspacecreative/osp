@@ -75,6 +75,23 @@ if ( have_rows('video') ): ?>
 <?php
 endif;
 
+elseif ( $layout === 'carousel' ):
+
+if ( $images ) : ?>
+	
+<div class="carouselContainer">
+	<div class="carousel">
+		  		
+		<?php foreach( $images as $image_id ) : ?>
+		<div>
+			<?php echo wp_get_attachment_image( $image_id, $size ); ?>
+		</div>
+		<?php endforeach; ?>
+		  	
+	</div>
+</div>
+
+<?php 
 else :
 
 if ( $images ) : ?>
@@ -92,4 +109,5 @@ if ( $images ) : ?>
 </div>
 	
 <?php endif;
+
 endif; ?>
