@@ -31,8 +31,6 @@
 			<p><?php osp_custom_excerpt('osp_index'); ?></p>
 				
 		</div>
-		
-		</div>
 	</article>
 	<!-- /article -->
 	
