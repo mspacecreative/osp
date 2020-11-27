@@ -62,7 +62,7 @@
 		
 		var hamburgerIcon = $('.hamburger'),
 		        mobileNav = $('nav'),
-		      subMenuLink = $('nav .sub-menu a');
+		      //subMenuLink = $('nav .sub-menu a');
 		
 		if ( $('.menuOpen').length ) {
 			mobileNav.slideDown();
@@ -72,10 +72,12 @@
 			hamburgerIcon.removeClass('is-active');
 		}
 		
+		/*
 		if ( subMenuLink.href.indexOf("#") != -1 ) {
 			hamburgerIcon.removeClass('is-active');
 			$('body').removeClass('menuOpen');
 		}
+		*/
 	}
 	
 	// MOBILE MENU
