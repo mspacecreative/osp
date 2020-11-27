@@ -22,12 +22,6 @@
 			</a>
 			<!-- /post title -->
 					
-			<!-- post details -->
-			<h5 class="date">
-				<?php echo the_time( 'F j, Y' ); ?><?php esc_html_e(' &nbsp;| &nbsp;'); ?><?php the_category(', '); ?>
-			</h5>
-			<!-- /post details -->
-					
 			<p><?php osp_custom_excerpt('osp_index'); ?></p>
 				
 		</div>
