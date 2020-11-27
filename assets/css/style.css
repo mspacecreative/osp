@@ -3529,6 +3529,10 @@ footer.section {
 	.contentPortals .row:nth-of-type(2) .col:nth-of-type(2) {
 		order: 1;
 	}
+	
+	.offsetBg {
+		height: 80%;
+	}
 }
 
 @media (min-width: 64em) {
@@ -3619,10 +3623,6 @@ footer.section {
 	
 	.fitPortal::before, .fitPortal::after {
 		height: 80px;
-	}
-	
-	.offsetBg {
-		height: 80%;
 	}
 	
 	.cosLogo {
