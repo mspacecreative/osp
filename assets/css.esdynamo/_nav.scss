@@ -6,8 +6,12 @@ header {
 	z-index: 999;
 	padding: 2em 0;
 	transition: 0.5s ease-in-out;
+	background-color: #fff;
 }
-header.scroll {
+.home header {
+	background-color: transparent;
+}
+.home header.scroll, header.scroll {
 	background-color: rgba(255, 255, 255, .9);
 	transition: 0.5s ease-in-out;
 	padding: 0.75em 0;
