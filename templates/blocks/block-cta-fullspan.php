@@ -30,8 +30,13 @@ $showsocial = get_field('show_social_media_icons');
 				the_row();
 				$link = get_sub_field('link');
 				$label = get_sub_field('label');
+				$class= get_sub_field('class');
 				
-				echo '<li><a class="button dark blue" href="' . $link . '">' . $label . '</a></li>';
+				if ( $class ) {
+					echo '<li><a class="button dark blue ' . $class . '" href="' . $link . '">' . $label . '</a></li>';
+				} else {
+					echo '<li><a class="button dark blue" href="' . $link . '">' . $label . '</a></li>';
+				}
 			}
 			echo '</ul>';
 		}
