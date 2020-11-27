@@ -3590,13 +3590,11 @@ footer.section {
 	}
 }
 
-/*
 @media (max-width: 75em) {
 	.section.faqs, .section {
 		background-attachment: scroll;
 	}
 }
-*/
 
 @media (max-width: 980px) {
 	.heroContent h1, h1 {
@@ -3950,12 +3948,14 @@ footer.section {
 	}
 }
 
+/*
 @media (max-width: 1366px) {
 	.faqs {
-		background-image: unset !important;
+		background-image: unset!important;
 		background-color: transparent;
 	}
 }
+*/
 
 @media (min-width: 1920px) {
 	.heroCollage {
