@@ -3948,6 +3948,12 @@ footer.section {
 	}
 }
 
+@media (max-device-width: 1366px) {
+	.faqs {
+		background: none;
+	}
+}
+
 @media (min-width: 1920px) {
 	.heroCollage {
 		width: 80%;
