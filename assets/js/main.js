@@ -56,6 +56,7 @@
 		$(this).toggleClass('rotate');
 	});
 	
+	/*
 	function toggleMenu() {
 		$('body').toggleClass('menuOpen');
 		
@@ -82,6 +83,7 @@
 		e.preventDefault();
 		toggleMenu();
 	});
+	*/
 	
 	
 	// FIX HEADER ON SCROLL
