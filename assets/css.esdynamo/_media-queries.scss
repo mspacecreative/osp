@@ -304,7 +304,7 @@
 		visibility: visible;
 	}
 	.searchBarContainer {
-		right: 4em;
+		right: 2em;
 	    max-width: 500px;
 		display: flex;
 		align-items: center;
@@ -315,6 +315,11 @@
 	.closeIcon {
 		margin-left: 15px;
 		position: relative;
+		top: auto;
+		right: 0;
+		background-position: top 1px center;
+	}
+	.scroll .closeIcon {
 		top: auto;
 	}
 }
