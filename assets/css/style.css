@@ -3590,7 +3590,7 @@ footer.section {
 	}
 }
 
-@media (max-width: 75em) {
+@media (max-device-width: 1366px) {
 	.section.faqs, .section {
 		background-attachment: scroll;
 	}
