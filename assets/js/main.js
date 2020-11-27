@@ -60,8 +60,8 @@
 	function toggleMenu() {
 		$('body').toggleClass('menuOpen');
 		
-		var hamburgerIcon = $('.hamburger');
-		        //mobileNav = $('nav'),
+		var hamburgerIcon = $('.hamburger'),
+		        mobileNav = $('nav');
 		      //subMenuLink = $('nav .sub-menu a');
 		
 		if ( $('.menuOpen').length ) {
