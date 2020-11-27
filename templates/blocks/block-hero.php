@@ -36,21 +36,33 @@
 <!-- HERO CAROUSEL / HERO VIDEO -->
 <?php 
 $layout = get_field('layout');
-$link = get_sub_field('link');
-$linkOgg = get_sub_field('ogg_link');
-$linkWebM = get_sub_field('webm_link');
 $images = get_field('gallery');
 $size = 'full';
 
-if ( $layout === 'video' ) : ?>
+if ( $layout === 'video' ) :
+
+if ( have_rows('video') ): ?>
 <div class="videoContainer">
+	<?php while ( have_rows('video') ): the_row();
+	$poster = get_sub_field('poster');
+	$link = get_sub_field('link');
+	$linkOgg = get_sub_field('ogg_link');
+	$linkWebM = get_sub_field('webm_link'); ?>
+	
 	<video src="<?php echo $link ?>" poster="<?php echo $poster ?>" playsinline muted loop autoplay>
 		<source src="<?php echo $link ?>" type="video/mp4" />
+		<?php if ( $lindOgg ): ?>
 		<source src="<?php echo $linkOgg ?>" type="video/ogg" />
+		<?php endif;
+		if ( $linkWebM ): ?>
 		<source src="<?php echo $linkWebM ?>" type="video/webm" />
+		<?php endif; ?>
 	</video>
+	
+	<?php endwhile; ?>
 </div>
 <?php
+endif;
 
 else :
 
