@@ -3568,7 +3568,7 @@ footer.section {
 }
 
 @media (max-width: 75em) {
-	.section.faqs .section {
+	.section.faqs, .section {
 		background-attachment: scroll;
 	}
 }
