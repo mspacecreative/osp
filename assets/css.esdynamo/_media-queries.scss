@@ -259,16 +259,9 @@
 	    right: 0;
 	    background: #fff;
 	    z-index: 999999;
-	    padding: 2em 0;
+	    padding: 4em 0;
 	    top: 0;
 	}
-	/*
-	.searchIcon.hide {
-		top: -1em;
-	    right: 1em;
-		z-index: 9999999;
-	}
-	*/
 	.searchIcon {
 		right: 5em;
 	}
@@ -277,9 +270,12 @@
 		margin: auto;
 		display: block;
 	}
-	.scroll .closeIcon, .closeIcon {
+	.scroll .closeIcon {
 	    right: 1em;
-	    top: .25em;
+	    top: -.75em;
+	}
+	.closeIcon {
+		top: -2em;
 	}
 }
 
