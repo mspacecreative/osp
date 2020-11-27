@@ -3481,13 +3481,21 @@ footer.section {
 	}
 }
 
-@media (max-width: 64em) {
+@media (max-width: 63.9em) {
 	.row.gutterSpaceWider > .bottomMarginMobile.col, .row.gutterSpaceWide > .bottomMarginMobile.col, .row > .bottomMarginMobile.col {
 		padding-bottom: 4em;
 	}
+	
+	.contentPortals .row:nth-of-type(2) .col:nth-of-type(2) {
+		order: 1;
+	}
+	
+	.fitPortal::before, .fitPortal::after {
+		height: 80px;
+	}
 }
 
-@media (max-width: 48em) {
+@media (max-width: 47.9em) {
 	.topMarginMobile50 {
 		margin-top: 50px;
 	}
@@ -3524,16 +3532,6 @@ footer.section {
 	
 	.row.gutterSpaceWider > .bottomMarginMobile.col, .row.gutterSpaceWide > .bottomMarginMobile.col, .row > .bottomMarginMobile.col {
 		padding-bottom: 1em;
-	}
-}
-
-@media (max-width: 1023px) {
-	.contentPortals .row:nth-of-type(2) .col:nth-of-type(2) {
-		order: 1;
-	}
-	
-	.offsetBg {
-		height: 80px;
 	}
 }
 
@@ -3623,8 +3621,8 @@ footer.section {
 		font-size: 32px;
 	}
 	
-	.fitPortal::before, .fitPortal::after {
-		height: 80px;
+	.offsetBg {
+		height: 80%;
 	}
 	
 	.cosLogo {
