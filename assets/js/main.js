@@ -1,5 +1,10 @@
 (function ($) {
 
+	var viewportHeight = $(window).height();
+	function heroHeight() {
+		$('.heroContent').height( viewportHeight );
+	}
+	
 	// SEARCH BAR
 	$('.searchIcon').click(function(e) {
 		e.preventDefault();
@@ -128,6 +133,7 @@
 	
 	$(document).ready(function() {
 		animateHoverHeight();
+		heroHeight();
 		
 		// SLICK SLIDER
 		$('.carousel').slick({
