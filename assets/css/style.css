@@ -3950,9 +3950,9 @@ footer.section {
 	}
 }
 
-@media (max-device-width: 1366px) {
+@media (max-width: 1366px) {
 	.faqs {
-		background-image: none !important;
+		background-image: unset !important;
 		background-color: transparent;
 	}
 }
