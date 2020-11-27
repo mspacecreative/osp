@@ -14,9 +14,6 @@
 }
 
 @media (max-width: 64em) {
-	.fitPortal::before, .fitPortal::after {
-		height: 80px;
-	}
 	.row.gutterSpaceWider > .bottomMarginMobile.col, .row.gutterSpaceWide > .bottomMarginMobile.col, .row > .bottomMarginMobile.col {
 		padding-bottom: 4em;
 	}
@@ -149,6 +146,9 @@
 	}
 	.contentPortals .row:nth-of-type(2) .col:nth-of-type(2) {
 		order: 1;
+	}
+	.fitPortal::before, .fitPortal::after {
+		height: 80px;
 	}
 	.offsetBg {
 		height: 80%;
