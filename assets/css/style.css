@@ -257,8 +257,11 @@ table {
 }
 
 .videoContainer {
-	height: 100vh;
-	position: relative;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
 }
 
 .angledBg {
@@ -333,7 +336,6 @@ table {
 */
 
 .heroContent {
-	background: linear-gradient(-45deg, #93e4f5, #38c3e1, #257f92) no-repeat center center scroll;
 	background-size: cover;
 	position: relative;
 	min-height: 100vh;

@@ -1,6 +1,9 @@
 .videoContainer {
-	height: 100vh;
-	position: relative;
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 .angledBg {
 	height: 100%;
@@ -70,7 +73,7 @@
 }
 */
 .heroContent {
-	background: linear-gradient(-45deg, #93e4f5, #38c3e1, #257f92) no-repeat center center scroll;
+	//background: linear-gradient(-45deg, #93e4f5, #38c3e1, #257f92) no-repeat center center scroll;
 	// LEGACY BACKGROUND STYLES WITH GRADIENT
 	//background-image: url(../img/paul-einerhand-qLIglFCcAeo-unsplash-scaled-e1590856668561_bw.jpg);
 	//animation: gradient 10s ease infinite;
