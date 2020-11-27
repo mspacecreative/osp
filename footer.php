@@ -81,7 +81,7 @@
 			<section class="credits" role="contentinfo">
 	
 				<div class="innerContainer">
-					<div class="row between-lg between-md nolColBottomPadding bottomMargin25 middle-lg middle-md middle-sm">
+					<div class="row between-lg between-md nolColBottomPadding bottomPadding25 middle-lg middle-md middle-sm">
 						<!-- credits -->
 						<div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div>

@@ -71,6 +71,19 @@
 	padding-bottom: 6em;
 }
 
+.topPadding25 {
+	padding-top: 25px;
+}
+
+.bottomPadding25 {
+	padding-bottom: 25px;
+}
+
+.topBottomPadding25 {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
 .topMargin25 {
 	margin-top: 25px;
 }
@@ -323,4 +336,5 @@
 // SECTION
 section {
 	background-color: #fff;
+	position: relative;
 }
