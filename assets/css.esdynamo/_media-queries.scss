@@ -260,7 +260,10 @@
 	    background: #fff;
 	    z-index: 999999;
 	    padding: 4em 0;
-	    top: 0;
+	    top: -2em;
+	}
+	.scroll .searchBarContainer.reveal {
+		top: -0.75em;
 	}
 	.searchIcon {
 		right: 5em;
@@ -270,12 +273,9 @@
 		margin: auto;
 		display: block;
 	}
-	.scroll .closeIcon {
+	.scroll .closeIcon, .closeIcon {
 	    right: 1em;
-	    top: -.75em;
-	}
-	.closeIcon {
-		top: -2em;
+	    top: 0.75em;
 	}
 }
 
