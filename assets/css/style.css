@@ -3952,7 +3952,6 @@ footer.section {
 
 @media (max-device-width: 1366px) {
 	.faqs {
-		background: none;
 		background-image: none !important;
 		background-color: transparent;
 	}
