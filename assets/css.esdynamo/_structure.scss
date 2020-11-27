@@ -307,3 +307,15 @@
 	padding-left: 0;
 	padding-right: 0;
 }
+
+// SEARCH
+.search article {
+	padding-bottom: 2em;
+    margin-bottom: 2em;
+    border-bottom: 1px solid #c9c9c9;
+}
+.search article:last-of-type {
+	padding-bottom: 0;
+	margin-bottom: 0;
+	border-bottom: none;
+}
