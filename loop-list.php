@@ -31,19 +31,21 @@
 			<p><?php osp_custom_excerpt('osp_index'); ?></p>
 				
 		</div>
-			
-		<?php endwhile; ?>
 		
 		</div>
 	</article>
 	<!-- /article -->
+	
+	<?php endwhile; ?>
 
-<?php else : ?>
+	<?php else : ?>
 
 	<!-- article -->
 	<article>
 		<h2><?php esc_html_e( 'Sorry, nothing to display.', 'osp' ); ?></h2>
 	</article>
 	<!-- /article -->
+	
+</div>
 
 <?php endif; ?>
