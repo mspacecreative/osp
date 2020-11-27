@@ -205,7 +205,10 @@ div.asl_w .probox .promagnifier, div.asl_r.vertical {
 	top: 95px!important;
 }
 .closeIcon {
-    right: -2em;
+	right: -2em;
+	top: 2.25em;
+}
+.scroll .closeIcon {
     top: .75em;
 }
 .searchIcon.mobileOnly {
