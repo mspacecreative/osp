@@ -3825,6 +3825,12 @@ footer.section {
 	}
 }
 
+@media (min-width: 981px) and (max-width: 1279px) {
+	.logo {
+		width: 215px;
+	}
+}
+
 @media (min-width: 768px) and (orientation: portrait) {
 	.heroContent h1 {
 		font-size: 52px;
