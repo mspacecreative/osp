@@ -44,17 +44,16 @@ if ( $layout === 'video' ) :
 if ( have_rows('video') ): ?>
 <div class="videoContainer">
 	<?php while ( have_rows('video') ): the_row();
-	$poster = get_sub_field('poster'); ?>
+	$poster = get_sub_field('poster');
+	
+	if ( have_rows('video_formats') ):
+	while ( have_rows('video_formats') ): the_row();
+	$link = get_sub_field('link');
+	$linkOgg = get_sub_field('ogg_link');
+	$linkWebM = get_sub_field('webm_link'); ?>
 	
 	<video src="<?php echo $link ?>" poster="<?php echo $poster ?>" playsinline muted loop autoplay>
-		<?php if ( have_rows('video_formats') ):
-		while ( have_rows('video_formats') ): the_row();
-		
-		$link = get_sub_field('link');
-		$linkOgg = get_sub_field('ogg_link');
-		$linkWebM = get_sub_field('webm_link');
-		
-		if ( $link ): ?>
+		<?php if ( $link ): ?>
 		<source src="<?php echo $link ?>" type="video/mp4" />
 		<?php endif; ?>
 		
@@ -64,13 +63,14 @@ if ( have_rows('video') ): ?>
 		
 		if ( $linkWebM ): ?>
 		<source src="<?php echo $linkWebM ?>" type="video/webm" />
-		<?php endif;
-		
-		endwhile;
-		endif; ?>
+		<?php endif; ?>
 	</video>
 	
-	<?php endwhile; ?>
+	<?php 
+	endwhile;
+	endif; 
+	
+	endwhile; ?>
 </div>
 <?php
 endif;
