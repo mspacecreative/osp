@@ -3475,10 +3475,6 @@ footer.section {
 }
 
 @media (max-width: 64em) {
-	.contentPortals .row:nth-of-type(2) .col:nth-of-type(2) {
-		order: 1;
-	}
-	
 	.fitPortal::before, .fitPortal::after {
 		height: 80px;
 	}
@@ -3612,6 +3608,10 @@ footer.section {
 @media (max-width: 980px) {
 	.heroContent h1, h1 {
 		font-size: 32px;
+	}
+	
+	.contentPortals .row:nth-of-type(2) .col:nth-of-type(2) {
+		order: 1;
 	}
 	
 	.offsetBg {

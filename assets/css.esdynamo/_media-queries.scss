@@ -14,9 +14,6 @@
 }
 
 @media (max-width: 64em) {
-	.contentPortals .row:nth-of-type(2) .col:nth-of-type(2) {
-		order: 1;
-	}
 	.fitPortal::before, .fitPortal::after {
 		height: 80px;
 	}
@@ -149,6 +146,9 @@
 		font-size: 32px;
 		//LEGACY STYLE
 		//max-width: 450px;
+	}
+	.contentPortals .row:nth-of-type(2) .col:nth-of-type(2) {
+		order: 1;
 	}
 	.offsetBg {
 		height: 80%;
