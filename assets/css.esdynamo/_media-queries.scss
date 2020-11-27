@@ -50,6 +50,9 @@
 	.row.gutterSpaceWider > .bottomMarginMobile.col, .row.gutterSpaceWide > .bottomMarginMobile.col, .row > .bottomMarginMobile.col {
 		padding-bottom: 1em;
 	}
+	.contentPortals .row:nth-of-type(2) .col:nth-of-type(2) {
+		order: 1;
+	}
 }
 
 @media (min-width: 64em) {
@@ -143,9 +146,6 @@
 		font-size: 32px;
 		//LEGACY STYLE
 		//max-width: 450px;
-	}
-	.contentPortals .row:nth-of-type(2) .col:nth-of-type(2) {
-		order: 1;
 	}
 	.fitPortal::before, .fitPortal::after {
 		height: 80px;
