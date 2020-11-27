@@ -2849,6 +2849,10 @@ section.credits {
 	padding-right: 2em;
 }
 
+.para-block-wrap:last-of-type {
+	margin-bottom: 0;
+}
+
 header {
 	position: fixed;
 	width: 100%;
