@@ -3803,34 +3803,6 @@ footer.section {
 	.searchIcon.hide {
 		transform: translateY(65px);
 	}
-	
-	.searchBarContainer.reveal {
-		width: 100%;
-		right: 0;
-		background: #fff;
-		z-index: 999999;
-		padding: 4em 0;
-		top: -2em;
-	}
-	
-	.scroll .searchBarContainer.reveal {
-		top: -0.75em;
-	}
-	
-	.searchIcon {
-		right: 5em;
-	}
-	
-	#ajaxsearchlite1 {
-		width: 90%;
-		margin: auto;
-		display: block;
-	}
-	
-	.scroll .closeIcon, .closeIcon {
-		right: 1em;
-		top: 1.5em;
-	}
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
