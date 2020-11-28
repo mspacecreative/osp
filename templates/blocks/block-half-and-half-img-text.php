@@ -160,6 +160,7 @@ elseif ( $blockanchor ): ?>
 		 		$heading = get_sub_field('heading');
 				$content = get_sub_field('content');
 				$contenttype = get_sub_field('content_type');
+				$mobile = get_sub_field('mobile_spacing');
 		 		
 		 		switch ( $colratio ) {
 					case 'three-fifth-two-fifth':
@@ -186,8 +187,10 @@ elseif ( $blockanchor ): ?>
 		 		
 		 		if ( $offsetlayout ): ?>
 				<div class="col-lg-6 bottomMarginMobile col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
-				<?php elseif ( $anchor ): ?>
-				<div id="<?php echo $anchor ?>" class="col-lg-6 bottomMarginMobile col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
+				<?php elseif ( $anchor && $mobile ): ?>
+				<div id="<?php echo $anchor ?>" class="<?php echo $colwidth ?> col-lg-6 bottomMarginMobile keepSpacing col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
+				<?php elseif ( $mobile ): ?>
+				<div class="<?php echo $colwidth ?> col-lg-6 bottomMarginMobile keepSpacing col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
 				<?php else : ?>
 				<div class="<?php echo $colwidth ?> col-md-6 col-sm-6 col-xs-12 col bottomMarginMobile offsetContentContainer">
 				<?php endif;
@@ -299,6 +302,7 @@ elseif ( $blockanchor ): ?>
 		 		$contenttype = get_sub_field('content_type');
 		 		$heading = get_sub_field('heading_right_col');
 		 		$contentrightcol = get_sub_field('content_right_col');
+				$mobile = get_sub_field('mobile_spacing');
 				
 				switch ( $colratio ) {
 					case 'three-fifth-two-fifth':
@@ -324,9 +328,11 @@ elseif ( $blockanchor ): ?>
 				}
 				
 				if ( $offsetlayout ): ?>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col bottomMarginMobile offsetContentContainer hideOnDesktop">
-				<?php elseif ( $anchor ): ?>
-				<div id="<?php echo $anchor ?>" class="col-lg-6 bottomMarginMobile col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
+				<div class="col-lg-6 bottomMarginMobile col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
+				<?php elseif ( $anchor && $mobile ): ?>
+				<div id="<?php echo $anchor ?>" class="<?php echo $colwidth ?> col-lg-6 bottomMarginMobile keepSpacing col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
+				<?php elseif ( $mobile ): ?>
+				<div class="<?php echo $colwidth ?> col-lg-6 bottomMarginMobile keepSpacing col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
 				<?php else : ?>
 				<div class="<?php echo $colwidth ?> col-md-6 col-sm-6 col-xs-12 col bottomMarginMobile offsetContentContainer">
 				<?php endif;
