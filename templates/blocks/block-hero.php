@@ -52,7 +52,7 @@ if ( have_rows('video') ): ?>
 	$linkOgg = get_sub_field('ogg_link');
 	$linkWebM = get_sub_field('webm_link'); ?>
 	
-	<video src="<?php echo $link ?>" poster="<?php echo $poster ?>" playsinline muted loop autoplay>
+	<video data-object-fit="cover" src="<?php echo $link ?>" poster="<?php echo $poster ?>" playsinline muted loop autoplay>
 		<?php if ( $link ): ?>
 		<source src="<?php echo $link ?>" type="video/mp4" />
 		<?php endif; ?>

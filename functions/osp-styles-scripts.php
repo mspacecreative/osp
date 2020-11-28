@@ -28,6 +28,9 @@ function sona_styles()
     
     wp_register_script('aos-script', 'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js', array('jquery'), null, true);
 	wp_enqueue_script('aos-script');
+	
+	wp_register_script('of-js', get_template_directory_uri() . '/assets/js/vendor/objectFitPolyfill.min.js', array('jquery'), null, true);
+    wp_enqueue_script('of-js');
 	    
     wp_register_script('slick-script', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), null, true);
 	wp_enqueue_script('slick-script');
