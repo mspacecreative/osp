@@ -182,12 +182,12 @@
 }
 
 .radarRight, .radarLeft {
-	background: url(../img/textures/sonar.svg);
+	//background: url(../img/textures/sonar.svg);
     width: 250px;
     height: 500px;
     position: absolute;
     z-index: 1;
-    background-repeat: no-repeat;
+    //background-repeat: no-repeat;
     opacity: .5;
 	top: 100%;
 	margin-top: -250px;

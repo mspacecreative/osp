@@ -189,3 +189,122 @@ row.imageStripContainer {
 	height: 100%;
 	object-fit: cover;
 }
+
+// RADAR ANIMATION
+.st0 {
+	fill: none;
+	stroke: transparent;
+	stroke-miterlimit: 10;
+	animation-name: sonar6;
+	animation-duration: 3.5s;
+	animation-delay: 1.25s;
+	animation-iteration-count: infinite;
+}
+
+.st1 {
+	fill: none;
+	stroke-width: 2.5;
+	stroke-miterlimit: 10;
+	animation-name: sonar5;
+	animation-duration: 3.5s;
+	animation-delay: 1s;
+	animation-iteration-count: infinite;
+}
+
+.st2 {
+	fill: none;
+	stroke: transparent;
+	stroke-width: 5;
+	stroke-miterlimit: 10;
+	animation-name: sonar4;
+	animation-duration: 3.5s;
+	animation-delay: .75s;
+	animation-iteration-count: infinite;
+}
+
+.st3 {
+	fill: none;
+	stroke: transparent;
+	stroke-width: 10;
+	stroke-miterlimit: 10;
+	animation-name: sonar3;
+	animation-duration: 3.5s;
+	animation-delay: .5s;
+	animation-iteration-count: infinite;
+}
+
+.st4 {
+	fill: none;
+	stroke: transparent;
+	stroke-width: 20;
+	stroke-miterlimit: 10;
+	animation-name: sonar2;
+	animation-duration: 3.5s;
+	animation-delay: .25s;
+	animation-iteration-count: infinite;
+}
+
+.st5 {
+	fill: #BCBEC0;
+}
+	@keyframes sonar6 {
+0% {
+	stroke: transparent;
+}
+
+50% {
+	stroke: #BCBEC0;
+}
+
+100% {
+	stroke: transparent;
+}
+}@keyframes sonar5 {
+0% {
+	stroke: transparent;
+}
+
+50% {
+	stroke: #BCBEC0;
+}
+
+100% {
+	stroke: transparent;
+}
+}@keyframes sonar4 {
+0% {
+	stroke: transparent;
+}
+
+50% {
+	stroke: #BCBEC0;
+}
+
+100% {
+	stroke: transparent;
+}
+}@keyframes sonar3 {
+0% {
+	stroke: transparent;
+}
+
+50% {
+	stroke: #BCBEC0;
+}
+
+100% {
+	stroke: transparent;
+}
+}@keyframes sonar2 {
+0% {
+	stroke: transparent;
+}
+
+50% {
+	stroke: #BCBEC0;
+}
+
+100% {
+	stroke: transparent;
+}
+}
