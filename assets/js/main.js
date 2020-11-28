@@ -48,9 +48,11 @@
 	}
 	
 	());
-	$('.imageStripInner').each(function() {
-		$(this).find('img').data('object-fit', 'cover');
-	});
+	function addDataObjectFit() {
+		$('.imageStripInner').each(function() {
+			$(this).find('img').data('object-fit', 'cover');
+		});
+	}
 	
 	var viewportHeight = $(window).height();
 	function heroHeight() {
@@ -186,6 +188,7 @@
 	$(document).ready(function() {
 		animateHoverHeight();
 		heroHeight();
+		addDataObjectFit();
 		
 		// SLICK SLIDER
 		$('.carousel').slick({
