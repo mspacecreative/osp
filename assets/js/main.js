@@ -49,7 +49,7 @@
 	
 	());
 	$('.imageStripInner').each(function() {
-		$(this).find('img').attr('data-object-fit="cover"');
+		$(this).find('img').data('data-object-fit="cover"');
 	});
 	
 	var viewportHeight = $(window).height();
