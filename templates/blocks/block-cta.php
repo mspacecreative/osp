@@ -7,7 +7,7 @@ $content = get_field('content');
 	<div class="innerContainer w1080">
 		<div class="cta textAlignCenter">
 			<div class="radarLeft">
-				<svg version="1.1" id="sonar" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 				 viewBox="0 0 250.5 501" style="enable-background:new 0 0 250.5 501;" xml:space="preserve">
 					<path class="st st0" d="M250.5,0.5c-138.1,0-250,111.9-250,250s111.9,250,250,250" />
 					

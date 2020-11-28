@@ -1,68 +1,9 @@
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 250.5 501" style="enable-background:new 0 0 250.5 501;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:none;stroke:transparent;stroke-miterlimit:10; animation-name: sonar6; animation-duration: 3.5s; animation-delay: 1.25s; animation-iteration-count: infinite;}
-	.st1{fill:none;stroke-width:2.5;stroke-miterlimit:10; animation-name: sonar5; animation-duration: 3.5s; animation-delay: 1s; animation-iteration-count: infinite;}
-	.st2{fill:none;stroke:transparent;stroke-width:5;stroke-miterlimit:10;animation-name: sonar4; animation-duration: 3.5s; animation-delay: .75s; animation-iteration-count: infinite;}
-	.st3{fill:none;stroke:transparent;stroke-width:10;stroke-miterlimit:10; animation-name: sonar3; animation-duration: 3.5s; animation-delay: .5s; animation-iteration-count: infinite;}
-	.st4{fill:none;stroke:transparent;stroke-width:20;stroke-miterlimit:10; animation-name: sonar2; animation-duration: 3.5s; animation-delay: .25s; animation-iteration-count: infinite;}
-	.st5{fill:#BCBEC0;}
-	@keyframes sonar6 {
-		0% {
-			stroke:transparent;
-		}
-		50% {
-			stroke: #BCBEC0;
-		}
-		100% {
-			stroke:transparent;
-		}
-	}@keyframes sonar5 {
-		0% {
-			stroke:transparent;
-		}
-		50% {
-			stroke: #BCBEC0;
-		}
-		100% {
-			stroke: transparent;
-		}
-	}@keyframes sonar4 {
-		0% {
-			stroke:transparent;
-		}
-		50% {
-			stroke: #BCBEC0;
-		}
-		100% {
-			stroke:transparent;
-		}
-	}@keyframes sonar3 {
-		0% {
-			stroke:transparent;
-		}
-		50% {
-			stroke: #BCBEC0;
-		}
-		100% {
-			stroke:transparent;
-		}
-	}@keyframes sonar2 {
-		0% {
-			stroke:transparent;
-		}
-		50% {
-			stroke: #BCBEC0;
-		}
-		100% {
-			stroke:transparent;
-		}
-	}
-</style>
-<path class="st st0" d="M250.5,0.5c-138.1,0-250,111.9-250,250s111.9,250,250,250"/>
-<path class="st st1" d="M250.5,31.9c-120.7,0-218.6,97.9-218.6,218.6s97.9,218.6,218.6,218.6"/>
-<path class="st st2" d="M250.5,65.3c-102.3,0-185.2,82.9-185.2,185.2s82.9,185.2,185.2,185.2"/>
-<path class="st st3" d="M250.5,101.2c-82.5,0-149.3,66.9-149.3,149.3S168,399.8,250.5,399.8"/>
-<path class="st st4" d="M250.5,147.7c-56.8,0-102.8,46-102.8,102.8c0,56.8,46,102.8,102.8,102.8"/>
-<path class="st st5" d="M250.5,190.7c-33,0-59.8,26.8-59.8,59.8c0,33,26.8,59.8,59.8,59.8V190.7z"/>
+	<path class="st st0" d="M250.5,0.5c-138.1,0-250,111.9-250,250s111.9,250,250,250"/>
+	<path class="st st1" d="M250.5,31.9c-120.7,0-218.6,97.9-218.6,218.6s97.9,218.6,218.6,218.6"/>
+	<path class="st st2" d="M250.5,65.3c-102.3,0-185.2,82.9-185.2,185.2s82.9,185.2,185.2,185.2"/>
+	<path class="st st3" d="M250.5,101.2c-82.5,0-149.3,66.9-149.3,149.3S168,399.8,250.5,399.8"/>
+	<path class="st st4" d="M250.5,147.7c-56.8,0-102.8,46-102.8,102.8c0,56.8,46,102.8,102.8,102.8"/>
+	<path class="st st5" d="M250.5,190.7c-33,0-59.8,26.8-59.8,59.8c0,33,26.8,59.8,59.8,59.8V190.7z"/>
 </svg>
