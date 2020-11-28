@@ -188,7 +188,6 @@
 	$(document).ready(function() {
 		animateHoverHeight();
 		heroHeight();
-		addDataObjectFit();
 		
 		// SLICK SLIDER
 		$('.carousel').slick({
@@ -202,6 +201,10 @@
 	$(window).resize(function() {
 		animateHoverHeight();
 		//calcCardHeight();
+	});
+	
+	$(window).load(function() {
+		addDataObjectFit();
 	});
 	
 })(jQuery);
