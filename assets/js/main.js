@@ -50,7 +50,7 @@
 	());
 	function addDataObjectFit() {
 		$('.imageStripInner').each(function() {
-			$(this).find('img').data('object-fit', 'cover');
+			$(this).children('img').data('object-fit', 'cover');
 		});
 	}
 	
