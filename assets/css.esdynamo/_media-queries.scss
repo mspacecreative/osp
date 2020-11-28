@@ -14,7 +14,7 @@
 }
 
 @media (max-width: 63.9em) {
-	.row.gutterSpaceWider > .bottomMarginMobile.col, .row.gutterSpaceWide > .bottomMarginMobile.col, .row > .bottomMarginMobile.col {
+	.row.gutterSpaceWider > .bottomMarginMobile.keepSpacing.col, .row.gutterSpaceWide > .bottomMarginMobile.keepSpacing.col, .row > .bottomMarginMobile.keepSpacing.col {
 		padding-bottom: 4em;
 	}
 	.contentPortals .row:nth-of-type(2) .col:nth-of-type(2) {
