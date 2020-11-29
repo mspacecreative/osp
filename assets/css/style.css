@@ -1567,6 +1567,16 @@ p, a, ol, ul {
 	color: #38C3E1;
 }
 
+.contentWrap a.light {
+	color: #fff;
+	transition: 0.25s ease-in-out;
+}
+
+.contentWrap a.light:hover {
+	color: #38C3E1;
+	transition: 0.25s ease-in-out;
+}
+
 p:last-of-type {
 	margin-bottom: 0;
 }

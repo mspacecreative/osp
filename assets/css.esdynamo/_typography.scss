@@ -87,6 +87,14 @@ p, a, ol, ul {
 	font-weight: 600;
 	color: $brandBlue;
 }
+.contentWrap a.light {
+	color: #fff;
+	transition: 0.25s ease-in-out;
+}
+.contentWrap a.light:hover {
+	color: $brandBlue;
+	transition: 0.25s ease-in-out;
+}
 
 p:last-of-type {
 	margin-bottom: 0;
