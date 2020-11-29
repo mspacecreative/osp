@@ -398,7 +398,8 @@ function fixedBackgroundImage() {
 	foreach ( $blocks as $block ) {
 		if ( $block['blockName'] === 'acf/faqs' ) {
 			$image = $block['attrs']['data']['background_image'];
-			$result = '<div class="fixedBgImg" style="background: url(' . esc_url($image['url']) . ') no-repeat center center fixed;"></div>';
+			$url = $image['url'];
+			$result = '<div class="fixedBgImg" style="background: url(' . esc_url($url) . ') no-repeat center center fixed;"></div>';
 		}
 	}
 	echo $result;
