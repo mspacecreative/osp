@@ -1081,10 +1081,6 @@ table {
 	left: 0;
 }
 
-.carousel .slick-dots li button:before {
-	font-size: 15px;
-}
-
 /* Slider */
 
 .slick-slider {
