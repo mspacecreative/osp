@@ -13,7 +13,7 @@ if( !empty($block['className']) ) {
 if ( $bgimg ):
 
 	if ( $blockanchor && $bgimgoverlay == 'dark' ): ?>
-	<section id="<?php echo $blockanchor ?>" class="bg-img-cover dark-overlay content-section" style="background-image: url(<?php echo $bgimg ?>);">
+	<section id="<?php echo $blockanchor ?>" class="bg-img-cover dark-overlay content-section<?php echo esc_attr($className) ?>" style="background-image: url(<?php echo $bgimg ?>);">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -24,7 +24,7 @@ if ( $bgimg ):
 	</section>
 	
 	<?php elseif ( $blockanchor && $bgimgoverlay == 'light' ): ?>
-	<section id="<?php echo $blockanchor ?>" class="bg-img-cover light-overlay content-section" style="background-image: url(<?php echo $bgimg ?>);">
+	<section id="<?php echo $blockanchor ?>" class="bg-img-cover light-overlay content-section<?php echo esc_attr($className) ?>" style="background-image: url(<?php echo $bgimg ?>);">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -35,7 +35,7 @@ if ( $bgimg ):
 	</section>
 	
 	<?php elseif ( $bgimgoverlay == 'dark' ): ?>
-	<section class="bg-img-cover dark-overlay content-section" style="background-image: url(<?php echo $bgimg ?>);">
+	<section class="bg-img-cover dark-overlay content-section<?php echo esc_attr($className) ?>" style="background-image: url(<?php echo $bgimg ?>);">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -46,7 +46,7 @@ if ( $bgimg ):
 	</section>
 	
 	<?php elseif ( $bgimgoverlay == 'light' ): ?>
-	<section class="bg-img-cover light-overlay content-section" style="background-image: url(<?php echo $bgimg ?>);">
+	<section class="bg-img-cover light-overlay content-section<?php echo esc_attr($className) ?>" style="background-image: url(<?php echo $bgimg ?>);">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -57,7 +57,7 @@ if ( $bgimg ):
 	</section>
 	
 	<?php elseif ( $blockanchor ): ?>
-	<section id="<?php echo $blockanchor ?>" class="bg-img-cover dark-overlay content-section" style="background-image: url(<?php echo $bgimg ?>);">
+	<section id="<?php echo $blockanchor ?>" class="bg-img-cover dark-overlay content-section<?php echo esc_attr($className) ?>" style="background-image: url(<?php echo $bgimg ?>);">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -68,7 +68,7 @@ if ( $bgimg ):
 	</section>
 	
 	<?php else : ?>
-	<section class="bg-img-cover content-section" style="background-image: url(<?php echo $bgimg ?>);">
+	<section class="bg-img-cover content-section<?php echo esc_attr($className) ?>" style="background-image: url(<?php echo $bgimg ?>);">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -82,7 +82,7 @@ if ( $bgimg ):
 elseif ( $bgcolor == 'light' ):
 	
 	if ( $blockanchor ) : ?>
-	<section id="<?php echo $blockanchor ?>" class="lightGreyBg content-section">
+	<section id="<?php echo $blockanchor ?>" class="lightGreyBg content-section<?php echo esc_attr($className) ?>">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -93,7 +93,7 @@ elseif ( $bgcolor == 'light' ):
 	</section>
 	
 	<?php else : ?>
-	<section class="lightGreyBg content-section">
+	<section class="lightGreyBg content-section<?php echo esc_attr($className) ?>">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -107,7 +107,7 @@ elseif ( $bgcolor == 'light' ):
 elseif ( $bgcolor == 'dark' ):
 	
 	if ( $blockanchor ) : ?>
-	<section id="<?php echo $blockanchor ?>" class="darkbg content-section light">
+	<section id="<?php echo $blockanchor ?>" class="darkbg content-section light<?php echo esc_attr($className) ?>">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
