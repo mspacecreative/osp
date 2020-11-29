@@ -72,7 +72,9 @@ switch ( $positioning ) {
 						default:
 							$link = '<a href="' . $internal . '"';
 					}
-					echo $link . ' class="button dark blue">' . $label . '</a>';
+					if ( $linktype ) {
+						echo $link . ' class="button dark blue">' . $label . '</a>';
+					}
 				}
 			} ?>
 			

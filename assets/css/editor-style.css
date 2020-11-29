@@ -44,11 +44,6 @@ blockquote::before {
 	height: auto !important;
 }
 
-.editor-styles-wrapper .radioMarginPadding ul {
-	margin-left: 0;
-	padding-left: 0;
-}
-
 @media (min-width: 782px) {
 	.interface-interface-skeleton__sidebar .interface-complementary-area {
 		width: 300px !important;

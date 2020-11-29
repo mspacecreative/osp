@@ -25,6 +25,10 @@
 .components-resizable-box__container.has-show-handle {
 	width: 100%!important;
 }
+.editor-styles-wrapper .radioMarginPadding ul {
+	margin-left: 0;
+	padding-left: 0;
+}
 @media (min-width: 782px) {
 	.interface-interface-skeleton__sidebar .interface-complementary-area {
 	    width: 500px!important;
