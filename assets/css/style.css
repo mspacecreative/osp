@@ -4138,6 +4138,10 @@ footer.section {
 		display: block;
 	}
 	
+	.contentWrap {
+		position: relative;
+	}
+	
 	.contentWrap::before {
 		position: fixed;
 		top: 0;
