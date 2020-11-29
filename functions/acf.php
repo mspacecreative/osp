@@ -397,8 +397,9 @@ function fixedBackgroundImage() {
 	$blocks = parse_blocks( $content );
 	foreach ( $blocks as $block ) {
 		if ( $block['blockName'] === 'acf/faqs' ) {
-			$url = $block['attrs']['data']['background_image'];
-			$result = '<div class="fixedBgImg" style="background: url(' . esc_url($url['url']) . ') no-repeat center center fixed;"></div>';
+			$image = $block['attrs']['data']['background_image'];
+			$size = 'full';
+			$result = '<div class="fixedBgImg" style="background: url(' . wp_get_attachment_image( $image, $size ) . ') no-repeat center center fixed;"></div>';
 		}
 	}
 	echo $result;
