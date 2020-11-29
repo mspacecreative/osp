@@ -390,7 +390,7 @@ function my_acf_block_render_callback( $block ) {
 	}
 	
 	// Create class attribute allowing for custom "className" and "align" values.
-	$className = 'content';
+	$className = '';
 	if( !empty($block['className']) ) {
 	    $className .= ' ' . $block['className'];
 	}
