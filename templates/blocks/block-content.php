@@ -127,7 +127,7 @@ elseif ( $bgcolor == 'dark' ):
 else : 
 	
 	if ( $blockanchor ) : ?>
-	<section id="<?php echo $blockanchor ?>" class="content-section">
+	<section id="<?php echo $blockanchor ?>" class="content-section <?php echo $className ?>">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
@@ -138,7 +138,7 @@ else :
 	</section>
 	
 	<?php else : ?>
-	<section class="content-section">
+	<section class="content-section <?php echo $className ?>">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>
