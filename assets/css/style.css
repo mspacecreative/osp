@@ -3404,6 +3404,7 @@ img {
 	background-size: cover;
 	top: 0;
 	left: 0;
+	display: none;
 }
 
 .iconContainer {
@@ -4122,14 +4123,16 @@ footer.section {
 	}
 }
 
-/*
 @media (max-width: 1366px) {
 	.faqs {
-		background-image: unset!important;
-		background-color: transparent;
+		background-image: unset !important;
+		background-color: transparent !important;
+	}
+	
+	.fixedBgImg {
+		display: block;
 	}
 }
-*/
 
 @media (min-width: 1920px) {
 	.heroCollage {

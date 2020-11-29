@@ -465,14 +465,15 @@
 	}
 }
 
-/*
 @media (max-width: 1366px) {
 	.faqs {
 		background-image: unset!important;
-		background-color: transparent;
+		background-color: transparent!important;
+	}
+	.fixedBgImg {
+		display: block;
 	}
 }
-*/
 
 @media (min-width: 1920px) {
 	.heroCollage {
