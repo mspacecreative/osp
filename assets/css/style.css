@@ -4137,24 +4137,23 @@ footer.section {
 	.fixedBgImg {
 		display: block;
 	}
-	
-	.contentWrap {
-		position: relative;
-	}
-	
-	.contentWrap::before {
-		position: fixed;
-		top: 0;
-		left: 0;
-		height: 121px;
-		background-color: #fff;
-		width: 100%;
-		content: "";
-	}
-	
-	.scroll .contentWrap::before {
-		height: 65px;
-	}
+	  /*
+		.contentWrap {
+			position: relative;
+		}
+		.contentWrap::before {
+			position: fixed;
+		    top: 0;
+		    left: 0;
+		    height: 121px;
+		    background-color: #fff;
+		    width: 100%;
+			content: "";
+		}
+		.scroll .contentWrap::before {
+			height: 65px;
+		}
+		*/
 }
 
 @media (min-width: 1920px) {
