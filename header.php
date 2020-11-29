@@ -18,9 +18,7 @@
 	</head>
 	<body <?php body_class(); ?>>
 		
-		<!-- fixed background image -->
 		<?php fixedBackgroundImage(); ?>
-		<!-- / fixed background image -->
 		
 		<!-- wrapper -->
 		<div class="wrapper">
