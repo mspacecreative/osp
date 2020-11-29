@@ -4,6 +4,11 @@ $bgcolor = get_field('background_color');
 $blockanchor = get_field('block_anchor');
 $bgimgoverlay = get_field('background_image_overlay');
 $width = get_field('content_width');
+
+$className = 'content';
+if( !empty($block['className']) ) {
+    $className .= ' ' . $block['className'];
+}
 	
 if ( $bgimg ):
 
@@ -138,7 +143,7 @@ else :
 	</section>
 	
 	<?php else : ?>
-	<section class="content-section <?php echo $className ?>">
+	<section class="content-section <?php echo esc_attr($className) ?>">
 		<?php if ( $width ) : ?>
 		<div class="bullet-points innerContainer w1080">
 		<?php else : ?>

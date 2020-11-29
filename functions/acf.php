@@ -382,21 +382,6 @@ function my_acf_block_render_callback( $block ) {
 	if( file_exists( get_theme_file_path("templates/blocks/block-{$slug}.php") ) ) {
 		include( get_theme_file_path("templates/blocks/block-{$slug}.php") );
 	}
-	
-	// Create id attribute allowing for custom "anchor" value.
-	$id = 'testimonial-' . $block['id'];
-	if( !empty($block['anchor']) ) {
-		$id = $block['anchor'];
-	}
-	
-	// Create class attribute allowing for custom "className" and "align" values.
-	$className = '';
-	if( !empty($block['className']) ) {
-	    $className .= ' ' . $block['className'];
-	}
-	if( !empty($block['align']) ) {
-	    $className .= ' align' . $block['align'];
-	}
 }
 
 // OPTIONS PAGE
