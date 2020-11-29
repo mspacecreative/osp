@@ -4137,6 +4137,20 @@ footer.section {
 	.fixedBgImg {
 		display: block;
 	}
+	
+	.contentWrap::before {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 121px;
+		background-color: #fff;
+		width: 100%;
+		content: "";
+	}
+	
+	.contentWrap::before {
+		height: 65px;
+	}
 }
 
 @media (min-width: 1920px) {
