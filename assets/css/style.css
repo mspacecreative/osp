@@ -4152,7 +4152,7 @@ footer.section {
 		content: "";
 	}
 	
-	.contentWrap::before {
+	.scroll .contentWrap::before {
 		height: 65px;
 	}
 }

@@ -485,7 +485,7 @@
 	    width: 100%;
 		content: "";
 	}
-	.contentWrap::before {
+	.scroll .contentWrap::before {
 		height: 65px;
 	}
 }
