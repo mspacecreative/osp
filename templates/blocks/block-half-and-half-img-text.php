@@ -277,13 +277,13 @@ elseif ( $blockanchor ): ?>
 							} elseif ( $bgcolor == 'dark' && $link ) {
 								echo '<a href="' . $link . '" class="button light">Learn more</a>';
 							} elseif ( $bgcolor == 'light' && $link && $label ) {
-								echo '<a href="' . $link . '" class="button dark">' . $label . '</a>';
+								echo '<a href="' . $link . '" class="button dark blue">' . $label . '</a>';
 							} elseif ( $bgcolor == 'light' && $link ) {
-								echo '<a href="' . $link . '" class="button dark">Learn more</a>';
+								echo '<a href="' . $link . '" class="button dark blue">Learn more</a>';
 							} elseif ( $link && $label ) {
-								echo '<a href="' . $link . '" class="button dark">' . $label . '</a>';
+								echo '<a href="' . $link . '" class="button dark blue">' . $label . '</a>';
 							} elseif ( $link ) {
-								echo '<a href="' . $link . '" class="button dark">Learn more</a>';
+								echo '<a href="' . $link . '" class="button dark blue">Learn more</a>';
 							}
 						}
 					} 
@@ -419,13 +419,13 @@ elseif ( $blockanchor ): ?>
 							} elseif ( $bgcolor == 'dark' && $link ) {
 								echo '<a href="' . $link . '" class="button light">Learn more</a>';
 							} elseif ( $bgcolor == 'light' && $link && $label ) {
-								echo '<a href="' . $link . '" class="button dark">' . $label . '</a>';
+								echo '<a href="' . $link . '" class="button dark blue">' . $label . '</a>';
 							} elseif ( $bgcolor == 'light' && $link ) {
-								echo '<a href="' . $link . '" class="button dark">Learn more</a>';
+								echo '<a href="' . $link . '" class="button dark blue">Learn more</a>';
 							} elseif ( $link && $label ) {
-								echo '<a href="' . $link . '" class="button dark">' . $label . '</a>';
+								echo '<a href="' . $link . '" class="button dark blue">' . $label . '</a>';
 							} elseif ( $link ) {
-								echo '<a href="' . $link . '" class="button dark">Learn more</a>';
+								echo '<a href="' . $link . '" class="button dark blue">Learn more</a>';
 							}
 						}
 					} 
