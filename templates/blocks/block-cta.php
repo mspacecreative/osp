@@ -6,13 +6,13 @@ $positioning = get_field('positioning');
 
 switch ( $positioning ) {
 	case 'left':
-		echo 'radarLeft';
+		$class = 'radarLeft';
 		break;
 	case 'right':
-		echo 'radarRight';
+		$class = 'radarRight';
 		break;
 	default:
-		echo 'radarLeft';
+		$class = 'radarLeft';
 }
 ?>
 <!-- cta -->
@@ -21,7 +21,7 @@ switch ( $positioning ) {
 		<div class="cta textAlignCenter">
 			
 			<?php if ( $radar ): ?>
-			<div class="<?php echo $positioning ?>">
+			<div class="<?php echo $class ?>">
 				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 				 viewBox="0 0 250.5 501" style="enable-background:new 0 0 250.5 501;" xml:space="preserve">
 					<path class="st st0" d="M250.5,0.5c-138.1,0-250,111.9-250,250s111.9,250,250,250" />
