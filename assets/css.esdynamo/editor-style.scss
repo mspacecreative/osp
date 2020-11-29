@@ -1,43 +1,3 @@
-/*
-// BLOCKQUOTE
-.wp-block blockquote {
-	padding-left: 4em;
-	margin-right: 0;
-	margin-bottom: 2em;
-    position: relative;
-	color: #666;
-	font-family: 'Libre Franklin', sans-serif!important;
-}
-.editor-styles-wrapper .blockQuoteAuthor {
-	font-size: 19px;
-	line-height: 1.5em;
-    display: block;
-}
-.editor-styles-wrapper blockquote::before {
-	content: "\f10d";
-	content: "\201C";
-	position: absolute;
-	left: 0;
-	top: -20px;
-	font-size: 100px;
-}
-.editor-styles-wrapper blockquote p {
-	font-size: 24px!important;
-	font-style: italic!important;
-	font-weight: 600!important;
-}
-
-.components-resizable-box__container {
-	width: 100%!important;
-	height: auto!important;
-}
-
-@media (min-width: 782px) {
-	.interface-interface-skeleton__sidebar .interface-complementary-area {
-	    width: 300px!important;
-	}
-}
-*/
 body {
 	font-family: 'Libre Franklin', sans-serif;
 }
@@ -76,6 +36,10 @@ blockquote::before {
 .components-resizable-box__container {
 	width: 100%!important;
 	height: auto!important;
+}
+.radioMarginPadding {
+	margin-left: 0;
+	padding-left: 0;
 }
 @media (min-width: 782px) {
 	.interface-interface-skeleton__sidebar .interface-complementary-area {
