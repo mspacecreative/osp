@@ -1,12 +1,27 @@
 <?php
 $heading = get_field('heading');
 $content = get_field('content');
+$radar = get_field('display_radar_animation');
+$positioning = get_field('positioning');
+
+switch ( $positioning ) {
+	case 'left':
+		echo 'radarLeft';
+		break;
+	case 'right':
+		echo 'radarRight';
+		break;
+	default:
+		echo 'radarLeft';
+}
 ?>
 <!-- cta -->
 <section class="section light">
 	<div class="innerContainer w1080">
 		<div class="cta textAlignCenter">
-			<div class="radarLeft">
+			
+			<?php if ( $radar ): ?>
+			<div class="<?php echo $positioning ?>">
 				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 				 viewBox="0 0 250.5 501" style="enable-background:new 0 0 250.5 501;" xml:space="preserve">
 					<path class="st st0" d="M250.5,0.5c-138.1,0-250,111.9-250,250s111.9,250,250,250" />
@@ -22,6 +37,7 @@ $content = get_field('content');
 					<path class="st st5" d="M250.5,190.7c-33,0-59.8,26.8-59.8,59.8c0,33,26.8,59.8,59.8,59.8V190.7z" />
 				</svg>
 			</div>
+			<?php endif; ?>
 			
 			<div class="positionRelative">
 			
