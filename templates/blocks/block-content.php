@@ -5,7 +5,7 @@ $blockanchor = get_field('block_anchor');
 $bgimgoverlay = get_field('background_image_overlay');
 $width = get_field('content_width');
 
-$className = 'content';
+$className = '';
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
 }
