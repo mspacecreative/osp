@@ -200,6 +200,7 @@
 	
 	$(window).resize(function() {
 		animateHoverHeight();
+		heroHeight();
 		//calcCardHeight();
 	});
 	
