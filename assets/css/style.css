@@ -3242,8 +3242,13 @@ img {
 }
 
 .cosLogo, .cosLogo .size-medium {
-	max-width: 120px;
+	max-width: 200px;
 	margin-bottom: 25px;
+}
+
+.cosLogo a:first-of-type img {
+	max-width: 100px;
+	margin: 0 auto 50px;
 }
 
 .contentPortal {
@@ -3686,8 +3691,12 @@ footer.section {
 		border-right: 1px solid #c9c9c9;
 	}
 	
+	.borderLeft {
+		border-left: 1px solid #c9c9c9;
+	}
+	
 	.cosLogo {
-		margin-left: 50px;
+		padding-left: 50px;
 	}
 	
 	.heroCollage {
@@ -3706,11 +3715,12 @@ footer.section {
 		margin-bottom: 0;
 		padding-bottom: 0;
 	}
-	
-	.row.footerLogos .col:last-child {
-		flex-basis: 41.66666667%;
-		max-width: 41.66666667%;
-	}
+	  /*
+		.row.footerLogos .col:last-child {
+			flex-basis: 41.66666667%;
+			max-width: 41.66666667%;
+		}
+		*/
 	
 	.row.footerLogos .col:last-child img {
 		max-width: 100%;

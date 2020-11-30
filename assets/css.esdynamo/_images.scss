@@ -13,8 +13,12 @@ img {
 }
 
 .cosLogo, .cosLogo .size-medium {
-	max-width: 120px;
+	max-width: 200px;
 	margin-bottom: 25px;
+}
+.cosLogo a:first-of-type img {
+	max-width: 100px;
+    margin: 0 auto 50px;
 }
 
 .contentPortal {
