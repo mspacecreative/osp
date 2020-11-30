@@ -464,9 +464,12 @@
 		margin-bottom: 25px;
 		order: -1;
 	}
+	.heroContent > .innerContainer {
+		margin-top: 121px;
+	}
 	.heroContent {
-	    align-items: flex-end;
-	    padding-bottom: 50px;
+	    align-items: flex-start;
+	   //padding-bottom: 50px;
 	}
 }
 
