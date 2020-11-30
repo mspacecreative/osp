@@ -452,6 +452,10 @@
 		//max-width: 100px;
 		padding: 20px 10px;
 	}
+	.cosLogo > div:first-of-type img {
+	    max-width: 100%;
+	    padding: 0 15px;
+	}
 }
 
 @media (max-width: 850px) and (orientation: landscape) {
