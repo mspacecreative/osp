@@ -3234,7 +3234,7 @@ img {
 
 .smallFooterLogo, .footerLogos .size-medium {
 	padding: 20px 0;
-	max-width: 150px;
+	max-width: 130px;
 }
 
 .shrinkLogo {
@@ -4104,6 +4104,10 @@ footer.section {
 	.imageStripContainer .col {
 		flex-basis: 50%;
 		max-width: 50%;
+	}
+	
+	.smallFooterLogo, .footerLogos .size-medium {
+		max-width: 100px;
 	}
 }
 

@@ -442,6 +442,9 @@
 		flex-basis: 50%;
 		max-width: 50%;
 	}
+	.smallFooterLogo, .footerLogos .size-medium {
+		max-width: 100px;
+	}
 }
 
 @media (max-width: 850px) and (orientation: landscape) {

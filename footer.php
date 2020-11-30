@@ -9,7 +9,7 @@
 				<!-- logos -->
 				<div class="container topMargin25">
 					<div class="row middle-lg middle-md">
-						<div class="col col-lg-7 col-md-7 col-sm-12 col-xs-12">
+						<div class="col col-lg-7 col-md-7 col-sm-12 col-xs-12 borderRight">
 							<div class="container">
 								<?php
 								$images = get_field('logos', 'options');
@@ -56,19 +56,43 @@
 									
 						if( $logo && $acoa ): ?>
 						
-						<div class="col col-lg-4 col-md-4 col-sm-12 col-xs-12 cosLogo borderLeft">
+						<div class="col col-lg-4 col-md-4 col-sm-12 col-xs-12 cosLogo">
+							<div class="row">
 							<?php 
 							if ( $url && $shrink ) {
-								echo '<div class="shrinkLogo"><a href="' . $url . '" target="_blank">' . wp_get_attachment_image( $logo, $size ) . '</a></div>';
-								echo '<div class="shrinkLogo"><a href="' . $acoaurl . '" target="_blank">' . wp_get_attachment_image( $acoa, $size ) . '</a></div>';
+								echo '
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+									<div class="shrinkLogo">
+										<a href="' . $url . '" target="_blank">' . wp_get_attachment_image( $logo, $size ) . '</a>
+									</div>
+								</div>';
+								echo '
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+									<div class="shrinkLogo">
+										<a href="' . $acoaurl . '" target="_blank">' . wp_get_attachment_image( $acoa, $size ) . '</a>
+									</div>
+								</div>';
 							} elseif ( $url ) {
-								echo '<a href="' . $url . '" target="_blank">' . wp_get_attachment_image( $logo, $size ) . '</a>';
-								echo '<a href="' . $acoaurl . '" target="_blank">' . wp_get_attachment_image( $acoa, $size ) . '</a>';
+								echo '
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+									<a href="' . $url . '" target="_blank">' . wp_get_attachment_image( $logo, $size ) . '</a>
+								</div>';
+								echo '
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+									<a href="' . $acoaurl . '" target="_blank">' . wp_get_attachment_image( $acoa, $size ) . '</a>
+								</div>';
 							} else {
-								echo wp_get_attachment_image( $logo, $size );
-								echo wp_get_attachment_image( $acoa, $size );
+								echo '
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"> . '
+									wp_get_attachment_image( $logo, $size ) . '
+								</div>';
+								echo '
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"> . '
+									wp_get_attachment_image( $acoa, $size ) . '
+								</div>';
 							} 
 							?>
+							</div>
 						</div>
 						
 						<?php endif;
