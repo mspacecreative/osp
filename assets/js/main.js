@@ -198,15 +198,18 @@
 		//calcCardHeight();
 	});
 	
-	window.addEventListener("orientationchange", function() {
+	window.addEventListener("resize", function() {
+		animateHoverHeight();
 		heroHeight();
-	});
+	}, false);
 	
+	/*
 	$(window).resize(function() {
 		animateHoverHeight();
 		//heroHeight();
 		//calcCardHeight();
 	});
+	*/
 	
 	$(window).load(function() {
 		addDataObjectFit();
