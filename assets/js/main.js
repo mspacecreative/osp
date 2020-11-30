@@ -54,10 +54,12 @@
 		});
 	}
 	
+	/*
 	var viewportHeight = $(window).height();
 	function heroHeight() {
 		$('.heroContent').height( viewportHeight );
 	}
+	*/
 	
 	// SEARCH BAR
 	$('.searchIcon').click(function(e) {
@@ -187,7 +189,7 @@
 	
 	$(document).ready(function() {
 		animateHoverHeight();
-		heroHeight();
+		//heroHeight();
 		
 		// SLICK SLIDER
 		$('.carousel').slick({
@@ -198,18 +200,19 @@
 		//calcCardHeight();
 	});
 	
+	/*
 	window.addEventListener("resize", function() {
 		animateHoverHeight();
 		heroHeight();
 	}, false);
+	*/
 	
-	/*
+	
 	$(window).resize(function() {
 		animateHoverHeight();
 		//heroHeight();
 		//calcCardHeight();
 	});
-	*/
 	
 	$(window).load(function() {
 		addDataObjectFit();
