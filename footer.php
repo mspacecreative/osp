@@ -71,6 +71,7 @@
 						</div>
 						
 						<?php endif;
+						
 						endwhile;
 						endif; ?>
 					</div>
