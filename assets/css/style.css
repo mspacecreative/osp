@@ -3911,7 +3911,7 @@ footer.section {
 		right: 0;
 		background: #fff;
 		z-index: 999999;
-		padding: 4em 0;
+		padding: 3em 0;
 		top: -2em;
 	}
 	
@@ -3924,14 +3924,16 @@ footer.section {
 	}
 	
 	#ajaxsearchlite1 {
-		width: 90%;
-		margin: auto;
+		width: calc(100% - 5em);
 		display: block;
+		right: 3em;
+		top: 2em;
+		position: absolute;
 	}
 	
 	.scroll .closeIcon, .closeIcon {
 		right: 1em;
-		top: 1.5em;
+		top: 40px;
 	}
 }
 
