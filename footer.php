@@ -50,6 +50,7 @@
 						$logo = get_sub_field('cos_logo', 'options');
 						$acoa = get_sub_field('acoa_logo', 'options');
 						$url = get_field('external_url', $logo);
+						$acoaurl = get_field('external_url', $acoa);
 						$shrink = get_field('shrink_image', $logo);
 						$size = 'medium';
 									
@@ -59,10 +60,10 @@
 							<?php 
 							if ( $url && $shrink ) {
 								echo '<div class="shrinkLogo"><a href="' . $url . '" target="_blank">' . wp_get_attachment_image( $logo, $size ) . '</a></div>';
-								echo '<div class="shrinkLogo"><a href="' . $url . '" target="_blank">' . wp_get_attachment_image( $acoa, $size ) . '</a></div>';
+								echo '<div class="shrinkLogo"><a href="' . $acoaurl . '" target="_blank">' . wp_get_attachment_image( $acoa, $size ) . '</a></div>';
 							} elseif ( $url ) {
 								echo '<a href="' . $url . '" target="_blank">' . wp_get_attachment_image( $logo, $size ) . '</a>';
-								echo '<a href="' . $url . '" target="_blank">' . wp_get_attachment_image( $acoa, $size ) . '</a>';
+								echo '<a href="' . $acoaurl . '" target="_blank">' . wp_get_attachment_image( $acoa, $size ) . '</a>';
 							} else {
 								echo wp_get_attachment_image( $logo, $size );
 								echo wp_get_attachment_image( $acoa, $size );
