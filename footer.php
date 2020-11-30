@@ -8,7 +8,7 @@
 				
 				<!-- logos -->
 				<div class="container topMargin25">
-					<div class="row middle-lg middle-md middle-sm middle-xs">
+					<div class="row middle-lg middle-md">
 						<div class="col col-lg-7 col-md-7 col-sm-12 col-xs-12 borderRight">
 							<div class="container">
 								<?php
@@ -57,7 +57,7 @@
 						if( $logo && $acoa ): ?>
 						
 						<div class="col col-lg-4 col-md-4 col-sm-12 col-xs-12 rightColumn">
-							<div class="row middle-lg middle-md cosLogo">
+							<div class="row middle-lg middle-md middle-sm middle-xs cosLogo">
 							<?php 
 							if ( $url && $shrink ): ?>
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
