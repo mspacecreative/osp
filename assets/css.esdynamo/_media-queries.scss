@@ -23,6 +23,9 @@
 	.fitPortal::before, .fitPortal::after {
 		height: 80px;
 	}
+	.rightColumn {
+		order: -1;
+	}
 }
 
 @media (max-width: 47.9em) {
