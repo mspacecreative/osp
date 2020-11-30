@@ -24,7 +24,7 @@
 									$url = get_field('external_url', $image);
 									$shrink = get_field('shrink_image', $image); ?>
 									
-									<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6">
+									<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-6">
 										<?php 
 										if ( $url && $shrink ) {
 											echo '<div class="shrinkLogo"><a href="' . $url . '" target="_blank">' . wp_get_attachment_image( $image, $size ) . '</a></div>';
@@ -60,33 +60,33 @@
 							<div class="row middle-lg middle-md middle-sm middle-xs cosLogo">
 							<?php 
 							if ( $url && $shrink ): ?>
-								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div class="col-lg-6 col-md-6 col-sm-4 col-xs-6">
 									<div class="shrinkLogo">
 										<a href="<?php echo $url ?>" target="_blank"><?php echo wp_get_attachment_image( $logo, $size ); ?></a>
 									</div>
 								</div>
 								
-								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div class="col-lg-6 col-md-6 col-sm-4 col-xs-6">
 									<div class="shrinkLogo">
 										<a href="<?php echo $acoaurl ?>" target="_blank"><?php echo wp_get_attachment_image( $acoa, $size ); ?></a>
 									</div>
 								</div>
 							
 							<?php elseif ( $url ): ?>
-								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div class="col-lg-6 col-md-6 col-sm-4 col-xs-6">
 									<a href="<?php echo $url ?>" target="_blank"><?php echo wp_get_attachment_image( $logo, $size ); ?></a>
 								</div>
 								
-								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div class="col-lg-6 col-md-6 col-sm-4 col-xs-6">
 									<a href="<?php echo $acoaurl ?>" target="_blank"><?php echo wp_get_attachment_image( $acoa, $size ); ?></a>
 								</div>
 								
 							<?php else : ?>
-								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div class="col-lg-6 col-md-6 col-sm-4 col-xs-6">
 									<?php echo wp_get_attachment_image( $logo, $size ); ?>
 								</div>
 								
-								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div class="col-lg-6 col-md-6 col-sm-4 col-xs-6">
 									<?php echo wp_get_attachment_image( $acoa, $size ); ?>
 								</div>
 							<?php endif; ?>
