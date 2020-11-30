@@ -198,6 +198,10 @@
 		//calcCardHeight();
 	});
 	
+	window.addEventListener("orientationchange", function() {
+		heroHeight();
+	});
+	
 	$(window).resize(function() {
 		animateHoverHeight();
 		//heroHeight();
