@@ -8,7 +8,7 @@
 				
 				<!-- logos -->
 				<div class="container topMargin25">
-					<div class="row middle-lg middle-md">
+					<div class="row middle-lg middle-md middle-sm middle-xs">
 						<div class="col col-lg-7 col-md-7 col-sm-12 col-xs-12 borderRight">
 							<div class="container">
 								<?php
