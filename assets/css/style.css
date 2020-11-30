@@ -4030,10 +4030,6 @@ footer.section {
 		}
 		*/
 	
-	.row.footerLogos .col:last-child img {
-		padding: 20px 10px;
-	}
-	
 	.smallFooterLogo {
 		padding: 20px 10px;
 	}
@@ -4114,7 +4110,7 @@ footer.section {
 	}
 	
 	.smallFooterLogo, .footerLogos .size-medium {
-		max-width: 100px;
+		padding: 20px 10px;
 	}
 }
 
