@@ -4031,7 +4031,7 @@ footer.section {
 		*/
 	
 	.row.footerLogos .col:last-child img {
-		max-width: 100%;
+		padding: 20px 10px;
 	}
 	
 	.smallFooterLogo {
