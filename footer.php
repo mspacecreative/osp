@@ -45,8 +45,8 @@
 						</div>
 						
 						<?php 
-						if ( have_rows('right_column_logos') ):
-						while ( have_rows('right_column_logos') ): the_row();
+						if ( have_rows('right_column_logos', 'options') ):
+						while ( have_rows('right_column_logos', 'options') ): the_row();
 						$logo = get_sub_field('cos_logo', 'options');
 						$acoa = get_sub_field('acoa_logo', 'options');
 						$url = get_field('external_url', $logo);
