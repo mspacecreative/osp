@@ -31,84 +31,84 @@
 		}
 		?>
 	</div>
-</div>
 	
-<!-- HERO CAROUSEL / HERO VIDEO -->
-<?php 
-$layout = get_field('layout');
-$images = get_field('gallery');
-$size = 'full';
-
-if ( $layout === 'video' ) :
-
-if ( have_rows('video') ): ?>
-<div class="videoContainer">
-	<?php while ( have_rows('video') ): the_row();
-	$poster = get_sub_field('poster');
-	
-	if ( have_rows('video_formats') ):
-	while ( have_rows('video_formats') ): the_row();
-	$link = get_sub_field('link');
-	$linkOgg = get_sub_field('ogg_link');
-	$linkWebM = get_sub_field('webm_link'); ?>
-	
-	<video data-object-fit="cover" src="<?php echo $link ?>" poster="<?php echo $poster ?>" playsinline muted loop autoplay>
-		<?php if ( $link ): ?>
-		<source src="<?php echo $link ?>" type="video/mp4" />
-		<?php endif; ?>
-		
-		<?php if ( $lindOgg ): ?>
-		<source src="<?php echo $linkOgg ?>" type="video/ogg" />
-		<?php endif;
-		
-		if ( $linkWebM ): ?>
-		<source src="<?php echo $linkWebM ?>" type="video/webm" />
-		<?php endif; ?>
-	</video>
-	
+	<!-- HERO CAROUSEL / HERO VIDEO -->
 	<?php 
-	endwhile;
-	endif; 
+	$layout = get_field('layout');
+	$images = get_field('gallery');
+	$size = 'full';
 	
-	endwhile; ?>
-</div>
-<?php
-endif;
-
-elseif ( $layout === 'carousel' ):
-
-if ( $images ) : ?>
+	if ( $layout === 'video' ) :
 	
-<div class="carouselContainer">
-	<div class="carousel">
-		  		
-		<?php foreach( $images as $image_id ) : ?>
-		<div>
-			<?php echo wp_get_attachment_image( $image_id, $size ); ?>
-		</div>
-		<?php endforeach; ?>
-		  	
+	if ( have_rows('video') ): ?>
+	<div class="videoContainer">
+		<?php while ( have_rows('video') ): the_row();
+		$poster = get_sub_field('poster');
+		
+		if ( have_rows('video_formats') ):
+		while ( have_rows('video_formats') ): the_row();
+		$link = get_sub_field('link');
+		$linkOgg = get_sub_field('ogg_link');
+		$linkWebM = get_sub_field('webm_link'); ?>
+		
+		<video data-object-fit="cover" src="<?php echo $link ?>" poster="<?php echo $poster ?>" playsinline muted loop autoplay>
+			<?php if ( $link ): ?>
+			<source src="<?php echo $link ?>" type="video/mp4" />
+			<?php endif; ?>
+			
+			<?php if ( $lindOgg ): ?>
+			<source src="<?php echo $linkOgg ?>" type="video/ogg" />
+			<?php endif;
+			
+			if ( $linkWebM ): ?>
+			<source src="<?php echo $linkWebM ?>" type="video/webm" />
+			<?php endif; ?>
+		</video>
+		
+		<?php 
+		endwhile;
+		endif; 
+		
+		endwhile; ?>
 	</div>
-</div>
-
-<?php endif;
-
-else :
-
-if ( $images ) : ?>
+	<?php
+	endif;
 	
-<div class="carouselContainer">
-	<div class="carousel">
-		  		
-		<?php foreach( $images as $image_id ) : ?>
-		<div>
-			<?php echo wp_get_attachment_image( $image_id, $size ); ?>
+	elseif ( $layout === 'carousel' ):
+	
+	if ( $images ) : ?>
+		
+	<div class="carouselContainer">
+		<div class="carousel">
+			  		
+			<?php foreach( $images as $image_id ) : ?>
+			<div>
+				<?php echo wp_get_attachment_image( $image_id, $size ); ?>
+			</div>
+			<?php endforeach; ?>
+			  	
 		</div>
-		<?php endforeach; ?>
-		  	
 	</div>
-</div>
 	
-<?php endif;
-
-endif; ?>
+	<?php endif;
+	
+	else :
+	
+	if ( $images ) : ?>
+		
+	<div class="carouselContainer">
+		<div class="carousel">
+			  		
+			<?php foreach( $images as $image_id ) : ?>
+			<div>
+				<?php echo wp_get_attachment_image( $image_id, $size ); ?>
+			</div>
+			<?php endforeach; ?>
+			  	
+		</div>
+	</div>
+		
+	<?php endif;
+	
+	endif; ?>
+</div>
