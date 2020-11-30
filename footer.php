@@ -56,8 +56,8 @@
 									
 						if( $logo && $acoa ): ?>
 						
-						<div class="col col-lg-5 col-md-5 col-sm-12 col-xs-12 cosLogo">
-							<div class="row">
+						<div class="col col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="row middle-lg middle-md cosLogo">
 							<?php 
 							if ( $url && $shrink ): ?>
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">

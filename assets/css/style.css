@@ -3245,7 +3245,11 @@ img {
 	margin-bottom: 25px;
 }
 
-.cosLogo a:first-of-type img {
+.cosLogo > div:last-of-type img {
+	max-width: 180px;
+}
+
+.cosLogo > div:first-of-type img {
 	max-width: 100px;
 }
 
