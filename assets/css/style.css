@@ -4132,6 +4132,7 @@ footer.section {
 	
 	.heroContent {
 		align-items: flex-start;
+		max-height: 100vh;
 	}
 }
 
