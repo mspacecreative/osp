@@ -9,7 +9,7 @@
 				<!-- logos -->
 				<div class="container topMargin25">
 					<div class="row middle-lg middle-md">
-						<div class="col col-lg-7 col-md-7 col-sm-12 col-xs-12 borderRight">
+						<div class="col col-lg-7 col-md-7 col-sm-12 col-xs-12">
 							<div class="container">
 								<?php
 								$images = get_field('logos', 'options');
@@ -55,7 +55,7 @@
 									
 						if( $logo && $acoa ): ?>
 						
-						<div class="col col-lg-4 col-md-4 col-sm-12 col-xs-12 cosLogo">
+						<div class="col col-lg-4 col-md-4 col-sm-12 col-xs-12 cosLogo borderLeft">
 							<?php 
 							if ( $url && $shrink ) {
 								echo '<div class="shrinkLogo"><a href="' . $url . '" target="_blank">' . wp_get_attachment_image( $logo, $size ) . '</a></div>';
