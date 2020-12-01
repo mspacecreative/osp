@@ -41,7 +41,7 @@ if ( $loop->have_posts() ) : ?>
 		
 		$posttype = get_field('content_type');
 		
-		if ( $posttype == 'researchers-students' ): ?>
+		if ( $posttype == 'researchers-and-students' ): ?>
 		<a class="button dark blue" href="<?php echo get_post_type_archive_link( $posttype ); ?>"><?php esc_html_e('View all'); ?></a>
 		<?php endif; ?>
 		
