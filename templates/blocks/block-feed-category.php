@@ -5,7 +5,6 @@ $category = get_field('group');
 if ( $category ) {
 
 	$args = array(
-		'post_type' => 'posts',
 		'posts_per_page'=> 3,
 		'category_name' => $category,
 	);
@@ -20,6 +19,8 @@ if ( $category ) {
 			<?php 
 			if ( $heading ) {
 				echo '<h2 class="light">' . $heading . '</h2>';
+			} else {
+				echo '<h2 class="light">' . esc_html_e('What&#8217;s new') . '</h2>';
 			} ?>
 			
 			<div class="row gutterSpaceWide feedGrid">
