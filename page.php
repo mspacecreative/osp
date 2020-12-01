@@ -8,7 +8,7 @@ if ( have_posts() ) {
 	 	the_post();
 	 	$title = get_the_title();
 	 	echo '
-	 	<div class="contentWrap">';
+	 	<div id="main" class="contentWrap">';
 	 		if ( $titlewidth === '1080' ) {
 	 		echo '
 	 		<section>

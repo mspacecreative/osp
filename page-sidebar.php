@@ -17,7 +17,7 @@ switch ( $titlewidth ) {
 		$width = '';
 } ?>
 
-<div class="contentWrap">
+<div id="main" class="contentWrap">
 
 <?php 
 $title = get_the_title();

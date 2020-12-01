@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="contentWrap">
+<div id="main" class="contentWrap">
 	<div class="innerContainer w1080 topPadding4">
 		<div class="container">
 			<div class="row gutterSpaceWide middle-lg middle-md">

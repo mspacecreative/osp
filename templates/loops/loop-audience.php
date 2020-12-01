@@ -1,4 +1,4 @@
-<div class="contentWrap">
+<div id="main" class="contentWrap">
 
 	<section>
 		 <div class="innerContainer w1080 section4">
