@@ -1,6 +1,6 @@
 <?php 
 $heading = get_field('heading');
-$contenttype = get_field_object('content_type');
+$contenttype = get_field_object('content_type', $post->ID);
 
 $args = array(
 	'post_type' => $contenttype['value'],
