@@ -4143,14 +4143,6 @@ footer.section {
 	}
 }
 
-@media (min-width: 1441px) {
-	.heroContent {
-		height: 100%;
-		margin-bottom: 0;
-		align-items: center;
-	}
-}
-
 @media (max-width: 1366px) {
 	.faqs {
 		background-image: unset !important;
