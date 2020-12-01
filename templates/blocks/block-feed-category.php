@@ -37,7 +37,7 @@ if ( $category ) {
 						</a>
 						<div class="cardContent">
 							<div class="colInner">
-								<a style="color: #333;" href="<?php get_the_permalink(); ?>">
+								<a style="color: #333;" href="<?php echo $permalink ?>">
 									<h3><?php echo $title ?></h3>
 								</a>
 								<?php 
