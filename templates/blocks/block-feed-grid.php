@@ -11,7 +11,7 @@ if ( $term ) {
 			array(
 				'taxonomy' => 'group',
 				'field' => 'slug',
-				'terms' => $term->slug,
+				'terms' => $term,
 			)
 		)
 	);
