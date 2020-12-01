@@ -2516,6 +2516,16 @@ p:last-of-type {
 	margin-left: auto;
 }
 
+.floatRight {
+	float: right;
+}
+
+.clearfix::after {
+	clear: both;
+	display: table;
+	content: "";
+}
+
 .section {
 	padding: 6em 0;
 	position: relative;
