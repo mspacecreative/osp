@@ -6,7 +6,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 	
 	<section>
 		 <div class="innerContainer w1080 section4">
-		 	<h1 class="postTitle"><?php echo $term->name ?></h1>
+		 	<h1 class="postTitle"><span class="grey"><?php esc_html_e( 'Archive ', 'osp' ); ?></span><?php echo $term->name ?></h1>
 		 </div>
 	</section>
 	
