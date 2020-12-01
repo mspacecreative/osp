@@ -1,10 +1,21 @@
 <?php 
 $heading = get_field('heading');
+$group = get_field('group');
+$term - get_field('group');
 
-$args = array(
-	'post_type' => 'researchers-students',
-	'posts_per_page'=> 3,
-);
+if ( $term ) {
+
+	$args = array(
+		'post_type' => 'audience',
+		'posts_per_page'=> 3,
+		'tax_query' => array (
+			array(
+				'taxonomy' => 'group',
+				'field' => 'slug',
+				'terms' => $term->name,
+			)
+		)
+	);
 
 $loop = new WP_Query( $args );
 if ( $loop->have_posts() ) : ?>
@@ -37,13 +48,7 @@ if ( $loop->have_posts() ) : ?>
 				</div>
 			</div>
 		</div>
-		<?php endwhile;
-		
-		$posttype = get_field('content_type');
-		
-		if ( $posttype == 'mentors-mid-career-professionals' ): ?>
-		<a class="button dark blue" href="<?php echo get_post_type_archive_link( $posttype ); ?>"><?php esc_html_e('View all'); ?></a>
-		<?php endif; ?>
+		<?php endwhile; ?>
 		
 	</div>
 </section>
