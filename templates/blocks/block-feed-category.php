@@ -7,7 +7,7 @@ if ( $term ) {
 	$args = array(
 		'post_type' => 'posts',
 		'posts_per_page'=> 3,
-		'category_name' => $term,
+		'cat' => $term,
 	);
 
 	$loop = new WP_Query( $args );
