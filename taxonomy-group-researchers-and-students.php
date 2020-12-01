@@ -9,17 +9,21 @@ $args = array(
 			'terms' => 'researchers-and-students',
 		)
 	)
-);
+); ?>
 
+<section>
+	 <div class="innerContainer w1080 section4">
+	 	<h1 class="postTitle"><?php esc_html_e('All audiences'); ?></h1>
+	 </div>
+</section>
+
+<?php 
 $loop = new WP_Query( $args );
 if ( $loop->have_posts() ) : ?>
 <section class="section">
 	<div class="offsetBg">
 		<div class="innerContainer">
 			<div class="container">
-				<?php if ( $heading ) {
-					echo '<h2 class="light">' . $term->name . '</h2>';
-				} ?>
 				<div class="row">
 				<?php while ( $loop->have_posts() ) : $loop->the_post();
 				$featuredimg = get_the_post_thumbnail( 'medium' );
