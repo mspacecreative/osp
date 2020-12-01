@@ -357,6 +357,19 @@ function my_acf_init() {
 			'supports'			=> array( 'mode' => false ),
 		));
 		
+		// register sidebar block
+		acf_register_block(array(
+			'name'				=> 'feed-category',
+			'title'				=> __('Feed Category Block'),
+			'description'		=> __('Pulls in most recent posts from a specified category and displays them in a grid'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'images-alt',
+			'keywords'			=> array( 'posts', 'category' ),
+			'mode'				=> 'edit',
+			'supports'			=> array( 'mode' => false ),
+		));
+		
 		// register image strip block
 		acf_register_block(array(
 			'name'				=> 'image-strip',
