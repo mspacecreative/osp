@@ -27,7 +27,7 @@ if ( $term ) {
 			if ( $heading ) {
 				echo '<h2 class="light">' . $heading . '</h2>';
 			} else {
-				echo '<h2 class="light">' . esc_html_e('What&#8217;s new') . '</h2>';
+				echo '<h2 class="light">' . __('What&#8217;s new') . '</h2>';
 			} ?>
 			
 			<div class="row gutterSpaceWide feedGrid">
