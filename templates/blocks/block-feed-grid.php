@@ -51,7 +51,7 @@ if ( $term ) {
 			
 			$termlink = get_term_link( $term ); ?>
 			
-			<a class="button dark blue" href="<?php echo esc_url( $term_link ); ?>"><?php esc_html_e('View all'); ?></a>
+			<a class="button dark blue" href="<?php echo esc_url( $termlink ); ?>"><?php esc_html_e('View all'); ?></a>
 			
 		</div>
 	</section>
