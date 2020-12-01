@@ -29,9 +29,9 @@
 						<div class="cardContent">
 							<h2>' . $title . '</h2>' . '
 							<p>' . $excerpt . '</p>
-						</div>';
-					endwhile; ?>
+						</div>'; ?>
 					</div>
+					<?php endwhile; ?>
 				</div>
 			</div>
 		</div>
