@@ -1,15 +1,12 @@
 <?php 
 $heading = get_field('heading');
-$contenttype = get_field_object('content_type', $post_id);
+$contenttype = get_field('content_type');
+$type = $contenttype['value'];
 
-if ( $contenttype['choices'] ) {
-
-	$args = array(
-		'post_type' => $value,
-		'posts_per_page'=> 3,
-	);
-
-}
+$args = array(
+	'post_type' => $type,
+	'posts_per_page'=> 3,
+);
 
 $loop = new WP_Query( $args );
 if ( $loop->have_posts() ) : ?>
