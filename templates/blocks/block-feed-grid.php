@@ -1,6 +1,5 @@
 <?php 
 $heading = get_field('heading');
-$group = get_field('group');
 $term - get_field('group');
 
 if ( $term ) {
@@ -12,10 +11,11 @@ if ( $term ) {
 			array(
 				'taxonomy' => 'group',
 				'field' => 'slug',
-				'terms' => $term->name,
+				'terms' => $term->slug,
 			)
 		)
 	);
+}
 
 $loop = new WP_Query( $args );
 if ( $loop->have_posts() ) : ?>
