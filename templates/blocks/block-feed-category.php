@@ -30,11 +30,15 @@ if ( $category ) {
 				$excerpt = get_the_excerpt(); ?>
 				<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12">
 					<div class="cardContainer">
-						<?php 
-						echo '<a href="' . get_the_permalink() . '">' . $featuredimg . '</a>
+						<a href="<?php echo $permalink ?>">
+							<?php echo $featuredimg ?>
+						</a>
 						<div class="cardContent">
 							<div class="colInner">
-								<a style="color: #333;" href="' . get_the_permalink() . '"><h3>' . $title . '</h3></a>'; 
+								<a style="color: #333;" href="<?php get_the_permalink(); ?>">
+									<h3><?php echo $title ?></h3>
+								</a>
+								<?php 
 								if ( $excerpt ) {
 									echo '<p>' . $excerpt . '</p>';
 								} else {
