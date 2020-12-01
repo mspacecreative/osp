@@ -1,6 +1,6 @@
 <?php 
 $heading = get_field('heading');
-$contenttype = get_field_object('content_type');
+$contenttype = get_field_object('content_type', $post_id);
 
 if ( $contenttype['choices'] ) {
 
