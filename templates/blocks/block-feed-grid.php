@@ -2,7 +2,7 @@
 $heading = get_field('heading');
 $contenttype = get_field('content_type');
 
-if ( $contenttype === 'researchers-students' ) {
+if ( $contenttype == 'researchers-students' ) {
 	$args = array(
 		'post_type' => $contenttype,
 		'posts_per_page'=> 3,
