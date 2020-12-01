@@ -17,7 +17,6 @@ if ( $loop->have_posts() ) : ?>
 		} ?>
 		<div class="row gutterSpaceWide feedGrid">
 		<?php while ( $loop->have_posts() ) : $loop->the_post();
-		$posttype = get_field('content_type');
 		$featuredimg = get_the_post_thumbnail( get_the_ID(), 'card-feature' );
 		$title = get_the_title();
 		$excerpt = get_the_excerpt(); ?>
@@ -39,6 +38,8 @@ if ( $loop->have_posts() ) : ?>
 			</div>
 		</div>
 		<?php endwhile;
+		
+		$posttype = get_field('content_type');
 		
 		if ( $posttype == 'researchers-students' ): ?>
 		<a class="button dark blue" href="<?php echo get_post_type_archive_link( $posttype ); ?>"><?php esc_html_e('View all'); ?></a>
