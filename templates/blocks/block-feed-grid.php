@@ -54,8 +54,12 @@ if ( $term ) {
 				<?php endwhile; ?>
 				
 			</div>
-			<?php $termlink = get_term_link( $term ); ?>
+			<?php $termlink = get_term_link( $term );
+			$postcount = $term->count;
+			
+			if ( $postcount >= 3 ): ?>
 			<a class="button dark blue floatRight" href="<?php echo esc_url( $termlink ); ?>"><?php esc_html_e('View all'); ?></a>
+			<?php endif; ?>
 		</div>
 		
 	</section>
