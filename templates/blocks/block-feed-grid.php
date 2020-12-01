@@ -1,6 +1,5 @@
 <?php 
 $heading = get_field('heading');
-$posttype = get_field('content_type');
 
 $args = array(
 	'post_type' => 'researchers-students',
@@ -18,6 +17,7 @@ if ( $loop->have_posts() ) : ?>
 		} ?>
 		<div class="row gutterSpaceWide feedGrid">
 		<?php while ( $loop->have_posts() ) : $loop->the_post();
+		$posttype = get_field('content_type');
 		$featuredimg = get_the_post_thumbnail( get_the_ID(), 'card-feature' );
 		$title = get_the_title();
 		$excerpt = get_the_excerpt(); ?>
