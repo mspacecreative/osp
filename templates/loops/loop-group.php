@@ -1,4 +1,6 @@
 <?php 
+$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+
 $args = array(
 	'post_type' => 'audience',
 	'posts_per_page'=> -1,
@@ -6,7 +8,7 @@ $args = array(
 		array(
 			'taxonomy' => 'group',
 			'field' => 'slug',
-			'terms' => 'researchers-and-students',
+			'terms' => $term,
 		)
 	)
 );

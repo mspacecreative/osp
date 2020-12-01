@@ -1,6 +1,4 @@
-<?php get_header();
-
-$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );  ?>
+<?php get_header(); ?>
 
 <div class="contentWrap">
 	
@@ -10,7 +8,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 		 </div>
 	</section>
 	
-	<?php get_template_part('templates/loops/loop-researchers-and-students'); ?>
+	<?php get_template_part('templates/loops/loop-group'); ?>
 	
 </div>
 
