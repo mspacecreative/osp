@@ -40,13 +40,9 @@ if ( $contenttype == 'researchers-students' ) {
 					</div>
 				</div>
 			</div>
-			<?php endwhile;
-			
-			if ( $contenttype === 'researchers-students' ): ?>
+			<?php endwhile; ?>
 			
 			<a class="button dark blue" href="<?php echo get_post_type_archive_link( $contenttype ); ?>"><?php esc_html_e('View all'); ?></a>
-			
-			<?php endif; ?>
 			
 		</div>
 	</section>
