@@ -1,13 +1,13 @@
 <?php 
 $heading = get_field('heading');
-$term = get_field('group');
+$category = get_field('group');
 
-if ( $term ) {
+if ( $category ) {
 
 	$args = array(
 		'post_type' => 'posts',
 		'posts_per_page'=> 3,
-		'cat' => $term,
+		'category_name' => $category,
 	);
 
 	$loop = new WP_Query( $args );
