@@ -1,7 +1,11 @@
 <?php 
 $heading = get_field('heading');
 $contenttype = get_field('content_type');
-$type = $contenttype['value'];
+
+switch ( $contenttype ) {
+	case 'researchers-students':
+		$type = 'researchers-students';
+}
 
 $args = array(
 	'post_type' => $type,
@@ -41,7 +45,7 @@ if ( $loop->have_posts() ) : ?>
 		</div>
 		<?php endwhile; ?>
 		
-		<a class="button dark blue" href="<?php echo get_post_type_archive_link( $value ); ?>"><?php esc_html_e('View all'); ?></a>
+		<a class="button dark blue" href="<?php echo get_post_type_archive_link( $type ); ?>"><?php esc_html_e('View all'); ?></a>
 		
 	</div>
 </section>
