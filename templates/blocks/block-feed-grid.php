@@ -5,7 +5,7 @@ $contenttype = get_field('content_type');
 if ( $contenttype == 'researchers-students' ) {
 	
 	$args = array(
-		'post_type' => $contenttype,
+		'post_type' => 'researchers-students',
 		'posts_per_page'=> 3,
 	);
 
