@@ -44,7 +44,7 @@ if ( $loop->have_posts() ) : ?>
 		</div>
 		<?php endwhile; ?>
 		
-		<a class="button dark blue" href="<?php echo get_post_type_archive_link( $contenttype ); ?>"><?php esc_html_e('View all'); ?></a>
+		<a class="button dark blue" href="<?php echo get_post_type_archive_link( $value ); ?>"><?php esc_html_e('View all'); ?></a>
 		
 	</div>
 </section>
