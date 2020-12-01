@@ -216,3 +216,31 @@ div.asl_w .probox .promagnifier, div.asl_r.vertical {
 	right: 0;
 	background-position: top center;
 }
+
+// SKIP NAV LINKS BUTTON
+.skip-links {
+	position: fixed;
+    top: 80px;
+    z-index: 2;
+	left: 50%;
+    margin-left: -67.5px;
+}
+.skip-to-link:focus {
+	outline: 3px solid goldenrod;
+}
+.skip-to-link {
+	padding: 15px;
+    background-color: #fff;
+}
+
+.using-mouse .skip-links, .skip-links {
+	display: none;
+}
+
+.using-keyboard .skip-links {
+	display: block;
+}
+
+body.using-mouse *:focus {
+	outline: none;
+}
