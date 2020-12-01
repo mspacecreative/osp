@@ -47,9 +47,11 @@ if ( $term ) {
 					</div>
 				</div>
 			</div>
-			<?php endwhile; ?>
+			<?php endwhile;
 			
-			<a class="button dark blue" href="<?php echo $term->slug ?>"><?php esc_html_e('View all'); ?></a>
+			$termlink = get_term_link( $term ); ?>
+			
+			<a class="button dark blue" href="<?php echo esc_url( $term_link ); ?>"><?php esc_html_e('View all'); ?></a>
 			
 		</div>
 	</section>
