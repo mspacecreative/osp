@@ -38,6 +38,9 @@ if ( $loop->have_posts() ) : ?>
 			</div>
 		</div>
 		<?php endwhile; ?>
+		
+		<a class="button dark blue" href="<?php echo get_post_type_archive_link( 'research-students' ); ?>"><?php esc_html_e('View all'); ?></a>
+		
 	</div>
 </section>
 <?php endif;  wp_reset_query(); ?>
