@@ -48,11 +48,7 @@ if ( $term ) {
 				<?php endwhile; ?>
 				
 			</div>
-			<?php $catlink = get_category_link( $term );
 			
-			if ( $postcount >= 3 ): ?>
-			<a class="button dark blue floatRight" href="<?php echo esc_url( $catlink ); ?>"><?php esc_html_e('View all'); ?></a>
-			<?php endif; ?>
 		</div>
 		
 	</section>
