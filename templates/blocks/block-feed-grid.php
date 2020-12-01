@@ -1,9 +1,10 @@
 <?php 
 $heading = get_field('heading');
-$contenttype = get_field('content_type', $post->ID);
+$contenttype = get_field_object('content_type', $post->ID);
+$type = $contenttype['value'];
 
 $args = array(
-	'post_type' => $contenttype,
+	'post_type' => $type,
 	'posts_per_page'=> 3,
 );
 
