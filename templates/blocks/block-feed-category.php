@@ -27,6 +27,7 @@ if ( $category ) {
 				<?php while ( $loop->have_posts() ) : $loop->the_post();
 				$featuredimg = get_the_post_thumbnail( get_the_ID(), 'card-feature' );
 				$title = get_the_title();
+				$permalink = get_the_permalink( get_the_ID() );
 				$excerpt = get_the_excerpt(); ?>
 				<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12">
 					<div class="cardContainer">
