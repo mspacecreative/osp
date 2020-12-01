@@ -1,8 +1,6 @@
 <?php 
 $heading = get_field('heading');
-$contenttype = get_field_object('content_type');
-$value = $contenttype['value'];
-$name = esc_attr( $value );
+$contenttype = get_field('content_type');
 
 if ( $contenttype === 'researchers-students' ) {
 	$args = array(
@@ -45,7 +43,9 @@ if ( $loop->have_posts() ) : ?>
 		<?php endwhile;
 		
 		if ( $contenttype === 'researchers-students' ): ?>
+		
 		<a class="button dark blue" href="<?php echo get_post_type_archive_link( $contenttype ); ?>"><?php esc_html_e('View all'); ?></a>
+		
 		<?php endif; ?>
 		
 	</div>
