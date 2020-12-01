@@ -4,10 +4,14 @@ $contenttype = get_field_object('content_type');
 
 if ( $contenttype['choices'] ) {
 
+	foreach( $contenttype['choices'] as $value ):
+	
 	$args = array(
 		'post_type' => $value,
 		'posts_per_page'=> 3,
 	);
+	
+	endforeach;
 
 }
 
