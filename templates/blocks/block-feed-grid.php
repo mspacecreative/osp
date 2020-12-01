@@ -1,6 +1,6 @@
 <?php 
 $heading = get_field('heading');
-$term - get_field('group');
+$term = get_field('group');
 
 if ( $term ) {
 
