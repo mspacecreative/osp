@@ -468,6 +468,12 @@
 	    max-width: 100%;
 	    padding: 0 15px;
 	}
+	h3, h3 > a {
+		font-size: 18px;
+	}
+	h2, h2 > a {
+		font-size: 27px;
+	}
 }
 
 @media (max-width: 850px) and (orientation: landscape) {
@@ -483,6 +489,12 @@
 	    align-items: flex-start;
 		//max-height: 100vh;
 	   //padding-bottom: 50px;
+	}
+	h2, h2 > a {
+		font-size: 27px;
+	}
+	h3, h3 > a {
+		font-size: 18px;
 	}
 }
 
