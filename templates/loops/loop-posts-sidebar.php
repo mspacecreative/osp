@@ -1,11 +1,11 @@
 <?php 
-$cat = get_the_category_by_ID( get_the_ID() );
+$cat = get_the_category( get_the_ID() );
 
 $args = array( 
 	'post_type' => 'post',
 	'posts_per_page'=> 5, 
 	'post__not_in' => array( $post->ID ),
-	'category_name' => $cat->name,
+	'category' => $cat,
 );
 $arr_posts = new WP_Query( $args ); ?>
 	
