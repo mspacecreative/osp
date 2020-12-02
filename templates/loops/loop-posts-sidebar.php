@@ -4,11 +4,12 @@ $related = get_posts( array(
 	'posts_per_page' => 5, 
 	'post__not_in' => array($post->ID) ) );
 
-if( $related ) foreach( $related as $post ) {
-setup_postdata( $post ); 
-?>
+if( $related ) { ?>
 	
 <div class="row gutterSpaceDefault cardGrid">
+			
+	<?php foreach( $related as $post ) {
+	setup_postdata( $post ); ?>
 			
 	<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12">
 		<div class="colInner cardContainer whiteBg">
@@ -29,5 +30,8 @@ setup_postdata( $post );
 		</div>
 	</div>
 	
+	<?php endforeach; ?>
+	
 </div>	
-<?php wp_reset_postdata(); ?>
+<?php
+} wp_reset_postdata(); ?>
