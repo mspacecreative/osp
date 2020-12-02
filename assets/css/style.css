@@ -3819,6 +3819,12 @@ footer.section {
 		font-size: 32px;
 	}
 	
+	.featuredInlineImg .size-medium {
+		max-width: 50%;
+		float: right;
+		margin: 8px 0 20px 20px;
+	}
+	
 	.offsetBg {
 		height: 80%;
 	}
@@ -3985,6 +3991,12 @@ footer.section {
 @media (min-width: 981px) {
 	nav {
 		margin-right: 60px;
+	}
+	
+	.featuredInlineImg .size-medium {
+		max-width: 30%;
+		float: right;
+		margin: 8px 0 20px 20px;
 	}
 	
 	nav.hide {

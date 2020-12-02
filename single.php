@@ -24,14 +24,14 @@
 		</div>
 
 		<?php if ( have_posts() ) : ?>
-		<div class="row gutterSpaceWider">
+		<div class="row gutterSpaceWider featuredInlineImg">
 		 	<?php while ( have_posts() ) : the_post();
-		 	$featuredimg = get_the_post_thumbnail( get_the_ID(), 'large' ); ?>
+		 	$featuredimg = get_the_post_thumbnail( get_the_ID(), 'medium' ); ?>
 			<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">
+				<?php echo $featuredimg ?>
 				<?php the_content(); ?>
 			</div>
 			<div class="col col-lg-4 col-md-4 col-sm-12 col-xs-12 sidebar">
-				<?php echo $featuredimg ?>
 				<h3>Recent posts</h3>
 				<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-blog')) ?>
 			</div>
