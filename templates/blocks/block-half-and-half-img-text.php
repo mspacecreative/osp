@@ -189,6 +189,8 @@ elseif ( $blockanchor ): ?>
 				<div class="col-lg-6 bottomMarginMobile col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
 				<?php elseif ( $anchor && $mobile ): ?>
 				<div id="<?php echo $anchor ?>" class="<?php echo $colwidth ?> col-lg-6 bottomMarginMobile keepSpacing col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
+				<?php elseif ( $anchor ): ?>
+				<div id="<?php echo $anchor ?>" class="<?php echo $colwidth ?> col-lg-6 bottomMarginMobile col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
 				<?php elseif ( $mobile ): ?>
 				<div class="<?php echo $colwidth ?> col-lg-6 bottomMarginMobile keepSpacing col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
 				<?php else : ?>
@@ -331,6 +333,8 @@ elseif ( $blockanchor ): ?>
 				<div class="col-lg-6 bottomMarginMobile col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
 				<?php elseif ( $anchor && $mobile ): ?>
 				<div id="<?php echo $anchor ?>" class="<?php echo $colwidth ?> col-lg-6 bottomMarginMobile keepSpacing col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
+				<?php elseif ( $anchor ): ?>
+				<div id="<?php echo $anchor ?>" class="<?php echo $colwidth ?> col-lg-6 bottomMarginMobile col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
 				<?php elseif ( $mobile ): ?>
 				<div class="<?php echo $colwidth ?> col-lg-6 bottomMarginMobile keepSpacing col-md-6 col-sm-6 col-xs-12 col offsetContentContainer">
 				<?php else : ?>
