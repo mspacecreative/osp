@@ -4195,6 +4195,8 @@ footer.section {
 	
 	.heroContent {
 		height: 100vh;
+		align-items: center;
+		padding-bottom: 0;
 	}
 }
 
