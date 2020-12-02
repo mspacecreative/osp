@@ -3149,6 +3149,10 @@ body.using-mouse *:focus {
 	outline: none;
 }
 
+.contentPortal a:focus {
+	outline: 3px solid goldenrod;
+}
+
 .button {
 	display: inline-block;
 	padding: 0.75em 1.5em;

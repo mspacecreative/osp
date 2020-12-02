@@ -244,3 +244,7 @@ div.asl_w .probox .promagnifier, div.asl_r.vertical {
 body.using-mouse *:focus {
 	outline: none;
 }
+
+.contentPortal a:focus {
+	outline: 3px solid goldenrod;
+}
