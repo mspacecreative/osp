@@ -3146,11 +3146,15 @@ div.asl_w .probox .promagnifier, div.asl_r.vertical {
 }
 
 body.using-mouse *:focus {
-	outline: none !important;
+	outline: none;
+}
+
+.using-keyboard .contentPortal {
+	overflow: visible;
 }
 
 .contentPortal a:focus {
-	outline: 3px solid goldenrod !important;
+	outline: 3px solid goldenrod;
 }
 
 .button {
