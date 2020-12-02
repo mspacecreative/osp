@@ -3158,7 +3158,7 @@ div.asl_w .probox .promagnifier, div.asl_r.vertical {
 }
 
 .using-keyboard .footerLogos a:focus, .using-keyboard .photoGrid a:focus {
-	display: inline-block;
+	display: block;
 }
 
 body.using-mouse *:focus {
