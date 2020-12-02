@@ -11,7 +11,7 @@
 			$permalink = get_the_permalink( get_the_ID() );
 			$excerpt = get_the_excerpt();
 			$url = get_field('url', get_the_ID());
-			$cannedimg = get_field('image_selection', get_the_ID() );
+			$cannedimg = get_field('image_selection');
 			
 			switch ( $cannedimg ) {
 				case 'pan-atl-partner':
