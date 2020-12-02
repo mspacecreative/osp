@@ -3298,6 +3298,10 @@ img {
 	max-width: 100px;
 }
 
+.featuredInlineImg .size-large {
+	width: 100%;
+}
+
 .contentPortal {
 	position: relative;
 	min-height: 300px;
