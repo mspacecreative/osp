@@ -16,7 +16,7 @@
 	transition: 0.25s ease-in-out;
 	color: $brandBlue;
 }
-.cardGrid .colInner, .cardContent .colInner {
+.cardGrid .colInner, .cardContent .colInner, .cardContainer {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
@@ -34,9 +34,6 @@
 }
 .innerCardContainer {
 	box-shadow: 0 0 10px #d9d9d9;
-}
-.cardContainer {
-	height: 100%;
 }
 
 // NEWS AND EVENTS CARD STYLES
