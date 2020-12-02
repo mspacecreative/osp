@@ -29,7 +29,8 @@ if ( $category ) {
 				$featuredimg = get_the_post_thumbnail( get_the_ID(), 'card-feature' );
 				$title = get_the_title();
 				$permalink = get_the_permalink( get_the_ID() );
-				$excerpt = get_the_excerpt(); ?>
+				$excerpt = get_the_excerpt();
+				$url = get_field('url', get_the_ID()); ?>
 				<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12">
 					<div class="cardContainer">
 						<a href="<?php echo $permalink ?>">
@@ -41,7 +42,9 @@ if ( $category ) {
 									<h3><?php echo $title ?></h3>
 								</a>
 								<?php 
-								if ( $excerpt ) {
+								if ( $url ) {
+									echo '<a class="button dark blue" href="' . $url . '" target="_blank">' . __('Read article') . '</a>';
+								} elseif ( $excerpt ) {
 									echo '<p>' . $excerpt . '</p>';
 								} else {
 									echo '<p>' . $excerpt . '</p>';
