@@ -3155,7 +3155,7 @@ body.using-mouse *:focus {
 
 .contentPortal a:focus, .button:focus, li a:focus, .searchIcon a:focus, li a:focus, .using-keyboard .footerLogos a:focus {
 	outline: 3px solid goldenrod;
-	display: block;
+	display: inline-block;
 }
 
 .button {
