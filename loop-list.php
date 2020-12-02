@@ -9,11 +9,11 @@
 		<div class="searchResult">
 			
 			<?php if ( has_post_thumbnail() ) : // Check if thumbnail exists. ?>
-			<div class="row">
+			<div class="row middle-lg middle-md middle-sm w800">
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 					<!-- post thumbnail -->
 					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-						<?php the_post_thumbnail( array( 120, 120 ) ); // Declare pixel size you need inside the array. ?>
+						<?php the_post_thumbnail( array( 400, 400 ) ); // Declare pixel size you need inside the array. ?>
 					</a>
 					<!-- /post thumbnail -->
 				</div>
