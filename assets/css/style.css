@@ -1469,6 +1469,7 @@ src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/s
 body {
 	font-family: 'Rajdhani', sans-serif;
 	line-height: 1.5em;
+	color: #424242;
 }
 
 h1 {
