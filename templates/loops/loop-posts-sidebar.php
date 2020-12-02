@@ -1,6 +1,6 @@
 <?php 
-$cat = get_the_category();
-$cat_id = $cat->cat_ID;
+$category = get_category( get_query_var( 'cat' ) );
+$cat_id = $category->cat_ID;
 
 $args = array( 
 	'posts_per_page'=> 5, 
