@@ -4192,6 +4192,10 @@ footer.section {
 	h2, h2 > a {
 		font-size: 27px;
 	}
+	
+	.heroContent {
+		height: 100vh;
+	}
 }
 
 @media (max-width: 850px) and (orientation: landscape) {
@@ -4215,6 +4219,10 @@ footer.section {
 	
 	h3, h3 > a {
 		font-size: 18px;
+	}
+	
+	.heroContent {
+		height: 100vh;
 	}
 }
 
