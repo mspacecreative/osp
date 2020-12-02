@@ -10,17 +10,56 @@
 			$title = get_the_title();
 			$permalink = get_the_permalink( get_the_ID() );
 			$excerpt = get_the_excerpt();
-			$url = get_field('url', get_the_ID()); ?>
+			$url = get_field('url', get_the_ID());
+			$cannedimg = get_field('image_selection', get_the_ID() );
+			
+			switch ( $cannedimg ) {
+				case 'pan-atl-partner':
+					$img = '
+					<div class="cannedImgContainer">
+						<img src="' . get_template_directory_uri() . '/assets/img/placeholders/osp-ocean-bg-feature.jpg">
+						<div class="cannedImgOverlay">
+							<h2>' . __('Pan-Atlantic Partner News') . '</h2>
+						</div>
+					</div>';
+					break;
+				case 'partner':
+					$img = '
+					<div class="cannedImgContainer">
+						<img src="' . get_template_directory_uri() . '/assets/img/placeholders/osp-ocean-bg-feature.jpg">
+						<div class="cannedImgOverlay">
+							<h2>' . __('Partner News') . '</h2>
+						</div>
+					</div>';
+					break;
+				default:
+					$img = '
+					<div class="cannedImgContainer">
+						<img src="' . get_template_directory_uri() . '/assets/img/placeholders/osp-ocean-bg-feature.jpg">
+						<div class="cannedImgOverlay">
+							<h2>' . __('Partner News') . '</h2>
+						</div>
+					</div>';
+			} ?>
+			
 			<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12">
 				<div class="cardContainer">
 					<?php 
-					if ( $url ): ?>
+					if ( $url && $cannedimg ): ?>
+					<a href="<?php echo $url ?>" target="_blank">
+						<?php echo $img ?>
+					</a>
+					<?php elseif ( $url && $featuredimg ): ?>
 					<a href="<?php echo $url ?>" target="_blank">
 						<?php echo $featuredimg ?>
 					</a>
+					<?php elseif ( $url ): ?>
+					<a href="<?php echo $url ?>" target="_blank">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholders/osp-ocean-bg-feature.jpg">
+					</a>
 					<?php else : ?>
 					<a href="<?php echo $permalink ?>">
-						<?php echo $featuredimg ?>
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholders/osp-ocean-bg-feature.jpg">
 					</a>
 					<?php endif; ?>
 					<div class="cardContent">
