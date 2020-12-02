@@ -18,7 +18,7 @@
 	
 		<h1 class="postTitle"><span class="grey"><?php esc_html_e( 'Category ', 'osp' ); ?></span><?php single_cat_title(); ?></h1>
 		
-		<?php get_template_part( 'loop' );
+		<?php get_template_part( 'templates/loops/loop-category' );
 		get_template_part( 'pagination' ); ?>
 		
 	</div>
