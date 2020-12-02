@@ -3149,7 +3149,7 @@ body.using-mouse *:focus {
 	outline: none;
 }
 
-.using-keyboard .contentPortal {
+.using-keyboard .contentPortal, .using-keyboard .container {
 	overflow: visible;
 }
 
