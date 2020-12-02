@@ -45,10 +45,16 @@ if ( $category ) {
 						<?php endif; ?>
 						<div class="cardContent">
 							<div class="colInner">
+								<?php if ( $url ): ?>
+								<a style="color: #333;" href="<?php echo $url ?>" target="_blank">
+									<h3><?php echo $title ?></h3>
+								</a>
+								<?php else : ?>
 								<a style="color: #333;" href="<?php echo $permalink ?>">
 									<h3><?php echo $title ?></h3>
 								</a>
-								<?php 
+								<?php endif;
+								 
 								if ( $url ) {
 									echo '<a class="readMore" href="' . $url . '" target="_blank">' . __('Read article') . '</a>';
 								} elseif ( $excerpt ) {

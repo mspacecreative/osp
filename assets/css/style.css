@@ -578,17 +578,17 @@ table {
 	color: #38C3E1;
 }
 
-.cardGrid .colInner {
+.cardGrid .colInner, .cardContent .colInner {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
 }
 
-.cardGrid .readMore {
+.cardGrid .readMore, .cardContent .readMore {
 	margin-top: auto;
 }
 
-.cardGrid .colInner p:last-of-type {
+.cardGrid .colInner p:last-of-type, .cardContent {
 	display: flex;
 	height: 100%;
 	flex-direction: column;
