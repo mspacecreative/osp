@@ -417,8 +417,16 @@
 					<a href="<?php echo $url ?>" target="_blank">
 						<?php echo $featuredimg ?>
 					</a>
+					<?php elseif ( $permalink && $featuredimg ): ?>
+					<a href="<?php echo $permalink ?>">
+						<?php echo $featuredimg ?>
+					</a>
 					<?php elseif ( $url ): ?>
 					<a href="<?php echo $url ?>" target="_blank">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholders/osp-ocean-bg-feature.jpg">
+					</a>
+					<?php elseif ( $permalink ): ?>
+					<a href="<?php echo $permalink ?>">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholders/osp-ocean-bg-feature.jpg">
 					</a>
 					<?php else : ?>
