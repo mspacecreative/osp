@@ -61,29 +61,10 @@
 	padding-top: 2em;
 	padding-bottom: 2em;
 }
-/*
-.heroContent.innerContainer {
-	position: relative;
-	display: flex;
-	align-items: center;
-	margin-bottom: 4em;
-	padding-top: 175px;
-	padding-bottom: 50px;
-	min-height: 100vh;
-}
-*/
 .heroContent {
-	//background: linear-gradient(-45deg, #93e4f5, #38c3e1, #257f92) no-repeat center center scroll;
-	// LEGACY BACKGROUND STYLES WITH GRADIENT
-	//background-image: url(../img/paul-einerhand-qLIglFCcAeo-unsplash-scaled-e1590856668561_bw.jpg);
-	//animation: gradient 10s ease infinite;
-	//position: relative;
-	//background-size: 400% 400%;
-	// padding: 200px 0 0;
-	//background: url(../img/paul-einerhand-qLIglFCcAeo-unsplash-scaled-e1590856668561_bw.jpg) no-repeat center center scroll;
 	background-size: cover;
 	position: relative;
-	height: 100vh;
+	height: 75vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
