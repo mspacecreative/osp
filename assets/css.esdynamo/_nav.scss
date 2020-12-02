@@ -254,11 +254,13 @@ li a:focus,
 .using-keyboard .photoGrid a:focus,
 .using-keyboard .cosLogo a:focus,
 .using-keyboard .logo a:focus,
-.using-keyboard .display-medium-item .col > a:focus {
+.using-keyboard .medPortrait a:focus {
 	outline: 3px solid goldenrod;
 }
 
-.using-keyboard p a:focus, .using-keyboard .tabRow a:focus, .using-keyboard .mediumContent a:focus {
+.using-keyboard p a:focus, 
+.using-keyboard .tabRow a:focus,
+.using-keyboard .mediumContent a:focus {
 	outline: 1px solid goldenrod;
 }
 
@@ -266,7 +268,8 @@ li a:focus,
 .using-keyboard .photoGrid a:focus, 
 .using-keyboard .cosLogo a:focus,
 .using-keyboard .logo a:focus,
-.using-keyboard .display-medium-item .col > a:focus {
+.using-keyboard .display-medium-item .col > a:focus,
+.using-keyboard .medPortrait a:focus, {
 	display: block;
 }
 
