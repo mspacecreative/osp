@@ -29,7 +29,7 @@
 		 	$featuredimg = get_the_post_thumbnail( get_the_ID(), 'medium' );
 		 	$lgfeaturedimg = get_the_post_thumbnail( get_the_ID(), 'large' );
 		 	$articlelink = get_field('url', $post->ID);
-		 	$butonlabel = get_field('button_label', $post->ID);
+		 	$buttonlabel = get_field('button_label', $post->ID);
 		 	
 		 	if ( $articlelink ): ?>
 			<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">
