@@ -75,7 +75,7 @@ if ( $category ) {
 			</div>
 			
 			<?php 
-			$catlink = get_category_link( $catgory );
+			$catlink = get_category_link( $catgory_id );
 			if ( $catlink ) {
 				echo '<a class="button dark blue" href="' . $catlink . '">' . __('View all') . '</a>';
 			} ?>
