@@ -36,7 +36,7 @@
 				<a href="<?php echo esc_attr( $articlelink ); ?>" target="_blank">
 					<?php echo $lgfeaturedimg ?>
 				</a>
-				<?php if ( $butonlabel ): ?>
+				<?php if ( $buttonlabel ): ?>
 				<p><a class="readMore" href="<?php echo esc_attr( $articlelink ); ?>" target="_blank"><?php echo $buttonlabel ?></a></p>
 				<?php else : ?>
 				<p><a class="readMore" href="<?php echo esc_attr( $articlelink ); ?>" target="_blank"><?php esc_html_e('View article'); ?></a></p>
