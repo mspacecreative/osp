@@ -32,8 +32,10 @@
 		 	
 		 	if ( $articlelink ): ?>
 			<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">
-				<?php echo $lgfeaturedimg ?>
-				<p><a class="readMore" href="<?php echo $articlelink ?>" target="_blank"><?php esc_html_e('View article'); ?></a></p>
+				<a class="readMore" href="<?php echo esc_attr( $articlelink ); ?>" target="_blank">
+					<?php echo $lgfeaturedimg ?>
+				</a>
+				<p><a class="readMore" href="<?php echo esc_attr( $articlelink ); ?>" target="_blank"><?php esc_html_e('View article'); ?></a></p>
 				<?php the_content(); ?>
 			</div>
 			<?php else : ?>
