@@ -30,7 +30,7 @@ if( $related ) { ?>
 		</div>
 	</div>
 	
-	<?php endforeach; ?>
+	<?php } ?>
 	
 </div>	
 <?php
