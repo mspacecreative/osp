@@ -13,7 +13,7 @@
 	<div class="innerContainer w850 section4">
 	
 	<?php else : ?>
-	<div class="innerContainer section4">
+	<div class="innerContainer section4 w1080">
 	<?php endif; ?>
 	
 		<div class="row">
