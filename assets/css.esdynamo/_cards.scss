@@ -16,7 +16,7 @@
 	transition: 0.25s ease-in-out;
 	color: $brandBlue;
 }
-.cardGrid .colInner, .cardContent .colInner, .cardContainer {
+.cardGrid .colInner, .cardContent .colInner, .cardContainer, .displayFlex {
 	display: flex;
 	flex-direction: column;
 	height: 100%;

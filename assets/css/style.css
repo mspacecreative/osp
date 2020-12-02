@@ -578,7 +578,7 @@ table {
 	color: #38C3E1;
 }
 
-.cardGrid .colInner, .cardContent .colInner, .cardContainer {
+.cardGrid .colInner, .cardContent .colInner, .cardContainer, .displayFlex {
 	display: flex;
 	flex-direction: column;
 	height: 100%;

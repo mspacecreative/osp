@@ -61,9 +61,9 @@ if ( $category ) {
 								} elseif ( $url ) {
 									echo '<a class="readMore" href="' . $url . '" target="_blank">' . __('View article') . '</a>';
 								} elseif ( $excerpt ) {
-									echo '<p>' . $excerpt . '</p>';
+									echo '<p class="displayFlex">' . $excerpt . '</p>';
 								} else {
-									echo '<p>' . $excerpt . '</p>';
+									echo '<p class="displayFlex">' . $excerpt . '</p>';
 								} 
 								?>
 							</div>
