@@ -57,7 +57,7 @@ if ( $category ) {
 								 
 								if ( $url && $excerpt ) {
 									echo '<p>' . $excerpt . '</p>';
-									echo '<p><a class="readMore" href="' . $url . '" target="_blank">' . __('View article') . '</a></p>';
+									echo '<p style="margin-top: auto;"><a class="readMore" href="' . $url . '" target="_blank">' . __('View article') . '</a></p>';
 								} elseif ( $url ) {
 									echo '<a class="readMore" href="' . $url . '" target="_blank">' . __('View article') . '</a>';
 								} elseif ( $excerpt ) {
