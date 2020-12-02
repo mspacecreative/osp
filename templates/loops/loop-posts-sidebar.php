@@ -4,7 +4,7 @@ $args = array(
 	'post_type' => 'post',
 	'posts_per_page'=> 5, 
 	'post__not_in' => array( $post->ID ),
-	'category_name' => $cat,
+	'cat' => $cat,
 );
 $arr_posts = new WP_Query( $args ); ?>
 	
