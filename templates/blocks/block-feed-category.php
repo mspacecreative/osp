@@ -33,9 +33,16 @@ if ( $category ) {
 				$url = get_field('url', get_the_ID()); ?>
 				<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12">
 					<div class="cardContainer">
+						<?php 
+						if ( $url ): ?>
+						<a href="<?php echo $url ?>" target="_blank">
+							<?php echo $featuredimg ?>
+						</a>
+						<?php else : ?>
 						<a href="<?php echo $permalink ?>">
 							<?php echo $featuredimg ?>
 						</a>
+						<?php endif; ?>
 						<div class="cardContent">
 							<div class="colInner">
 								<a style="color: #333;" href="<?php echo $permalink ?>">
@@ -43,7 +50,7 @@ if ( $category ) {
 								</a>
 								<?php 
 								if ( $url ) {
-									echo '<a class="button dark blue" href="' . $url . '" target="_blank">' . __('Read article') . '</a>';
+									echo '<a class="readMore" href="' . $url . '" target="_blank">' . __('Read article') . '</a>';
 								} elseif ( $excerpt ) {
 									echo '<p>' . $excerpt . '</p>';
 								} else {
