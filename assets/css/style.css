@@ -288,18 +288,6 @@ table {
 	filter: grayscale(1);
 }
 
-/*
-.hero {
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background: linear-gradient(-45deg, #93e4f5, #38c3e1, #257f92);
-	background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
-}
-*/
 @keyframes float {
 0% {
 	transform: translatey(0px);
@@ -328,9 +316,10 @@ table {
 	position: relative;
 	height: 75vh;
 	display: flex;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: center;
 	overflow: hidden;
+	padding-bottom: 6em;
 }
 
 .carouselContainer {
@@ -373,8 +362,10 @@ table {
 }
 
 .heroContent h1 {
-	font-size: 52px;
 	margin-bottom: 0;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .heroContent .button {
