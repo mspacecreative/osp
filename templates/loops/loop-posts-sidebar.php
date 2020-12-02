@@ -1,5 +1,5 @@
 <?php 
-$cat = get_the_category_by_ID( $post->ID );
+$cat = get_the_category_by_ID( get_the_ID() );
 
 $args = array( 
 	'post_type' => 'post',
