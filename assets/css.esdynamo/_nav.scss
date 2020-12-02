@@ -249,6 +249,6 @@ body.using-mouse *:focus {
 	overflow: visible;
 }
 
-.contentPortal a:focus {
+.contentPortal a:focus, .button:focus, nav li a:focus, .searchIcon a:focus {
 	outline: 3px solid goldenrod;
 }
