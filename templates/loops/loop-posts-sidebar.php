@@ -1,5 +1,5 @@
 <?php 
-$cat = get_the_cateogry( $post->ID );
+$cat = get_the_category( $post->ID );
 $args = array( 
 	'post_type' => 'post',
 	'posts_per_page'=> 5, 
