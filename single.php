@@ -29,13 +29,18 @@
 		 	$featuredimg = get_the_post_thumbnail( get_the_ID(), 'medium' );
 		 	$lgfeaturedimg = get_the_post_thumbnail( get_the_ID(), 'large' );
 		 	$articlelink = get_field('url', $post->ID);
+		 	$butonlabel = get_field('button_label', $post->ID);
 		 	
 		 	if ( $articlelink ): ?>
 			<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">
 				<a href="<?php echo esc_attr( $articlelink ); ?>" target="_blank">
 					<?php echo $lgfeaturedimg ?>
 				</a>
+				<?php if ( $butonlabel ): ?>
+				<p><a class="readMore" href="<?php echo esc_attr( $articlelink ); ?>" target="_blank"><?php echo $buttonlabel ?></a></p>
+				<?php else : ?>
 				<p><a class="readMore" href="<?php echo esc_attr( $articlelink ); ?>" target="_blank"><?php esc_html_e('View article'); ?></a></p>
+				<?php endif; ?>
 				<?php the_content(); ?>
 			</div>
 			<?php else : ?>
