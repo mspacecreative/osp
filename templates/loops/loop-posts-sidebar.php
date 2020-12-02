@@ -1,5 +1,5 @@
 <?php 
-$cat_id = get_query_var('cat');
+$cat_id = get_query_var('cat', get_the_ID() );
 
 $args = array( 
 	'posts_per_page'=> 5, 
