@@ -3145,10 +3145,6 @@ div.asl_w .probox .promagnifier, div.asl_r.vertical {
 	display: block;
 }
 
-body.using-mouse *:focus {
-	outline: none;
-}
-
 .using-keyboard .contentPortal, .using-keyboard .container {
 	overflow: visible;
 }
@@ -3156,6 +3152,15 @@ body.using-mouse *:focus {
 .contentPortal a:focus, .button:focus, li a:focus, .searchIcon a:focus, li a:focus, .using-keyboard .footerLogos a:focus {
 	outline: 3px solid goldenrod;
 	display: inline-block;
+	text-align: center;
+}
+
+.using-keyboard p a:focus {
+	outline: 1px solid goldenrod;
+}
+
+body.using-mouse *:focus {
+	outline: none;
 }
 
 .button {
