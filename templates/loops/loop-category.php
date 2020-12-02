@@ -3,7 +3,7 @@
 	<!-- article -->
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<div class="row gutterSpaceWide feedGrid w1080">
+		<div class="row gutterSpaceWide feedGrid">
 			
 			<?php while ( have_posts() ) : the_post();
 			$featuredimg = get_the_post_thumbnail( get_the_ID(), 'card-feature' );
