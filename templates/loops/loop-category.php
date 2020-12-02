@@ -5,7 +5,7 @@
 
 		<div class="row gutterSpaceWide feedGrid">
 			
-			<?php while ( $loop->have_posts() ) : $loop->the_post();
+			<?php while ( have_posts() ) : the_post();
 			$featuredimg = get_the_post_thumbnail( get_the_ID(), 'card-feature' );
 			$title = get_the_title();
 			$permalink = get_the_permalink( get_the_ID() );
