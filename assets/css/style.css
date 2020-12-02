@@ -3149,12 +3149,16 @@ div.asl_w .probox .promagnifier, div.asl_r.vertical {
 	overflow: visible;
 }
 
-.contentPortal a:focus, .button:focus, li a:focus, .searchIcon a:focus, li a:focus, .using-keyboard .footerLogos a:focus {
+.contentPortal a:focus, .button:focus, li a:focus, .searchIcon a:focus, li a:focus, .using-keyboard .footerLogos a:focus, .using-keyboard p a:focus {
 	outline: 3px solid goldenrod;
 }
 
-.using-keyboard p a:focus {
+.using-keyboard p a:focus, .using-keyboard .tabRow a:focus {
 	outline: 1px solid goldenrod;
+}
+
+.using-keyboard .footerLogos a:focus, .using-keyboard .photoGrid a:focus {
+	display: inline-block;
 }
 
 body.using-mouse *:focus {
