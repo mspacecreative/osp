@@ -55,8 +55,11 @@ if ( $category ) {
 								</a>
 								<?php endif;
 								 
-								if ( $url ) {
-									echo '<a class="readMore" href="' . $url . '" target="_blank">' . __('Read article') . '</a>';
+								if ( $url && $excerpt ) {
+									echo '<a class="readMore" href="' . $url . '" target="_blank">' . __('View article') . '</a>';
+									echo '<p>' . $excerpt . '</p>';
+								} elseif ( $url ) {
+									echo '<a class="readMore" href="' . $url . '" target="_blank">' . __('View article') . '</a>';
 								} elseif ( $excerpt ) {
 									echo '<p>' . $excerpt . '</p>';
 								} else {
