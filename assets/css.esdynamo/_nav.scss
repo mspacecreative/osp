@@ -242,9 +242,9 @@ div.asl_w .probox .promagnifier, div.asl_r.vertical {
 }
 
 body.using-mouse *:focus {
-	outline: none;
+	outline: none!important;
 }
 
 .contentPortal a:focus {
-	outline: 3px solid goldenrod;
+	outline: 3px solid goldenrod!important;
 }
