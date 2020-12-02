@@ -47,6 +47,33 @@
 .news-and-events #display-medium-owl-demo .medium-image {
 	height: 200px;
 }
+.cannedImgOverlay {
+	top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 99;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    padding: 1em;
+}
+.cannedImgContainer {
+	position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+.cannedImgContainer img {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.cannedImgContainer span {
+	display: block;
+    max-width: 130px;
+    margin: auto;
+    position: relative;
+    left: -10px;
+}
 @media (min-width: 64em) {
 	.news-and-events .evenbriteEvents ul {
 		margin-left: -.5rem!important;
