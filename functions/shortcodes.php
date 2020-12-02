@@ -1,21 +1,5 @@
 <?php
 
-// LOOP FINANCIAL STATEMENTS
-function loopFinancialStatements() {
-	ob_start();
-		get_template_part('includes/loops/loop-financial-statements');
-	return ob_get_clean();
-}
-add_shortcode( 'financial_statements', 'loopFinancialStatements' );
-
-// LOOP MD&As
-function loopMda() {
-	ob_start();
-		get_template_part('includes/loops/loop-mda');
-	return ob_get_clean();
-}
-add_shortcode( 'mda', 'loopMda' );
-
 // LOOP THROUGH NEWS POSTS
 function newsPosts() {
 	ob_start();
@@ -39,30 +23,6 @@ function testimonialsLoop() {
 	return ob_get_clean();
 }
 add_shortcode( 'testimonials', 'testimonialsLoop' );
-
-// LOOP THROUGH PRODUCTS
-function productLoop() {
-	ob_start();
-		get_template_part('includes/loops/loop-products');
-	return ob_get_clean();
-}
-add_shortcode( 'products', 'productLoop' );
-
-// LOOP THROUGH PRODUCTS IN SIDEBAR
-function productSidebarLoop() {
-	ob_start();
-		get_template_part('includes/loops/loop-sidebar-products');
-	return ob_get_clean();
-}
-add_shortcode( 'products_sidebar', 'productSidebarLoop' );
-
-// LOOP THROUGH PARTNER BRANDS IN SIDEBAR
-function partnerSidebarLoop() {
-	ob_start();
-		get_template_part('includes/loops/loop-sidebar-partners');
-	return ob_get_clean();
-}
-add_shortcode( 'partners_sidebar', 'partnerSidebarLoop' );
 
 // INFO PORTALS
 function infoPortals() {

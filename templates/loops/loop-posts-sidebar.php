@@ -1,8 +1,10 @@
 <?php 
+$cat = get_the_cateogry( $post->ID );
 $args = array( 
 	'post_type' => 'post',
 	'posts_per_page'=> 5, 
-	'post__not_in' => array( $post->ID )
+	'post__not_in' => array( $post->ID ),
+	'category_name' => $cat->name,
 );
 $arr_posts = new WP_Query( $args ); ?>
 	
