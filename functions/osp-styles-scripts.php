@@ -11,8 +11,8 @@ function sona_styles()
     wp_register_script('osp-scripts', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), null, true); // Custom scripts
     wp_enqueue_script('osp-scripts');
     
-    wp_register_style('sona-styles', get_template_directory_uri() . '/assets/css/style.css', array(), null, 'all');
-    wp_enqueue_style('sona-styles');
+    wp_register_style('osp-styles', get_template_directory_uri() . '/assets/css/style.css', array(), null, 'all');
+    wp_enqueue_style('osp-styles');
     
     wp_register_style('google-font', 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap', array(), null, 'all');
     wp_enqueue_style('google-font');
