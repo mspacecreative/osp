@@ -430,4 +430,3 @@ include 'functions/tinymce.php';
 include 'functions/remove-ptag.php';
 include 'functions/remove-brand-slug.php';
 include 'functions/excerpts.php';
-include 'functions/events.php';
