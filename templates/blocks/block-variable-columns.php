@@ -30,7 +30,7 @@ if ( $blockanchor && $bgcolor == 'dark' ): ?>
 <?php endif;
 
  	if ( $narrow ): ?>
-	<div class="innerContainer no-top-bottom-padding maxWidth850">
+	<div class="innerContainer no-top-bottom-padding w1080">
 	<?php else : ?>
 	<div class="innerContainer no-top-bottom-padding">
 	<?php endif; ?>
@@ -39,7 +39,7 @@ if ( $blockanchor && $bgcolor == 'dark' ): ?>
 			echo '
 				<div class="text-align-center">
 					<h2>' . $rowheading . '</h2>
-					<h3 class="bottom-margin">' . $rowsubheading . '</h3>
+					<h3 class="bottomMargin50">' . $rowsubheading . '</h3>
 				</div>
 				';
 		} elseif ( $rowheading && $rowsubheading ) {
@@ -48,45 +48,45 @@ if ( $blockanchor && $bgcolor == 'dark' ): ?>
 				<h3 class="bottom-padding">' . $rowsubheading . '</h3>
 				';
 		} elseif ( $rowheading && $centeredheading ) {
-			echo '<h2 class="text-align-center bottom-margin"">' . $rowheading . '</h2>';
+			echo '<h2 class="text-align-center bottomMargin50"">' . $rowheading . '</h2>';
 		} elseif ( $rowheading ) {
-			echo '<h2 class="bottom-margin">' . $rowheading . '</h2>';
+			echo '<h2 class="bottomMargin50">' . $rowheading . '</h2>';
 		}
 		
 		if( have_rows('columns_grid') ):
 		
 		if ( $centeredtext && $icon && $gutters == 'none' ): ?>
-		<div class="row gutter_space_0 center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
+		<div class="row center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext && $icon && $gutters == 'default' ): ?>
-		<div class="row gutter_space_1 center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext && $icon && $gutters == 'wide' ): ?>
-		<div class="row gutter_space_2 center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWider center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext && $gutters == 'none' ): ?>
-		<div class="row gutter_space_0 center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
+		<div class="row center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext && $gutters == 'default' ): ?>
-		<div class="row gutter_space_1 center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext && $gutters == 'wide' ): ?>
-		<div class="row gutter_space_2 center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWider center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
 		<?php elseif ( $icon && $gutters == 'none' ): ?>
-		<div class="row gutter_space_0 icons-visible bullet-points extra-col-spacing">
+		<div class="row icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $icon && $gutters == 'default' ): ?>
-		<div class="row gutter_space_1 icons-visible bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $icon && $gutters == 'wide' ): ?>
 		<div class="row gutter_space_2 icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $gutters == 'none' ): ?>
 		<div class="row gutter_space_0 bullet-points extra-col-spacing">
 		<?php elseif ( $gutters == 'default' ): ?>
-		<div class="row gutter_space_1 bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide bullet-points extra-col-spacing">
 		<?php elseif ( $gutters == 'wide' ): ?>
-		<div class="row gutter_space_2 bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWider bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext && $icon ): ?>
-		<div class="row gutter_space_2 center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext ): ?>
-		<div class="row gutter_space_2 center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
 		<?php elseif ( $icon ): ?>
-		<div class="row gutter_space_2 icons-visible bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide icons-visible bullet-points extra-col-spacing">
 		<?php else : ?>
-		<div class="row gutter_space_2 bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide bullet-points extra-col-spacing">
 		<?php endif; ?>
 			
 			<?php while( have_rows('columns_grid') ): the_row();
@@ -194,63 +194,63 @@ if ( $blockanchor && $bgcolor == 'dark' ): ?>
 <?php endif; 
 	
 	if ( $narrow ): ?>
-	<div class="innerContainer no-top-bottom-padding maxWidth850">
+	<div class="innerContainer no-top-bottom-padding w1080">
 	<?php else : ?>
 	<div class="innerContainer no-top-bottom-padding">
-	<?php endif; ?>
-		
-		<?php if ( $rowheading && $rowsubheading && $centeredheading ) {
+	<?php endif;
+	
+		if ( $rowheading && $rowsubheading && $centeredheading ) {
 			echo '
 				<div class="text-align-center">
 					<h2>' . $rowheading . '</h2>
-					<h3 class="bottom-padding">' . $rowsubheading . '</h3>
+					<h3 class="bottomMargin50">' . $rowsubheading . '</h3>
 				</div>
 				';
 		} elseif ( $rowheading && $rowsubheading ) {
 			echo '
 				<h2>' . $rowheading . '</h2>
-				<h3 class="bottom-padding">' . $rowsubheading . '</h3>
+				<h3 class="bottomMargin50">' . $rowsubheading . '</h3>
 				';
 		} elseif ( $rowheading && $centeredheading ) {
-			echo '<h2 class="text-align-center bottom-margin"">' . $rowheading . '</h2>';
+			echo '<h2 class="text-align-center bottomMargin50"">' . $rowheading . '</h2>';
 		} elseif ( $rowheading ) {
-			echo '<h2 class="bottom-margin">' . $rowheading . '</h2>';
+			echo '<h2 class="bottomMargin50">' . $rowheading . '</h2>';
 		}
 		
 		if( have_rows('columns_grid') ):
 		
 		if ( $centeredtext && $icon && $gutters == 'none' ): ?>
-		<div class="row gutter_space_0 center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
+		<div class="row center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext && $icon && $gutters == 'default' ): ?>
-		<div class="row gutter_space_1 center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext && $icon && $gutters == 'wide' ): ?>
-		<div class="row gutter_space_2 center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWider center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext && $gutters == 'none' ): ?>
-		<div class="row gutter_space_0 center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
+		<div class="row center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext && $gutters == 'default' ): ?>
-		<div class="row gutter_space_1 center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext && $gutters == 'wide' ): ?>
-		<div class="row gutter_space_2 center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWider center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
 		<?php elseif ( $icon && $gutters == 'none' ): ?>
-		<div class="row gutter_space_0 icons-visible bullet-points extra-col-spacing">
+		<div class="row icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $icon && $gutters == 'default' ): ?>
-		<div class="row gutter_space_1 icons-visible bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $icon && $gutters == 'wide' ): ?>
-		<div class="row gutter_space_2 icons-visible bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWider icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $gutters == 'none' ): ?>
-		<div class="row gutter_space_0 bullet-points extra-col-spacing">
+		<div class="row bullet-points extra-col-spacing">
 		<?php elseif ( $gutters == 'default' ): ?>
-		<div class="row gutter_space_1 bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide bullet-points extra-col-spacing">
 		<?php elseif ( $gutters == 'wide' ): ?>
-		<div class="row gutter_space_2 bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWider bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext && $icon ): ?>
-		<div class="row gutter_space_2 center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext ): ?>
-		<div class="row gutter_space_2 center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
 		<?php elseif ( $icon ): ?>
-		<div class="row gutter_space_2 icons-visible bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide icons-visible bullet-points extra-col-spacing">
 		<?php else : ?>
-		<div class="row gutter_space_2 bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide bullet-points extra-col-spacing">
 		<?php endif; ?>
 			
 			<?php while( have_rows('columns_grid') ): the_row();
@@ -358,63 +358,63 @@ if ( $blockanchor && $bgcolor == 'dark' ): ?>
 <?php endif; 
 	
 	if ( $narrow ): ?>
-	<div class="innerContainer no-top-bottom-padding maxWidth850">
+	<div class="innerContainer no-top-bottom-padding w1080">
 	<?php else : ?>
 	<div class="innerContainer no-top-bottom-padding">
-	<?php endif; ?>
-		
-		<?php if ( $rowheading && $rowsubheading && $centeredheading ) {
+	<?php endif;
+	
+		if ( $rowheading && $rowsubheading && $centeredheading ) {
 			echo '
 				<div class="text-align-center">
 					<h2>' . $rowheading . '</h2>
-					<h3 class="bottom-padding">' . $rowsubheading . '</h3>
+					<h3 class="bottomMargin50">' . $rowsubheading . '</h3>
 				</div>
 				';
 		} elseif ( $rowheading && $rowsubheading ) {
 			echo '
 				<h2>' . $rowheading . '</h2>
-				<h3 class="bottom-padding">' . $rowsubheading . '</h3>
+				<h3 class="bottomMargin50">' . $rowsubheading . '</h3>
 				';
 		} elseif ( $rowheading && $centeredheading ) {
-			echo '<h2 class="text-align-center bottom-margin"">' . $rowheading . '</h2>';
+			echo '<h2 class="text-align-center bottomMargin50"">' . $rowheading . '</h2>';
 		} elseif ( $rowheading ) {
-			echo '<h2 class="bottom-margin">' . $rowheading . '</h2>';
+			echo '<h2 class="bottomMargin50">' . $rowheading . '</h2>';
 		}
 		
 		if( have_rows('columns_grid') ):
 		
 		if ( $centeredtext && $icon && $gutters == 'none' ): ?>
-		<div class="row gutter_space_0 center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
+		<div class="row center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext && $icon && $gutters == 'default' ): ?>
-		<div class="row gutter_space_1 center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext && $icon && $gutters == 'wide' ): ?>
-		<div class="row gutter_space_2 center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWider center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext && $gutters == 'none' ): ?>
-		<div class="row gutter_space_0 center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
+		<div class="row center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext && $gutters == 'default' ): ?>
-		<div class="row gutter_space_1 center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext && $gutters == 'wide' ): ?>
-		<div class="row gutter_space_2 center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWider center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
 		<?php elseif ( $icon && $gutters == 'none' ): ?>
-		<div class="row gutter_space_0 icons-visible bullet-points extra-col-spacing">
+		<div class="row icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $icon && $gutters == 'default' ): ?>
-		<div class="row gutter_space_1 icons-visible bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $icon && $gutters == 'wide' ): ?>
-		<div class="row gutter_space_2 icons-visible bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWider icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $gutters == 'none' ): ?>
-		<div class="row gutter_space_0 bullet-points extra-col-spacing">
+		<div class="row bullet-points extra-col-spacing">
 		<?php elseif ( $gutters == 'default' ): ?>
-		<div class="row gutter_space_1 bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide bullet-points extra-col-spacing">
 		<?php elseif ( $gutters == 'wide' ): ?>
-		<div class="row gutter_space_2 bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWider bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext && $icon ): ?>
-		<div class="row gutter_space_2 center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
 		<?php elseif ( $centeredtext ): ?>
-		<div class="row gutter_space_2 center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
 		<?php elseif ( $icon ): ?>
-		<div class="row gutter_space_2 icons-visible bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide icons-visible bullet-points extra-col-spacing">
 		<?php else : ?>
-		<div class="row gutter_space_2 bullet-points extra-col-spacing">
+		<div class="row gutterSpaceWide bullet-points extra-col-spacing">
 		<?php endif; ?>
 			
 			<?php while( have_rows('columns_grid') ): the_row();

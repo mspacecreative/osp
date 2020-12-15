@@ -18,7 +18,7 @@ if (function_exists('add_theme_support'))
     add_image_size( 'sidebar', 200, 200, true );
     add_image_size( 'card-feature', 600, 338, array('center', 'center') );
     add_image_size( 'team-member', 400, 400, array('center', 'top') );
-    add_image_size( 'photo-strip', 1080, 607.5, array('center', 'center') );
+    add_image_size( 'photo-strip', 500, 281.25, array('center', 'center') );
 
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');
@@ -112,6 +112,17 @@ if (function_exists('register_sidebar'))
         'name' => __('News Sidebar', 'osp'),
         'description' => __('Content for news sidebar', 'osp'),
         'id' => 'sidebar-news',
+        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+    
+    // Recent news releases/presentations Sidebar
+    register_sidebar(array(
+        'name' => __('News releases/presentations Sidebar', 'osp'),
+        'description' => __('Pulls in 5 most recent posts', 'osp'),
+        'id' => 'news-posts',
         'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
@@ -267,44 +278,6 @@ function custom_pagination($pages = '', $range = 2)
  }
  }
 
-/*
-// Custom Excerpts
-function html5wp_index($length) // Create 20 Word Callback for Index page Excerpts, call using html5wp_excerpt('html5wp_index');
-{
-    return 20;
-}
-// Create 40 Word Callback for Custom Post Excerpts, call using html5wp_excerpt('html5wp_custom_post');
-function html5wp_custom_post($length)
-{
-    return 40;
-}
-*
-
-// Create the Custom Excerpts callback
-function html5wp_excerpt($length_callback = '', $more_callback = '')
-{
-    global $post;
-    if (function_exists($length_callback)) {
-        add_filter('excerpt_length', $length_callback);
-    }
-    if (function_exists($more_callback)) {
-        add_filter('excerpt_more', $more_callback);
-    }
-    $output = get_the_excerpt();
-    $output = apply_filters('wptexturize', $output);
-    $output = apply_filters('convert_chars', $output);
-    $output = '<p>' . $output . '</p>';
-    echo $output;
-}
-
-// Custom View Article link to Post
-function html5_blank_view_article($more)
-{
-    global $post;
-    return '... <p class="view-article-container"><a class="view-article button dark" href="' . get_permalink($post->ID) . '">' . __('Read more', 'osp') . '</a></p>';
-}
-*/
-
 // custom excerpt length
 function osp_custom_excerpt($length_callback = '', $more_callback = '')
 {
@@ -457,3 +430,4 @@ include 'functions/tinymce.php';
 include 'functions/remove-ptag.php';
 include 'functions/remove-brand-slug.php';
 include 'functions/excerpts.php';
+include 'functions/events.php';

@@ -16,6 +16,14 @@ function recentPosts() {
 }
 add_shortcode( 'sidebar_recent_posts', 'recentPosts' );
 
+// LOOP 5 RECENT NEWS POSTS
+function recentNewsPosts5() {
+	ob_start();
+		get_template_part('templates/loops/loop-news-posts');
+	return ob_get_clean();
+}
+add_shortcode( 'recent_news_posts', 'recentNewsPosts5' );
+
 // LOOP THROUGH TESTIMONIALS
 function testimonialsLoop() {
 	ob_start();

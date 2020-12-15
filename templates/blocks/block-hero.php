@@ -112,3 +112,21 @@
 	
 	endif; ?>
 </div>
+
+<style>
+	<?php
+	$colorpicker = get_field('colour_overlay');
+	$overlayopacity = get_field('overlay_opacity');
+	if ( $colorpicker && $overlayopacity ): ?>
+	.heroContent::before {
+		background-color: <?php echo $colorpicker ?>;
+		opacity: <?php echo $overlayopacity ?>;
+	} elseif ( $colourpicker ) {
+		background-color: <?php echo $colorpicker ?>;
+	} <?php else : ?>
+	.heroContent::before {
+		background-color: #38C3E1;
+		opacity: 0.85;
+	}
+	<?php endif; ?>
+</style>

@@ -4,7 +4,11 @@
 		<!-- footer -->
 		<footer class="section">
 			<div class="innerContainer">
-				<p>The Ocean Startup Project is driven by Canada's Ocean Supercluster, and directed and supported by six pan-Atlantic founding partners.</p>
+				<?php $footercopy = get_field('footer_copy', 'options');
+				
+				if ( $footercopy ): ?>
+				<p><?php echo $footercopy ?></p>
+				<?php endif; ?>
 				
 				<!-- logos -->
 				<div class="container topMargin25">
@@ -117,7 +121,7 @@
 						<!-- credits -->
 						<div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div>
-								<p><?php _e('&copy; '); echo date('Y'); _e(' '); bloginfo('name'); _e('. All rights reserved.'); ?></p>
+								<p><?php _e('&copy; '); echo date('Y'); _e(' '); bloginfo('name'); _e('. All rights reserved.'); ?> <a class="copyRightLink" href="<?php echo home_url( 'privacy-statement' ) ?>"><?php echo __('Privacy Statement'); ?></a></p>
 							</div>
 						</div>
 						<!-- / credits -->

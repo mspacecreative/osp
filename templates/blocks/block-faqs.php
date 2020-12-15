@@ -10,9 +10,13 @@ echo '
 echo '
 <section id="faqs" class="faqs section light" style="background-image: url(' . get_template_directory_uri() . '/assets/img/placeholders/ocean-bg.jpg);">';
 }
-
+	if ( $narrow ) {
+	echo '
+	<div class="innerContainer w1080">';
+	} else {
 	echo '
 	<div class="innerContainer">';
+	}
 	
 		if ( $heading ) {
 			echo '<h2>' . $heading . '</h2>';

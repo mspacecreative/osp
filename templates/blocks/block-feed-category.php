@@ -23,7 +23,7 @@ if ( $category ) {
 				echo '<h2 class="light">' . __('What&#8217;s new') . '</h2>';
 			} ?>
 			
-			<div class="row gutterSpaceWide feedGrid">
+			<div class="row gutterSpaceWide feedGrid cards">
 				
 				<?php while ( $loop->have_posts() ) : $loop->the_post();
 				$featuredimg = get_the_post_thumbnail( get_the_ID(), 'card-feature' );
@@ -425,7 +425,7 @@ if ( $category ) {
 							</div>
 						</div>';
 				} ?>
-				<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6">
 					<div class="cardContainer">
 						<?php 
 						if ( $url && $cannedimg ): ?>

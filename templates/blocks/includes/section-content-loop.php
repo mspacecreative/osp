@@ -11,7 +11,7 @@ if ( $txtalign == 'left' ):
 	<div class="topPadding clear">
 	
 	<?php elseif ( $padding == 'bottom'): ?>
-	<div class="bottom-padding clear">
+	<div class="bottomPadding clear">
 	
 	<?php else : ?>
 	<div class="topBottomPadding clear">
@@ -38,7 +38,7 @@ if ( $txtalign == 'left' ):
 	<div class="topPadding clear text-align-center">
 	
 	<?php elseif ( $padding == 'bottom'): ?>
-	<div class="bottom-padding clear text-align-center">
+	<div class="bottomPadding clear text-align-center">
 	
 	<?php else : ?>
 	<div class="topBottomPadding clear text-align-center">
@@ -65,7 +65,7 @@ if ( $txtalign == 'left' ):
 	<div class="topPadding clear text-align-right">
 	
 	<?php elseif ( $padding == 'bottom'): ?>
-	<div class="bottom-padding clear text-align-right">
+	<div class="bottomPadding clear text-align-right">
 	
 	<?php else : ?>
 	<div class="topBottomPadding clear text-align-right">
@@ -92,7 +92,7 @@ if ( $txtalign == 'left' ):
 	<div class="topPadding clear">
 	
 	<?php elseif ( $padding == 'bottom'): ?>
-	<div class="bottom-padding clear">
+	<div class="bottomPadding clear">
 	
 	<?php else : ?>
 	<div class="clear">

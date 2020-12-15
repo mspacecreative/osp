@@ -1,5 +1,27 @@
 (function ($) {
 
+	// FIX SIDEBAR ON SCROLL
+	if ( window.matchMedia("(min-width: 64em)").matches ) {
+		if ( $('.news-and-events').length ) {
+			var stickySidebar = $('.sidebar').offset().top,
+				colWidth = $('.sidebar').parent().width();
+			$(window).scroll(function() {
+				var headerHeight = $('header').outerHeight() + 20;
+				if ($(window).scrollTop() > (stickySidebar - headerHeight)) {
+					$('.sidebar').addClass('fixed').css({
+						'margin-top': headerHeight,
+						'width': colWidth
+					});
+				} else {
+					$('.sidebar').removeClass('fixed').css({
+						'margin-top': '0',
+						'width': 'auto'
+					});
+				}
+			});
+		}
+	}
+	
 	// REMOVE OUTLINE ON CLICKABLE ITEMS WHEN USING MOUSE
 	document.body.addEventListener('mousedown', function() {
 		document.body.classList.add('using-mouse');
@@ -13,6 +35,50 @@
 			document.body.classList.add('using-keyboard');
 		}
 	});
+	
+	var hasFocus = $(':focus');
+	
+	function headerHeightCalc() {
+		var headerHeight = $('header').outerHeight();
+		$('.skip-links').css('top', headerHeight);
+	}
+	
+	// bind a click event to the 'skip' link
+    $(".skip-to-link").click(function(event) {
+
+        // strip the leading hash and declare
+        // the content we're skipping to
+        var skipTo = "#" + this.href.split('#')[1];
+
+        // Setting 'tabindex' to -1 takes an element out of normal 
+        // tab flow but allows it to be focused via javascript
+        $(skipTo).attr('tabindex',  -1).on('blur focusout', function() {
+
+            // when focus leaves this element, 
+            // remove the tabindex attribute
+            $(this).removeAttr('tabindex');
+		}).focus(); // focus on the content container
+	});
+	
+	
+	/*
+	// KEYDOWN AND SKIP NAV FOR ACCESSIBILITY
+	$('.skip-links').keypress(function() {
+		$('nav li a').each(function() {
+			$(this).attr('tabindex', '-1');
+		});
+		$(this).next().find('.logo a').attr('tabindex', '-1');
+		$(this).next().find('.searchIcon a').attr('tabindex', '-1');
+	});
+	
+	$(document).on('keydown', function() { 
+		$('nav li a').each(function() {
+			$(this).removeAttr('tabindex');
+		});
+		$('.logo a').removeAttr('tabindex');
+		$('.searchIcon a').removeAttr('tabindex');
+    });
+	*/
 	
 	// MATCHMEDIA POLYFILL FOR IE9
 	window.matchMedia || (window.matchMedia = function () {
@@ -100,30 +166,6 @@
 		$(this).find('.innerCardContainer').children('.eaw-title, .eaw-time').wrapAll('<div class="colInner"></div>');
 	});
 	
-	// MEDIUM TWEAKS
-	/*
-	$('.display-medium-title').each(function() {
-		var titles = $(this),
-		$target = $(this).parent();
-		titles.insertAfter($target);
-	});
-	
-	$('.display-medium-readmore').each(function() {
-		var readMore = $(this),
-		$target = $(this).parent();
-		readMore.insertAfter($target).wrap('<p></p>');
-	});
-	
-	$(".display-medium-date-read").html(function(i, html){
-	    return html.replace("/", "");
-	});
-	
-	$('.display-medium-item').each(function() {
-		var items = $(this).find('p');
-		items.wrapAll('<div class="mediumContent"></div>');
-	});
-	*/
-	
 	// ACCORDION FUNCTIONALITY
 	$('.tabRow > a').click(function(e) {
 		e.preventDefault();
@@ -173,6 +215,7 @@
 		} else {
 			$('header').removeClass('scroll');
 		}
+		headerHeightCalc();
 	});
 	
 	// SMOOTH SCROLL
@@ -230,6 +273,7 @@
 	
 	$(window).load(function() {
 		addDataObjectFit();
+		headerHeightCalc();
 	});
 	
 })(jQuery);

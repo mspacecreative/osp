@@ -29,6 +29,18 @@ img {
 	width: 100%;
 }
 
+.alignright.wp-caption, img.alignright {
+	width: auto;
+	float: right;
+	margin: 8px 0 20px 20px;
+}
+.wp-caption-text {
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.35em;
+}
+
 .contentPortal {
 	position: relative;
 	min-height: 300px;

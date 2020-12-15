@@ -7,6 +7,9 @@ footer.section {
 .credits {
 	padding-top: 4em;
 }
-.credits p {
+.credits p, .copyRightLink {
 	font-size: 13px;
+}
+.copyRightLink {
+	text-decoration: underline;
 }

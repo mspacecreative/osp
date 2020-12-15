@@ -8,6 +8,9 @@ header {
 	transition: 0.5s ease-in-out;
 	background-color: #fff;
 }
+.logged-in.admin-bar header {
+	margin-top: 32px;
+}
 .home header {
 	background-color: transparent;
 }
@@ -220,7 +223,6 @@ div.asl_w .probox .promagnifier, div.asl_r.vertical {
 // SKIP NAV LINKS BUTTON
 .skip-links {
 	position: fixed;
-    top: 80px;
     z-index: 2;
 	left: 50%;
     margin-left: -67.5px;
@@ -231,6 +233,7 @@ div.asl_w .probox .promagnifier, div.asl_r.vertical {
 .skip-to-link {
 	padding: 15px;
     background-color: #fff;
+	display: block;
 }
 
 .using-mouse .skip-links, .skip-links {

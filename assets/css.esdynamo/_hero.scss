@@ -52,7 +52,7 @@
 .heroContent {
 	background-size: cover;
 	position: relative;
-	height: 75vh;
+	height: 600px;
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
@@ -84,8 +84,6 @@
 	top: 0;
 	left: 0;
 	content: "";
-	opacity: 0.85;
-	background-color: $brandBlue;
 	z-index: 1;
 }
 .heroContent .innerContainer {

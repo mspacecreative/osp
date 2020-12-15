@@ -1,0 +1,116 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 25 25" style="enable-background:new 0 0 25 25;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#424242;stroke-width:0.8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256;}
+	.lineAnimate {
+		animation: lineAnimate 10s linear infinite;
+		animation-delay: 0.5s;
+		stroke-dasharray: 150;
+		stroke-dashoffset: 150;
+	}
+	.lineAnimateDelay {
+		animation: lineAnimate 10s linear infinite;
+		animation-delay: .75s;
+		stroke-dasharray: 150;
+		stroke-dashoffset: 150;
+	}
+	.lineAnimateDelayMore {
+		animation: lineAnimate 10s linear infinite;
+		animation-delay: 1s;
+		stroke-dasharray: 150;
+		stroke-dashoffset: 150;
+	}
+	.animate {
+		animation: animate 10s ease-in-out 0s infinite;
+	}
+	.animateDelay {
+		animation: animate 10s ease-in-out 0s infinite;
+		animation-delay: .25s;
+	}
+	.animateDelayMore {
+		animation: animate 10s ease-in-out 0s infinite;
+		animation-delay: .5s;
+	}
+	@keyframes lineAnimate {
+		from {
+			stroke-dashoffset: 150;
+		}
+		to {
+			stroke-dashoffset: 0;
+		}
+		0% {
+			opacity: 1;
+		}
+		10% {
+			opacity: 1;
+		}
+		85% {
+			opacity: 1;
+			transition:  0.5s ease-in-out 0s;
+		}
+		100% {
+			opacity: 0;
+			transition:  0.5s ease-in-out 0s;
+		}
+		
+	}
+	@keyframes animate {
+		0% {
+			opacity: 0;
+			transition:  0.5s ease-in-out 0s;
+			transform: translateY(-10px);
+		}
+		10% {
+			opacity: 1;
+			transition:  0.5s ease-in-out 0s;
+			transform: translateY(0);
+		}
+		85% {
+			opacity: 1;
+			transition:  0.5s ease-in-out 0s;
+			transform: translateY(0);
+		}
+		100% {
+			opacity: 0;
+			transition:  0.5s ease-in-out 0s;
+			transform: translateY(0);
+		}
+		
+	}
+	@keyframes animateDelay {
+		0% {
+			opacity: 0;
+			transition:  0.5s ease-in-out 0s;
+			transform: translateY(-10px);
+		}
+		15% {
+			opacity: 1;
+			transition:  0.5s ease-in-out 0s;
+			transform: translateY(0);
+		}
+		85% {
+			opacity: 1;
+			transition: 0.5s ease-in-out 1s;
+			transform: translateY(0);
+		}
+		100% {
+			opacity: 0;
+			transition:  0.5s ease-in-out 0s;
+			transform: translateY(0);
+		}
+		
+	}
+</style>
+<polygon class="st0" points="2.3,2.4 22.7,2.4 22.7,16.9 2.3,16.9 "/>
+<line class="st0" x1="0.6" y1="2.4" x2="24.3" y2="2.4"/>
+<line class="st0" x1="12.5" y1="16.9" x2="12.5" y2="23.2"/>
+<line class="st0" x1="12.5" y1="2.4" x2="12.5" y2="0.6"/>
+<line class="st0" x1="12.5" y1="20.2" x2="19.1" y2="24.3"/>
+<line class="st0" x1="12.4" y1="20.2" x2="5.9" y2="24.3"/>
+<line class="st0 lineAnimateDelayMore" x1="11" y1="6.3" x2="18.5" y2="6.3"/>
+<polyline class="st0 animateDelayMore" points="6.4,5.9 7.4,7.1 8.5,5.7 "/>
+<line class="st0 lineAnimateDelay" x1="11" y1="9.5" x2="18.5" y2="9.5"/>
+<polyline class="st0 animateDelay" points="6.4,9.1 7.4,10.3 8.5,8.9 "/>
+<line class="st0 lineAnimate" x1="11" y1="12.7" x2="18.5" y2="12.7"/>
+<polyline class="st0 animate" points="6.4,12.2 7.4,13.5 8.5,12 "/>
+</svg>

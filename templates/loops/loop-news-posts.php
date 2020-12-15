@@ -1,10 +1,11 @@
 <?php 
 $related = get_posts( array( 
-	'category__in' => wp_get_post_categories($post->ID), 
-	'posts_per_page' => 5, 
-	'post__not_in' => array($post->ID) ) );
+	'category' => 3, 
+	'posts_per_page' => 5,
+	) 
+);
 
-if( $related ) { ?>
+if ( $related ) { ?>
 	
 <div class="row gutterSpaceDefault cardGrid">
 			
@@ -12,7 +13,7 @@ if( $related ) { ?>
 	setup_postdata( $post ); ?>
 			
 	<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12">
-		<div class="colInner whiteBg">
+		<div class="colInner cardContainer whiteBg">
 
 			<!-- post title -->
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">

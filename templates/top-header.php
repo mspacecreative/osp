@@ -1,8 +1,8 @@
+<div class="skip-links" aria-label="Skip to main content"><a href="#main" class="skip-to-link" tabindex="1">Skip to main content</a></div>
+
 <!-- header -->
 <header id="header" class="header clear" role="banner">
-
-	<div class="skip-links" aria-label="Skip to main content"><a href="#main" class="skip-to-link">Skip to main content</a></div>
-
+	
 	<!-- INNER CONTAINER -->
 	<div class="innerContainer clear">
 

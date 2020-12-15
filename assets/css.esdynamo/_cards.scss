@@ -24,7 +24,7 @@
 .cardGrid .readMore, .cardContent .readMore {
 	margin-top: auto;
 }
-.cardGrid .colInner p:last-of-type, .cardContent {
+.cardGrid .colInner p:last-of-type, .cardContent, .boxed {
 	display: flex;
 	height: 100%;
 	flex-direction: column;
@@ -32,8 +32,22 @@
 .cardGrid .colInner p:last-of-type a.readMore {
 	margin-top: auto;
 }
-.innerCardContainer {
-	box-shadow: 0 0 10px #d9d9d9;
+.innerCardContainer, .boxed {
+	box-shadow: 0 5px 10px #d4d4d4;
+}
+.boxed {
+	padding: 2em;
+}
+.cardContainer, .innerCardContainer, .boxed {
+	border-radius: 10px;
+    border-bottom: 10px solid #38C3E0;
+    overflow: hidden;
+	position: relative;
+}
+
+.center-lg .iconContainer {
+	margin-right: auto;
+	margin-left: auto;
 }
 
 // NEWS AND EVENTS CARD STYLES

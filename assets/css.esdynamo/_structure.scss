@@ -177,7 +177,7 @@
 	padding-bottom: 1rem;
 }
 
-.page-template-page-sidebar .contentWrap section > .innerContainer {
+.page-template-page-sidebar .contentWrap .content-section > .innerContainer, .page-template-page-sidebar .contentWrap .content-section ~ section > .innerContainer {
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -334,6 +334,12 @@
 	padding-right: 0;
 }
 
+//  SIDEBAR
+.sidebar.fixed {
+	position: fixed;
+	top: 0;
+}
+
 // SEARCH
 .search article {
 	padding-bottom: 2em;
@@ -354,10 +360,12 @@ section {
 section.credits {
 	background-color: transparent;
 }
+/*
 .innerPadding {
 	padding-left: 2em;
 	padding-right: 2em;
 }
+*/
 
 .para-block-wrap:last-of-type {
 	margin-bottom: 0;
