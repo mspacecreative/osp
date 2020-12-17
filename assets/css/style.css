@@ -675,6 +675,19 @@ table {
 	text-align: left;
 }
 
+body .pb-close {
+	background-image: url(../img/icons/video-close.png);
+	background-size: cover;
+	width: 15px;
+	height: 15px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+body .pb-close::before {
+	display: none;
+}
+
 .evenbriteEvents {
 	margin: 50px auto 15px;
 }
