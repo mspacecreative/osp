@@ -219,6 +219,19 @@ row.imageStripContainer {
 	height: 100%;
 	object-fit: cover;
 }
+@media (min-width: 1600px) {
+	.stripOuter {
+		background-color: $brandBlue;
+	}
+	.stripInner {
+		margin-right: auto;
+		margin-left: auto;
+	    max-width: 1600px;
+	    background-color: #fff;
+	    border-right: .75rem solid #fff;
+	    border-left: .75rem solid #fff;
+	}
+}
 
 // RADAR ANIMATION
 .st0 {
