@@ -140,50 +140,6 @@ if (function_exists('register_sidebar'))
         'after_title' => '</h3>'
     ));
     
-    // Define Footer Area 1
-    register_sidebar(array(
-        'name' => __('Footer Area 1', 'osp'),
-        'description' => __('Content for first footer area', 'osp'),
-        'id' => 'footer-area-1',
-        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-    
-    // Define Footer Area 2
-    register_sidebar(array(
-        'name' => __('Footer Area 2', 'osp'),
-        'description' => __('Content for second footer column', 'osp'),
-        'id' => 'footer-area-2',
-        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-    
-    // Define Footer Area 3
-    register_sidebar(array(
-        'name' => __('Footer Area 3', 'osp'),
-        'description' => __('Content for third footer column', 'osp'),
-        'id' => 'footer-area-3',
-        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-    
-    // Define Footer Area 4
-    register_sidebar(array(
-        'name' => __('Footer Area 4', 'osp'),
-        'description' => __('Content for fourth footer column', 'osp'),
-        'id' => 'footer-area-4',
-        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-    
     // Define Events Area
     register_sidebar(array(
         'name' => __('Eventbrite Events (News & Events)', 'osp'),
