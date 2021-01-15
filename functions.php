@@ -108,32 +108,11 @@ if (function_exists('register_sidebar'))
     ));
 
     // Define News Sidebar
+    /*
     register_sidebar(array(
         'name' => __('News Sidebar', 'osp'),
         'description' => __('Content for news sidebar', 'osp'),
         'id' => 'sidebar-news',
-        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-    
-    // Recent news releases/presentations Sidebar
-    register_sidebar(array(
-        'name' => __('News releases/presentations Sidebar', 'osp'),
-        'description' => __('Pulls in 5 most recent posts', 'osp'),
-        'id' => 'news-posts',
-        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-
-    // Define Page Sidebar
-    register_sidebar(array(
-        'name' => __('Page Sidebar', 'osp'),
-        'description' => __('Content for page sidebar', 'osp'),
-        'id' => 'sidebar-on-page',
         'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
@@ -156,6 +135,29 @@ if (function_exists('register_sidebar'))
         'name' => __('Eventbrite Events (Archive)', 'osp'),
         'description' => __('Pulls in all events from Evenbrite', 'osp'),
         'id' => 'eventbrite-all-events',
+        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+    */
+    
+    // Recent news releases/presentations Sidebar
+    register_sidebar(array(
+        'name' => __('News releases/presentations Sidebar', 'osp'),
+        'description' => __('Pulls in 5 most recent posts', 'osp'),
+        'id' => 'news-posts',
+        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+
+    // Define Page Sidebar
+    register_sidebar(array(
+        'name' => __('Page Sidebar', 'osp'),
+        'description' => __('Content for page sidebar', 'osp'),
+        'id' => 'sidebar-on-page',
         'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
