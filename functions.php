@@ -149,8 +149,8 @@ if (function_exists('register_sidebar'))
         'id' => 'news-posts',
         'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
         'after_widget' => '</div>',
-        //'before_title' => '<h3>',
-        //'after_title' => '</h3>'
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
     ));
 
     // Define Page Sidebar
