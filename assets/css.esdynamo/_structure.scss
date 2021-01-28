@@ -360,12 +360,12 @@ section {
 section.credits {
 	background-color: transparent;
 }
-/*
-.innerPadding {
-	padding-left: 2em;
-	padding-right: 2em;
+
+// IF CONTENT AFTER ARTICLE POST
+.single .contentWrap .col > section > .para-block-wrap {
+	padding: 0;
+    margin-top: 25px;
 }
-*/
 
 .para-block-wrap:last-of-type {
 	margin-bottom: 0;
