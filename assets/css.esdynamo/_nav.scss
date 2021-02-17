@@ -78,6 +78,13 @@ nav li a {
 .menu-item-has-children {
 	position: relative;
 }
+.nav li.menu-item-has-children a::after {
+    position: absolute;
+    content: "\f107";
+    top: 42px;
+    right: 24px;
+    font-family: fontAwesome;
+}
 .nav ul.sub-menu {
 	position: absolute;
 	left: 0;
@@ -110,6 +117,9 @@ nav li a {
 	border: none;
 	text-align: left;
 	white-space: nowrap;
+}
+.nav li .sub-menu li {
+	margin-left: 0;
 }
 .sub-menu li:first-of-type {
 	margin-top: 20px;
