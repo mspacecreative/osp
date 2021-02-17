@@ -17,7 +17,15 @@ header {
 .home header.scroll, header.scroll {
 	background-color: rgba(255, 255, 255, .9);
 	transition: 0.5s ease-in-out;
-	padding: 0.75em 0;
+	padding: 0;
+}
+header.scroll .nav li a {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+header.scroll .nav li .sub-menu a {
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 .brandingColor {
 	fill: $brandBlue;
@@ -46,8 +54,16 @@ header > .innerContainer {
 	width: 100px;
 	transition: 0.5s ease-in-out;
 }
-nav {
-	
+.mobile-nav ul {
+	list-style: none;
+}
+.mobile-nav ul a, .mobile-nav .sub-menu li a {
+	padding: 0.5em 0;
+    display: block;
+	color: #333;
+}
+.mobile-nav .sub-menu {
+	margin: 0;
 }
 nav ul {
 	display: flex;
@@ -79,34 +95,24 @@ nav li a {
 	position: relative;
 	padding-right: 20px;
 }
-.nav li.menu-item-has-children a::after {
+.nav li.menu-item-has-children a::after, .mobile-nav li.menu-item-has-children a::after {
     position: absolute;
     content: "\f107";
-    top: 42px;
-    right: 24px;
+    top: 9px;
+    right: 0;
     font-family: fontAwesome;
 	font-weight: 100;
+	transition: 0.5s ease-in-out;
 }
-.nav ul.sub-menu {
-	position: absolute;
-	left: 0;
-	top: calc(100% - 4px);
-	visibility: hidden;
-	opacity: 0;
-	transition: 0.25s ease-in-out;
-	background-color: #b2d7ed;
-	padding: 0;
-	flex-direction: column;
-	align-items: flex-start;
+header.scroll .nav li.menu-item-has-children a::after {
+	top: 20px;
+	transition: 0.5s ease-in-out;
 }
 .nav .sub-menu li a {
-	color: #fff;
+	color: #333;
 	font-weight: 500;
 }
-.nav li.menu-item-has-children .sub-menu a {
-	padding-right: .5em;
-}
-.nav li.menu-item-has-children .sub-menu a::after {
+.nav li.menu-item-has-children .sub-menu a::after, .mobile-nav li.menu-item-has-children .sub-menu a::after {
 	display: none;
 }
 .nav .sub-menu li a:hover {
@@ -115,25 +121,14 @@ nav li a {
 .menuInner .sub-menu {
 	display: none;
 }
-.menu-item-has-children:hover > .sub-menu, .menu-item-has-children.hover > .sub-menu  {
-	visibility: visible;
-	opacity: 1;
-	transition: 0.25s ease-in-out;
-}
 .sub-menu li {
 	display: block;
 	border: none;
 	text-align: left;
-	white-space: nowrap;
+	//white-space: nowrap;
 }
 .nav li .sub-menu li {
 	margin-left: 0;
-}
-.sub-menu li:first-of-type {
-	margin-top: 20px;
-}
-.wrapper ul.sub-menu li:last-of-type {
-	margin-bottom: 20px;
 }
 .sub-menu li::after {
 	display: none;
@@ -141,6 +136,56 @@ nav li a {
 .sub-menu li a {
 	color: #fff;
 	padding: 10px 30px;
+}
+.mobile-nav {
+	display: none;
+	position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: #fff;
+    left: 0;
+    padding: 1em 2em;
+}
+
+@media (min-width: 981px) {
+	.nav ul.sub-menu {
+		position: absolute;
+		top: 100%;
+		visibility: hidden;
+		opacity: 0;
+		transition: 0.25s ease-in-out;
+		background-color: #b2d7ed;
+		padding: 0;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.menu-item-has-children:hover > .sub-menu, .menu-item-has-children.hover > .sub-menu  {
+		visibility: visible;
+		opacity: 1;
+		transition: 0.25s ease-in-out;
+	}
+	.sub-menu li:first-of-type {
+		margin-top: 20px;
+	}
+	.wrapper ul.sub-menu li:last-of-type {
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 980px) {
+	.mobile-nav .sub-menu, .nav {
+		display: none;
+	}
+	.mobile-nav li.menu-item-has-children a::after {
+		transition: .5s ease-in-out;
+	}
+	.mobile-nav li.menu-item-has-children.open a::after {
+		transform: rotate(180deg);
+		transition: .5s ease-in-out;
+	}
+	.sub-menu {
+		position: relative;
+	}
 }
 
 // HAMBURGER MENU

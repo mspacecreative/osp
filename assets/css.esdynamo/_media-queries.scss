@@ -346,7 +346,19 @@
 
 @media (min-width: 981px) and (max-width: 1279px) {
 	.logo {
-		width: 215px;
+		width: 180px;
+	}
+	nav li {
+	    margin-left: 20px;
+	}
+	nav li a {
+	    font-size: 16px;
+	}
+	header.scroll .nav li.menu-item-has-children a::after {
+		top: 18px;
+	}
+	.nav li.menu-item-has-children a::after {
+		top: 7px;
 	}
 }
 
@@ -557,5 +569,11 @@
 	}
 	.colInnerMed .col-lg-8 {
 		padding-left: 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.row.gutterSpaceWide > .col:nth-child(2n+1):nth-last-child(-n+2) {
+		padding-bottom: 1em;
 	}
 }
