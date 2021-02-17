@@ -74,6 +74,55 @@ nav li a {
 	color: #333;
 }
 
+// SUB MENU
+.menu-item-has-children {
+	position: relative;
+}
+.nav ul.sub-menu {
+	position: absolute;
+	left: 0;
+	top: calc(100% - 4px);
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.25s ease-in-out;
+	background-color: #b2d7ed;
+	padding: 0;
+}
+.nav .sub-menu li a {
+	color: $brandBlue;
+	font-weight: 500;
+}
+.nav .sub-menu li a:hover {
+	color: #999;
+}
+.menuInner .sub-menu {
+	display: none;
+}
+.menu-item-has-children:hover > .sub-menu, .menu-item-has-children.hover > .sub-menu  {
+	visibility: visible;
+	opacity: 1;
+	transition: 0.25s ease-in-out;
+}
+.sub-menu li {
+	display: block;
+	border: none;
+	text-align: left;
+	white-space: nowrap;
+}
+.sub-menu li:first-of-type {
+	margin-top: 20px;
+}
+.wrapper ul.sub-menu li:last-of-type {
+	margin-bottom: 20px;
+}
+.sub-menu li::after {
+	display: none;
+}
+.sub-menu li a {
+	color: #fff;
+	padding: 10px 30px;
+}
+
 // HAMBURGER MENU
 .hamburger {
 	transform: translateX(0);
