@@ -3051,10 +3051,12 @@ nav li a {
 	transition: 0.25s ease-in-out;
 	background-color: #b2d7ed;
 	padding: 0;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 .nav .sub-menu li a {
-	color: #38C3E1;
+	color: #fff;
 	font-weight: 500;
 }
 

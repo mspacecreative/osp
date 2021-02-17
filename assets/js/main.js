@@ -198,7 +198,7 @@
 	}
 	
 	// MOBILE MENU
-	$('.hamburger, .menuOverlay, nav .sub-menu a').click(function(e) {
+	$('.hamburger').click(function(e) {
 		e.preventDefault();
 		toggleMenu();
 	});

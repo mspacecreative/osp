@@ -87,9 +87,11 @@ nav li a {
 	transition: 0.25s ease-in-out;
 	background-color: #b2d7ed;
 	padding: 0;
+	flex-direction: column;
+	align-items: flex-start;
 }
 .nav .sub-menu li a {
-	color: $brandBlue;
+	color: #fff;
 	font-weight: 500;
 }
 .nav .sub-menu li a:hover {
