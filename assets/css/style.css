@@ -3038,8 +3038,9 @@ nav li a {
 	color: #333;
 }
 
-.menu-item-has-children {
+.menu-item-has-children a {
 	position: relative;
+	padding-right: 20px;
 }
 
 .nav li.menu-item-has-children a::after {
@@ -3048,6 +3049,7 @@ nav li a {
 	top: 42px;
 	right: 24px;
 	font-family: fontAwesome;
+	font-weight: 100;
 }
 
 .nav ul.sub-menu {
@@ -3066,6 +3068,14 @@ nav li a {
 .nav .sub-menu li a {
 	color: #fff;
 	font-weight: 500;
+}
+
+.nav li.menu-item-has-children .sub-menu a {
+	padding-right: .5em;
+}
+
+.nav li.menu-item-has-children .sub-menu a::after {
+	display: none;
 }
 
 .nav .sub-menu li a:hover {
