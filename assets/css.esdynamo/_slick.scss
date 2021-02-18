@@ -334,7 +334,7 @@
 .col.quote_content {
 	padding-right: 0;
 }
-.col.object_fit {
+.col.no_padding_left {
 	padding-left: 0;
 }
 .object_fit img {
@@ -344,7 +344,7 @@
 .object_fit .testimonialLogoContainer img {
 	height: auto;
 }
-.carousel .testimonialLogoContainer {
+.carousel .testimonialLogoContainer, .one_col .testimonialLogoContainer {
 	display: flex;
 	height: 100%;
 }

@@ -646,13 +646,24 @@ table {
 	order: 1;
 }
 
-.two_col .col:last-of-type, .three_col .col:last-of-type, .four_col .col:last-of-type {
-	display: flex;
-	flex-direction: column;
+.two_col .col:last-of-type {
 	height: 300px;
 }
 
-.two_col .testimonialLogoContainer {
+.three_col .col:last-of-type {
+	height: 200px;
+}
+
+.four_col .col:last-of-type {
+	height: 150px;
+}
+
+.two_col .col:last-of-type, .three_col .col:last-of-type, .four_col .col:last-of-type {
+	display: flex;
+	flex-direction: column;
+}
+
+.two_col .testimonialLogoContainer, .three_col .testimonialLogoContainer, .four_col .testimonialLogoContainer {
 	background-color: #f5f5f5;
 	display: flex;
 	height: 100%;
@@ -1469,7 +1480,7 @@ src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/s
 	padding-right: 0;
 }
 
-.col.object_fit {
+.col.no_padding_left {
 	padding-left: 0;
 }
 
@@ -1482,7 +1493,7 @@ src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/s
 	height: auto;
 }
 
-.carousel .testimonialLogoContainer {
+.carousel .testimonialLogoContainer, .one_col .testimonialLogoContainer {
 	display: flex;
 	height: 100%;
 }
@@ -1649,6 +1660,10 @@ menu, ol, ul {
 
 .light > *, .light a, .light {
 	color: #fff;
+}
+
+.text-align-center {
+	text-align: center;
 }
 
 .overlaidText {

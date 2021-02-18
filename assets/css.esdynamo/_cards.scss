@@ -104,14 +104,24 @@
 .four_col .col:first-of-type {
 	order: 1;
 }
+.two_col .col:last-of-type {
+	height: 300px;
+}
+.three_col .col:last-of-type {
+	height: 200px;
+}
+.four_col .col:last-of-type {
+	height: 150px;
+}
 .two_col .col:last-of-type,
 .three_col .col:last-of-type,
 .four_col .col:last-of-type {
 	display: flex;
     flex-direction: column;
-    height: 300px;
 }
-.two_col .testimonialLogoContainer {
+.two_col .testimonialLogoContainer,
+.three_col .testimonialLogoContainer,
+.four_col .testimonialLogoContainer {
 	background-color: #f5f5f5;
 	display: flex;
 	height: 100%;

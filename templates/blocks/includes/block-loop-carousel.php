@@ -73,7 +73,7 @@ switch ( $spacing ) {
 							</div>
 						</div>
 							
-						<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-12 object_fit">
+						<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-12 object_fit no_padding_left">
 							<?php 
 							if ( $featuredimg ) {
 								echo wp_get_attachment_image( $featuredimg, $size ); 

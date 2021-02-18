@@ -24,25 +24,25 @@ switch ( $cols ) {
 	case 'two' :
 		$flex = 'class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 two_col"';
 		$fullcoltop = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12"';
-		$fullcolbottom = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12"';
+		$fullcolbottom = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 object_fit"';
 		break;
 				
 	case 'three' :
 		$flex = 'class="col col-lg-4 col-md-4 col-sm-6 col-xs-12 three_col"';
 		$fullcoltop = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12"';
-		$fullcolbottom = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12"';
+		$fullcolbottom = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 object_fit"';
 		break;
 				
 	case 'four' :
 		$flex = 'class="col col-lg-3 col-md-3 col-sm-6 col-xs-12 four_col"';
 		$fullcoltop = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12"';
-		$fullcolbottom = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12"';
+		$fullcolbottom = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 object_fit"';
 		break;
 				
 	default :
-		$flex = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12"';
-		$fullcoltop = 'class="col col-lg-9 col-md-9 col-sm-8 col-xs-12"';
-		$fullcolbottom = 'class="col col-lg-3 col-md-3 col-sm-4 col-xs-12"';
+		$flex = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 one_col"';
+		$fullcoltop = 'class="col col-lg-9 col-md-9 col-sm-8 col-xs-12 quote_content"';
+		$fullcolbottom = 'class="col col-lg-3 col-md-3 col-sm-4 col-xs-12 object_fit no_padding_left"';
 } ?>
 
 <section <?php echo $paddingClass ?>>
@@ -52,6 +52,16 @@ switch ( $cols ) {
 	if( $featured_posts ): ?>
 	
 	<div class="innerContainer w1080">
+	
+		<?php 
+		$rowheading = get_field('row_heading');
+		$rowheadingalignment = get_field('row_heading_alignment');
+			
+		if ( $rowheading && $rowheadingalignment ) {
+			echo '<h1 class="text-align-center" style="margin-bottom: 1.5em;">' . $rowheading . '</h1>';
+		} elseif ( $rowheading ) {
+			echo '<h1 style="margin-bottom: 1.5em;">' . $rowheading . '</h1>';
+		} ?>
 	
 		<div class="row gutter_space_wide">
 	
@@ -70,7 +80,7 @@ switch ( $cols ) {
 			
 				<div class="container testimonialContainer">
 						
-					<div class="row middle-lg middle-md middle-sm">				
+					<div class="row">				
 							
 						<div <?php echo $fullcoltop ?>>
 							<div class="testimonialContainerInner">
