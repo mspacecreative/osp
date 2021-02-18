@@ -47,10 +47,6 @@ switch ( $cols ) {
 
 <section <?php echo $paddingClass ?>>
 	
-	<?php 
-	$featured_posts = get_field('post_type');
-	if( $featured_posts ): ?>
-	
 	<div class="innerContainer w1080">
 	
 		<?php 
@@ -65,7 +61,10 @@ switch ( $cols ) {
 	
 		<div class="row gutter_space_wide">
 	
-			<?php foreach( $featured_posts as $post ):
+			<?php 
+			$featured_posts = get_field('post_type');
+			if( $featured_posts ):
+			foreach( $featured_posts as $post ):
 			
 			setup_postdata($post);
 			$author = get_the_title($post->ID);
@@ -118,13 +117,11 @@ switch ( $cols ) {
 				
 			</div>
 			
-		<?php endforeach; wp_reset_postdata(); ?>
+			<?php endforeach; 
+			endif; wp_reset_postdata(); ?>
 		
 		</div>
 	
 	</div>
-	
-	<?php 
-	endif; ?>
 	
 </section>
