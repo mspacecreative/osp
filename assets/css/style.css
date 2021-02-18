@@ -1498,6 +1498,13 @@ src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/s
 	color: black;
 }
 
+.archive.carousel .slick-dots {
+	position: relative;
+	bottom: auto;
+	text-align: center;
+	margin: auto;
+}
+
 .archive.carousel .slick-slide {
 	padding: 1em;
 }
