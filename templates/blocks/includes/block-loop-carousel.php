@@ -20,10 +20,6 @@ switch ( $spacing ) {
 
 <section <?php echo $paddingClass ?>>
 	
-	<?php 
-	$featured_posts = get_field('post_type');
-	if( $featured_posts ): ?>
-	
 	<div class="innerContainer w1080">
 	
 		<?php 
@@ -37,6 +33,10 @@ switch ( $spacing ) {
 		} ?>
 	
 		<div class="carousel archive">
+			
+			<?php 
+			$featured_posts = get_field('post_type');
+			if( $featured_posts ): ?>
 	
 			<?php foreach( $featured_posts as $post ):
 		
@@ -90,15 +90,15 @@ switch ( $spacing ) {
 				</div>
 			
 			</div>
-				
-			<?php endforeach; wp_reset_postdata(); ?>
+			
+			<?php endforeach;
+			
+			endif;
+			wp_reset_postdata(); ?>
 			
 		</div>
 		
 	</div>
-	
-	<?php 
-	endif; ?>
 	
 </section>
 	
