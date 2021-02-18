@@ -241,7 +241,7 @@
 		});
 	}
 	
-	$(function() {
+	$(document).readyfunction() {
 		
 		var targetedLink = $('.menu-item-has-children > a'),
 		    hasHashInHref = targetedLink.attr('href');
