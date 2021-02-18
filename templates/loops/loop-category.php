@@ -12,6 +12,7 @@
 			$excerpt = get_the_excerpt();
 			$url = get_field('url', get_the_ID());
 			$cannedimg = get_field('image_selection');
+		 	$buttonlabel = get_field('button_label', get_the_ID()) ;
 			
 			switch ( $cannedimg ) {
 				case 'pan-atl-partner':
@@ -449,6 +450,8 @@
 							if ( $url && $excerpt ) {
 								echo '<p>' . $excerpt . '</p>';
 								echo '<p style="margin-top: auto;"><a class="readMore" href="' . $url . '" target="_blank">' . __('View article') . '</a></p>';
+							} elseif ( $url && $buttonlabel ) {
+								echo '<p style="margin-top: auto;"><a class="readMore" href="' . $url . '" target="_blank">' .  $buttonlabel . '</a></p>';
 							} elseif ( $url ) {
 								echo '<a class="readMore" href="' . $url . '" target="_blank">' . __('View article') . '</a>';
 							} elseif ( $excerpt ) {
