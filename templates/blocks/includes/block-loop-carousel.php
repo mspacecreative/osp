@@ -37,9 +37,7 @@ switch ( $spacing ) {
 		} ?>
 	
 		<div class="carousel archive">
-			
-			<div>
-			
+	
 			<?php foreach( $featured_posts as $post ):
 		
 			setup_postdata($post);
@@ -50,6 +48,8 @@ switch ( $spacing ) {
 			$featuredimg = get_field('image', $post->ID);
 			$logo = get_field('logo', $post->ID);
 			$size = 'medium'; ?>
+			
+			<div>
 			
 				<div class="container testimonialContainer">
 						
@@ -88,10 +88,10 @@ switch ( $spacing ) {
 					</div>
 					
 				</div>
-				
-			<?php endforeach; ?>
 			
 			</div>
+				
+			<?php endforeach; ?>
 			
 		</div>
 		
