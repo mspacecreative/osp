@@ -30,11 +30,13 @@ switch ( $cols ) {
 	case 'three' :
 		$flex = 'class="col col-lg-4 col-md-4 col-sm-6 col-xs-12 three_col"';
 		$fullcoltop = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12"';
+		$fullcolbottom = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12"';
 		break;
 				
 	case 'four' :
 		$flex = 'class="col col-lg-3 col-md-3 col-sm-6 col-xs-12 four_col"';
 		$fullcoltop = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12"';
+		$fullcolbottom = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12"';
 		break;
 				
 	default :
