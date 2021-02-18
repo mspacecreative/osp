@@ -46,7 +46,7 @@ switch ( $cols ) {
 		$fullcolbottom = 'class="col col-lg-3 col-md-3 col-sm-4 col-xs-12 object_fit no_padding_left"';
 }
 
-if ( $blockanchord ): ?>
+if ( $blockanchor ): ?>
 <section id="<?php echo $blockanchor ?>" <?php echo $paddingClass ?>>
 <?php else: ?>
 <section <?php echo $paddingClass ?>>

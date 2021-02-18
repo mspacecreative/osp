@@ -19,7 +19,7 @@ switch ( $spacing ) {
 		$paddingClass = '';
 }
 
-if ( $blockanchord ): ?>
+if ( $blockanchor ): ?>
 <section id="<?php echo $blockanchor ?>" <?php echo $paddingClass ?>>
 <?php else: ?>
 <section <?php echo $paddingClass ?>>
