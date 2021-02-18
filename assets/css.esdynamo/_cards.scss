@@ -88,6 +88,52 @@
     position: relative;
     left: -10px;
 }
+
+// TESTIMONIALS CARDS
+.two_col,
+.three_col,
+.four_col {
+	display: flex;
+}
+.two_col .row {
+	//flex-direction: column-reverse;
+    //align-items: normal;
+}
+.two_col .col:first-of-type,
+.three_col .col:first-of-type,
+.four_col .col:first-of-type {
+	order: 1;
+}
+.two_col .col:last-of-type,
+.three_col .col:last-of-type,
+.four_col .col:last-of-type {
+	display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+.two_col .testimonialLogoContainer {
+	background-color: #f5f5f5;
+	display: flex;
+	height: 100%;
+}
+.two_col .container.testimonialContainer,
+.three_col .container.testimonialContainer,
+.four_col .container.testimonialContainer {
+	background-color: #fff;
+}
+.two_col .testimonialContainer::after,
+.three_col .testimonialContainer::after,
+.four_col .testimonialContainer::after {
+	top: -22px;
+}
+.row.gutter_space_wide {
+	margin-right: -1rem;
+	margin-left: -1rem;
+}
+.row.gutter_space_wide > .col {
+	padding-right: 1rem;
+	padding-left: 1rem;
+}
 @media (min-width: 64em) {
 	.news-and-events .evenbriteEvents ul {
 		margin-left: -.5rem!important;

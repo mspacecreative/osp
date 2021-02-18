@@ -323,3 +323,28 @@
     opacity: .75;
     color: black;
 }
+
+// ARCHIVE BLOCK STYLES
+.archive.carousel .slick-slide {
+	padding: 1em;
+}
+.archive.carousel .slick-list {
+	padding: 1em 0;
+}
+.col.quote_content {
+	padding-right: 0;
+}
+.col.object_fit {
+	padding-left: 0;
+}
+.object_fit img {
+	height: 100%;
+	object-fit: cover;
+}
+.object_fit .testimonialLogoContainer img {
+	height: auto;
+}
+.carousel .testimonialLogoContainer {
+	display: flex;
+	height: 100%;
+}

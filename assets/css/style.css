@@ -638,6 +638,44 @@ table {
 	left: -10px;
 }
 
+.two_col, .three_col, .four_col {
+	display: flex;
+}
+
+.two_col .col:first-of-type, .three_col .col:first-of-type, .four_col .col:first-of-type {
+	order: 1;
+}
+
+.two_col .col:last-of-type, .three_col .col:last-of-type, .four_col .col:last-of-type {
+	display: flex;
+	flex-direction: column;
+	height: 300px;
+}
+
+.two_col .testimonialLogoContainer {
+	background-color: #f5f5f5;
+	display: flex;
+	height: 100%;
+}
+
+.two_col .container.testimonialContainer, .three_col .container.testimonialContainer, .four_col .container.testimonialContainer {
+	background-color: #fff;
+}
+
+.two_col .testimonialContainer::after, .three_col .testimonialContainer::after, .four_col .testimonialContainer::after {
+	top: -22px;
+}
+
+.row.gutter_space_wide {
+	margin-right: -1rem;
+	margin-left: -1rem;
+}
+
+.row.gutter_space_wide > .col {
+	padding-right: 1rem;
+	padding-left: 1rem;
+}
+
 @media (min-width: 64em) {
 	.news-and-events .evenbriteEvents ul {
 		margin-left: -0.5rem !important;
@@ -1417,6 +1455,36 @@ src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/s
 .slick-dots li.slick-active button:before {
 	opacity: .75;
 	color: black;
+}
+
+.archive.carousel .slick-slide {
+	padding: 1em;
+}
+
+.archive.carousel .slick-list {
+	padding: 1em 0;
+}
+
+.col.quote_content {
+	padding-right: 0;
+}
+
+.col.object_fit {
+	padding-left: 0;
+}
+
+.object_fit img {
+	height: 100%;
+	object-fit: cover;
+}
+
+.object_fit .testimonialLogoContainer img {
+	height: auto;
+}
+
+.carousel .testimonialLogoContainer {
+	display: flex;
+	height: 100%;
 }
 
 /*!
