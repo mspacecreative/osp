@@ -55,7 +55,13 @@ switch ( $spacing ) {
 						
 					<div class="row">				
 							
+						<?php 
+						if ( !empty( $featuredimg ) || !empty( $logo ) ): ?>
 						<div class="col col-lg-8 col-md-8 col-sm-8 col-xs-12 quote_content">
+						<?php else: ?>
+						<div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<?php endif; ?>
+						
 							<div class="testimonialContainerInner">
 								<?php
 								echo '<div class="quoteContent">' . $quote . '</div>';
@@ -71,19 +77,23 @@ switch ( $spacing ) {
 								}
 								?>
 							</div>
-						</div>
 							
+						</div>
+						
+						<?php 
+						if ( !empty( $featuredimg ) || !empty( $logo ) ): ?>
 						<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-12 object_fit no_padding_left">
 							<?php 
-							if ( $featuredimg ) {
-								echo wp_get_attachment_image( $featuredimg, $size ); 
-							} elseif ( $logo ) {
-								echo '
-								<div class="testimonialLogoContainer">' . 
-									wp_get_attachment_image( $logo, $size ); '
-								</div>';
-							} ?>
-						</div>
+							if ( $featuredimg ):
+							echo wp_get_attachment_image( $featuredimg, $size );
+							elseif ( $logo ): ?>
+							<div class="testimonialLogoContainer">
+								<?php echo wp_get_attachment_image( $logo, $size ); ?>
+							</div>
+							<?php endif; ?>
+						</div> 
+						<?php 
+						endif; ?>
 							
 					</div>
 					

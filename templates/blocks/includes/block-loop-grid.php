@@ -59,7 +59,7 @@ switch ( $cols ) {
 			echo '<h1 style="margin-bottom: 1.5em;">' . $rowheading . '</h1>';
 		} ?>
 	
-		<div class="row gutter_space_wide">
+		<div class="row gutter_space_wide archive_grid">
 	
 			<?php 
 			$featured_posts = get_field('post_type');
@@ -79,7 +79,11 @@ switch ( $cols ) {
 			
 				<div class="container testimonialContainer">
 						
-					<div class="row">				
+					<?php if ( !empty($featuredimg) || !empty($logo) ): ?>
+					<div class="row">
+					<?php else: ?>
+					<div class="row no_image_logo">	
+					<?php endif; ?>
 							
 						<div <?php echo $fullcoltop ?>>
 							<div class="testimonialContainerInner">
@@ -99,17 +103,20 @@ switch ( $cols ) {
 							</div>
 						</div>
 							
+						<?php 
+						if ( !empty( $featuredimg ) || !empty( $logo ) ): ?>
 						<div <?php echo $fullcolbottom ?>>
 							<?php 
-							if ( $featuredimg ) {
-								echo wp_get_attachment_image( $featuredimg, $size ); 
-							} elseif ( $logo ) {
-								echo '
-								<div class="testimonialLogoContainer">' . 
-									wp_get_attachment_image( $logo, $size ); '
-								</div>';
-							} ?>
-						</div>
+							if ( $featuredimg ):
+							echo wp_get_attachment_image( $featuredimg, $size );
+							elseif ( $logo ): ?>
+							<div class="testimonialLogoContainer">
+								<?php echo wp_get_attachment_image( $logo, $size ); ?>
+							</div>
+							<?php endif; ?>
+						</div> 
+						<?php 
+						endif; ?>
 							
 					</div>
 					

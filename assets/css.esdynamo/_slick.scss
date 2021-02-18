@@ -331,12 +331,20 @@
 .archive.carousel .slick-list {
 	padding: 1em 0;
 }
-.col.quote_content {
-	padding-right: 0;
+
+.carousel.slick-dotted.slick-slider {
+	margin-bottom: 0;
 }
-.col.no_padding_left {
-	padding-left: 0;
+
+@media (min-width: 768px) {
+	.col.quote_content {
+		padding-right: 0;
+	}
+	.col.no_padding_left {
+		padding-left: 0;
+	}
 }
+
 .object_fit img {
 	height: 100%;
 	object-fit: cover;
