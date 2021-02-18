@@ -118,14 +118,13 @@ switch ( $cols ) {
 				
 			</div>
 			
-		<?php endforeach; ?>
+		<?php endforeach; wp_reset_postdata(); ?>
 		
 		</div>
 	
 	</div>
 	
 	<?php 
-	endif;
-	wp_reset_postdata(); ?>
+	endif; ?>
 	
 </section>
