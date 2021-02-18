@@ -124,7 +124,8 @@ switch ( $cols ) {
 	
 	</div>
 	
-	<?php wp_reset_postdata(); 
-	endif; ?>
+	<?php 
+	endif;
+	wp_reset_postdata(); ?>
 	
 </section>

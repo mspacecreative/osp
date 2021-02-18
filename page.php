@@ -22,12 +22,11 @@ if ( have_posts() ) {
 		 	<section>
 	 			<div class="innerContainer section4">';
 		 	}
-			echo '
-					<h1 class="postTitle">' . $title . '</h1>';
-					the_content() . '
-					
+			echo '<h1 class="postTitle">' . $title . '</h1>
 				</div>
-			</section>
+			</section>';
+			echo the_content(); 
+		echo '
 		</div>';
 	}
 }
