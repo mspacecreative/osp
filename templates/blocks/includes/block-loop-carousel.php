@@ -1,5 +1,6 @@
 <?php
 $spacing = get_field('vertical_spacing');
+$blockanchor = get_field('block_anchor');
 		
 switch ( $spacing ) {
 	case 'top' :
@@ -16,9 +17,13 @@ switch ( $spacing ) {
 				
 	default :
 		$paddingClass = '';
-} ?>
+}
 
+if ( $blockanchord ): ?>
+<section id="<?php echo $blockanchor ?>" <?php echo $paddingClass ?>>
+<?php else: ?>
 <section <?php echo $paddingClass ?>>
+<?php endif; ?>
 	
 	<div class="innerContainer w1080">
 	

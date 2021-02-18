@@ -1,5 +1,6 @@
 <?php
 $spacing = get_field('vertical_spacing');
+$blockanchor = get_field('block_anchor');
 		
 switch ( $spacing ) {
 	case 'top' :
@@ -43,9 +44,13 @@ switch ( $cols ) {
 		$flex = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 one_col"';
 		$fullcoltop = 'class="col col-lg-9 col-md-9 col-sm-8 col-xs-12 quote_content"';
 		$fullcolbottom = 'class="col col-lg-3 col-md-3 col-sm-4 col-xs-12 object_fit no_padding_left"';
-} ?>
+}
 
+if ( $blockanchord ): ?>
+<section id="<?php echo $blockanchor ?>" <?php echo $paddingClass ?>>
+<?php else: ?>
 <section <?php echo $paddingClass ?>>
+<?php endif; ?>
 	
 	<div class="innerContainer w1080">
 	
