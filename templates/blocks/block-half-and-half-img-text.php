@@ -1,5 +1,8 @@
 <?php
+$bgtype = get_field('background_type');
 $bgcolor = get_field('background_colour');
+$bgimg = get_field('background_image');
+$bgimgalign = get_field('background_position');
 $contenttype = get_field('content_type');
 $aligncolumns = get_field('align_columns');
 $rowheading = get_field('row_heading');
@@ -14,7 +17,7 @@ $removeBulletSpacing = get_field('remove_spacing_between_bullet_points');
 $gutters = get_field('gutter_space');
 $spacing = get_field('vertical_spacing');
 $offsetlayout = get_field('offset_layout');
-$featuredimg = get_field('background_image');
+$overlayopacity = get_field('overlay_opacity');
 
 switch ( $bgcolor ) {
 	case 'light':
@@ -25,6 +28,16 @@ switch ( $bgcolor ) {
 		break;
 	default:
 		$shade = '';
+}
+
+switch ( $textcolor ) {
+	case 'light':
+		$color = 'light';
+		break;
+	case 'dark':
+		$color = 'dark';
+		break;
+	default: 'dark';
 }
 
 switch ( $aligncolumns ) {
@@ -66,8 +79,8 @@ switch ( $spacing ) {
 		$padding = '';
 }
 
-if ( $blockanchor && $offsetlayout ): ?>
-<section id="<?php echo $blockanchor ?>" class="positionRelative section3 offsetLayout">
+if ( $offsetlayout ): ?>
+<section<?php if ( $blockanchor ): ?> id="<?php echo $blockanchor ?>"<?php endif; ?> class="positionRelative section3 offsetLayout">
 	<?php 
 	if( have_rows('right_column') ):
 		while( have_rows('right_column') ): the_row();
@@ -86,71 +99,36 @@ if ( $blockanchor && $offsetlayout ): ?>
 		endwhile;
 	endif;
 	
-elseif ( $offsetlayout ): ?>
-<section class="positionRelative section3 offsetLayout">
-	<?php 
-	if( have_rows('right_column') ):
-		while( have_rows('right_column') ): the_row();
-			$img = get_sub_field('image');
-			if ( $reverse ) :
-				if ( !empty( $img ) ): ?>
-				<div class="innerContainerOffset topBottomPadding left" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
-				<?php
-				endif;
-			else :
-				if ( !empty( $img ) ): ?>
-				<div class="innerContainerOffset topBottomPadding right" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
-				<?php
-				endif;
-			endif;
-		endwhile;
-	endif;
-
-elseif ( $blockanchor ): ?>
-<section id="<?php echo $blockanchor ?>" class="<?php echo $shade ?>">
+elseif ( $bgtype === 'image' && $bgimg ): ?>
+<section<?php if ( $blockanchor ): ?> id="<?php echo $blockanchor ?>"<?php endif; ?> class="section section_has_bg_img <?php echo $color ?>" style="background-image: url(<?php echo $bgimg ?>);">
+	<div class="section_has_bg_img_overlay" style="background-color: <?php if ( $textcolor === 'dark' && $overlayopacity ): ?>rgba(255,255,255,<?php echo $overlayopacity ?>);<?php elseif ( $textcolor === 'dark' ): ?>rgba(255,255,255,.75);<?php endif; ?><?php if ( $textcolor === 'light' && $overlayopacity ): ?>rgba(0,0,25,<?php echo $overlayopacity ?>);<?php elseif ( $textcolor === 'light' ): ?>rgba(0,0,25,.75);<?php endif; ?>"></div>
 
 <?php else : ?>
 <section class="positionRelative <?php echo $shade ?>">
 
-<?php endif;
+<?php endif; ?>
 
-	if ( $narrow ): ?>
-	<div class="innerContainer w1080 <?php echo $padding ?>">
+	<div class="innerContainer <?php if ( $narrow ): ?>w1080<?php endif; ?> <?php echo $padding ?>">
 		<div class="container">
-	<?php else : ?>
-	<div class="innerContainer <?php echo $padding ?>">
-		<div class="container">
-	<?php endif;
 			
+			<?php 
 			if ( $rowheading ) {
 				echo '<h2 ' . $align . '>' . $rowheading . '</h2>';
 			}
 			
-			if ( $gutters == 'none' ):
+			if ( $gutters == 'none' ): ?>
 			
-			if ( $reverse ): ?>
-			<div class="row relativePositioning noGutters reverse <?php echo $position ?>">
+			<div class="row relativePositioning noGutters <?php if ( $reverse ): ?>reverse<?php endif; ?><?php echo $position ?>">
+			
+			<?php elseif ( $gutters == 'default' ): ?>
+			
+			<div class="row relativePositioning gutterSpaceWide <?php if ( $reverse ): ?>reverse<?php endif; ?><?php echo $position ?>">
+			
 			<?php else : ?>
-			<div class="row relativePositioning noGutters <?php echo $position ?>">
+			
+			<div class="row relativePositioning gutterSpaceWider <?php if ( $reverse ): ?>reverse<?php endif; ?><?php echo $position ?>">
+			
 			<?php endif;
-			
-			elseif ( $gutters == 'default' ):
-			
-			if ( $reverse ): ?>
-			<div class="row relativePositioning gutterSpaceWide reverse <?php echo $position ?>">
-			<?php else : ?>
-			<div class="row relativePositioning gutterSpaceWide <?php echo $position ?>">
-			<?php endif;
-			
-			else :
-			
-			if ( $reverse ): ?>
-			<div class="row relativePositioning gutterSpaceWider reverse <?php echo $position ?>">
-			<?php else : ?>
-			<div class="row relativePositioning gutterSpaceWide <?php echo $position ?>">
-			<?php endif;
-			
-			endif;
 			
 				if( have_rows('left_column') ):
 		 		while( have_rows('left_column') ): the_row();
@@ -444,3 +422,43 @@ elseif ( $blockanchor ): ?>
 		</div>
 	</div>
 </section>
+
+<style>
+	<?php
+	switch ( $bgimgalign ) {
+		case 'center':
+			$position = 'center';
+			break;
+		case 'top':
+			$position = 'top center';
+			break;
+		case 'bottom':
+			$position = 'bottom center';
+			break;
+		default:
+			$position = 'center';
+	}
+	if ( $bgimgalign ) { ?>
+		.section_has_bg_img {
+			background-position: <?php echo $position ?>;
+		}
+	<?php 
+	} else { ?>
+		.section_has_bg_img {
+			background-position: center;
+		}
+	<?php 
+	} ?>
+	.section_has_bg_img {
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	
+	.section_has_bg_img_overlay {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+</style>

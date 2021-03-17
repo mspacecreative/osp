@@ -2,6 +2,20 @@
 $padding = get_field('section_padding');
 $content = get_field('content_editor');
 $txtalign = get_field('text_alignment');
+
+switch ( $txtalign ) {
+	case 'left':
+		$align = '';
+		break;
+	case 'center':
+		$align = 'class="text-align-center"';
+		break;
+	case 'right':
+		$right = 'class="text-align-right"';
+		break;
+	default:
+		$align = '';
+}
 	
 if ( $txtalign == 'left' ):
 	if ( $padding == 'both' ): ?>
