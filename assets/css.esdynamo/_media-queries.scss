@@ -300,6 +300,11 @@
 }
 
 @media (min-width: 981px) {
+	nav li a {
+		line-height: 1;
+		text-align: center;
+	}
+	
 	nav {
 		margin-right: 60px;
 	}

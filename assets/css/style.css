@@ -3135,12 +3135,12 @@ header > .innerContainer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	max-width: 1920px;
 }
 
 .logo {
 	width: 250px;
 	position: relative;
-	left: -15px;
 	transition: 0.5s ease-in-out;
 }
 
@@ -4389,6 +4389,11 @@ footer.section {
 }
 
 @media (min-width: 981px) {
+	nav li a {
+		line-height: 1;
+		text-align: center;
+	}
+	
 	nav {
 		margin-right: 60px;
 	}
