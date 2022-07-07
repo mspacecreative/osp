@@ -147,12 +147,14 @@
 		$(this).toggleClass('hide');
 		$(this).next().toggleClass('reveal');
 		$(this).prev().toggleClass('hide');
+		$(this).prev().prev().toggleClass('hide');
 	});
 	$('.closeIcon').click(function(e) {
 		e.preventDefault();
 		$(this).parent().toggleClass('reveal');
 		$(this).parent().prev().toggleClass('hide');
 		$(this).parent().prev().prev().toggleClass('hide');
+		$(this).parent().prev().prev().prev().toggleClass('hide');
 	});
 	
 	function calcCardHeight() {

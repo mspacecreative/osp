@@ -30,6 +30,7 @@
 		<nav class="nav" role="navigation">
 			<?php osp_nav(); ?>
 		</nav>
+		<?php echo do_shortcode('[language-switcher]'); ?>
 		<!-- /nav -->
 		
 		<!-- search icon -->
