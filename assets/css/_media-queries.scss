@@ -92,10 +92,6 @@
 	.cosLogo {
 		padding-left: 50px;
 	}
-	
-	.shrinkLogo {
-		//margin: auto;
-	}
 	.heroCollage {
 		position: absolute;
 		top: 0;
@@ -306,20 +302,21 @@
 	}
 	
 	nav {
-		margin-right: 60px;
+		margin-right: 40px;
+		margin-left: auto;
 	}
 	.featuredInlineImg .size-medium {
 		max-width: 30%;
 	    float: right;
 	    margin: 8px 0 20px 20px;
 	}
-	nav.hide {
+	nav.hide, .trp_language_switcher_shortcode.hide {
 		transform: translateY(65px);
 		transition: 0.5s ease-in-out;
 		opacity: 0;
 		visibility: hidden;
 	}
-	nav {
+	nav, .trp_language_switcher_shortcode {
 		transform: translateY(0);
 		transition: 0.5s ease-in-out;
 		opacity: 1;
@@ -330,6 +327,10 @@
 	    max-width: 500px;
 		display: flex;
 		align-items: center;
+		justify-content: flex-end;
+	}
+	.asl_w_container.asl_w_container {
+		width: auto;
 	}
 	.searchIcon.hide {
 		transform: translateY(65px);
@@ -397,6 +398,9 @@
 		justify-content: flex-start;
 		margin-bottom: 25px;
 		order: -1;
+	}
+	.mc-popup-form.mc-popup-form {
+		height: auto;
 	}
 	.smallFooterLogo {
 		padding: 20px 10px;
