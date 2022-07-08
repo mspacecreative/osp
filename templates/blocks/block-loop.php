@@ -73,6 +73,21 @@ echo
                 $location = array();
                 $status = get_the_terms($item, 'company_status');
 
+                if ($location_array) {
+                    foreach ($location_array as $cat) {
+                        if ($cat->parent) {
+                            array_push($location, $cat->name);
+                        }
+                    }
+                }
+                if ($location_array) {
+                    foreach ($location_array as $cat) {
+                        if (!$cat->parent) {
+                            array_push($location, $cat->name);
+                        }
+                    }
+                }
+
                 if ($layout == 'list') {
                     echo 
                     '<div class="row extra-col-spacing bottom-border gutterSpaceWide">';
@@ -104,20 +119,7 @@ echo
                             '<div class="col button-top-margin col-lg-9 col-md-9 col-sm-8 col-xs-12">';
                         }
                                 echo $title;
-                            if ($location_array) {
-                                foreach ($location_array as $cat) {
-                                    if ($cat->parent) {
-                                        array_push($location, $cat->name);
-                                    }
-                                }
-                            }
-                            if ($location_array) {
-                                foreach ($location_array as $cat) {
-                                    if (!$cat->parent) {
-                                        array_push($location, $cat->name);
-                                    }
-                                }
-                            }
+                            
                             if ($location_array) {
                                 echo '<span style="margin-bottom: 15px; display: inline-block;"><strong>' . __('Location: ') . '</strong>' . implode(', ', $location) . '</span>';
                             }
@@ -145,7 +147,14 @@ echo
                             }
                             echo
                             '</div>'
-                            . $title, 
+                            . $title;
+                            if ($location_array) {
+                                echo '<span style="display: block;"><strong>' . __('Location: ') . '</strong>' . implode(', ', $location) . '</span>';
+                            }
+                            if ($status) {
+                                echo '<span style="margin-bottom: 15px; display: block;"><strong>' . __('Status: ') . '</strong>' . $status[0]->name . '</span>';
+                            }
+                            echo
                             $content;
                             if ($externallink) {
                                 echo '<a href="' . $externallink . '" target="_blank" class="button blue external-link">' . $linklabel . '</a>';
