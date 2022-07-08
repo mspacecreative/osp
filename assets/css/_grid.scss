@@ -29,3 +29,60 @@
 .heroContent {
 	grid-template-columns: 1fr 45% 45%;
 }
+
+.extra-col-spacing {
+    margin-bottom: 30px;
+}
+
+.bottom-border {
+    border-bottom: 1px solid #e9e9e9;
+    padding-bottom: 30px;
+}
+
+.feat-img--list {
+    max-width: 300px;
+}
+.stacked {
+    max-width: 150px;
+}
+
+.content-loop h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.button.external-link {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.boxed p:last-of-type {
+    margin-bottom: 15px;
+} 
+
+.logo-container {
+    height: 100px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+.logo-container > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: left;
+    max-width: 85%;
+}
+.centred-logo > img {
+    object-position: center;
+}
+.right-aligned-logo > img {
+    object-position: right;
+}
+.logo-container--inline > img {
+    object-position: center;
+}
+
+.innerContainer.w850 {
+    max-width: calc(800px + 4em);
+}

@@ -122,6 +122,19 @@ function my_acf_init() {
 			'mode'				=> 'edit',
 			'supports'			=> array( 'mode' => false ),
 		));
+
+		// register company block
+		acf_register_block(array(
+			'name'				=> 'loop',
+			'title'				=> __('Companies Block'),
+			'description'		=> __('Showcase companies in list, grid or carousel layout'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'images-alt',
+			'keywords'			=> array( 'grid layout', 'list companies', 'carousel' ),
+			'mode'				=> 'edit',
+			'supports'			=> array( 'mode' => false ),
+		));
 		
 		// register events block
 		acf_register_block(array(
