@@ -88,9 +88,9 @@ echo
                             '</div>
                         </div>';
                         }
-                        if ($liststyle == 'inline') {
+                        if ($liststyle == 'inline' || $liststyle == NULL) {
                             echo
-                            '<div class="col col-lg-9 col-md-9 col-sm-8 col-xs-12">';
+                            '<div class="col button-top-margin col-lg-9 col-md-9 col-sm-8 col-xs-12">';
                         } elseif ($liststyle == 'stacked') {
                             echo
                             '<div class="col col-lg-3 col-md-3 col-sm-4 col-xs-12">
@@ -98,10 +98,10 @@ echo
                                     <img src="' . $featimg . '" class="feat-img--list stacked">
                                 </div>
                             </div>
-                            <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">';
+                            <div class="col button-top-margin col-lg-12 col-md-12 col-sm-12 col-xs-12">';
                         } else {
                             echo
-                            '<div class="col col-lg-9 col-md-9 col-sm-8 col-xs-12">';
+                            '<div class="col button-top-margin col-lg-9 col-md-9 col-sm-8 col-xs-12">';
                         }
                                 echo $title;
                             if ($location_array) {
