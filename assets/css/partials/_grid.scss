@@ -64,6 +64,11 @@
     margin-bottom: 15px;
 } 
 
+.icon.row {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .logo-container {
     height: 100px;
     margin-bottom: 30px;
@@ -89,4 +94,22 @@
 
 .innerContainer.w850 {
     max-width: calc(800px + 4em);
+}
+
+h1 ~ .archive_grid,
+h2 ~ .archive_grid,
+h3 ~ .archive_grid,
+h4 ~ .archive_grid,
+h5 ~ .archive_grid,
+h6 ~ .archive_grid {
+    margin-top: 50px;
+}
+
+.three_col, .four_col {
+    .testimonialContainerInner {
+        padding: 1.5em;
+    }
+    .quoteContent {
+        margin-bottom: 15px;
+    }
 }

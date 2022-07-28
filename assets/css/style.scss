@@ -1,82 +1,82 @@
 // colours
-$brandOrange: #e8ad23;
-$brandBlue: #38C3E1;
-$brandLightGrey: #f5f5f5;
-$brandGrey: #424242;
+@import "partials/_colors.scss";
 
-@import "_normalize.min.scss";
+@import "partials/_normalize.min.scss";
 
 // HERO
-@import "_hero.scss";
+@import "partials/_hero.scss";
 
 // MAP
-@import "_map.scss";
+@import "partials/_map.scss";
 
 // FORMS
-@import "_form.scss";
+@import "partials/_form.scss";
 
 // SIDEBAR
-@import "_sidebar.scss";
+@import "partials/_sidebar.scss";
 
 // CARDS
-@import "_cards.scss";
+@import "partials/_cards.scss";
 
 // VIDEOS
-@import "_videos.scss";
+@import "partials/_videos.scss";
 
 // EVENBRITE EVENTS
-@import "_eventbrite.scss";
+@import "partials/_eventbrite.scss";
 
 // ACCORDION
-@import "_accordion.scss";
+@import "partials/_accordion.scss";
 
 // FEED GRID
-@import "_feed.scss";
+@import "partials/_feed.scss";
 
 // MEDIUM STYLES
-@import "_medium.scss";
+@import "partials/_medium.scss";
 
 // TESTIMONIALS
-@import "_quote.scss";
+@import "partials/_quote.scss";
 
 // CTA
-@import "_cta.scss";
+@import "partials/_cta.scss";
 
 // CSS GRID
-@import "_grid.scss";
+@import "partials/_grid.scss";
 
 // CAROUSEL
-@import "_carousel.scss";
+@import "partials/_carousel.scss";
 
 // SLICK STYLES
-@import "_slick.scss";
+@import "partials/_slick.scss";
 
 // HAMBURGER
-@import "_hamburgers.scss";
+@import "partials/_hamburgers.scss";
 
 // TYPOGRAPHY
-@import "_typography.scss";
+@import "partials/_typography.scss";
 
 // STRUCTURE
-@import "_structure.scss";
+@import "partials/_structure.scss";
 
 // NAV
-@import "_nav.scss";
+@import "partials/_nav.scss";
 
 // BUTTONS
-@import "_buttons.scss";
+@import "partials/_buttons.scss";
 
 // IMAGES
-@import "_images.scss";
+@import "partials/_images.scss";
 
 // BUCKETS
-@import "_buckets.scss";
+@import "partials/_buckets.scss";
 
 // FOOTER
-@import "_footer.scss";
+@import "partials/_footer.scss";
 
 // LANGUAGE SWITCHER
-@import "_language-switcher.scss";
+@import "partials/_language-switcher.scss";
+
+// MODAL
+@import "partials/_modal.scss";
 
 // MEDIA QUERIES
-@import "_media-queries.scss";
+@import "partials/_media-queries.scss";

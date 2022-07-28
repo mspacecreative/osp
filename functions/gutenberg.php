@@ -13,3 +13,12 @@ function wpse325327_add_excerpts_to_pages() {
     add_post_type_support( 'page', 'excerpt' );
 }
 add_action( 'init', 'wpse325327_add_excerpts_to_pages' );
+
+// DISABLE GUTENBERG ON SPECIFIC CPTs
+add_filter('use_block_editor_for_post_type', 'prefix_disable_gutenberg', 10, 2);
+function prefix_disable_gutenberg($current_status, $post_type)
+{
+    // Use your post type key instead of 'product'
+    if ($post_type === 'testimonial') return false;
+    return $current_status;
+}

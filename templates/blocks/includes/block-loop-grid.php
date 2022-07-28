@@ -42,8 +42,8 @@ switch ( $cols ) {
 				
 	default :
 		$flex = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 one_col"';
-		$fullcoltop = 'class="col col-lg-9 col-md-9 col-sm-8 col-xs-12 quote_content"';
-		$fullcolbottom = 'class="col col-lg-3 col-md-3 col-sm-4 col-xs-12 object_fit no_padding_left"';
+		$fullcoltop = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 quote_content"';
+		$fullcolbottom = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 object_fit no_padding_left"';
 }
 
 if ( $blockanchor ): ?>
@@ -54,15 +54,7 @@ if ( $blockanchor ): ?>
 	
 	<div class="innerContainer w1080">
 	
-		<?php 
-		$rowheading = get_field('row_heading');
-		$rowheadingalignment = get_field('row_heading_alignment');
-			
-		if ( $rowheading && $rowheadingalignment ) {
-			echo '<h1 class="text-align-center" style="margin-bottom: 1.5em;">' . $rowheading . '</h1>';
-		} elseif ( $rowheading ) {
-			echo '<h1 style="margin-bottom: 1.5em;">' . $rowheading . '</h1>';
-		} ?>
+	<?php include 'row-heading.php'; ?>
 	
 		<div class="row gutter_space_wide archive_grid">
 	

@@ -28,7 +28,7 @@ function my_custom_styles( $init_array ) {
 add_filter( 'tiny_mce_before_init', 'my_custom_styles' );
 
 function custom_editor_styles() {
-	add_editor_style('editor-styles.css');
+	add_editor_style('/assets/css/editor-styles.css');
 }
 
 add_action('init', 'custom_editor_styles');

@@ -6,15 +6,15 @@ $titlewidth = get_field('title_row_width');
 
 switch ( $titlewidth ) {
 	case '1080':
-		$width = 'w1080';
+		$titlewidth = 'w1080';
 		break;
 	
 	case '850':
-		$width = 'w850';
+		$titlewidth = 'w850';
 		break;
 	
 	default:
-		$width = '';
+		$titlewidth = '';
 } ?>
 
 <div id="main" class="contentWrap">
@@ -23,7 +23,7 @@ switch ( $titlewidth ) {
 $title = get_the_title();
 echo '
 	<section class="innerPadding">
-		<div class="innerContainer section4 ' . $width . '">
+		<div class="innerContainer section4 ' . $titlewidth . '" style="padding-bottom: 1em;">
 		 		
 		 	<h1 class="postTitle">' . $title . '</h1>
 				
