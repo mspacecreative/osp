@@ -62,16 +62,7 @@ if ( $blockanchor ): ?>
 							<div class="testimonialContainerInner<?php echo $textcolor; if ($bgimg): echo ' has_bg_img'; endif; ?>"<?php echo $bgimg; ?>>
 								<?php
 								echo '<div class="quoteContent">' . $quote . '</div>';
-										
-								if ( $author && $title && $company ) {
-									echo '<p class="testimonialAuthor">' . esc_html('- '), $author . ', ' . $title . ', ' . $company . '</p>';
-								} elseif ( $author && $title ) {
-									echo '<p class="testimonialAuthor">' . esc_html('- '), $author . ', ' . $title . '</p>';
-								} elseif ( $author && $company ) {
-									echo '<p class="testimonialAuthor">' . esc_html('- '), $author . ', ' . $company . '</p>';
-								} elseif ( $author ) {
-									echo '<p class="testimonialAuthor">' . esc_html('- '), $author . '</p>';
-								}
+								include 'testimonial-author.php';
 								?>
 							</div>
 							
