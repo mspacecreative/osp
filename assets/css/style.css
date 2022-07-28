@@ -3826,6 +3826,14 @@ body.using-mouse *:focus {
   margin-top: 30px;
 }
 
+p > .button {
+  margin-top: 0;
+}
+
+.icon ~ p {
+  margin-top: 15px;
+}
+
 .button.blue {
   background-color: #38C3E1;
   -webkit-transition: 0.25s ease-in-out;
