@@ -66,7 +66,7 @@ if ( $blockanchor ): ?>
 			setup_postdata($post);
 			$author = get_the_title($post->ID);
 			$quote = get_the_content();
-			$title = get_field('company__title', $post->ID);
+			$title = get_field('position__title', $post->ID);
 			$company = get_field('company', $post->ID);
 			$featuredimg = get_field('image', $post->ID);
 			$logo = get_field('logo', $post->ID);
@@ -88,13 +88,13 @@ if ( $blockanchor ): ?>
 								echo '<div class="quoteContent">' . $quote . '</div>';
 										
 								if ( $author && $title && $company ) {
-									echo '<p class="testimonialAuthor">' . esc_html('- '), $author . ', ' . $title . ', ' . $company . '</p>';
+									echo '<p class="testimonialAuthor">' . esc_html('- ') . '<strong>' . $author . '</strong><br><span style="margin-left: 11px;">' . $title . ', ' . $company . '</span></p>';
 								} elseif ( $author && $title ) {
-									echo '<p class="testimonialAuthor">' . esc_html('- '), $author . ', ' . $title . '</p>';
+									echo '<p class="testimonialAuthor">' . esc_html('- ') . '<strong>' . $author . '</strong><br><span style="margin-left: 11px;">' . $title . '</span></p>';
 								} elseif ( $author && $company ) {
-									echo '<p class="testimonialAuthor">' . esc_html('- '), $author . ', ' . $company . '</p>';
+									echo '<p class="testimonialAuthor">' . esc_html('- ') . '<strong>' . $author . '</strong><br><span style="margin-left: 11px;">' . $company . '</span></p>';
 								} elseif ( $author ) {
-									echo '<p class="testimonialAuthor">' . esc_html('- '), $author . '</p>';
+									echo '<p class="testimonialAuthor">' . esc_html('- ') . '<strong>' . $author . '</strong></p>';
 								}
 								?>
 							</div>
