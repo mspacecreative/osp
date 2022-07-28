@@ -10,7 +10,7 @@ switch ( $titlewidth ) {
 		break;
 	
 	case '850':
-		$titlewidth = 'w850';
+		$titlewidth = 'w800';
 		break;
 	
 	default:

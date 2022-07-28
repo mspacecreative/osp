@@ -86,16 +86,7 @@ if ( $blockanchor ): ?>
 							<div class="testimonialContainerInner">
 								<?php
 								echo '<div class="quoteContent">' . $quote . '</div>';
-										
-								if ( $author && $title && $company ) {
-									echo '<p class="testimonialAuthor">' . esc_html('- ') . '<strong>' . $author . '</strong><br><span style="margin-left: 11px;">' . $title . ', ' . $company . '</span></p>';
-								} elseif ( $author && $title ) {
-									echo '<p class="testimonialAuthor">' . esc_html('- ') . '<strong>' . $author . '</strong><br><span style="margin-left: 11px;">' . $title . '</span></p>';
-								} elseif ( $author && $company ) {
-									echo '<p class="testimonialAuthor">' . esc_html('- ') . '<strong>' . $author . '</strong><br><span style="margin-left: 11px;">' . $company . '</span></p>';
-								} elseif ( $author ) {
-									echo '<p class="testimonialAuthor">' . esc_html('- ') . '<strong>' . $author . '</strong></p>';
-								}
+								include 'testimonial-author.php';
 								?>
 							</div>
 						</div>
