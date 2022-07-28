@@ -52,7 +52,7 @@ if ( $blockanchor ): ?>
 <section <?php echo $paddingClass ?>>
 <?php endif; ?>
 	
-	<div class="innerContainer w1080">
+	<div class="innerContainer<?php echo $sectionwidth; ?>">
 	
 	<?php include 'row-heading.php'; ?>
 	
