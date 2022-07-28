@@ -4,6 +4,14 @@ body {
 	color: $brandGrey;
 }
 
+body.block-editor-writing-flow {
+	padding: 20px;
+}
+
+body.block-editor-writing-flow .container {
+	width: auto;
+}
+
 h1 {
 	font-size: 40px;
 	margin-top: 0;

@@ -27,15 +27,7 @@ if ( $blockanchor ): ?>
 	
 	<div class="innerContainer w1080">
 	
-		<?php 
-		$rowheading = get_field('row_heading');
-		$rowheadingalignment = get_field('row_heading_alignment');
-			
-		if ( $rowheading && $rowheadingalignment ) {
-			echo '<h1 class="text-align-center">' . $rowheading . '</h1>';
-		} elseif ( $rowheading ) {
-			echo '<h1>' . $rowheading . '</h1>';
-		} ?>
+		<?php include 'row-heading.php'; ?>
 	
 		<div class="carousel archive">
 			
@@ -46,7 +38,7 @@ if ( $blockanchor ): ?>
 			<?php foreach( $featured_posts as $post ):
 		
 			setup_postdata($post);
-			$author = get_the_title($post->ID);
+			$author = get_the_title($post->ID) ? esc_html(get_the_title($post->ID)) : '';
 			$quote = get_the_content();
 			$title = get_field('position__title', $post->ID);
 			$company = get_field('company', $post->ID);
@@ -67,18 +59,18 @@ if ( $blockanchor ): ?>
 						<div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<?php endif; ?>
 						
-							<div class="testimonialContainerInner">
+							<div class="testimonialContainerInner<?php echo $textcolor; if ($bgimg): echo ' has_bg_img'; endif; ?>"<?php echo $bgimg; ?>>
 								<?php
 								echo '<div class="quoteContent">' . $quote . '</div>';
 										
 								if ( $author && $title && $company ) {
-									echo '<p class="testimonialAuthor">' . $author . ', ' . $title . ', ' . $company . '</p>';
+									echo '<p class="testimonialAuthor">' . esc_html('- '), $author . ', ' . $title . ', ' . $company . '</p>';
 								} elseif ( $author && $title ) {
-									echo '<p class="testimonialAuthor">' . $author . ', ' . $title . '</p>';
+									echo '<p class="testimonialAuthor">' . esc_html('- '), $author . ', ' . $title . '</p>';
 								} elseif ( $author && $company ) {
-									echo '<p class="testimonialAuthor">' . $author . ', ' . $company . '</p>';
+									echo '<p class="testimonialAuthor">' . esc_html('- '), $author . ', ' . $company . '</p>';
 								} elseif ( $author ) {
-									echo '<p class="testimonialAuthor">' . $author . '</p>';
+									echo '<p class="testimonialAuthor">' . esc_html('- '), $author . '</p>';
 								}
 								?>
 							</div>

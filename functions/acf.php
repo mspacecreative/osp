@@ -106,8 +106,13 @@ function my_acf_init() {
 			'category'			=> 'formatting',
 			'icon'				=> 'images-alt',
 			'keywords'			=> array( 'two columns', 'row' ),
-			'mode'				=> 'edit',
-			'supports'			=> array( 'mode' => false ),
+			'mode'				=> 'preview',
+			'supports'		=> [
+				'align'			=> false,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
 		));
 		
 		// register cta block
@@ -119,8 +124,13 @@ function my_acf_init() {
 			'category'			=> 'formatting',
 			'icon'				=> 'images-alt',
 			'keywords'			=> array( 'grid layout', 'columns' ),
-			'mode'				=> 'edit',
-			'supports'			=> array( 'mode' => false ),
+			'mode'				=> 'preview',
+			'supports'		=> [
+				'align'			=> false,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
 		));
 
 		// register company block
@@ -132,6 +142,19 @@ function my_acf_init() {
 			'category'			=> 'formatting',
 			'icon'				=> 'images-alt',
 			'keywords'			=> array( 'grid layout', 'list companies', 'carousel' ),
+			'mode'				=> 'edit',
+			'supports'			=> array( 'mode' => false ),
+		));
+
+		// register team block
+		acf_register_block(array(
+			'name'				=> 'team',
+			'title'				=> __('Team Block'),
+			'description'		=> __('Showcase staff in list, grid or carousel layout'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'images-alt',
+			'keywords'			=> array( 'grid layout', 'staff members', 'carousel' ),
 			'mode'				=> 'edit',
 			'supports'			=> array( 'mode' => false ),
 		));
@@ -249,8 +272,13 @@ function my_acf_init() {
 			'category'			=> 'formatting',
 			'icon'				=> 'images-alt',
 			'keywords'			=> array( 'layout', 'editor' ),
-			'mode'				=> 'edit',
-			'supports'			=> array( 'mode' => false ),
+			'mode'				=> 'preview',
+			'supports'		=> [
+				'align'			=> false,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
 		));
 		
 		// register product block
@@ -327,8 +355,13 @@ function my_acf_init() {
 			'category'			=> 'formatting',
 			'icon'				=> 'images-alt',
 			'keywords'			=> array( 'questions', 'answers' ),
-			'mode'				=> 'edit',
-			'supports'			=> array( 'mode' => false ),
+			'mode'				=> 'preview',
+			'supports'		=> [
+				'align'			=> false,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
 		));
 		
 		// register brand grid / carousel

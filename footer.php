@@ -150,7 +150,9 @@
 		</footer>
 		<!-- / footer -->
 
-		<?php wp_footer(); ?>
+		<?php 
+		get_template_part('templates/modal');
+		wp_footer(); ?>
 
 	</body>
 </html>

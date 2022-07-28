@@ -74,14 +74,14 @@
 	padding: 0 1em;
 }
 .carousel .slick-prev, .carousel .slick-next {
-	width: 25px;
+	width: 20px;
 	height: 12px;
 }
 .carousel .slick-prev {
-	left: -20px;
+	left: 0;
 }
 .carousel .slick-next {
-	right: -20px;
+	right: 0;
 }
 .carousel .slick-dots {
 	width: calc(100% - 2em);

@@ -15,7 +15,7 @@ header {
 	background-color: transparent;
 }
 .home header.scroll, header.scroll {
-	background-color: rgba(255, 255, 255, .9);
+	background-color: $brandBlue;
 	transition: 0.5s ease-in-out;
 	padding: 0;
 }
@@ -31,14 +31,11 @@ header.scroll .nav li .sub-menu a {
 	fill: $brandBlue;
 	transition: 0.5s ease-in-out;
 }
-.home .brandingColor {
+.home .brandingColor, .scroll .brandingColor {
 	fill: #fff;
 	transition: 0.5s ease-in-out;
 }
-.scroll .brandingColor {
-	fill: $brandBlue;
-	transition: 0.5s ease-in-out;
-}
+
 header > .innerContainer {
 	display: flex;
 	justify-content: space-between;
@@ -84,11 +81,8 @@ nav li a {
 	text-transform: uppercase;
 	font-size: 18px;
 }
-.home nav li a {
+.home nav li a, .scroll nav li a {
 	color: #fff;
-}
-.scroll nav li a {
-	color: #333;
 }
 
 // SUB MENU
