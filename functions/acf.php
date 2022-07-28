@@ -290,8 +290,13 @@ function my_acf_init() {
 			'category'			=> 'formatting',
 			'icon'				=> 'images-alt',
 			'keywords'			=> array( 'layout', 'editor' ),
-			'mode'				=> 'edit',
-			'supports'			=> array( 'mode' => false ),
+			'mode'				=> 'preview',
+			'supports'		=> [
+				'align'			=> false,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
 		));
 		
 		// register accordion block
