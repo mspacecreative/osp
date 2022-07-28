@@ -8,6 +8,15 @@
 	text-decoration: none;
 	margin-top: 30px;
 }
+
+p > .button {
+	margin-top: 0;
+}
+
+.icon ~ p {
+	margin-top: 15px;
+}
+
 .button.blue {
 	background-color: $brandBlue;
 	transition: 0.25s ease-in-out;
