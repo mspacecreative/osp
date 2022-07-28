@@ -3891,6 +3891,7 @@ a {
 
 .inlineButtons li {
   margin-right: 30px;
+  margin-bottom: 30px;
 }
 
 .readMore, .text-right {
@@ -5306,7 +5307,7 @@ MODAL STYLES
   }
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1279px) {
   .faqs {
     background-image: unset !important;
     background-color: transparent !important;
