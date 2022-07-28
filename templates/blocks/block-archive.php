@@ -10,8 +10,8 @@ switch ($sectionwidth) {
 	case '1080':
 		$sectionwidth = ' w1080';
 		break;
-	case '850':
-		$sectionwidth = ' w850';
+	case '800':
+		$sectionwidth = ' w800';
 		break;
 	default:
 		$sectionwidth = '';

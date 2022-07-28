@@ -101,19 +101,19 @@ if ( $hide ) : ?>
 			<?php endif; ?>
 			
 			<?php if ( $padding == 'both' && $maxwidth ): ?>
-			<div class="top-bottom-padding-50 row clear w850">
+			<div class="top-bottom-padding-50 row clear w800">
 			<?php elseif ( $padding == 'top' && $maxwidth ): ?>
-			<div class="top-padding row clear w850">
+			<div class="top-padding row clear w800">
 			<?php elseif ( $padding == 'bottom' && $maxwidth ): ?>
-			<div class="bottom-padding row clear w850">
+			<div class="bottom-padding row clear w800">
 			<?php elseif ( $padding == 'both' ): ?>
 			<div class="top-bottom-padding-50 innerContainer w1080 row clear">
 			<?php elseif ( $padding == 'top' ): ?>
-			<div class="top-padding innerContainer w850 row clear">
+			<div class="top-padding innerContainer w800 row clear">
 			<?php elseif ( $padding == 'bottom' ): ?>
 			<div class="bottom-padding row clear">
 			<?php elseif ( $maxwidth ): ?>
-			<div class="row clear w850">
+			<div class="row clear w800">
 			<?php else : ?>
 			<div class="no-top-bottom-padding innerContainer w1080 row clear">
 			<?php endif; ?>

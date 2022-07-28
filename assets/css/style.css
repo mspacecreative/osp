@@ -1373,7 +1373,7 @@ body .pb-close::before {
      object-position: center;
 }
 
-.innerContainer.w850 {
+.innerContainer.w800 {
   max-width: calc(800px + 4em);
 }
 
@@ -3900,6 +3900,10 @@ a {
 .inlineButtons li {
   margin-right: 30px;
   margin-bottom: 30px;
+}
+
+.inlineButtons li:last-of-type {
+  margin-bottom: 0;
 }
 
 .readMore, .text-right {

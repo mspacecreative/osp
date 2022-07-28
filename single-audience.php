@@ -11,7 +11,7 @@ get_header(); ?>
 	<div class="innerContainer w1080 section4">';
 	 } elseif ( $titlewidth === '850' ) {
 	echo '
-	<div class="innerContainer w850 section4">';
+	<div class="innerContainer w800 section4">';
 	} else {
 	echo '
 	<div class="innerContainer section4">';

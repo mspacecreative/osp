@@ -12,7 +12,7 @@
 		<div class="innerContainer w1080 section4">
 		
 		<?php elseif ( $titlewidth === '850' ) : ?>
-		<div class="innerContainer w850 section4">
+		<div class="innerContainer w800 section4">
 		
 		<?php else : ?>
 		<div class="innerContainer section4 w1080">
