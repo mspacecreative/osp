@@ -22,6 +22,12 @@ include 'includes/column-gutters.php'; ?>
 <div<?php if ($id): echo ' id="' . $id . '"'; endif; ?> class="section<?php echo $sectionbgcolor, $sectionpadding, esc_attr($className); ?>">
 
  	<div class="innerContainer<?php echo $sectionwidth; ?>">
+include 'includes/section-classname.php';
+include 'includes/column-gutters.php'; ?>
+
+<div<?php echo $id ?> class="section<?php echo $sectionbgcolor, $sectionpadding, esc_attr($className); ?>">
+
+ 	<div class="innerContainer no-top-bottom-padding<?php echo $sectionwidth; ?>">
 	
 		<?php if ( $rowheading ) : ?>
 		<h2<?php echo $centeredheading; ?>>
