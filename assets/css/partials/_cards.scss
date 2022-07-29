@@ -95,10 +95,6 @@
 .four_col {
 	display: flex;
 }
-.two_col .row {
-	//flex-direction: column-reverse;
-    //align-items: normal;
-}
 .two_col .col:first-of-type,
 .three_col .col:first-of-type,
 .four_col .col:first-of-type {
