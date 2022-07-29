@@ -1394,6 +1394,11 @@ h6 ~ .archive_grid {
   margin-bottom: 15px;
 }
 
+.has-max-width {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*
 .offsetCarousel .slick-slide {
 	margin-right: 25px;
@@ -3103,25 +3108,25 @@ p:last-of-type {
 }
 
 .row.gutterSpaceWide {
-  margin-right: -1.5rem;
-  margin-left: -1.5rem;
+  margin-right: -1.5em;
+  margin-left: -1.5em;
 }
 
 .row.gutterSpaceWide > .col {
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-  padding-bottom: 3rem;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  padding-bottom: 3em;
 }
 
 .row.gutterSpaceWider {
-  margin-right: -2.5rem;
-  margin-left: -2.5rem;
+  margin-right: -2em;
+  margin-left: -2em;
 }
 
 .row.gutterSpaceWider > .col {
-  padding-right: 2.5rem;
-  padding-left: 2.5rem;
-  padding-bottom: 5rem;
+  padding-right: 2em;
+  padding-left: 2em;
+  padding-bottom: 4em;
 }
 
 .col .row.gutterSpaceDefault > .col {
@@ -3335,6 +3340,19 @@ section.credits {
 
 .para-block-wrap:last-of-type {
   margin-bottom: 0;
+}
+
+.no-bottom-padding {
+  padding-bottom: 0;
+}
+
+.no-top-padding {
+  padding-top: 0;
+}
+
+.no-top-bottom-padding {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 header {

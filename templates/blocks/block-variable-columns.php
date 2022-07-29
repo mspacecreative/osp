@@ -1,173 +1,75 @@
 <?php
-$columns = get_field('columns');
 $rowheading = get_field('row_heading');
 $rowsubheading = get_field('row_sub_heading');
-$bgcolor = get_field('background_colour');
 $textcolor = get_field('text_colour');
 $boxedcontent = get_field('boxed_content');
 $blockanchor = get_field('block_anchor');
 $narrow = get_field('narrow');
-$centeredtext = get_field('center_align_text');
-$roundedcorners = get_field('rounded_corners');
-$centeredheading = get_field('centered_heading');
-$gutters = get_field('gutter_space');
-$icon = get_sub_field('icon');
+$centeredtext = get_field('center_align_text') ? ' text-align-center' : '';
+$roundedcorners = get_field('rounded_corners') ? ' roundedCorners' : '';
+$centeredheading = get_field('centered_heading') ? ' class="text-align-center"' : '';
+$icon = get_sub_field('icon') ? ' icons-visible' : '';
 
-if ( $columns == 'two' ):
+include 'includes/column-ratios.php';
+include 'includes/vertical-alignment.php';
+include 'includes/section-padding.php';
+include 'includes/section-width.php';
+include 'includes/section-background-color.php';
+include 'includes/section-classname.php';
+include 'includes/column-gutters.php'; ?>
 
-if ( $blockanchor && $bgcolor == 'dark' ): ?>
-<div id="<?php echo $blockanchor ?>" class="section darkbg light">
-<?php elseif ( $blockanchor && $bgcolor == 'light' ): ?>
-<div id="<?php echo $blockanchor ?>" class="section lightbg">
-<?php elseif ( $bgcolor == 'light' ): ?>
-<div class="section lightbg">
-<?php elseif ( $bgcolor == 'dark' ): ?>
-<div class="section darkbg light">
-<?php elseif ( $blockanchor ): ?>
-<div id="<?php echo $blockanchor ?>" class="section lightbg">
-<?php else : ?>
-<div class="section lightbg">
-<?php endif;
+<div<?php echo $id ?> class="section<?php echo $sectionbgcolor, $sectionpadding, esc_attr($className); ?>">
 
- 	if ( $narrow ): ?>
-	<div class="innerContainer no-top-bottom-padding w1080">
-	<?php else : ?>
-	<div class="innerContainer no-top-bottom-padding">
-	<?php endif; ?>
+ 	<div class="innerContainer no-top-bottom-padding<?php echo $sectionwidth; ?>">
 	
-		<?php if ( $rowheading && $rowsubheading && $centeredheading ) {
-			echo '
-				<div class="text-align-center">
-					<h2>' . $rowheading . '</h2>
-					<h3 class="bottomMargin50">' . $rowsubheading . '</h3>
-				</div>
-				';
-		} elseif ( $rowheading && $rowsubheading ) {
-			echo '
-				<h2>' . $rowheading . '</h2>
-				<h3 class="bottom-padding">' . $rowsubheading . '</h3>
-				';
-		} elseif ( $rowheading && $centeredheading ) {
-			echo '<h2 class="text-align-center bottomMargin50"">' . $rowheading . '</h2>';
-		} elseif ( $rowheading ) {
-			echo '<h2 class="bottomMargin50">' . $rowheading . '</h2>';
-		}
+		<?php if ( $rowheading ) : ?>
+		<h2<?php echo $centeredheading; ?>>
+			<?php echo $rowheading; ?>
+		</h2>
+		<?php endif;
+
+		if ($rowsubheading) : ?>
+		<h3 class="bottomMargin50<?php echo $centeredtext; ?>">
+			<?php $rowsubheading; ?>
+		</h3>
+		<?php endif;
 		
-		if( have_rows('columns_grid') ):
+		if( have_rows('columns_grid') ): ?>
 		
-		if ( $centeredtext && $icon && $gutters == 'none' ): ?>
-		<div class="row center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext && $icon && $gutters == 'default' ): ?>
-		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext && $icon && $gutters == 'wide' ): ?>
-		<div class="row gutterSpaceWider center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext && $gutters == 'none' ): ?>
-		<div class="row center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext && $gutters == 'default' ): ?>
-		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext && $gutters == 'wide' ): ?>
-		<div class="row gutterSpaceWider center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
-		<?php elseif ( $icon && $gutters == 'none' ): ?>
-		<div class="row icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $icon && $gutters == 'default' ): ?>
-		<div class="row gutterSpaceWide icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $icon && $gutters == 'wide' ): ?>
-		<div class="row gutter_space_2 icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $gutters == 'none' ): ?>
-		<div class="row gutter_space_0 bullet-points extra-col-spacing">
-		<?php elseif ( $gutters == 'default' ): ?>
-		<div class="row gutterSpaceWide bullet-points extra-col-spacing">
-		<?php elseif ( $gutters == 'wide' ): ?>
-		<div class="row gutterSpaceWider bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext && $icon ): ?>
-		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext ): ?>
-		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
-		<?php elseif ( $icon ): ?>
-		<div class="row gutterSpaceWide icons-visible bullet-points extra-col-spacing">
-		<?php else : ?>
-		<div class="row gutterSpaceWide bullet-points extra-col-spacing">
-		<?php endif; ?>
+		<div class="row<?php echo $gutters, $icon, $verticalalignment; ?>">
 			
 			<?php while( have_rows('columns_grid') ): the_row();
 			
 			$inlinelinks = get_sub_field('inline_links');
+			$maxwidth = get_sub_field('max_width') ? ' class="has-max-width" style="max-width: ' . get_sub_field('max_width') . '"' : ''; ?>
 			
-			if ( $inlinelinks ):
-			
-			if ( $boxedcontent && $roundedcorners && $bgcolor == 'dark' ): ?>
-			<div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed light dark roundedCorners">
-					<?php include 'includes/content-inline.php'; ?>
+			<div class="bottomMarginMobile<?php echo $columns; ?>col-sm-12 col-xs-12">
+				
+				<?php if ($boxedcontent): ?>
+				<div class="boxed<?php echo $roundedcorners; if ($sectionbgcolor == 'dark'): echo ' light dark'; endif; ?>">
+				<?php endif;
+				
+				if ($maxwidth) : ?>
+				<div<?php echo $maxwidth; ?>>
+				<?php endif;
+				
+					if ( $inlinelinks ) {
+						include 'includes/content-inline.php';
+					} else {
+						include 'includes/content-stacked.php';
+					}
+					
+				if ($maxwidth) : ?>
 				</div>
-			</div>
-			
-			<?php elseif ( $boxedcontent && $roundedcorners && $bgcolor == 'light' ): ?>
-			<div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed roundedCorners">
-					<?php include 'includes/content-inline.php'; ?>
+				<?php endif; ?>
+				
+				<?php if ($boxedcontent): ?>
 				</div>
+				<?php endif; ?>
+				
 			</div>
 			
-			<?php elseif ( $boxedcontent && $roundedcorners ): ?>
-			<div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed roundedCorners">
-					<?php include 'includes/content-inline.php'; ?>
-				</div>
-			</div>
-			
-			<?php elseif ( $boxedcontent ): ?>
-			<div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed">
-					<?php include 'includes/content-inline.php'; ?>
-				</div>
-			</div>
-			
-			<?php else : ?>
-			<div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 bottomMarginMobile">
-				<?php include 'includes/content-inline.php'; ?>
-			</div>
-			<?php endif;
-			
-			else :
-			
-			if ( $boxedcontent && $roundedcorners && $bgcolor == 'dark' ): ?>
-			<div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed light dark roundedCorners">
-					<?php include 'includes/content-stacked.php'; ?>
-				</div>
-			</div>
-			
-			<?php elseif ( $boxedcontent && $roundedcorners && $bgcolor == 'light' ): ?>
-			<div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed roundedCorners">
-					<?php include 'includes/content-stacked.php'; ?>
-				</div>
-			</div>
-			
-			<?php elseif ( $boxedcontent && $roundedcorners ): ?>
-			<div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed roundedCorners">
-					<?php include 'includes/content-stacked.php'; ?>
-				</div>
-			</div>
-			
-			<?php elseif ( $boxedcontent ): ?>
-			<div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed">
-					<?php include 'includes/content-stacked.php'; ?>
-				</div>
-			</div>
-			
-			<?php else : ?>
-			<div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 bottomMarginMobile">
-				<?php include 'includes/content-stacked.php'; ?>
-			</div>
-			<?php endif;
-			
-			endif;
-			
-			endwhile; ?>
+			<?php endwhile; ?>
 			
 		</div>
 		
@@ -175,333 +77,3 @@ if ( $blockanchor && $bgcolor == 'dark' ): ?>
 		
 	</div>
 </div>
-
-<?php 
-elseif ( $columns == 'three' ):
-
-if ( $blockanchor && $bgcolor == 'dark' ): ?>
-<div id="<?php echo $blockanchor ?>" class="section darkbg light">
-<?php elseif ( $blockanchor && $bgcolor == 'light' ): ?>
-<div id="<?php echo $blockanchor ?>" class="section lightbg">
-<?php elseif ( $bgcolor == 'light' ): ?>
-<div class="section lightbg">
-<?php elseif ( $bgcolor == 'dark' ): ?>
-<div class="section darkbg light">
-<?php elseif ( $blockanchor ): ?>
-<div id="<?php echo $blockanchor ?>" class="section lightbg">
-<?php else : ?>
-<div class="section lightbg">
-<?php endif; 
-	
-	if ( $narrow ): ?>
-	<div class="innerContainer no-top-bottom-padding w1080">
-	<?php else : ?>
-	<div class="innerContainer no-top-bottom-padding">
-	<?php endif;
-	
-		if ( $rowheading && $rowsubheading && $centeredheading ) {
-			echo '
-				<div class="text-align-center">
-					<h2>' . $rowheading . '</h2>
-					<h3 class="bottomMargin50">' . $rowsubheading . '</h3>
-				</div>
-				';
-		} elseif ( $rowheading && $rowsubheading ) {
-			echo '
-				<h2>' . $rowheading . '</h2>
-				<h3 class="bottomMargin50">' . $rowsubheading . '</h3>
-				';
-		} elseif ( $rowheading && $centeredheading ) {
-			echo '<h2 class="text-align-center bottomMargin50"">' . $rowheading . '</h2>';
-		} elseif ( $rowheading ) {
-			echo '<h2 class="bottomMargin50">' . $rowheading . '</h2>';
-		}
-		
-		if( have_rows('columns_grid') ):
-		
-		if ( $centeredtext && $icon && $gutters == 'none' ): ?>
-		<div class="row center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext && $icon && $gutters == 'default' ): ?>
-		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext && $icon && $gutters == 'wide' ): ?>
-		<div class="row gutterSpaceWider center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext && $gutters == 'none' ): ?>
-		<div class="row center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext && $gutters == 'default' ): ?>
-		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext && $gutters == 'wide' ): ?>
-		<div class="row gutterSpaceWider center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
-		<?php elseif ( $icon && $gutters == 'none' ): ?>
-		<div class="row icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $icon && $gutters == 'default' ): ?>
-		<div class="row gutterSpaceWide icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $icon && $gutters == 'wide' ): ?>
-		<div class="row gutterSpaceWider icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $gutters == 'none' ): ?>
-		<div class="row bullet-points extra-col-spacing">
-		<?php elseif ( $gutters == 'default' ): ?>
-		<div class="row gutterSpaceWide bullet-points extra-col-spacing">
-		<?php elseif ( $gutters == 'wide' ): ?>
-		<div class="row gutterSpaceWider bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext && $icon ): ?>
-		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext ): ?>
-		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
-		<?php elseif ( $icon ): ?>
-		<div class="row gutterSpaceWide icons-visible bullet-points extra-col-spacing">
-		<?php else : ?>
-		<div class="row gutterSpaceWide bullet-points extra-col-spacing">
-		<?php endif; ?>
-			
-			<?php while( have_rows('columns_grid') ): the_row();
-			
-			$inlinelinks = get_sub_field('inline_links');
-			
-			if ( $inlinelinks ):
-			
-			if ( $boxedcontent && $roundedcorners && $bgcolor == 'dark' ): ?>
-			<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed light dark roundedCorners">
-					<?php include 'includes/content-inline.php'; ?>
-				</div>
-			</div>
-			
-			<?php elseif ( $boxedcontent && $roundedcorners && $bgcolor == 'light' ): ?>
-			<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed roundedCorners">
-					<?php include 'includes/content-inline.php'; ?>
-				</div>
-			</div>
-			
-			<?php elseif ( $boxedcontent && $roundedcorners ): ?>
-			<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed roundedCorners">
-					<?php include 'includes/content-inline.php'; ?>
-				</div>
-			</div>
-			
-			<?php elseif ( $boxedcontent ): ?>
-			<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed">
-					<?php include 'includes/content-inline.php'; ?>
-				</div>
-			</div>
-			
-			<?php else : ?>
-			<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12 bottomMarginMobile">
-				<?php include 'includes/content-inline.php'; ?>
-			</div>
-			<?php endif;
-			
-			else :
-			
-			if ( $boxedcontent && $roundedcorners && $bgcolor == 'dark' ): ?>
-			<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed light dark roundedCorners">
-					<?php include 'includes/content-stacked.php'; ?>
-				</div>
-			</div>
-			
-			<?php elseif ( $boxedcontent && $roundedcorners && $bgcolor == 'light' ): ?>
-			<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed roundedCorners">
-					<?php include 'includes/content-stacked.php'; ?>
-				</div>
-			</div>
-			
-			<?php elseif ( $boxedcontent && $roundedcorners ): ?>
-			<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed roundedCorners">
-					<?php include 'includes/content-stacked.php'; ?>
-				</div>
-			</div>
-			
-			<?php elseif ( $boxedcontent ): ?>
-			<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed">
-					<?php include 'includes/content-stacked.php'; ?>
-				</div>
-			</div>
-			
-			<?php else : ?>
-			<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12 bottomMarginMobile">
-				<?php include 'includes/content-stacked.php'; ?>
-			</div>
-			<?php endif;
-			
-			endif;
-			
-			endwhile; ?>
-			
-		</div>
-		
-		<?php endif; ?>
-		
-	</div>
-</div>
-
-<?php 
-elseif ( $columns == 'four' ):
-
-if ( $blockanchor && $bgcolor == 'dark' ): ?>
-<div id="<?php echo $blockanchor ?>" class="section darkbg light">
-<?php elseif ( $blockanchor && $bgcolor == 'light' ): ?>
-<div id="<?php echo $blockanchor ?>" class="section lightbg">
-<?php elseif ( $bgcolor == 'light' ): ?>
-<div class="section lightbg">
-<?php elseif ( $bgcolor == 'dark' ): ?>
-<div class="section darkbg light">
-<?php elseif ( $blockanchor ): ?>
-<div id="<?php echo $blockanchor ?>" class="section lightbg">
-<?php else : ?>
-<div class="section lightbg">
-<?php endif; 
-	
-	if ( $narrow ): ?>
-	<div class="innerContainer no-top-bottom-padding w1080">
-	<?php else : ?>
-	<div class="innerContainer no-top-bottom-padding">
-	<?php endif;
-	
-		if ( $rowheading && $rowsubheading && $centeredheading ) {
-			echo '
-				<div class="text-align-center">
-					<h2>' . $rowheading . '</h2>
-					<h3 class="bottomMargin50">' . $rowsubheading . '</h3>
-				</div>
-				';
-		} elseif ( $rowheading && $rowsubheading ) {
-			echo '
-				<h2>' . $rowheading . '</h2>
-				<h3 class="bottomMargin50">' . $rowsubheading . '</h3>
-				';
-		} elseif ( $rowheading && $centeredheading ) {
-			echo '<h2 class="text-align-center bottomMargin50"">' . $rowheading . '</h2>';
-		} elseif ( $rowheading ) {
-			echo '<h2 class="bottomMargin50">' . $rowheading . '</h2>';
-		}
-		
-		if( have_rows('columns_grid') ):
-		
-		if ( $centeredtext && $icon && $gutters == 'none' ): ?>
-		<div class="row center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext && $icon && $gutters == 'default' ): ?>
-		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext && $icon && $gutters == 'wide' ): ?>
-		<div class="row gutterSpaceWider center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext && $gutters == 'none' ): ?>
-		<div class="row center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext && $gutters == 'default' ): ?>
-		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext && $gutters == 'wide' ): ?>
-		<div class="row gutterSpaceWider center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
-		<?php elseif ( $icon && $gutters == 'none' ): ?>
-		<div class="row icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $icon && $gutters == 'default' ): ?>
-		<div class="row gutterSpaceWide icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $icon && $gutters == 'wide' ): ?>
-		<div class="row gutterSpaceWider icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $gutters == 'none' ): ?>
-		<div class="row bullet-points extra-col-spacing">
-		<?php elseif ( $gutters == 'default' ): ?>
-		<div class="row gutterSpaceWide bullet-points extra-col-spacing">
-		<?php elseif ( $gutters == 'wide' ): ?>
-		<div class="row gutterSpaceWider bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext && $icon ): ?>
-		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
-		<?php elseif ( $centeredtext ): ?>
-		<div class="row gutterSpaceWide center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
-		<?php elseif ( $icon ): ?>
-		<div class="row gutterSpaceWide icons-visible bullet-points extra-col-spacing">
-		<?php else : ?>
-		<div class="row gutterSpaceWide bullet-points extra-col-spacing">
-		<?php endif; ?>
-			
-			<?php while( have_rows('columns_grid') ): the_row();
-			
-			$inlinelinks = get_sub_field('inline_links');
-			
-			if ( $inlinelinks ):
-			
-			if ( $boxedcontent && $roundedcorners && $bgcolor == 'dark' ): ?>
-			<div class="col col-lg-3 col-md-3 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed light dark roundedCorners">
-					<?php include 'includes/content-inline.php'; ?>
-				</div>
-			</div>
-			
-			<?php elseif ( $boxedcontent && $roundedcorners && $bgcolor == 'light' ): ?>
-			<div class="col col-lg-3 col-md-3 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed roundedCorners">
-					<?php include 'includes/content-inline.php'; ?>
-				</div>
-			</div>
-			
-			<?php elseif ( $boxedcontent && $roundedcorners ): ?>
-			<div class="col col-lg-3 col-md-3 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed roundedCorners">
-					<?php include 'includes/content-inline.php'; ?>
-				</div>
-			</div>
-			
-			<?php elseif ( $boxedcontent ): ?>
-			<div class="col col-lg-3 col-md-3 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed">
-					<?php include 'includes/content-inline.php'; ?>
-				</div>
-			</div>
-			
-			<?php else : ?>
-			<div class="col col-lg-3 col-md-3 col-sm-6 col-xs-12 bottomMarginMobile">
-				<?php include 'includes/content-inline.php'; ?>
-			</div>
-			<?php endif;
-			
-			else :
-			
-			if ( $boxedcontent && $roundedcorners && $bgcolor == 'dark' ): ?>
-			<div class="col col-lg-3 col-md-3 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed light dark roundedCorners">
-					<?php include 'includes/content-stacked.php'; ?>
-				</div>
-			</div>
-			
-			<?php elseif ( $boxedcontent && $roundedcorners && $bgcolor == 'light' ): ?>
-			<div class="col col-lg-3 col-md-3 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed roundedCorners">
-					<?php include 'includes/content-stacked.php'; ?>
-				</div>
-			</div>
-			
-			<?php elseif ( $boxedcontent && $roundedcorners ): ?>
-			<div class="col col-lg-3 col-md-3 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed roundedCorners">
-					<?php include 'includes/content-stacked.php'; ?>
-				</div>
-			</div>
-			
-			<?php elseif ( $boxedcontent ): ?>
-			<div class="col col-lg-3 col-md-3 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed">
-					<?php include 'includes/content-stacked.php'; ?>
-				</div>
-			</div>
-			
-			<?php else : ?>
-			<div class="col col-lg-3 col-md-3 col-sm-6 col-xs-12 bottomMarginMobile">
-				<?php include 'includes/content-stacked.php'; ?>
-			</div>
-			<?php endif;
-			
-			endif;
-			
-			endwhile; ?>
-			
-		</div>
-		
-		<?php endif; ?>
-		
-	</div>
-</div>
-
-<?php endif; ?>
