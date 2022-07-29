@@ -1,10 +1,16 @@
 <?php
-if ( $author && $title && $company ) {
-    echo '<p class="testimonialAuthor">' . esc_html('- '), $author . ', ' . $title . ', ' . $company . '</p>';
-} elseif ( $author && $title ) {
-    echo '<p class="testimonialAuthor">' . esc_html('- '), $author . ', ' . $title . '</p>';
-} elseif ( $author && $company ) {
-    echo '<p class="testimonialAuthor">' . esc_html('- '), $author . ', ' . $company . '</p>';
-} elseif ( $author ) {
-    echo '<p class="testimonialAuthor">' . esc_html('- '), $author . '</p>';
-}
+if ($author): 
+    echo '<p class="testimonialAuthor">' . esc_html('- ') . '<strong>' . $author . '</strong>'; 
+endif; 
+
+if ($title || $company): 
+    echo '<br><span style="margin-left: 11px;">'; 
+endif; 
+
+if ($title && $company): 
+    echo $title . ', ' . $company; 
+elseif ($title): 
+    echo $title; 
+elseif ($company): 
+    echo $company; 
+endif;

@@ -26,7 +26,7 @@ switch ( $spacing ) {
 
 <section <?php echo $paddingClass ?>>
 	<div class="innerContainer w1080">
-		<div class="container testimonialContainer">
+		<div class="container testimonialContainer single-testimonial">
 			<?php if ( $featuredimg || $logo ) : ?>
 			<div class="row middle-lg middle-md middle-sm">
 				<div class="col col-lg-9 col-md-9 col-sm-8 col-xs-12">
