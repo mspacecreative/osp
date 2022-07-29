@@ -30,12 +30,16 @@ switch ( $cols ) {
 
 	case 'two' :
 		$flex = ' class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 two_col"';
+		$fullcoltopwithlogo = ' class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 quote_content"';
+		$fullcolbottomwithlogo = ' class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 object_fit has-logo"';
 		$fullcoltop = ' class="col col-lg-12 col-md-12 col-sm-12 col-xs-12"';
 		$fullcolbottom = ' class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 object_fit"';
 		break;
 				
 	case 'three' :
 		$flex = ' class="col col-lg-4 col-md-4 col-sm-6 col-xs-12 three_col"';
+		$fullcoltopwithlogo = ' class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 quote_content"';
+		$fullcolbottomwithlogo = ' class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 object_fit has-logo"';
 		$fullcoltop = ' class="col col-lg-12 col-md-12 col-sm-12 col-xs-12"';
 		$fullcolbottom = ' class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 object_fit"';
 		break;
@@ -49,7 +53,7 @@ switch ( $cols ) {
 	default :
 		$flex = ' class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 one_col"';
 		$fullcoltopwithlogo = ' class="col col-lg-8 col-md-8 col-sm-12 col-xs-12 quote_content"';
-		$fullcolbottomwithlogo = ' class="col col-lg-4 col-md-4 col-sm-12 col-xs-12 object_fit no_padding_left"';
+		$fullcolbottomwithlogo = ' class="col col-lg-4 col-md-4 col-sm-12 col-xs-12 object_fit no_padding_left has-logo"';
 		$fullcoltop = ' class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 quote_content"';
 		$fullcolbottom = ' class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 object_fit no_padding_left"';
 }
@@ -84,12 +88,12 @@ if ( $blockanchor ): ?>
 			
 			<div<?php echo $flex ?>>
 			
-				<div class="container testimonialContainer">
+				<div class="testimonialContainer<?php if ( !empty($featuredimg) || !empty($logo) ): echo ' has_logo'; endif; ?>">
 						
 					<?php if ( !empty($featuredimg) || !empty($logo) ): ?>
-					<div class="row">
+					<div class="row gutter_space_wide">
 					<?php else: ?>
-					<div class="row no_image_logo">	
+					<div class="row gutter_space_wide no_image_logo">	
 					<?php endif; ?>
 							
 						<?php if ( !empty($featuredimg) || !empty($logo) ): ?>
@@ -110,8 +114,6 @@ if ( $blockanchor ): ?>
 						<?php 
 						if ( !empty( $featuredimg ) || !empty( $logo ) ): ?>
 						<div<?php echo $fullcolbottomwithlogo; ?>>
-						<?php else : ?>
-						<div<?php echo $fullcolbottom ?>>
 						<?php endif; ?>
 
 							<?php 
@@ -121,9 +123,11 @@ if ( $blockanchor ): ?>
 							<div class="testimonialLogoContainer">
 								<?php echo wp_get_attachment_image( $logo, $size ); ?>
 							</div>
-							<?php endif; ?>
+							<?php endif;
 						
-            </div> 
+						if ( !empty( $featuredimg ) || !empty( $logo ) ): ?>
+						</div>
+						<?php endif; ?>
 							
 					</div>
 					

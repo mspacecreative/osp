@@ -346,10 +346,8 @@
 	.col.quote_content {
 		padding-right: 0;
 	}
-    .no_image_logo .col.quote_content {
-        padding-right: .5rem;
-    }
-	.col.no_padding_left {
+	.col.no_padding_left,
+    .row.gutter_space_wide > .no_padding_left {
 		padding-left: 0;
 	}
 }
@@ -357,9 +355,6 @@
 .object_fit img {
 	height: 100%;
 	object-fit: cover;
-}
-.object_fit .testimonialLogoContainer img {
-	height: auto;
 }
 .carousel .testimonialLogoContainer, .one_col .testimonialLogoContainer {
 	display: flex;

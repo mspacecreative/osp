@@ -107,9 +107,6 @@
 .two_col .col:last-of-type {
 	height: 300px;
 }
-.three_col .col:last-of-type {
-	height: 200px;
-}
 .four_col .col:last-of-type {
 	height: 150px;
 }
@@ -157,6 +154,11 @@
 .three_col .testimonialContainer > .row,
 .four_col .testimonialContainer > .row {
 	height: 100%;
+}
+.two_col .has_logo > .row,
+.three_col .has_logo > .row,
+.four_col .has_logo > .row {
+	height: auto;
 }
 .two_col .testimonialContainer > .row > .col:first-of-type,
 .three_col .testimonialContainer > .row > .col:first-of-type,
