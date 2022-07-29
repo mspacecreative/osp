@@ -83,6 +83,10 @@
 	}
 }
 
+.object_fit .testimonialLogoContainer img {
+	object-fit: contain;
+}
+
 .single-testimonial {
 	.testimonialLogoContainer {
 		display: flex;

@@ -48,7 +48,7 @@ if ( $blockanchor ): ?>
 			
 			<div>
 			
-				<div class="container testimonialContainer">
+				<div class="testimonialContainer<?php if ($bgimg): echo ' has_bg_img'; endif; ?>">
 						
 					<div class="row">				
 							

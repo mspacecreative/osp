@@ -1257,6 +1257,11 @@ body .pb-close::before {
   max-height: 100px;
 }
 
+.object_fit .testimonialLogoContainer img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .single-testimonial .testimonialLogoContainer {
   display: -webkit-box;
   display: -ms-flexbox;
