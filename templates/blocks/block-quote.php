@@ -26,9 +26,9 @@ switch ( $spacing ) {
 
 <section <?php echo $paddingClass ?>>
 	<div class="innerContainer w1080">
-		<div class="container testimonialContainer single-testimonial">
+		<div class="testimonialContainer single-testimonial">
 			<?php if ( $featuredimg || $logo ) : ?>
-			<div class="row middle-lg middle-md middle-sm">
+			<div class="row">
 				<div class="col col-lg-9 col-md-9 col-sm-8 col-xs-12">
 					<div class="testimonialContainerInner">
 						<?php
@@ -47,7 +47,7 @@ switch ( $spacing ) {
 						echo $featuredimg;
 					} elseif ( $logo ) {
 						echo '
-						<div class="testimonialLogoContainer">' . 
+						<div class="testimonialLogoContainer has_logo">' . 
 							wp_get_attachment_image( $logo, $size ); '
 						</div>';
 					} ?>
