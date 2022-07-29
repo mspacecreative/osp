@@ -1226,6 +1226,14 @@ body .pb-close::before {
   border: none;
 }
 
+.archive_grid > .col-lg-12 .testimonialContainer {
+  border: 2px solid #969696;
+}
+
+.archive_grid > .col-lg-12 .testimonialContainer .testimonialContainerInner {
+  border: none;
+}
+
 .cta {
   background-color: #424242;
   padding: 6em;
