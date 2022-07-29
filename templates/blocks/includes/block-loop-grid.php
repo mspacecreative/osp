@@ -22,6 +22,12 @@ switch ( $spacing ) {
 $cols = get_field('column_count');
 
 switch ( $cols ) {
+	case 'one' :
+		$flex = 'class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 two_col"';
+		$fullcoltop = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12"';
+		$fullcolbottom = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 object_fit"';
+		break;
+
 	case 'two' :
 		$flex = 'class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 two_col"';
 		$fullcoltop = 'class="col col-lg-12 col-md-12 col-sm-12 col-xs-12"';
@@ -67,7 +73,9 @@ if ( $blockanchor ): ?>
 			$author = get_the_title($post->ID);
 			$quote = get_the_content();
 			$title = get_field('position__title', $post->ID);
-			$company = get_field('company', $post->ID);
+			//$company = get_field('company', $post->ID);
+			$external_link = get_field('external_link');
+			$company = $external_link ? '<a href="' . $external_link . '" target="_blank">' . get_field('company', $post->ID) . '</a>' : get_field('company', $post->ID);
 			$featuredimg = get_field('image', $post->ID);
 			$logo = get_field('logo', $post->ID);
 			$size = 'medium'; ?>
