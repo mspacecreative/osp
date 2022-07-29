@@ -15,12 +15,13 @@ include 'includes/vertical-alignment.php';
 include 'includes/section-padding.php';
 include 'includes/section-width.php';
 include 'includes/section-background-color.php';
+include 'includes/section-id.php';
 include 'includes/section-classname.php';
 include 'includes/column-gutters.php'; ?>
 
-<div<?php echo $id ?> class="section<?php echo $sectionbgcolor, $sectionpadding, esc_attr($className); ?>">
+<div<?php if ($id): echo ' id="' . $id . '"'; endif; ?> class="section<?php echo $sectionbgcolor, $sectionpadding, esc_attr($className); ?>">
 
- 	<div class="innerContainer no-top-bottom-padding<?php echo $sectionwidth; ?>">
+ 	<div class="innerContainer<?php echo $sectionwidth; ?>">
 	
 		<?php if ( $rowheading ) : ?>
 		<h2<?php echo $centeredheading; ?>>
