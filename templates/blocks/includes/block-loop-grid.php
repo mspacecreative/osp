@@ -76,8 +76,8 @@ if ( $blockanchor ): ?>
 			$quote = get_the_content();
 			$title = get_field('position__title', $post->ID);
 			//$company = get_field('company', $post->ID);
-      		$external_link = get_field('external_link', $post->ID);
-			$company = $external_link ? '<a href="' . $external_link . '" target="_blank">' . get_field('company', $post->ID) . '</a>' : get_field('company', $post->ID);
+      $external_link = get_field('external_link', $post->ID);
+      $company = $external_link ? '<a href="' . $external_link . '" target="_blank">' . get_field('company', $post->ID) . '</a>' : get_field('company', $post->ID);
 			$featuredimg = get_field('image', $post->ID);
 			$logo = get_field('logo', $post->ID);
 			$size = 'medium'; ?>
@@ -122,8 +122,8 @@ if ( $blockanchor ): ?>
 								<?php echo wp_get_attachment_image( $logo, $size ); ?>
 							</div>
 							<?php endif; ?>
-							
-						</div>
+						
+            </div> 
 							
 					</div>
 					
