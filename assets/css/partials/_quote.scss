@@ -48,10 +48,17 @@
 	background-position: center;
 }
 
-.single-testimonial {
+.single-testimonial  {
 	border: 2px solid #969696;
 }
 .single-testimonial {
+	.testimonialContainerInner {
+		border: none;
+	}
+}
+
+.archive_grid > .col-lg-12 .testimonialContainer {
+	border: 2px solid #969696;
 	.testimonialContainerInner {
 		border: none;
 	}
