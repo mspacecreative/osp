@@ -100,12 +100,14 @@
 .four_col .col:first-of-type {
 	order: 1;
 }
+/*
 .two_col .col:last-of-type {
 	height: 300px;
 }
 .four_col .col:last-of-type {
 	height: 150px;
 }
+*/
 .two_col .col:last-of-type,
 .three_col .col:last-of-type,
 .four_col .col:last-of-type {
