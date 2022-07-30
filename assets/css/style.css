@@ -744,13 +744,6 @@ table {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-}
-
-.two_col .col:last-of-type {
-  height: 200px;
-}
-
-.four_col .col:last-of-type {
   height: 150px;
 }
 
@@ -822,13 +815,13 @@ table {
 .two_col .has_logo > .row,
 .three_col .has_logo > .row,
 .four_col .has_logo > .row {
-  height: auto;
+  height: 100%;
 }
 
 .two_col .testimonialContainer > .row > .col:first-of-type,
 .three_col .testimonialContainer > .row > .col:first-of-type,
 .four_col .testimonialContainer > .row > .col:first-of-type {
-  height: calc(100% - 200px);
+  height: calc(100% - 150px);
 }
 
 .two_col .testimonialContainer > .row.no_image_logo > .col:first-of-type,
