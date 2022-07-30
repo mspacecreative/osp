@@ -1241,7 +1241,7 @@ body .pb-close::before {
 .has_logo .testimonialLogoContainer {
   height: 0;
   position: relative;
-  padding-bottom: 43%;
+  padding-bottom: 35%;
 }
 
 .has_logo .testimonialLogoContainer img {
@@ -1255,6 +1255,7 @@ body .pb-close::before {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   max-height: 100px;
+  max-width: 220px;
 }
 
 .object_fit .testimonialLogoContainer img {
