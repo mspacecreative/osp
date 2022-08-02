@@ -119,6 +119,6 @@ h6 ~ .archive_grid {
     margin-right: auto;
 }
 
-.reverse-odd-rows .row {
+.reverse-odd-rows > .col:nth-child(odd) .row {
     flex-flow: row-reverse;
 }
