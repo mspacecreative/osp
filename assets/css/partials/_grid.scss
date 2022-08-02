@@ -139,9 +139,4 @@ h6 ~ .archive_grid {
         padding-left: calc(2em + 1rem);
     }
     */
-    
-    .reverse-odd-rows > .col:nth-child(odd) .row.gutter_space_wide > .col {
-        padding-left: 1rem;
-        padding-right: 0;
-    }
 }
