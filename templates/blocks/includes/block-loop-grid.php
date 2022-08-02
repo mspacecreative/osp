@@ -61,7 +61,7 @@ switch ( $cols ) {
 		$fullcolbottom = ' class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 object_fit no_padding_left"';
 } ?>
 
-<section<?php if ($id): echo ' id="' . $id . '"'; endif; ?> class="section<?php echo $paddingClass, esc_attr($className); ?>>
+<section<?php if ($id): echo ' id="' . $id . '"'; endif; ?> class="section<?php echo $paddingClass, esc_attr($className); ?>">
 	
 	<div class="innerContainer<?php echo $sectionwidth; ?>">
 	
