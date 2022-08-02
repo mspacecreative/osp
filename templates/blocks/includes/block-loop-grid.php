@@ -49,7 +49,7 @@ switch ( $cols ) {
 	
 	<?php include 'row-heading.php'; ?>
 	
-		<div class="row gutter_space_wide archive_grid">
+		<div class="row gutter_space_wide archive_grid<?php echo $reversecol; ?>">
 	
 			<?php 
 			$featured_posts = get_field('post_type');
@@ -69,7 +69,7 @@ switch ( $cols ) {
 			
 			<div<?php echo $flex ?>>
 			
-				<div class="testimonialContainer<?php if ( !empty($featuredimg) || !empty($logo) ): echo ' has_logo'; endif; echo $reversecol; ?>">
+				<div class="testimonialContainer<?php if ( !empty($featuredimg) || !empty($logo) ): echo ' has_logo'; endif; ?>">
 						
 					<?php if ( !empty($featuredimg) || !empty($logo) ): ?>
 					<div class="row gutter_space_wide">
