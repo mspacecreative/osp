@@ -95,9 +95,9 @@
 .four_col {
 	display: flex;
 }
-.two_col.has_logo,
-.three_col.has_logo,
-.four_col.has_logo {
+.two_col .has-logo,
+.three_col .has-logo,
+.four_col .has-logo {
 	display: flex;
     flex-direction: column;
 	height: 150px;
