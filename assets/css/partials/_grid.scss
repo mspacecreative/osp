@@ -122,10 +122,13 @@ h6 ~ .archive_grid {
 @media (min-width: 1024px) {
     .reverse-odd-rows > .col:nth-child(odd) .row {
         flex-flow: row-reverse;
-        padding-left: 0;
     }
 
     .reverse-odd-rows > .col:nth-child(odd) .gutter_space_wide > .no_padding_left {
         padding-right: 0;
+    }
+    
+    .reverse-odd-rows > .col:nth-child(odd) .row.gutter_space_wide > .col {
+        padding-left: 0;
     }
 }
