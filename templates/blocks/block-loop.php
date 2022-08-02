@@ -53,9 +53,11 @@ switch ($logoalignment) {
         $logoalignment = '';
         break;
 }
+include 'includes/section-padding.php';
+
 $sectionwidth = $sectionwidth ? ' style="max-width: ' . $sectionwidth . 'px; margin-right: auto; margin-left: auto;"' : '';
 echo 
-'<section>
+'<section class="section' . $sectionpadding . '">
     <div class="innerContainer content-loop"' . $sectionwidth . '>';
         if ($cpt) {
             if ($layout == 'grid') {
