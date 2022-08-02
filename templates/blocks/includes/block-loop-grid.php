@@ -1,26 +1,7 @@
 <?php
-$spacing = get_field('vertical_spacing');
-$blockanchor = get_field('block_anchor');
-
+include 'section-padding.php';
 include 'section-id.php';
 include 'section-classname.php';
-		
-switch ( $spacing ) {
-	case 'top' :
-		$spacing = ' topPadding';
-		break;
-				
-	case 'bottom' :
-		$spacing = ' bottomPadding';
-		break;
-				
-	case 'both' :
-		$spacing = ' topBottomPadding';
-		break;
-				
-	default :
-		$spacing = '';
-}
 
 $cols = get_field('column_count');
 
@@ -61,7 +42,7 @@ switch ( $cols ) {
 		$fullcolbottom = ' class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 object_fit no_padding_left"';
 } ?>
 
-<section<?php if ($id): echo ' id="' . $id . '"'; endif; ?> class="section<?php echo $paddingClass, esc_attr($className); ?>">
+<section<?php if ($id): echo ' id="' . $id . '"'; endif; ?> class="section<?php echo $sectionpadding, esc_attr($className); ?>">
 	
 	<div class="innerContainer<?php echo $sectionwidth; ?>">
 	
