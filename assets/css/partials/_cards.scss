@@ -95,17 +95,13 @@
 .four_col {
 	display: flex;
 }
-.two_col .col:first-of-type,
-.three_col .col:first-of-type,
-.four_col .col:first-of-type {
-	order: 1;
-	height: 150px;
-}
-.two_col .col:last-of-type,
-.three_col .col:last-of-type,
-.four_col .col:last-of-type {
+.two_col.has_logo,
+.three_col.has_logo,
+.four_col.has_logo {
 	display: flex;
     flex-direction: column;
+	height: 150px;
+	order: 1;
 }
 .two_col .testimonialLogoContainer,
 .three_col .testimonialLogoContainer,

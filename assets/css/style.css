@@ -738,18 +738,9 @@ table {
   display: flex;
 }
 
-.two_col .col:first-of-type,
-.three_col .col:first-of-type,
-.four_col .col:first-of-type {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  height: 150px;
-}
-
-.two_col .col:last-of-type,
-.three_col .col:last-of-type,
-.four_col .col:last-of-type {
+.two_col.has_logo,
+.three_col.has_logo,
+.four_col.has_logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -757,6 +748,10 @@ table {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 150px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .two_col .testimonialLogoContainer,
