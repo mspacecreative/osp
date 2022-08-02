@@ -129,7 +129,7 @@ h6 ~ .archive_grid {
         padding-right: 0;
     }
 
-    .reverse-odd-rows > .col:nth-child(even) .row > .col:nth-child(odd) {
+    .reverse-odd-rows > .col:nth-child(odd) .row > .col:nth-child(odd) {
         padding-left: 0;
         padding-right: 1rem;
     }
