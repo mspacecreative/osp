@@ -1453,7 +1453,8 @@ h6 ~ .archive_grid {
         -ms-flex-flow: row-reverse;
             flex-flow: row-reverse;
   }
-  .reverse-odd-rows > .col:nth-child(odd) .gutter_space_wide > .no_padding_left {
+  .reverse-odd-rows > .col:nth-child(odd) .gutter_space_wide > .no_padding_left,
+  .reverse-odd-rows > .col:nth-child(even) .row > .col:nth-child(odd) {
     padding-right: 0;
   }
   /*
