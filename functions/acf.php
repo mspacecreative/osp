@@ -284,7 +284,7 @@ function my_acf_init() {
 		// register product block
 		acf_register_block(array(
 			'name'				=> 'archive',
-			'title'				=> __('Archive Block'),
+			'title'				=> __('Posts Block'),
 			'description'		=> __('Displays selected post type results'),
 			'render_callback'	=> 'my_acf_block_render_callback',
 			'category'			=> 'formatting',
