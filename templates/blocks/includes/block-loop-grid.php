@@ -1,22 +1,25 @@
 <?php
 $spacing = get_field('vertical_spacing');
 $blockanchor = get_field('block_anchor');
+
+include 'section-id.php';
+include 'section-classname.php';
 		
 switch ( $spacing ) {
 	case 'top' :
-		$paddingClass = 'class="topPadding"';
+		$spacing = ' topPadding';
 		break;
 				
 	case 'bottom' :
-		$paddingClass = 'class="bottomPadding"';
+		$spacing = ' bottomPadding';
 		break;
 				
 	case 'both' :
-		$paddingClass = 'class="section"';
+		$spacing = ' topBottomPadding';
 		break;
 				
 	default :
-		$paddingClass = '';
+		$spacing = '';
 }
 
 $cols = get_field('column_count');
@@ -56,13 +59,9 @@ switch ( $cols ) {
 		$fullcolbottomwithlogo = ' class="col col-lg-4 col-md-4 col-sm-12 col-xs-12 object_fit no_padding_left has-logo"';
 		$fullcoltop = ' class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 quote_content"';
 		$fullcolbottom = ' class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 object_fit no_padding_left"';
-}
+} ?>
 
-if ( $blockanchor ): ?>
-<section id="<?php echo $blockanchor ?>" <?php echo $paddingClass ?>>
-<?php else: ?>
-<section <?php echo $paddingClass ?>>
-<?php endif; ?>
+<section<?php if ($id): echo ' id="' . $id . '"'; endif; ?> class="section<?php echo $paddingClass, esc_attr($className); ?>>
 	
 	<div class="innerContainer<?php echo $sectionwidth; ?>">
 	
