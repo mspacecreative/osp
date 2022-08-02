@@ -4,6 +4,7 @@ include 'section-id.php';
 include 'section-classname.php';
 
 $cols = get_field('column_count');
+$reversecol = get_field('reverse_columns') ? ' reverse-odd-rows' : '';
 
 switch ( $cols ) {
 	case 'one' :
@@ -60,15 +61,15 @@ switch ( $cols ) {
 			$quote = get_the_content();
 			$title = get_field('position__title', $post->ID);
 			//$company = get_field('company', $post->ID);
-      $external_link = get_field('external_link', $post->ID);
-      $company = $external_link ? '<a href="' . $external_link . '" target="_blank">' . get_field('company', $post->ID) . '</a>' : get_field('company', $post->ID);
+      		$external_link = get_field('external_link', $post->ID);
+      		$company = $external_link ? '<a href="' . $external_link . '" target="_blank">' . get_field('company', $post->ID) . '</a>' : get_field('company', $post->ID);
 			$featuredimg = get_field('image', $post->ID);
 			$logo = get_field('logo', $post->ID);
 			$size = 'medium'; ?>
 			
 			<div<?php echo $flex ?>>
 			
-				<div class="testimonialContainer<?php if ( !empty($featuredimg) || !empty($logo) ): echo ' has_logo'; endif; ?>">
+				<div class="testimonialContainer<?php if ( !empty($featuredimg) || !empty($logo) ): echo ' has_logo'; endif; echo $reversecol; ?>">
 						
 					<?php if ( !empty($featuredimg) || !empty($logo) ): ?>
 					<div class="row gutter_space_wide">

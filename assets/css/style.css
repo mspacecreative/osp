@@ -1446,6 +1446,13 @@ h6 ~ .archive_grid {
   margin-right: auto;
 }
 
+.reverse-odd-rows .row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse;
+          flex-flow: row-reverse;
+}
+
 /*
 .offsetCarousel .slick-slide {
 	margin-right: 25px;
