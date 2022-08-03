@@ -1375,4 +1375,8 @@ section.credits {
   padding-top: 0;
   padding-bottom: 0;
 }
+
+.single .content-section .innerContainer {
+  padding: 0;
+}
 /*# sourceMappingURL=editor-styles.css.map */
