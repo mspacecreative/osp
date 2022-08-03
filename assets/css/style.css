@@ -3416,6 +3416,10 @@ section.credits {
   padding-bottom: 0;
 }
 
+.single .content-section .innerContainer {
+  padding: 0;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -5254,6 +5258,9 @@ MODAL STYLES
   }
   .smallFooterLogo {
     padding: 20px 10px;
+  }
+  .testimonialContainerInner {
+    padding: 1.5em;
   }
   .shrinkLogo {
     padding: 20px;
