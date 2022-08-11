@@ -17,6 +17,8 @@ echo '
 	echo '
 	<div class="innerContainer">';
 	}
+
+		echo '<div class="container">';
 	
 		if ( $heading ) {
 			echo '<h2>' . $heading . '</h2>';
@@ -47,7 +49,8 @@ echo '
 				}
 			}
 			echo '
-			</div>';
+			</div>
+		</div>';
 		}
  	echo '
  	</div>
