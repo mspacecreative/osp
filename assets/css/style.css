@@ -4898,7 +4898,6 @@ MODAL STYLES
   .row.gutterSpaceWide > .col:nth-child(3n+1):nth-last-child(-n+3) ~ .col,
   .evenbriteEvents ul > li:nth-child(3n+1):nth-last-child(-n+3) ~ li {
     margin-bottom: 0;
-    padding-bottom: 0;
   }
   .borderRight {
     border-right: 1px solid #c9c9c9;
