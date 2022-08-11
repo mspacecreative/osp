@@ -2,9 +2,9 @@
 $cpt = get_field('post_type');
 $layout = get_field('layout');
 $colcount = get_field('column_count');
-$sectionwidth = get_field('section_width');
 $liststyle = get_field('list_style');
 $logoalignment = get_field('logo_alignment');
+
 switch ($colcount) {
     case 'one':
         $colcount = 'col col-lg-12 col-md-12 col-sm-12 col-xs-12';
@@ -22,23 +22,6 @@ switch ($colcount) {
     $colcount = 'col col-lg-4 col-md-4 col-sm-6 col-xs-12';
         break;
 }
-switch ($sectionwidth) {
-    case 'full':
-        $sectionwidth = '';
-        break;
-    case '1280':
-        $sectionwidth = '1280';
-        break;
-    case '1080':
-        $sectionwidth = '1080';
-        break;
-    case '800':
-        $sectionwidth = '800';
-        break;
-    default:
-    $sectionwidth = '';
-        break;
-}
 switch ($logoalignment) {
     case 'left':
         $logoalignment = '';
@@ -53,16 +36,18 @@ switch ($logoalignment) {
         $logoalignment = '';
         break;
 }
-include 'includes/section-padding.php';
 
-$sectionwidth = $sectionwidth ? ' style="max-width: ' . $sectionwidth . 'px; margin-right: auto; margin-left: auto;"' : '';
+include 'includes/section-padding.php';
+include 'includes/section-width.php';
+include 'includes/column-gutters.php';
+
 echo 
 '<section class="section' . $sectionpadding . '">
-    <div class="innerContainer content-loop"' . $sectionwidth . '>';
+    <div class="innerContainer content-loop' . $sectionwidth . '">';
         if ($cpt) {
             if ($layout == 'grid') {
                 echo 
-                '<div class="row">';
+                '<div class="row' . $sectiongutters . '">';
             }
             foreach ($cpt as $item) {
                 setup_postdata($item);

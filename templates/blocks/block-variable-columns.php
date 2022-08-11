@@ -3,7 +3,6 @@ $rowheading = get_field('row_heading');
 $rowsubheading = get_field('row_sub_heading');
 $textcolor = get_field('text_colour');
 $boxedcontent = get_field('boxed_content');
-$blockanchor = get_field('block_anchor');
 $narrow = get_field('narrow');
 $centeredtext = get_field('center_align_text') ? ' text-align-center' : '';
 $roundedcorners = get_field('rounded_corners') ? ' roundedCorners' : '';
@@ -37,7 +36,7 @@ include 'includes/column-gutters.php'; ?>
 		
 		if( have_rows('columns_grid') ): ?>
 		
-		<div class="row<?php echo $gutters, $icon, $verticalalignment; ?>">
+		<div class="row<?php echo $sectiongutters, $icon, $verticalalignment; ?>">
 			
 			<?php while( have_rows('columns_grid') ): the_row();
 			

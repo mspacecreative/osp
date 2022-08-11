@@ -762,7 +762,7 @@ body {
 }
 
 body.block-editor-writing-flow {
-  padding: 20px;
+  padding: 0;
 }
 
 body.block-editor-writing-flow .container {
@@ -965,32 +965,40 @@ p:last-of-type {
   line-height: 1.5em;
 }
 
-.editor-styles-wrapper {
-  font-family: "Rajdhani", sans-serif !important;
-  padding: 20px !important;
+html :where(.wp-block) {
+  max-width: 100%;
 }
 
-.editor-styles-wrapper .wp-block, .editor-styles-wrapper .container {
+html :where(div.editor-styles-wrapper) {
+  padding: 0;
+}
+
+.block-editor__container .editor-styles-wrapper {
+  font-family: "Rajdhani", sans-serif !important;
+  padding: 0 !important;
+}
+
+.block-editor__container .editor-styles-wrapper .wp-block, .block-editor__container .editor-styles-wrapper .container {
   width: auto !important;
 }
 
-.editor-styles-wrapper .wp-block {
-  max-width: none !important;
-  padding: 0 1em !important;
-}
-
-.editor-styles-wrapper .editor-writing-flow {
-  margin: 0 !important;
-  max-width: none !important;
-}
-
-.editor-styles-wrapper .dark, .editor-styles-wrapper .acf-icon.dark {
+.block-editor__container .editor-styles-wrapper .dark, .block-editor__container .editor-styles-wrapper .acf-icon.dark {
   color: #fff !important;
 }
 
-.editor-styles-wrapper .radioMarginPadding ul {
+.block-editor__container .editor-styles-wrapper .radioMarginPadding ul {
   margin-left: 0;
   padding-left: 0;
+}
+
+div.editor-styles-wrapper.block-editor-writing-flow {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+}
+
+.edit-post-visual-editor__post-title-wrapper {
+  padding: 0 2em;
 }
 
 .components-resizable-box__container.has-show-handle {

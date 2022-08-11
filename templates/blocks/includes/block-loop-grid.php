@@ -2,6 +2,7 @@
 include 'section-padding.php';
 include 'section-id.php';
 include 'section-classname.php';
+include 'section-gutters.php';
 
 $cols = get_field('column_count');
 $reversecol = get_field('reverse_columns') ? ' reverse-odd-rows' : '';
@@ -49,7 +50,7 @@ switch ( $cols ) {
 	
 	<?php include 'row-heading.php'; ?>
 	
-		<div class="row gutter_space_wide archive_grid<?php echo $reversecol; ?>">
+		<div class="row archive_grid<?php echo $reversecol, $sectiongutters; ?>">
 	
 			<?php 
 			$featured_posts = get_field('post_type');

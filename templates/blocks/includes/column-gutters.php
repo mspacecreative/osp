@@ -1,13 +1,19 @@
 <?php
-$gutters = get_field('gutter_space');
-switch ($gutters) {
+$sectiongutters = get_field('section_gutters');
+switch ($sectiongutters) {
+    case 'default':
+        $sectiongutters = ' gutterSpaceWide';
+        break;
+    case 'narrow':
+        $sectiongutters = ' gutterSpaceNarrow';
+        break;
     case 'wide':
-        $gutters = ' gutterSpaceWider';
+        $sectiongutters = ' gutterSpaceWider';
         break;
     case 'none':
-        $gutters = '';
+        $sectiongutters = ' gutterSpaceNone';
         break;
     default:
-        $gutters = ' gutterSpaceWide';
+        $sectiongutters = ' gutterSpaceWide';
         break;
 }
