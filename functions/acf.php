@@ -142,8 +142,13 @@ function my_acf_init() {
 			'category'			=> 'formatting',
 			'icon'				=> 'images-alt',
 			'keywords'			=> array( 'grid layout', 'list companies', 'carousel' ),
-			'mode'				=> 'edit',
-			'supports'			=> array( 'mode' => false ),
+			'mode'				=> 'preview',
+			'supports'		=> [
+				'align'			=> false,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
 		));
 
 		// register team block

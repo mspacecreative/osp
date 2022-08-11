@@ -9,14 +9,16 @@
 			$featuredimg = get_the_post_thumbnail( get_the_ID(), 'card-feature' );
 			$title = get_the_title();
 			$permalink = get_the_permalink( get_the_ID() );
-			$excerpt = get_the_excerpt();
+			$excerpt = '<p>' . get_the_excerpt(get_the_ID()) . '</p>';
 			$url = get_field('url', get_the_ID());
-			$cannedimg = get_field('image_selection');
-		 	$buttonlabel = get_field('button_label', get_the_ID()) ;
+			$cannedimg = get_field('image_selection', get_the_ID());
+		 	$buttonlabel = get_field('button_label', get_the_ID()) ? get_field('button_label', get_the_ID()) : __('View article');
+			$permalinkbutton = empty($url) ? '<p style="margin-top: auto;"><a class="readMore" href="' . $permalink . '">' . __('Read more') . '</a></p>' : '';
+			$viewarticlebutton = $url ? '<p style="margin-top: auto;"><a class="readMore" href="' . $url . '" target="_blank">' . $buttonlabel . '</a></p>' : '';
 			
 			switch ( $cannedimg ) {
 				case 'pan-atl-partner':
-					$img = '
+					$cannedimg = '
 					<div class="cannedImgContainer">
 						<img src="' . get_template_directory_uri() . '/assets/img/placeholders/osp-ocean-bg-feature.jpg">
 						<div class="cannedImgOverlay">
@@ -147,7 +149,7 @@
 					</div>';
 					break;
 				case 'partner':
-					$img = '
+					$cannedimg = '
 					<div class="cannedImgContainer">
 						<img src="' . get_template_directory_uri() . '/assets/img/placeholders/osp-ocean-bg-feature.jpg">
 						<div class="cannedImgOverlay">
@@ -277,7 +279,7 @@
 					</div>';
 					break;
 				default:
-					$img = '
+					$cannedimg = '
 					<div class="cannedImgContainer">
 						<img src="' . get_template_directory_uri() . '/assets/img/placeholders/osp-ocean-bg-feature.jpg">
 						<div class="cannedImgOverlay">
@@ -412,7 +414,7 @@
 					<?php 
 					if ( $url && $cannedimg ): ?>
 					<a href="<?php echo $url ?>" target="_blank">
-						<?php echo $img ?>
+						<?php echo $cannedimg ?>
 					</a>
 					<?php elseif ( $url && $featuredimg ): ?>
 					<a href="<?php echo $url ?>" target="_blank">
@@ -421,18 +423,6 @@
 					<?php elseif ( $permalink && $featuredimg ): ?>
 					<a href="<?php echo $permalink ?>">
 						<?php echo $featuredimg ?>
-					</a>
-					<?php elseif ( $url ): ?>
-					<a href="<?php echo $url ?>" target="_blank">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholders/osp-ocean-bg-feature.jpg">
-					</a>
-					<?php elseif ( $permalink ): ?>
-					<a href="<?php echo $permalink ?>">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholders/osp-ocean-bg-feature.jpg">
-					</a>
-					<?php else : ?>
-					<a href="<?php echo $permalink ?>">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholders/osp-ocean-bg-feature.jpg">
 					</a>
 					<?php endif; ?>
 					<div class="cardContent">
@@ -447,18 +437,10 @@
 							</a>
 							<?php endif;
 							 
-							if ( $url && $excerpt ) {
-								echo '<p>' . $excerpt . '</p>';
-								echo '<p style="margin-top: auto;"><a class="readMore" href="' . $url . '" target="_blank">' . __('View article') . '</a></p>';
-							} elseif ( $url && $buttonlabel ) {
-								echo '<p style="margin-top: auto;"><a class="readMore" href="' . $url . '" target="_blank">' .  $buttonlabel . '</a></p>';
-							} elseif ( $url ) {
-								echo '<a class="readMore" href="' . $url . '" target="_blank">' . __('View article') . '</a>';
-							} elseif ( $excerpt ) {
-								echo '<p class="displayFlex">' . $excerpt . '</p>';
-							} else {
-								echo '<p class="displayFlex">' . $excerpt . '</p>';
-							} 
+							echo $excerpt;
+							echo $permalinkbutton;
+							echo $viewarticlebutton;
+							
 							?>
 						</div>
 					</div>

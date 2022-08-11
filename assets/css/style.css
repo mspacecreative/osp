@@ -2045,7 +2045,7 @@ body {
 }
 
 body.block-editor-writing-flow {
-  padding: 20px;
+  padding: 0;
 }
 
 body.block-editor-writing-flow .container {
@@ -3169,29 +3169,39 @@ p:last-of-type {
 }
 
 .row.gutterSpaceWide {
-  margin-right: -1.5em;
-  margin-left: -1.5em;
+  margin-right: -1em;
+  margin-left: -1em;
 }
 
 .row.gutterSpaceWide > .col {
+  padding-right: 1em;
+  padding-left: 1em;
+  padding-bottom: 2em;
+}
+
+.row.gutterSpaceWider {
+  margin-right: -1.5em;
+  margin-left: -1em;
+}
+
+.row.gutterSpaceWider > .col {
   padding-right: 1.5em;
   padding-left: 1.5em;
   padding-bottom: 3em;
 }
 
-.row.gutterSpaceWider {
-  margin-right: -2em;
-  margin-left: -2em;
-}
-
-.row.gutterSpaceWider > .col {
-  padding-right: 2em;
-  padding-left: 2em;
-  padding-bottom: 4em;
-}
-
 .col .row.gutterSpaceDefault > .col {
   padding-bottom: 1rem;
+}
+
+.row.gutterSpaceNone {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.row.gutterSpaceNone > .col {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .page-template-page-sidebar .contentWrap .content-section > .innerContainer, .page-template-page-sidebar .contentWrap .content-section ~ section > .innerContainer {
