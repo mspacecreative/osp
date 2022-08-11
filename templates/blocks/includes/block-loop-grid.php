@@ -47,79 +47,83 @@ switch ( $cols ) {
 <section<?php if ($id): echo ' id="' . $id . '"'; endif; ?> class="section<?php echo $sectionpadding, esc_attr($className); ?>">
 	
 	<div class="innerContainer<?php echo $sectionwidth; ?>">
-	
-	<?php include 'row-heading.php'; ?>
-	
-		<div class="row archive_grid<?php echo $reversecol, $sectiongutters; ?>">
-	
-			<?php 
-			$featured_posts = get_field('post_type');
-			if( $featured_posts ):
-			foreach( $featured_posts as $post ):
-			
-			setup_postdata($post);
-			$author = get_the_title($post->ID);
-			$quote = get_the_content();
-			$title = get_field('position__title', $post->ID);
-			//$company = get_field('company', $post->ID);
-      		$external_link = get_field('external_link', $post->ID);
-      		$company = $external_link ? '<a href="' . $external_link . '" target="_blank">' . get_field('company', $post->ID) . '</a>' : get_field('company', $post->ID);
-			$featuredimg = get_field('image', $post->ID);
-			$logo = get_field('logo', $post->ID);
-			$size = 'medium'; ?>
-			
-			<div<?php echo $flex ?>>
-			
-				<div class="testimonialContainer<?php if ( !empty($featuredimg) || !empty($logo) ): echo ' has_logo'; endif; ?>">
-						
-					<?php if ( !empty($featuredimg) || !empty($logo) ): ?>
-					<div class="row gutter_space_wide">
-					<?php else: ?>
-					<div class="row gutter_space_wide no_image_logo">	
-					<?php endif; ?>
+
+		<div class="container">
+		
+			<?php include 'row-heading.php'; ?>
+		
+			<div class="row archive_grid<?php echo $reversecol, $sectiongutters; ?>">
+		
+				<?php 
+				$featured_posts = get_field('post_type');
+				if( $featured_posts ):
+				foreach( $featured_posts as $post ):
+				
+				setup_postdata($post);
+				$author = get_the_title($post->ID);
+				$quote = get_the_content();
+				$title = get_field('position__title', $post->ID);
+				//$company = get_field('company', $post->ID);
+				$external_link = get_field('external_link', $post->ID);
+				$company = $external_link ? '<a href="' . $external_link . '" target="_blank">' . get_field('company', $post->ID) . '</a>' : get_field('company', $post->ID);
+				$featuredimg = get_field('image', $post->ID);
+				$logo = get_field('logo', $post->ID);
+				$size = 'medium'; ?>
+				
+				<div<?php echo $flex ?>>
+				
+					<div class="testimonialContainer<?php if ( !empty($featuredimg) || !empty($logo) ): echo ' has_logo'; endif; ?>">
 							
 						<?php if ( !empty($featuredimg) || !empty($logo) ): ?>
-						<div<?php echo $fullcoltopwithlogo; ?>>
-						<?php else : ?>
-						<div<?php echo $fullcoltop ?>>
+						<div class="row gutter_space_wide">
+						<?php else: ?>
+						<div class="row gutter_space_wide no_image_logo">	
 						<?php endif; ?>
+								
+							<?php if ( !empty($featuredimg) || !empty($logo) ): ?>
+							<div<?php echo $fullcoltopwithlogo; ?>>
+							<?php else : ?>
+							<div<?php echo $fullcoltop ?>>
+							<?php endif; ?>
 
-							<div class="testimonialContainerInner">
-								<?php
-								echo '<div class="quoteContent">' . $quote . '</div>';
-								include 'testimonial-author.php';
-								?>
+								<div class="testimonialContainerInner">
+									<?php
+									echo '<div class="quoteContent">' . $quote . '</div>';
+									include 'testimonial-author.php';
+									?>
+								</div>
+
 							</div>
-
-						</div>
-							
-						<?php 
-						if ( !empty( $featuredimg ) || !empty( $logo ) ): ?>
-						<div<?php echo $fullcolbottomwithlogo; ?>>
-						<?php endif; ?>
-
+								
 							<?php 
-							if ( $featuredimg ):
-							echo wp_get_attachment_image( $featuredimg, $size );
-							elseif ( $logo ): ?>
-							<div class="testimonialLogoContainer">
-								<?php echo wp_get_attachment_image( $logo, $size ); ?>
-							</div>
-							<?php endif;
-						
-						if ( !empty( $featuredimg ) || !empty( $logo ) ): ?>
-						</div>
-						<?php endif; ?>
+							if ( !empty( $featuredimg ) || !empty( $logo ) ): ?>
+							<div<?php echo $fullcolbottomwithlogo; ?>>
+							<?php endif; ?>
+
+								<?php 
+								if ( $featuredimg ):
+								echo wp_get_attachment_image( $featuredimg, $size );
+								elseif ( $logo ): ?>
+								<div class="testimonialLogoContainer">
+									<?php echo wp_get_attachment_image( $logo, $size ); ?>
+								</div>
+								<?php endif;
 							
+							if ( !empty( $featuredimg ) || !empty( $logo ) ): ?>
+							</div>
+							<?php endif; ?>
+								
+						</div>
+						
 					</div>
 					
 				</div>
 				
-			</div>
+				<?php endforeach; 
+				endif; wp_reset_postdata(); ?>
 			
-			<?php endforeach; 
-			endif; wp_reset_postdata(); ?>
-		
+			</div>
+
 		</div>
 	
 	</div>

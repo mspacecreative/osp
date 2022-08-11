@@ -53,43 +53,48 @@ $showsocial = get_field('show_social_media_icons');
 	} ?>
 	
 	<div class="innerContainer">
-		<h2><?php echo $heading ?></h2>
-		
-		<?php 
-		if ( have_rows('cta_buttons') ) {
-			echo '<ul class="inlineButtons">';
-			while ( have_rows('cta_buttons') ) {
-				the_row();
-				$link = get_sub_field('link');
-				$label = get_sub_field('label');
-				$class= get_sub_field('class');
-				
-				if ( $class ) {
-					echo '<li><a class="button dark blue ' . $class . '" href="' . $link . '" target="_blank">' . $label . '</a></li>';
-				} else {
-					echo '<li><a class="button dark blue" href="' . $link . '" target="_blank">' . $label . '</a></li>';
-				}
-			}
-			echo '</ul>';
-		}
-		
-		if ( $subheading ) {
-			echo '<h3 class="topMargin50">' . $subheading . '</h3>';
-		}
-		
-		if ( $showsocial ) {
-			if ( have_rows('social_media', 'options') ) {
-				echo '<ul class="social">';
-				while ( have_rows('social_media', 'options') ) {
+
+		<div class="container">
+
+			<h2><?php echo $heading ?></h2>
+			
+			<?php 
+			if ( have_rows('cta_buttons') ) {
+				echo '<ul class="inlineButtons">';
+				while ( have_rows('cta_buttons') ) {
 					the_row();
-					$link = get_sub_field('link', 'options');
-					$icon = get_sub_field('icon', 'options');
+					$link = get_sub_field('link');
+					$label = get_sub_field('label');
+					$class= get_sub_field('class');
 					
-					echo '<li><a href="' . $link . '"><i class="fa ' . $icon . '"></i></a></li>';
+					if ( $class ) {
+						echo '<li><a class="button dark blue ' . $class . '" href="' . $link . '" target="_blank">' . $label . '</a></li>';
+					} else {
+						echo '<li><a class="button dark blue" href="' . $link . '" target="_blank">' . $label . '</a></li>';
+					}
 				}
 				echo '</ul>';
 			}
-		} ?>
+			
+			if ( $subheading ) {
+				echo '<h3 class="topMargin50">' . $subheading . '</h3>';
+			}
+			
+			if ( $showsocial ) {
+				if ( have_rows('social_media', 'options') ) {
+					echo '<ul class="social">';
+					while ( have_rows('social_media', 'options') ) {
+						the_row();
+						$link = get_sub_field('link', 'options');
+						$icon = get_sub_field('icon', 'options');
+						
+						echo '<li><a href="' . $link . '"><i class="fa ' . $icon . '"></i></a></li>';
+					}
+					echo '</ul>';
+				}
+			} ?>
+
+		</div>
 		
 	</div>
 </section>
