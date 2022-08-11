@@ -1,4 +1,4 @@
-@media (min-width: 48em) {
+@media (min-width: 768px) {
 	.container {
 		width: 100%;
 	}
@@ -13,24 +13,12 @@
 	}
 }
 
-@media (max-width: 63.9em) {
-	.row.gutterSpaceWider > .bottomMarginMobile.keepSpacing.col, .row.gutterSpaceWide > .bottomMarginMobile.keepSpacing.col, .row > .bottomMarginMobile.keepSpacing.col {
-		padding-bottom: 4em;
-	}
-	.contentPortals .row:nth-of-type(2) .col:nth-of-type(2) {
-		order: 1;
-	}
-	.fitPortal::before, .fitPortal::after {
-		height: 80px;
-	}
-	.rightColumn {
-		order: -1;
-	}
-}
-
-@media (max-width: 47.9em) {
+@media (max-width: 767px) {
 	.topMarginMobile50 {
 		margin-top: 50px;
+	}
+	.row.gutterSpaceWide > .col:nth-child(2n+1):nth-last-child(-n+2) {
+		padding-bottom: 1em;
 	}
 	.innerContainerOffset.topBottomPadding {
 		background-image: none!important;
@@ -64,7 +52,7 @@
 	}
 }
 
-@media (min-width: 64em) {
+@media (min-width: 1024px) {
 	.container {
 		width: 100%;
 	}
@@ -133,7 +121,7 @@
 	}
 }
 
-@media (min-width: 75em) {
+@media (min-width: 1200px) {
 	.container {
 		width: 100%;
 	}
@@ -150,6 +138,18 @@
 		font-size: 32px;
 		//LEGACY STYLE
 		//max-width: 450px;
+	}
+	.row.gutterSpaceWider > .bottomMarginMobile.keepSpacing.col, .row.gutterSpaceWide > .bottomMarginMobile.keepSpacing.col, .row > .bottomMarginMobile.keepSpacing.col {
+		padding-bottom: 4em;
+	}
+	.contentPortals .row:nth-of-type(2) .col:nth-of-type(2) {
+		order: 1;
+	}
+	.fitPortal::before, .fitPortal::after {
+		height: 80px;
+	}
+	.rightColumn {
+		order: -1;
 	}
 	.featuredInlineImg .size-medium {
 		max-width: 50%;
@@ -397,7 +397,7 @@
 	}
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
 	.social_footer {
 		justify-content: flex-start;
 		margin-bottom: 25px;
@@ -515,7 +515,7 @@
 	}
 }
 
-@media (max-width: 850px) and (orientation: landscape) {
+@media (max-width: 880px) and (orientation: landscape) {
 	.social_footer {
 		justify-content: flex-start;
 		margin-bottom: 25px;
@@ -579,17 +579,11 @@
 	}
 }
 
-@media (min-width: 451px) {
+@media (min-width: 481px) {
 	.colInnerMed .col-lg-4 {
 		padding-right: 0;
 	}
 	.colInnerMed .col-lg-8 {
 		padding-left: 0;
-	}
-}
-
-@media (max-width: 767px) {
-	.row.gutterSpaceWide > .col:nth-child(2n+1):nth-last-child(-n+2) {
-		padding-bottom: 1em;
 	}
 }
