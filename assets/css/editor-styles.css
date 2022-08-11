@@ -990,19 +990,19 @@ p:last-of-type {
   padding-bottom: 10em;
 }
 
-.w1440 {
+.w1440, .container.w1280 {
   max-width: 1440px;
 }
 
-.w1280 {
+.w1280, .container.w1280 {
   max-width: 1280px;
 }
 
-.w1080 {
+.w1080, .container.w1080 {
   max-width: 1080px;
 }
 
-.w800, .narrow_flushLeft {
+.w800, .narrow_flushLeft, .container.w800 {
   max-width: 800px;
 }
 
