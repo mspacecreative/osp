@@ -44,7 +44,7 @@ if ( $category ) {
 								<div class="cannedImgOverlay">
 									<h3>' . __('Pan-Atlantic Partner News') . '</h3>
 									<span>
-										' . include 'img/pan-atl-partner.php' . '
+										' . get_template_part('img/pan-atl-partner') . '
 									</span>
 								</div>
 							</div>';
@@ -56,7 +56,7 @@ if ( $category ) {
 								<div class="cannedImgOverlay">
 									<h3>' . __('Partner News') . '</h3>
 									<span>
-										' . include 'img/partner.php' . '
+										' . get_template_part('img/partner') . '
 									</span>
 								</div>
 							</div>';
@@ -68,7 +68,7 @@ if ( $category ) {
 								<div class="cannedImgOverlay">
 									<h3>' . __('Partner News') . '</h3>
 									<span>
-									' . include 'img/partner.php' . '
+									' . get_template_part('img/partner') . '
 									</span>
 								</div>
 							</div>';
