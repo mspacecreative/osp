@@ -4246,6 +4246,10 @@ img.alignright {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 /*
@@ -4272,13 +4276,8 @@ img.alignright {
 .fitPortal > h3 {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  margin-top: auto;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   text-transform: uppercase;
-}
-
-.fitPortal > h3 ~ a {
-  margin-bottom: auto;
 }
 
 .contentPortal a {

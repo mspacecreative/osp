@@ -13,14 +13,15 @@ switch ($titlewidth) {
 		$titlewidth = '';
 		break;
 }
-$title = get_the_title(); ?>
+$title = get_the_title();
+$titlealignment = get_field('title_alignment') ? ' text-align-center' : ''; ?>
 <div id="main" class="contentWrap">
 	 		
 	<section>
 	 			
 	 	<div class="innerContainer section4<?php echo $titlewidth; ?>" style="padding-bottom: 1em;">
 	 			
-			<h1 class="postTitle"><?php echo $title ?></h1>
+			<h1 class="postTitle<?php echo $titlealignment ?>"><?php echo $title ?></h1>
 					
 		</div>
 			
