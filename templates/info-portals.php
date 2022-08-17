@@ -4,7 +4,7 @@ $fit = get_field('cta_box', 'options');
 ?>
 
 <!-- info portals -->
-<section id="infoPortals" class="section textAlignCenter contentPortals">
+<section id="infoPortals" class="section textAlignCenter contentPortals w1440">
 	<h2><?php echo $heading ?></h2>
 	
 	<div class="container">
