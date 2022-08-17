@@ -3,7 +3,6 @@ $bgtype = get_field('background_type');
 $bgcolor = get_field('background_colour');
 $bgimg = get_field('background_image');
 $bgimgalign = get_field('background_position');
-$contenttype = get_field('content_type');
 $aligncolumns = get_field('align_columns');
 $rowheading = get_field('row_heading');
 $headingalignment = get_field('heading_alignment');
@@ -88,7 +87,7 @@ switch ( $headingalignment ) {
 				if( have_rows('left_column') ):
 		 		while( have_rows('left_column') ): the_row();
 		 		
-				$anchor = get_sub_field('anchor') ? ' id="' . get_sub_field('anchor') . '"' : '';
+				$anchor = get_sub_field('anchor') ? ' id="#' . get_sub_field('anchor') . '"' : '';
 		 		$icon = get_sub_field('icon');
 		 		$iconsize = 'thumbnail';
 		 		$heading = get_sub_field('heading') ? '<h3>' . get_sub_field('heading') . '</h3>' : '';
@@ -135,7 +134,7 @@ switch ( $headingalignment ) {
 				if( have_rows('right_column') ):
 		 		while( have_rows('right_column') ): the_row();
 		 		
-				$anchor = get_sub_field('anchor') ? ' id="' . get_sub_field('anchor') . '"' : '';
+				$anchor = get_sub_field('anchor') ? ' id="#' . get_sub_field('anchor') . '"' : '';
 		 		$icon = get_sub_field('icon');
 		 		$iconsize = 'thumbnail';
 		 		$contenttype = get_sub_field('content_type');
