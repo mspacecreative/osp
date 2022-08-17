@@ -1747,6 +1747,11 @@ section.credits {
   margin: auto;
 }
 
+.contentPortals.w1440 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .gridItem.itemLogo {
   grid-area: logo;
   -ms-grid-column: 1;
