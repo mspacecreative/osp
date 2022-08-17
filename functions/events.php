@@ -55,7 +55,7 @@ function printUpcomingEvents() {
 			
 			if ( is_page( 51 ) ) {
 				echo '
-				<p><a class="button dark blue" href="' . home_url( 'events' ) . '">' . __('View all events') . '</a></p>';
+				<p><a class="btn dark blue" href="' . home_url( 'events' ) . '">' . __('View all events') . '</a></p>';
 			}
 		}
 	
@@ -67,7 +67,7 @@ function printUpcomingEvents() {
 		if ( is_page( 51 ) ) {
 			echo '
 			<p style="margin-bottom: 0;">There are no upcoming events. Please check back soon!</p>
-			<p><a class="button dark blue" href="' . home_url( 'events' ) . '">' . __('View all events') . '</a></p>';
+			<p><a class="btn dark blue" href="' . home_url( 'events' ) . '">' . __('View all events') . '</a></p>';
 		} else {
 			echo '
 			<p style="margin-bottom: 50px;">There are no upcoming events. Please check back soon!</p>';

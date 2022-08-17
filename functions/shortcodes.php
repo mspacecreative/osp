@@ -185,13 +185,13 @@ function teamMembers($atts) {
 					if ( $shortbio ): ?>
 						<div class="shortBio">
 							<?php echo $shortbio ?>
-							<a class="button light" href="<?php echo $link ?>">Read more</a>
+							<a class="btn light" href="<?php echo $link ?>">Read more</a>
 						</div>
 					<?php endif;
 					
 					$file = get_field('file');
 					if ( $file ) : ?>
-					    <p><a class="button light" style="margin-top: 15px;" href="<?php the_field('file'); ?>" download>Download high res head shot</a></p>
+					    <p><a class="btn light" style="margin-top: 15px;" href="<?php the_field('file'); ?>" download>Download high res head shot</a></p>
 					<?php endif; ?>
 			
 				</div>

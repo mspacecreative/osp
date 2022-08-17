@@ -17,7 +17,7 @@ if ( have_rows('video_group', 'options') ) :
 					</button>
 					<?php 
 					if ( $video ) : ?>
-					<a class="button light externalLink" href="<?php echo $video_url ?>" target="_blank">Open in new tab
+					<a class="btn light externalLink" href="<?php echo $video_url ?>" target="_blank">Open in new tab
 					</a>
 					<?php endif; ?>
 				</div>
@@ -51,7 +51,7 @@ if ( have_rows('video_group', 'options') ) :
 					</button>
 					<?php 
 					if ( $video ) : ?>
-					<a class="button light externalLink" href="<?php echo $video_url ?>" target="_blank">Open in new tab
+					<a class="btn light externalLink" href="<?php echo $video_url ?>" target="_blank">Open in new tab
 					</a>
 					<?php endif; ?>
 				</div>
@@ -85,7 +85,7 @@ if ( have_rows('video_group', 'options') ) :
 					</button>
 					<?php 
 					if ( $video ) : ?>
-					<a class="button light externalLink" href="<?php echo $video_url ?>" target="_blank">Open in new tab
+					<a class="btn light externalLink" href="<?php echo $video_url ?>" target="_blank">Open in new tab
 					</a>
 					<?php endif; ?>
 				</div>
@@ -119,7 +119,7 @@ if ( have_rows('video_group', 'options') ) :
 					</button>
 					<?php 
 					if ( $video ) : ?>
-					<a class="button light externalLink" href="<?php echo $video_url ?>" target="_blank">Open in new tab
+					<a class="btn light externalLink" href="<?php echo $video_url ?>" target="_blank">Open in new tab
 					</a>
 					<?php endif; ?>
 				</div>
@@ -153,7 +153,7 @@ if ( have_rows('video_group', 'options') ) :
 					</button>
 					<?php 
 					if ( $video ) : ?>
-					<a class="button light externalLink" href="<?php echo $video_url ?>" target="_blank">Open in new tab
+					<a class="btn light externalLink" href="<?php echo $video_url ?>" target="_blank">Open in new tab
 					</a>
 					<?php endif; ?>
 				</div>
@@ -187,7 +187,7 @@ if ( have_rows('video_group', 'options') ) :
 					</button>
 					<?php 
 					if ( $video ) : ?>
-					<a class="button light externalLink" href="<?php echo $video_url ?>" target="_blank">Open in new tab
+					<a class="btn light externalLink" href="<?php echo $video_url ?>" target="_blank">Open in new tab
 					</a>
 					<?php endif; ?>
 				</div>
@@ -221,7 +221,7 @@ if ( have_rows('video_group', 'options') ) :
 					</button>
 					<?php 
 					if ( $video ) : ?>
-					<a class="button light externalLink" href="<?php echo $video_url ?>" target="_blank">Open in new tab
+					<a class="btn light externalLink" href="<?php echo $video_url ?>" target="_blank">Open in new tab
 					</a>
 					<?php endif; ?>
 				</div>
@@ -259,7 +259,7 @@ if ( have_rows('issuu_embed', 'options') ) {
 				</button>
 				<?php 
 				if ( $embed_url ) : ?>
-				<a class="button light externalLink" href="<?php echo $embed_url ?>" target="_blank">Open in new tab
+				<a class="btn light externalLink" href="<?php echo $embed_url ?>" target="_blank">Open in new tab
 				</a>
 				<?php endif; ?>
 			</div>

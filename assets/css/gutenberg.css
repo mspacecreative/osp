@@ -756,7 +756,7 @@
 }
 
 body {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   line-height: 1.5em;
   color: #424242;
 }
@@ -793,7 +793,8 @@ h2 {
   margin-top: 0;
 }
 
-h3, h3 > a {
+h3,
+h3 > a {
   font-size: 22px;
   margin-top: 0;
   line-height: 1.25em;
@@ -803,24 +804,35 @@ h4 {
   font-size: 20px;
 }
 
-.darkHeading, .darkHeading > a {
+.darkHeading,
+.darkHeading > a {
   color: #424242;
 }
 
-menu, ol, ul {
+menu,
+ol,
+ul {
   padding: 0 0 0 18px;
 }
 
-.contentPortal h3, .fitPortal h3 {
+.contentPortal h3,
+.fitPortal h3 {
   margin-top: 0;
 }
 
-.light > *, .light a, .light {
+.light > *,
+.light a,
+.light {
   color: #fff;
 }
 
 .text-align-center {
   text-align: center;
+}
+
+.innerContainer > .text-align-center {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .text-align-right {
@@ -853,13 +865,15 @@ menu, ol, ul {
   text-align: center;
 }
 
-.textAlignCenter .inlineButtons, .textAlignCenter .social {
+.textAlignCenter .inlineButtons,
+.textAlignCenter .social {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.social li:last-child, .inlineButtons li:last-child {
+.social li:last-child,
+.inlineButtons li:last-child {
   margin-right: 0;
 }
 
@@ -875,11 +889,15 @@ p {
   margin-top: 0;
 }
 
-p, a, ol, ul {
+p,
+a,
+ol,
+ul {
   font-size: 16px;
 }
 
-.date, .date a {
+.date,
+.date a {
   font-size: 14px;
 }
 

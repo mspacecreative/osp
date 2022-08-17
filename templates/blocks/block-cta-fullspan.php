@@ -68,9 +68,9 @@ $showsocial = get_field('show_social_media_icons');
 					$class= get_sub_field('class');
 					
 					if ( $class ) {
-						echo '<li><a class="button dark blue ' . $class . '" href="' . $link . '" target="_blank">' . $label . '</a></li>';
+						echo '<li><a class="btn dark blue ' . $class . '" href="' . $link . '" target="_blank">' . $label . '</a></li>';
 					} else {
-						echo '<li><a class="button dark blue" href="' . $link . '" target="_blank">' . $label . '</a></li>';
+						echo '<li><a class="btn dark blue" href="' . $link . '" target="_blank">' . $label . '</a></li>';
 					}
 				}
 				echo '</ul>';

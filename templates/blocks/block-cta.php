@@ -82,7 +82,7 @@ switch ( $spacing ) {
 								$link = '<a href="' . $internal . '"';
 						}
 						if ( $linktype ) {
-							echo $link . ' class="button dark blue">' . $label . '</a>';
+							echo $link . ' class="btn dark blue">' . $label . '</a>';
 						}
 					}
 				} ?>

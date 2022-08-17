@@ -118,7 +118,7 @@ echo
                             }
                             echo $content;
                             if ($externallink) {
-                                echo '<a href="' . $externallink . '" target="_blank" class="button blue external-link">' . $linklabel . '</a>';
+                                echo '<a href="' . $externallink . '" target="_blank" class="btn blue external-link">' . $linklabel . '</a>';
                             }
                         echo 
                         '</div>
@@ -144,7 +144,7 @@ echo
                             echo
                             $content;
                             if ($externallink) {
-                                echo '<a href="' . $externallink . '" target="_blank" class="button blue external-link">' . $linklabel . '</a>';
+                                echo '<a href="' . $externallink . '" target="_blank" class="btn blue external-link">' . $linklabel . '</a>';
                             }
                             echo 
                         '</div>
