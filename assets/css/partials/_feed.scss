@@ -1,22 +1,23 @@
 .cardContainer {
-	box-shadow: 0 5px 10px #d4d4d4;
-	background-color: #f9f9f9;
+  box-shadow: 0 5px 10px #d4d4d4;
+  background-color: #f9f9f9;
+  text-align: left;
 }
 .feedGrid .cardContainer {
-	box-shadow: 0 5px 10px #888;
+  box-shadow: 0 5px 10px #888;
 }
 .offsetBg {
-	position: absolute;
-	background-image: url(../img/textures/just-waves-blue.png);
-	height: 65%;
-	width: 100%;
-	left: 0;
-	top: 0;
+  position: absolute;
+  background-image: url(../img/textures/just-waves-blue.png);
+  height: 65%;
+  width: 100%;
+  left: 0;
+  top: 0;
 }
 
 .owl-controls {
-	display: none!important;
+  display: none !important;
 }
 .owl-carousel .owl-item {
-	float: none;
+  float: none;
 }
