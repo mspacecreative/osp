@@ -74,17 +74,6 @@ switch ( $headingalignment ) {
 	<div class="section_has_bg_img_overlay" style="background-color: rgba(<?php if ( $textcolor == 'dark' ): echo '255,255,255,'; elseif ( $textcolor == 'light'): echo '0,0,25,'; endif; echo $overlayopacity; ?>);"></div>
 	<?php endif; ?>
 
-	<?php 
-	if( have_rows('right_column') ):
-		while( have_rows('right_column') ): the_row();
-			$img = get_sub_field('image');
-			if ( !empty( $img && $offsetlayout ) ): ?>
-			<div class="innerContainerOffset topBottomPadding<?php if ($reverse): echo ' left'; else : echo ' right'; endif; ?>" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
-			<?php
-			endif;
-		endwhile;
-	endif; ?>
-
 	<div class="innerContainer<?php echo $sectionwidth; if ($textcolor == 'light'): echo ' light'; endif; ?>">
 		<div class="container">
 			
