@@ -11,9 +11,9 @@ if ( have_rows('cta_links') ):
 			$linktype = get_sub_field('link_type');
 								
 			if ( $linktype == 'internal' ) {
-				echo '<p><a class="button blue dark" href="' . $pagelink . '">' . $linklabel . '</a></p>';
+				echo '<p><a class="btn blue dark" href="' . $pagelink . '">' . $linklabel . '</a></p>';
 			} elseif ( $linktype == 'external' ) {
-				echo '<p><a class="button blue dark" href="' . $exturl . '" target="_blank">' . $linklabel . '</a></p>';
+				echo '<p><a class="btn blue dark" href="' . $exturl . '" target="_blank">' . $linklabel . '</a></p>';
 			} elseif ( $linktype == 'pdf' ) {
 				echo '<p><a class="pdf_dl" href="' . $pdf . '" target="_blank">' . $linklabel . '</a></p>';
 			}

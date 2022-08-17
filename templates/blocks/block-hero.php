@@ -20,13 +20,13 @@
 					$url = get_sub_field('url');
 							
 					if ( $linktype === 'anchor' ) {
-						echo '<a class="button light" href="#' . $anchor . '">' . $label .'</a>';
+						echo '<a class="btn light" href="#' . $anchor . '">' . $label .'</a>';
 					} elseif ( $linktype === 'internal' ) {
-						echo '<a class="button light" href="' . $link . '">' . $label .'</a>';
+						echo '<a class="btn light" href="' . $link . '">' . $label .'</a>';
 					} elseif ( $linktype === 'external' ) {
-						echo '<a class="button light" href="' . $url . '" target="_blank">' . $label .'</a>';
+						echo '<a class="btn light" href="' . $url . '" target="_blank">' . $label .'</a>';
 					} else {
-						echo '<a class="button light" href="' . $link . '">' . $label .'</a>';
+						echo '<a class="btn light" href="' . $link . '">' . $label .'</a>';
 					}
 				}
 			}

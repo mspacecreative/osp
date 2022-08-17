@@ -91,7 +91,7 @@ $fit = get_field('cta_box', 'options');
 					while ( have_rows('cta_button', 'options') ): the_row();
 					$link = get_sub_field('link', 'options');
 					$label = get_sub_field('label', 'options'); ?>
-					<a href="<?php echo $link ?>" class="button light"><?php echo $label ?></a>
+					<a href="<?php echo $link ?>" class="btn light"><?php echo $label ?></a>
 					<?php 
 					endwhile;
 					endif;

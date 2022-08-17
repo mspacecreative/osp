@@ -65,7 +65,7 @@ if ( $term ) {
 			$postcount = $term->count;
 			
 			if ( $postcount >= 3 ): ?>
-			<a class="button dark blue floatRight" href="<?php echo esc_url( $termlink ); ?>"><?php esc_html_e('View all'); ?></a>
+			<a class="btn dark blue floatRight" href="<?php echo esc_url( $termlink ); ?>"><?php esc_html_e('View all'); ?></a>
 			<?php endif; ?>
 		</div>
 		

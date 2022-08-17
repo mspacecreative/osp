@@ -10,13 +10,12 @@ if ( have_rows('cta_links') ):
 		$pdf = get_sub_field('pdf');
 		$linktype = get_sub_field('link_type');
 								
-		if ( $linktype == 'internal' ) {
-			echo '<p class="inline-links"><a class="button dark" href="' . $pagelink . '">' . $linklabel . '</a></p>';
-		} elseif ( $linktype == 'external' ) {
-			echo '<p class="inline-links"><a class="button dark" href="' . $exturl . '" target="_blank">' . $linklabel . '</a></p>';
-		} elseif ( $linktype == 'pdf' ) {
-			echo '<p class="inline-links"><a class="pdf_dl" href="' . $pdf . '" target="_blank">' . $linklabel . '</a></p>';
-		}
+		echo 
+		'<p class="inline-links">
+			<a class="btn dark blue" href="'; if ( $linktype == 'internal' ): echo $pagelink; elseif ( $linktype == 'external' ): echo $exturl; elseif ( $linktype == 'pdf' ): echo $pdf; endif; echo '"'; if ( $linktype == 'external' || $linktype == 'pdf' ): echo ' target="_blank"'; endif; echo '>' 
+				. $linklabel . 
+			'</a>
+		</p>';
 				
 	endwhile;
 	endif;
