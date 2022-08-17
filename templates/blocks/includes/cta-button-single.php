@@ -34,8 +34,10 @@ if ( have_rows('cta_link') ):
 		default:
 			$linktype = get_sub_field('page_link');
 	}
-						
-	echo '<a class="btn'; echo $btnstyle . '"'; if ($linktype == 'pdf'): echo ' pdf_dl'; endif; echo 'href="' . $linktype . '"'; if ($linktype == 'external' || $linktype == 'pdf'): echo ' target="_blank"'; endif; echo '>' . $linklabel . '</a>';
+
+	if ( get_sub_field('page_link') || get_sub_field('external_url') || get_sub_field('page_link') ) {
+		echo '<a class="btn'; echo $btnstyle . '"'; if ($linktype == 'pdf'): echo ' pdf_dl'; endif; echo 'href="' . $linktype . '"'; if ($linktype == 'external' || $linktype == 'pdf'): echo ' target="_blank"'; endif; echo '>' . $linklabel . '</a>';
+	}
 		
 	endwhile;
 endif;
