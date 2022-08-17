@@ -123,6 +123,7 @@ switch ( $headingalignment ) {
 				<?php
 					echo $heading;
 					echo $content;
+					include 'includes/cta-button-single.php';
 				?>
 				</div>
 				

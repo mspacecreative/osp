@@ -1,25 +1,26 @@
 <?php
 if ( have_rows('cta_link') ):
 	while ( have_rows('cta_link') ): the_row();
-	$linklabel = get_sub_field('label');
-	$exturl = get_sub_field('url');
-	$pagelink = get_sub_field('page');
-	$pdf = get_sub_field('pdf');
-	$linktype = get_sub_field('link_type'); 
-						
-	if ( $linktype == 'internal' && $linklabel ) {
-		echo '<a class="btn light" href="' . $pagelink . '">' . $linklabel . '</a>';
-	} elseif ( $linktype == 'internal' ) {
-		echo '<a class="btn light" href="' . $pagelink . '">Learn more</a>';
-	} elseif ( $linktype == 'external' && $linklabel ) {
-		echo '<a class="btn light" href="' . $exturl . '" target="_blank">' . $linklabel . '</a>';
-	} elseif ( $linktype == 'external' ) {
-		echo '<a class="btn light" href="' . $exturl . '" target="_blank">Learn more</a>';
-	} elseif ( $linktype == 'pdf' && $linklabel ) {
-		echo '<a class="pdf_dl" href="' . $pdf . '" target="_blank">' . $linklabel . '</a>';
-	} elseif ( $linktype == 'pdf' ) {
-		echo '<a class="pdf_dl" href="' . $pdf . '" target="_blank">Download PDF</a>';
+	$linklabel = get_sub_field('label') ? get_sub_field('label') : 'Learn more';
+	//$exturl = get_sub_field('url');
+	//$pagelink = get_sub_field('page');
+	//$pdf = get_sub_field('pdf');
+	$linktype = get_sub_field('link_type');
+	switch ($linktype) {
+		case 'internal':
+			$linktype = get_sub_field('page_link');
+			break;
+		case 'external':
+			$linktype = get_sub_field('external_url');
+			break;
+		case 'pdf':
+			$linktype = get_sub_field('pdf_download');
+			break;
+		default:
+			$linktype = get_sub_field('page_link');
 	}
+						
+	echo '<a class="btn"'; if ($linktype == 'pdf'): echo ' pdf_dl'; endif; echo 'href="' . $linktype . '"'; if ($linktype == 'external' || $linktype == 'pdf'): echo ' target="_blank"'; endif; echo '>' . $linklabel . '</a>';
 		
 	endwhile;
 endif;
