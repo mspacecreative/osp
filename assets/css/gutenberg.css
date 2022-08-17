@@ -769,6 +769,10 @@ body.block-editor-writing-flow .container {
   width: auto;
 }
 
+.editor-styles-wrapper .wp-switch-editor {
+  height: auto;
+}
+
 h1 {
   font-size: 40px;
   margin-top: 0;

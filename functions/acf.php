@@ -160,8 +160,13 @@ function my_acf_init() {
 			'category'			=> 'formatting',
 			'icon'				=> 'images-alt',
 			'keywords'			=> array( 'grid layout', 'staff members', 'carousel' ),
-			'mode'				=> 'edit',
-			'supports'			=> array( 'mode' => false ),
+			'mode'				=> 'preview',
+			'supports'		=> [
+				'align'			=> false,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
 		));
 		
 		// register events block
@@ -264,8 +269,13 @@ function my_acf_init() {
 			'category'			=> 'formatting',
 			'icon'				=> 'images-alt',
 			'keywords'			=> array( 'carousel', 'logos' ),
-			'mode'				=> 'edit',
-			'supports'			=> array( 'mode' => false ),
+			'mode'				=> 'preview',
+			'supports'		=> [
+				'align'			=> false,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
 		));
 		
 		// register content block
@@ -339,8 +349,13 @@ function my_acf_init() {
 			'category'			=> 'formatting',
 			'icon'				=> 'images-alt',
 			'keywords'			=> array( 'Call to action', 'informational' ),
-			'mode'				=> 'edit',
-			'supports'			=> array( 'mode' => false ),
+			'mode'				=> 'preview',
+			'supports'		=> [
+				'align'			=> false,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
 		));
 		
 		// register brand grid / carousel
@@ -352,8 +367,13 @@ function my_acf_init() {
 			'category'			=> 'formatting',
 			'icon'				=> 'images-alt',
 			'keywords'			=> array( 'Call to action', 'informational' ),
-			'mode'				=> 'edit',
-			'supports'			=> array( 'mode' => false ),
+			'mode'				=> 'preview',
+			'supports'		=> [
+				'align'			=> false,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
 		));
 		
 		// register brand grid / carousel
@@ -383,8 +403,13 @@ function my_acf_init() {
 			'category'			=> 'formatting',
 			'icon'				=> 'images-alt',
 			'keywords'			=> array( 'testimonial', 'quote' ),
-			'mode'				=> 'edit',
-			'supports'			=> array( 'mode' => false ),
+			'mode'				=> 'preview',
+			'supports'		=> [
+				'align'			=> false,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
 		));
 		
 		// register sidebar block
@@ -409,8 +434,13 @@ function my_acf_init() {
 			'category'			=> 'formatting',
 			'icon'				=> 'images-alt',
 			'keywords'			=> array( 'custom post type', 'feed' ),
-			'mode'				=> 'edit',
-			'supports'			=> array( 'mode' => false ),
+			'mode'				=> 'preview',
+			'supports'		=> [
+				'align'			=> false,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
 		));
 		
 		// register sidebar block
@@ -422,8 +452,13 @@ function my_acf_init() {
 			'category'			=> 'formatting',
 			'icon'				=> 'images-alt',
 			'keywords'			=> array( 'posts', 'category' ),
-			'mode'				=> 'edit',
-			'supports'			=> array( 'mode' => false ),
+			'mode'				=> 'preview',
+			'supports'		=> [
+				'align'			=> false,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
 		));
 		
 		// register image strip block
@@ -435,8 +470,13 @@ function my_acf_init() {
 			'category'			=> 'formatting',
 			'icon'				=> 'images-alt',
 			'keywords'			=> array( 'gallery', 'image' ),
-			'mode'				=> 'edit',
-			'supports'			=> array( 'mode' => false ),
+			'mode'				=> 'preview',
+			'supports'		=> [
+				'align'			=> false,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
 		));
 
 	}

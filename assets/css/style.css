@@ -2073,6 +2073,10 @@ body.block-editor-writing-flow .container {
   width: auto;
 }
 
+.editor-styles-wrapper .wp-switch-editor {
+  height: auto;
+}
+
 h1 {
   font-size: 40px;
   margin-top: 0;
@@ -3497,6 +3501,18 @@ section.credits {
   width: 100%;
   top: 0;
   left: 0;
+}
+
+.is-type-video.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 1024px) {
+  .is-type-video.aligncenter {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
 }
 
 .is-type-video > .wp-block-embed__wrapper {
