@@ -78,7 +78,7 @@ switch ( $headingalignment ) {
 	if( have_rows('right_column') ):
 		while( have_rows('right_column') ): the_row();
 			$img = get_sub_field('image');
-			if ( !empty( $img ) ): ?>
+			if ( !empty( $img && $offsetlayout ) ): ?>
 			<div class="innerContainerOffset topBottomPadding<?php if ($reverse): echo ' left'; else : echo ' right'; endif; ?>" style="background-image: url(<?php echo esc_url( $img['url'] ); ?>);">
 			<?php
 			endif;
