@@ -62,6 +62,7 @@ img.alignright {
   flex-wrap: wrap;
   //min-height: 350px;
   position: relative;
+  flex-direction: column;
 }
 /*
 .fitPortal::after {
@@ -86,12 +87,8 @@ img.alignright {
 */
 .fitPortal > h3 {
   flex-basis: 100%;
-  margin-top: auto;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   text-transform: uppercase;
-}
-.fitPortal > h3 ~ a {
-  margin-bottom: auto;
 }
 .contentPortal a {
   display: block;
