@@ -1,15 +1,17 @@
 footer {
-	background: url(../img/osp-brand-icon.svg) no-repeat bottom right scroll;
+  background: url(../img/osp-brand-icon.svg) no-repeat bottom right scroll;
 }
 footer.section {
-	padding-bottom: 0;
+  padding-bottom: 0;
+  background-color: #f0f6ff;
 }
 .credits {
-	padding-top: 4em;
+  padding-top: 4em;
 }
-.credits p, .copyRightLink {
-	font-size: 13px;
+.credits p,
+.copyRightLink {
+  font-size: 13px;
 }
 .copyRightLink {
-	text-decoration: underline;
+  text-decoration: underline;
 }

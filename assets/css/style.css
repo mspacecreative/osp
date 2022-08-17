@@ -4671,13 +4671,15 @@ footer {
 
 footer.section {
   padding-bottom: 0;
+  background-color: #f0f6ff;
 }
 
 .credits {
   padding-top: 4em;
 }
 
-.credits p, .copyRightLink {
+.credits p,
+.copyRightLink {
   font-size: 13px;
 }
 
