@@ -38,46 +38,37 @@ if ( $category ) {
 					
 					switch ( $cannedimg ) {
 						case 'pan-atl-partner':
-							$img = '
-							<div class="cannedImgContainer">
-								<img src="' . get_template_directory_uri() . '/assets/img/placeholders/osp-ocean-bg-feature.jpg">
-								<div class="cannedImgOverlay">
-									<h3>' . __('Pan-Atlantic Partner News') . '</h3>
-									<span>
-										' . get_template_part('img/pan-atl-partner') . '
-									</span>
-								</div>
-							</div>';
+							$cannedimg = '
+							<h3>' . __('Pan-Atlantic Partner News') . '</h3>
+							<span>
+								' . get_template_part('img/partner') . '
+							</span>';
 							break;
 						case 'partner':
-							$img = '
-							<div class="cannedImgContainer">
-								<img src="' . get_template_directory_uri() . '/assets/img/placeholders/osp-ocean-bg-feature.jpg">
-								<div class="cannedImgOverlay">
-									<h3>' . __('Partner News') . '</h3>
-									<span>
-										' . get_template_part('img/partner') . '
-									</span>
-								</div>
-							</div>';
+							$cannedimg = '
+							<h3>' . __('Partner News') . '</h3>
+							<span>
+								' . get_template_part('img/partner') . '
+							</span>';
 							break;
 						default:
-							$img = '
-							<div class="cannedImgContainer">
-								<img src="' . get_template_directory_uri() . '/assets/img/placeholders/osp-ocean-bg-feature.jpg">
-								<div class="cannedImgOverlay">
-									<h3>' . __('Partner News') . '</h3>
-									<span>
-									' . get_template_part('img/partner') . '
-									</span>
-								</div>
-							</div>';
+							$cannedimg = '
+							<h3>' . __('Partner News') . '</h3>
+							<span>
+								' . get_template_part('img/partner') . '
+							</span>';
 					} ?>
 					<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6">
 						<div class="cardContainer">
 							<?php 
 							if ( $url && $cannedimg ): ?>
 							<a href="<?php echo $url ?>" target="_blank">
+								<div class="cannedImgContainer">
+									<img src="<?php echo get_template_directory_uri(); ?>'/assets/img/placeholders/osp-ocean-bg-feature.jpg">
+									<div class="cannedImgOverlay">
+										<?php echo $cannedimg ?>
+									</div>
+								</div>
 								<?php echo $img ?>
 							</a>
 							<?php elseif ( $url && $featuredimg ): ?>
