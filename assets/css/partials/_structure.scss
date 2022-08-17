@@ -428,6 +428,18 @@ section.credits {
   left: 0;
 }
 
+.is-type-video.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 1024px) {
+  .is-type-video.aligncenter {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
 .is-type-video > .wp-block-embed__wrapper {
   height: 0;
   padding-bottom: 56.25%;
