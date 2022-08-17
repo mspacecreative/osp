@@ -3,7 +3,6 @@ $heading = get_field('heading');
 $content = get_field('content');
 $radar = get_field('display_radar_animation');
 $positioning = get_field('positioning');
-$spacing = get_field('vertical_spacing');
 
 switch ( $positioning ) {
 	case 'left':
@@ -14,24 +13,12 @@ switch ( $positioning ) {
 		break;
 	default:
 		$class = 'radarLeft';
-}
-switch ( $spacing ) {
-	case 'top':
-		$padding = 'topPadding';
-		break;
-	case 'bottom':
-		$padding = 'bottomPadding';
-		break;
-	case 'both':
-		$padding = 'topBottomPadding';
-		break;
-	default:
-		$padding = 'topBottomPadding';
-} ?>
+} 
+include 'includes/section-padding.php'; ?>
 <!-- cta -->
-<section class="<?php echo $padding ?> positionRelative light">
-	<div class="innerContainer w1080">
-		<div class="container">
+<section class="section positionRelative light<?php echo $sectionpadding ?>">
+	<div class="innerContainer">
+		<div class="container w1080">
 			<div class="cta textAlignCenter">
 				
 				<?php if ( $radar ): ?>
