@@ -73,8 +73,8 @@ switch ( $headingalignment ) {
 	<div class="section_has_bg_img_overlay" style="background-color: rgba(<?php if ( $textcolor == 'dark' ): echo '255,255,255,'; elseif ( $textcolor == 'light'): echo '0,0,25,'; endif; echo $overlayopacity; ?>);"></div>
 	<?php endif; ?>
 
-	<div class="innerContainer<?php echo $sectionwidth; if ($textcolor == 'light'): echo ' light'; endif; ?>">
-		<div class="container">
+	<div class="innerContainer<?php if ($textcolor == 'light'): echo ' light'; endif; ?>">
+		<div class="container<?php echo $sectionwidth ?>">
 			
 			<?php 
 			if ( $rowheading ) {
