@@ -2178,6 +2178,19 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+
+.inlineButtons li {
+  padding: 0 10px;
+}
+
+.inlineButtons .btn {
+  margin-top: 0;
 }
 
 .social li:last-child,
@@ -4166,7 +4179,8 @@ img {
   width: 100%;
 }
 
-.smallFooterLogo, .footerLogos .size-medium {
+.smallFooterLogo,
+.footerLogos .size-medium {
   padding: 20px 0;
   max-width: 130px;
 }
@@ -4175,7 +4189,8 @@ img {
   max-width: 90px;
 }
 
-.cosLogo, .cosLogo .size-medium {
+.cosLogo,
+.cosLogo .size-medium {
   margin-bottom: 25px;
 }
 
@@ -4191,7 +4206,8 @@ img {
   width: 100%;
 }
 
-.alignright.wp-caption, img.alignright {
+.alignright.wp-caption,
+img.alignright {
   width: auto;
   float: right;
   margin: 8px 0 20px 20px;
@@ -4229,32 +4245,30 @@ img {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  min-height: 350px;
   position: relative;
 }
 
+/*
 .fitPortal::after {
-  background: url(../img/textures/fit-point.svg);
-  right: 0;
-  background-position: bottom right;
+	background: url(../img/textures/fit-point.svg);
+    right: 0;
+    background-position: bottom right;
 }
-
 .fitPortal::before {
-  background: url(../img/textures/fit-point-left.svg);
-  left: 0;
-  background-position: bottom left;
+	background: url(../img/textures/fit-point-left.svg);
+    left: 0;
+    background-position: bottom left;
 }
-
 .fitPortal::before, .fitPortal::after {
-  position: absolute;
-  bottom: 0;
-  width: 50%;
-  height: 50px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  content: "";
+	position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+	content: "";
 }
-
+*/
 .fitPortal > h3 {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -4341,7 +4355,8 @@ img {
   border-right: 1px solid #c9c9c9;
 }
 
-.photoGrid li:nth-child(2n+1):nth-last-child(-n+2), .photoGrid li:nth-child(2n+1):nth-last-child(-n+2) ~ li {
+.photoGrid li:nth-child(2n + 1):nth-last-child(-n + 2),
+.photoGrid li:nth-child(2n + 1):nth-last-child(-n + 2) ~ li {
   border-bottom: none;
 }
 
@@ -4394,14 +4409,14 @@ img {
 }
 
 row.imageStripContainer {
-  margin-right: -.25rem;
-  margin-left: -.25rem;
+  margin-right: -0.25rem;
+  margin-left: -0.25rem;
 }
 
 .row.imageStripContainer > .col {
   height: 100%;
-  padding-right: .25rem;
-  padding-left: .25rem;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
   padding-bottom: 0;
 }
 
@@ -4430,8 +4445,8 @@ row.imageStripContainer {
     margin-left: auto;
     max-width: 1600px;
     background-color: #fff;
-    border-right: .75rem solid #fff;
-    border-left: .75rem solid #fff;
+    border-right: 0.75rem solid #fff;
+    border-left: 0.75rem solid #fff;
   }
 }
 
@@ -4472,8 +4487,8 @@ row.imageStripContainer {
           animation-name: sonar4;
   -webkit-animation-duration: 3.5s;
           animation-duration: 3.5s;
-  -webkit-animation-delay: .75s;
-          animation-delay: .75s;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -4487,8 +4502,8 @@ row.imageStripContainer {
           animation-name: sonar3;
   -webkit-animation-duration: 3.5s;
           animation-duration: 3.5s;
-  -webkit-animation-delay: .5s;
-          animation-delay: .5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -4502,14 +4517,14 @@ row.imageStripContainer {
           animation-name: sonar2;
   -webkit-animation-duration: 3.5s;
           animation-duration: 3.5s;
-  -webkit-animation-delay: .25s;
-          animation-delay: .25s;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
 
 .st5 {
-  fill: #BCBEC0;
+  fill: #bcbec0;
 }
 
 @-webkit-keyframes sonar6 {
@@ -4517,7 +4532,7 @@ row.imageStripContainer {
     stroke: transparent;
   }
   50% {
-    stroke: #BCBEC0;
+    stroke: #bcbec0;
   }
   100% {
     stroke: transparent;
@@ -4529,7 +4544,7 @@ row.imageStripContainer {
     stroke: transparent;
   }
   50% {
-    stroke: #BCBEC0;
+    stroke: #bcbec0;
   }
   100% {
     stroke: transparent;
@@ -4541,7 +4556,7 @@ row.imageStripContainer {
     stroke: transparent;
   }
   50% {
-    stroke: #BCBEC0;
+    stroke: #bcbec0;
   }
   100% {
     stroke: transparent;
@@ -4553,7 +4568,7 @@ row.imageStripContainer {
     stroke: transparent;
   }
   50% {
-    stroke: #BCBEC0;
+    stroke: #bcbec0;
   }
   100% {
     stroke: transparent;
@@ -4565,7 +4580,7 @@ row.imageStripContainer {
     stroke: transparent;
   }
   50% {
-    stroke: #BCBEC0;
+    stroke: #bcbec0;
   }
   100% {
     stroke: transparent;
@@ -4577,7 +4592,7 @@ row.imageStripContainer {
     stroke: transparent;
   }
   50% {
-    stroke: #BCBEC0;
+    stroke: #bcbec0;
   }
   100% {
     stroke: transparent;
@@ -4589,7 +4604,7 @@ row.imageStripContainer {
     stroke: transparent;
   }
   50% {
-    stroke: #BCBEC0;
+    stroke: #bcbec0;
   }
   100% {
     stroke: transparent;
@@ -4601,7 +4616,7 @@ row.imageStripContainer {
     stroke: transparent;
   }
   50% {
-    stroke: #BCBEC0;
+    stroke: #bcbec0;
   }
   100% {
     stroke: transparent;
@@ -4613,7 +4628,7 @@ row.imageStripContainer {
     stroke: transparent;
   }
   50% {
-    stroke: #BCBEC0;
+    stroke: #bcbec0;
   }
   100% {
     stroke: transparent;
@@ -4625,7 +4640,7 @@ row.imageStripContainer {
     stroke: transparent;
   }
   50% {
-    stroke: #BCBEC0;
+    stroke: #bcbec0;
   }
   100% {
     stroke: transparent;
