@@ -1,65 +1,69 @@
 img {
-	max-width: 100%;
-	height: auto;
-	display: block;
-	width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  width: 100%;
 }
-.smallFooterLogo, .footerLogos .size-medium {
-	padding: 20px 0;
-	max-width: 130px;
+.smallFooterLogo,
+.footerLogos .size-medium {
+  padding: 20px 0;
+  max-width: 130px;
 }
 .shrinkLogo {
-	max-width: 90px;
+  max-width: 90px;
 }
 
-.cosLogo, .cosLogo .size-medium {
-	//max-width: 200px;
-	margin-bottom: 25px;
+.cosLogo,
+.cosLogo .size-medium {
+  //max-width: 200px;
+  margin-bottom: 25px;
 }
 .cosLogo > div:last-of-type img {
-	max-width: 180px;
-    //margin: 0 auto 50px;
+  max-width: 180px;
+  //margin: 0 auto 50px;
 }
 .cosLogo > div:first-of-type img {
-	max-width: 100px;
-    //margin: 0 auto 50px;
+  max-width: 100px;
+  //margin: 0 auto 50px;
 }
 
 .featuredInlineImg .size-large {
-	width: 100%;
+  width: 100%;
 }
 
-.alignright.wp-caption, img.alignright {
-	width: auto;
-	float: right;
-	margin: 8px 0 20px 20px;
+.alignright.wp-caption,
+img.alignright {
+  width: auto;
+  float: right;
+  margin: 8px 0 20px 20px;
 }
 .wp-caption-text {
-	margin-top: 10px;
-	font-size: 14px;
-	font-weight: 600;
-	line-height: 1.35em;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35em;
 }
 
 .contentPortal {
-	position: relative;
-	min-height: 300px;
-	max-height: 300px;
-	overflow: hidden;
+  position: relative;
+  min-height: 300px;
+  max-height: 300px;
+  overflow: hidden;
 }
 .fitPortal {
-	position: relative;
-	min-height: 300px;
-	background: $brandBlue url(../img/textures/just-waves-blue.png);
+  position: relative;
+  min-height: 300px;
+  background: $brandBlue url(../img/textures/just-waves-blue.png);
 }
 .fitPortal {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	min-height: 350px;
-	position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  //min-height: 350px;
+  position: relative;
 }
+/*
 .fitPortal::after {
 	background: url(../img/textures/fit-point.svg);
     right: 0;
@@ -79,275 +83,280 @@ img {
     background-size: cover;
 	content: "";
 }
+*/
 .fitPortal > h3 {
-	flex-basis: 100%;
-	margin-top: auto;
-	margin-bottom: 20px;
-	text-transform: uppercase;
+  flex-basis: 100%;
+  margin-top: auto;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 .fitPortal > h3 ~ a {
-	margin-bottom: auto;
+  margin-bottom: auto;
 }
 .contentPortal a {
-	display: block;
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 .contentPortal img {
-	object-fit: cover;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+  object-fit: cover;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 // SHRINK LOGO
 .photoGrid .shrinkLogo img {
-	max-width: 200px;
-	margin: auto;
+  max-width: 200px;
+  margin: auto;
 }
 .photoGrid .shrinkLogo {
-	max-width: 100%;
-	padding: 10px 0;
+  max-width: 100%;
+  padding: 10px 0;
 }
 
 // PHOTO GRID
 .photoGrid {
-	display: flex;
-	list-style: none;
-	align-items: center;
-	flex-wrap: wrap;
-	justify-content: center;
-	padding: 0;
-	margin: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 .photoGrid a:hover img {
-	filter: grayscale(1);
-	transition: 0.25s ease-in-out;
+  filter: grayscale(1);
+  transition: 0.25s ease-in-out;
 }
 .photoGrid a img {
-	transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 .photoGrid li {
-	flex-basis: 50%;
-	margin-bottom: 25px;
+  flex-basis: 50%;
+  margin-bottom: 25px;
 }
 .photoGrid li img {
-	padding: 2em;
-	max-width: 250px;
-    margin: auto;
+  padding: 2em;
+  max-width: 250px;
+  margin: auto;
 }
 .photoGrid li:nth-child(odd) {
-	border-right: 1px solid #c9c9c9;
+  border-right: 1px solid #c9c9c9;
 }
 
-.photoGrid li:nth-child(2n+1):nth-last-child(-n+2), .photoGrid li:nth-child(2n+1):nth-last-child(-n+2) ~ li {
-	border-bottom: none;
+.photoGrid li:nth-child(2n + 1):nth-last-child(-n + 2),
+.photoGrid li:nth-child(2n + 1):nth-last-child(-n + 2) ~ li {
+  border-bottom: none;
 }
 
 .photoGrid li {
-	margin-bottom: 0;
-	padding-top: 1em;
+  margin-bottom: 0;
+  padding-top: 1em;
 }
 .photoGrid li {
-	position: relative;
-	min-height: 150px;
-	max-height: 150px;
+  position: relative;
+  min-height: 150px;
+  max-height: 150px;
 }
 .photoGrid li {
-	border-bottom: 1px solid #c9c9c9;
+  border-bottom: 1px solid #c9c9c9;
 }
 .about-us .photoGrid li:last-of-type {
-	flex-basis: 100%;
-	max-width: 100%;
-	//border-bottom: 1px solid #c9c9c9;
-	border-right: none;
-	min-height: auto;
+  flex-basis: 100%;
+  max-width: 100%;
+  //border-bottom: 1px solid #c9c9c9;
+  border-right: none;
+  min-height: auto;
 }
 .about-us .photoGrid li:last-of-type img {
-	max-width: 400px;
+  max-width: 400px;
 }
 
 // FIXED BACKGROUND IMAGE
 .fixedBgImg {
-	position: fixed;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: none;
 }
 .fixedBgImg img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 // ICONS
 .iconContainer {
-	width: 50px;
-    height: 50px;
-    margin-bottom: 25px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 25px;
 }
 
 // IMAGE STRIP
 row.imageStripContainer {
-	margin-right: -.25rem;
-	margin-left: -.25rem;
+  margin-right: -0.25rem;
+  margin-left: -0.25rem;
 }
 .row.imageStripContainer > .col {
-	height: 100%;
-	padding-right: .25rem;
-	padding-left: .25rem;
-	padding-bottom: 0;
+  height: 100%;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
+  padding-bottom: 0;
 }
 .imageStripInner {
-	height: 0;
-	padding-bottom: 56.25%;
-	position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
 }
 .imageStripInner img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 @media (min-width: 1600px) {
-	.stripOuter {
-		background-color: $brandBlue;
-	}
-	.stripInner {
-		margin-right: auto;
-		margin-left: auto;
-	    max-width: 1600px;
-	    background-color: #fff;
-	    border-right: .75rem solid #fff;
-	    border-left: .75rem solid #fff;
-	}
+  .stripOuter {
+    background-color: $brandBlue;
+  }
+  .stripInner {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1600px;
+    background-color: #fff;
+    border-right: 0.75rem solid #fff;
+    border-left: 0.75rem solid #fff;
+  }
 }
 
 // RADAR ANIMATION
 .st0 {
-	fill: none;
-	stroke: transparent;
-	stroke-miterlimit: 10;
-	animation-name: sonar6;
-	animation-duration: 3.5s;
-	animation-delay: 1.25s;
-	animation-iteration-count: infinite;
+  fill: none;
+  stroke: transparent;
+  stroke-miterlimit: 10;
+  animation-name: sonar6;
+  animation-duration: 3.5s;
+  animation-delay: 1.25s;
+  animation-iteration-count: infinite;
 }
 
 .st1 {
-	fill: none;
-	stroke-width: 2.5;
-	stroke-miterlimit: 10;
-	animation-name: sonar5;
-	animation-duration: 3.5s;
-	animation-delay: 1s;
-	animation-iteration-count: infinite;
+  fill: none;
+  stroke-width: 2.5;
+  stroke-miterlimit: 10;
+  animation-name: sonar5;
+  animation-duration: 3.5s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
 }
 
 .st2 {
-	fill: none;
-	stroke: transparent;
-	stroke-width: 5;
-	stroke-miterlimit: 10;
-	animation-name: sonar4;
-	animation-duration: 3.5s;
-	animation-delay: .75s;
-	animation-iteration-count: infinite;
+  fill: none;
+  stroke: transparent;
+  stroke-width: 5;
+  stroke-miterlimit: 10;
+  animation-name: sonar4;
+  animation-duration: 3.5s;
+  animation-delay: 0.75s;
+  animation-iteration-count: infinite;
 }
 
 .st3 {
-	fill: none;
-	stroke: transparent;
-	stroke-width: 10;
-	stroke-miterlimit: 10;
-	animation-name: sonar3;
-	animation-duration: 3.5s;
-	animation-delay: .5s;
-	animation-iteration-count: infinite;
+  fill: none;
+  stroke: transparent;
+  stroke-width: 10;
+  stroke-miterlimit: 10;
+  animation-name: sonar3;
+  animation-duration: 3.5s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
 }
 
 .st4 {
-	fill: none;
-	stroke: transparent;
-	stroke-width: 20;
-	stroke-miterlimit: 10;
-	animation-name: sonar2;
-	animation-duration: 3.5s;
-	animation-delay: .25s;
-	animation-iteration-count: infinite;
+  fill: none;
+  stroke: transparent;
+  stroke-width: 20;
+  stroke-miterlimit: 10;
+  animation-name: sonar2;
+  animation-duration: 3.5s;
+  animation-delay: 0.25s;
+  animation-iteration-count: infinite;
 }
 
 .st5 {
-	fill: #BCBEC0;
+  fill: #bcbec0;
 }
-	@keyframes sonar6 {
-0% {
-	stroke: transparent;
-}
+@keyframes sonar6 {
+  0% {
+    stroke: transparent;
+  }
 
-50% {
-	stroke: #BCBEC0;
-}
+  50% {
+    stroke: #bcbec0;
+  }
 
-100% {
-	stroke: transparent;
+  100% {
+    stroke: transparent;
+  }
 }
-}@keyframes sonar5 {
-0% {
-	stroke: transparent;
-}
+@keyframes sonar5 {
+  0% {
+    stroke: transparent;
+  }
 
-50% {
-	stroke: #BCBEC0;
-}
+  50% {
+    stroke: #bcbec0;
+  }
 
-100% {
-	stroke: transparent;
+  100% {
+    stroke: transparent;
+  }
 }
-}@keyframes sonar4 {
-0% {
-	stroke: transparent;
-}
+@keyframes sonar4 {
+  0% {
+    stroke: transparent;
+  }
 
-50% {
-	stroke: #BCBEC0;
-}
+  50% {
+    stroke: #bcbec0;
+  }
 
-100% {
-	stroke: transparent;
+  100% {
+    stroke: transparent;
+  }
 }
-}@keyframes sonar3 {
-0% {
-	stroke: transparent;
-}
+@keyframes sonar3 {
+  0% {
+    stroke: transparent;
+  }
 
-50% {
-	stroke: #BCBEC0;
-}
+  50% {
+    stroke: #bcbec0;
+  }
 
-100% {
-	stroke: transparent;
+  100% {
+    stroke: transparent;
+  }
 }
-}@keyframes sonar2 {
-0% {
-	stroke: transparent;
-}
+@keyframes sonar2 {
+  0% {
+    stroke: transparent;
+  }
 
-50% {
-	stroke: #BCBEC0;
-}
+  50% {
+    stroke: #bcbec0;
+  }
 
-100% {
-	stroke: transparent;
-}
+  100% {
+    stroke: transparent;
+  }
 }
