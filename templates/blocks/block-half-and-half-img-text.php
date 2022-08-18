@@ -180,7 +180,7 @@ switch ( $headingalignment ) {
 					$staticimg = get_sub_field('static_image');
 					$size = 'full';
 					if ( $staticimg ) {
-						echo wp_get_attachment_image( $staticimg['ID'], $size );
+						echo wp_get_attachment_image( $staticimg, $size );
 					}
 				} elseif ( $contenttype == 'content' ) {
 					include 'includes/content.php';
