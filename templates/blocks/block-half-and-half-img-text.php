@@ -172,11 +172,14 @@ switch ( $headingalignment ) {
 				<?php 
 				if ( $contenttype == 'carousel' ) {
 					include 'includes/carousel.php';
-				} elseif ( $contenttype == 'grid' ) {
+				}
+				if ( $contenttype == 'grid' ) {
 					include 'includes/grid.php';
-				} elseif ( $contenttype == 'image' ) {
+				}
+				if ( $contenttype == 'image' ) {
 					include 'includes/image.php';
-				} elseif ( $contenttype == 'content' ) {
+				}
+				if ( $contenttype == 'content' ) {
 					include 'includes/content.php';
 				} ?>
 
