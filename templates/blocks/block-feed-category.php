@@ -53,7 +53,7 @@ if ( $category ) {
 					<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6">
 						<div class="cardContainer">
 							<?php 
-							if ( $url && $cannedimg ): ?>
+							if ( $url && $cannedimg && empty($featuredimg) ): ?>
 							<a href="<?php echo $url ?>" target="_blank">
 								<div class="cannedImgContainer">
 									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholders/osp-ocean-bg-feature.jpg">
