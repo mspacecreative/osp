@@ -522,18 +522,7 @@
     max-width: 100%;
     flex-basis: 100%;
   }
-  .row.gutterSpaceWide > .col:nth-child(2n + 1):nth-last-child(-n + 2),
-  .row.gutterSpaceWider > .col:nth-child(2n + 1):nth-last-child(-n + 2) {
-    padding-bottom: 2em;
-  }
-  .row.gutterSpaceWide > .col:last-of-type,
-  .row.gutterSpaceWider > .col:last-of-type,
-  .row.gutterSpaceWide
-    > .col:nth-child(2n + 1):nth-last-child(-n + 2)
-    ~ .col
-    .row.gutterSpaceWider
-    > .col:nth-child(2n + 1):nth-last-child(-n + 2)
-    ~ .col {
+  .feedGrid .col:last-child {
     padding-bottom: 0;
   }
 }
@@ -571,11 +560,6 @@
   }
   .heroContent {
     height: 100vh;
-  }
-  .row.gutterSpaceWide.cards > .col,
-  .row.gutterSpaceWider.cards > .col,
-  .row.cards > .col {
-    padding-bottom: 3em;
   }
 }
 
