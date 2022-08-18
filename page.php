@@ -21,7 +21,9 @@ $titlealignment = get_field('title_alignment') ? ' text-align-center' : ''; ?>
 	 			
 	 	<div class="innerContainer section4<?php echo $titlewidth; ?>" style="padding-bottom: 1em;">
 	 			
-			<h1 class="postTitle<?php echo $titlealignment ?>"><?php echo $title ?></h1>
+			<div class="container">
+				<h1 class="postTitle<?php echo $titlealignment ?>"><?php echo $title ?></h1>
+			</div>
 					
 		</div>
 			
