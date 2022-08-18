@@ -177,7 +177,7 @@ switch ( $headingalignment ) {
 				} elseif ( $contenttype == 'image' ) {
 					$title = get_the_title($post->ID);
 					$staticimg = get_sub_field('static_image');
-					$alt = get_post_meta($staticimg['ID'], '_wp_attachment_image_alt', TRUE) ? get_post_meta($staticimg['ID'], '_wp_attachment_image_alt', TRUE) : $title;
+					$alt = get_post_meta($staticimg, '_wp_attachment_image_alt', TRUE) ? get_post_meta($staticimg, '_wp_attachment_image_alt', TRUE) : $title;
 					$size = 'full';
 					if ( $staticimg ) {
 						echo wp_get_attachment_image( $staticimg, $size, false, array('class' => 'full-width', 'alt' => $alt) );
