@@ -138,7 +138,7 @@ if ( $category ) {
 				if ( $catlink ) {
 					echo '
 					<div' . $buttonalignment . '>
-						<a class="btn blue" style="margn-top: 0;" href="' . $catlink . '">' . __('View all') . '</a>
+						<a class="btn blue" href="' . $catlink . '">' . __('View all') . '</a>
 					</div>';
 				} ?>
 			</div>
