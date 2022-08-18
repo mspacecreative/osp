@@ -175,12 +175,12 @@ switch ( $headingalignment ) {
 				} elseif ( $contenttype == 'grid' ) {
 					include 'includes/grid.php';
 				} elseif ( $contenttype == 'image' ) {
-					//$staticimg = get_sub_field('static_image');
 					$title = get_the_title($post->ID);
 					$staticimg = get_sub_field('static_image');
+					$alt = get_post_meta($staticimg['ID'], '_wp_attachment_image_alt', TRUE) ? get_post_meta($staticimg['ID'], '_wp_attachment_image_alt', TRUE) : $title;
 					$size = 'full';
 					if ( $staticimg ) {
-						echo wp_get_attachment_image( $staticimg, $size, false, array('class' => 'full-width', 'alt' => $title) );
+						echo wp_get_attachment_image( $staticimg, $size, false, array('class' => 'full-width', 'alt' => $alt) );
 					}
 				} elseif ( $contenttype == 'content' ) {
 					include 'includes/content.php';
