@@ -3,6 +3,7 @@ $heading = get_field('heading');
 $category = get_field('group');
 
 include 'includes/section-padding.php';
+include 'includes/section-width.php';
 
 if ( $category ) {
 
@@ -14,11 +15,11 @@ if ( $category ) {
 	$loop = new WP_Query( $args );
 	if ( $loop->have_posts() ) : ?>
 	
-	<section class="section">
+	<section class="section<?php echo $sectionpadding ?>">
 		<div class="offsetBg"></div>
 		
 		<div class="innerContainer clearfix">
-			<div class="container<?php echo $sectionpadding ?>">
+			<div class="container<?php echo $sectionwidth ?>">
 				<?php 
 				if ( $heading ) {
 					echo '<h2 class="light">' . $heading . '</h2>';
