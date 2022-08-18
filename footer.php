@@ -4,14 +4,14 @@
 		<!-- footer -->
 		<footer class="section">
 			<div class="innerContainer">
-				<?php $footercopy = get_field('footer_copy', 'options');
-				
-				if ( $footercopy ): ?>
-				<p><?php echo $footercopy ?></p>
-				<?php endif; ?>
 				
 				<!-- logos -->
 				<div class="container topMargin25">
+					<?php $footercopy = get_field('footer_copy', 'options');
+					
+					if ( $footercopy ): ?>
+					<p><?php echo $footercopy ?></p>
+					<?php endif; ?>
 					<div class="row middle-lg middle-md">
 						<div class="col col-lg-7 col-md-7 col-sm-12 col-xs-12 borderRight">
 							<div class="container">
@@ -102,15 +102,15 @@
 						endwhile;
 						endif; ?>
 					</div>
+					<!-- foot note -->
+					<?php 
+					$footnote = get_field('foot_note', 'options');
+					if ( $footnote ) {
+						echo '<p style="margin-top:25px; max-width: 450px;">' . $footnote . '</p>';
+					} ?>
 				</div>
 				<!-- / logos -->
 				
-				<!-- foot note -->
-				<?php 
-				$footnote = get_field('foot_note', 'options');
-				if ( $footnote ) {
-					echo '<p style="margin-top:25px; max-width: 450px;">' . $footnote . '</p>';
-				} ?>
 			</div>
 			
 			<!-- credits -->
