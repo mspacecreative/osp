@@ -1,56 +1,60 @@
 @import "partials/_flexboxgrid.min.scss";
 @import "partials/_colors.scss";
 @import "partials/_typography.scss";
+@import "partials/_feed.scss";
+@import "partials/_slick.scss";
 
 html {
-	:where(.wp-block) {
-		max-width: 100%;
-	}
-	:where(div.editor-styles-wrapper) {
-		padding: 0;
-	}
+  :where(.wp-block) {
+    max-width: 100%;
+  }
+  :where(div.editor-styles-wrapper) {
+    padding: 0;
+  }
 }
 
 .block-editor__container .editor-styles-wrapper {
-	font-family: 'Rajdhani', sans-serif!important;
-	padding: 0!important;
-	.wp-block, .container {
-		width: auto!important;
-	}
-	.dark, .acf-icon.dark {
-		color: #fff!important;
-	}
-	.radioMarginPadding ul {
-		margin-left: 0;
-		padding-left: 0;
-	}
+  font-family: "Rajdhani", sans-serif !important;
+  padding: 0 !important;
+  .wp-block,
+  .container {
+    width: auto !important;
+  }
+  .dark,
+  .acf-icon.dark {
+    color: #fff !important;
+  }
+  .radioMarginPadding ul {
+    margin-left: 0;
+    padding-left: 0;
+  }
 }
 div.editor-styles-wrapper.block-editor-writing-flow {
-	padding: 0!important;
-	margin: 0!important;
-	max-width: 100%!important;
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: 100% !important;
 }
 .edit-post-visual-editor__post-title-wrapper {
-	padding: 0 2em;
+  padding: 0 2em;
 }
 .components-resizable-box__container.has-show-handle {
-	width: 100%!important;
+  width: 100% !important;
 }
 
 .interface-interface-skeleton__content.interface-interface-skeleton__content {
-	display: block;
+  display: block;
 }
 @media (min-width: 782px) {
-	.interface-interface-skeleton__sidebar .interface-complementary-area {
-	    width: 500px!important;
-	}
+  .interface-interface-skeleton__sidebar .interface-complementary-area {
+    width: 500px !important;
+  }
 }
 @media (min-width: 1920px) {
-	.block-editor-page .interface-interface-skeleton__content {
-		max-width: 70%!important;
-	}
-	.block-editor-page .interface-interface-skeleton__sidebar {
-		max-width: 30%!important;
-		width: 100%!important;
-	}
+  .block-editor-page .interface-interface-skeleton__content {
+    max-width: 70% !important;
+  }
+  .block-editor-page .interface-interface-skeleton__sidebar {
+    max-width: 30% !important;
+    width: 100% !important;
+  }
 }
