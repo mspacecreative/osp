@@ -116,14 +116,31 @@ if ( $category ) {
 					</div>
 					<?php endwhile; ?>
 
-					<?php 
-					$catid = get_cat_ID( $category->name );
-					$catlink = get_category_link( $catid );
-					if ( $catlink ) {
-						echo '<a class="btn dark blue floatRight" href="' . $catlink . '">' . __('View all') . '</a>';
-					} ?>
-
 				</div>
+				<?php 
+				$catid = get_cat_ID( $category->name );
+				$catlink = get_category_link( $catid );
+				$buttonalignment = get_field('button_alignment');
+				switch ($buttonalignment) {
+					case 'left':
+						$buttonalignment = '';
+						break;
+					case 'center':
+						$buttonalignment = ' class="text-align-center"';
+						break;
+					case 'right':
+						$buttonalignment = ' class="text-align-right"';
+						break;
+					default:
+						$buttonalignment = '';
+						break;
+				}
+				if ( $catlink ) {
+					echo '
+					<div' . $buttonalignment . '>
+						<a class="btn blue" style="margn-top: 0;" href="' . $catlink . '">' . __('View all') . '</a>
+					</div>';
+				} ?>
 			</div>
 			
 		</div>
