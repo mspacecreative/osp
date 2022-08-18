@@ -44,7 +44,7 @@ switch ( $bgcolor ) {
 
 switch ( $aligncolumns ) {
 	case 'top':
-		$aligncolumns = ' top-lg top-md';
+		$aligncolumns = '';
 		break;
 	case 'middle':
 		$aligncolumns = ' middle-lg middle-md';
@@ -83,7 +83,7 @@ switch ( $headingalignment ) {
 			
 			<div class="row relativePositioning<?php echo $reverse, $aligncolumns, $sectiongutters; ?>">
 			
-			<?php
+				<?php
 				if( have_rows('left_column') ):
 		 		while( have_rows('left_column') ): the_row();
 		 		
