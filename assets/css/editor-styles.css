@@ -122,6 +122,8 @@ ul {
   display: flex;
   padding: 0;
   list-style: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .inlineButtons li {
