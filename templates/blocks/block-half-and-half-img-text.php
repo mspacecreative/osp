@@ -175,7 +175,12 @@ switch ( $headingalignment ) {
 				} elseif ( $contenttype == 'grid' ) {
 					include 'includes/grid.php';
 				} elseif ( $contenttype == 'image' ) {
-					include 'includes/image.php';
+					$staticimg = get_sub_field('static_image');
+					$title = get_the_title($post->ID);
+					//$size = 'full';
+					if ( $staticimg ) {
+						echo '<img src="' . $staticimg . '" class="full-width" alt="' . $title . '">';
+					}
 				} elseif ( $contenttype == 'content' ) {
 					include 'includes/content.php';
 				} ?>
