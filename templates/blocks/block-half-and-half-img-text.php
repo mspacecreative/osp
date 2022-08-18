@@ -176,11 +176,11 @@ switch ( $headingalignment ) {
 					include 'includes/grid.php';
 				} elseif ( $contenttype == 'image' ) {
 					//$staticimg = get_sub_field('static_image');
-					//$title = get_the_title($post->ID);
+					$title = get_the_title($post->ID);
 					$staticimg = get_sub_field('static_image');
 					$size = 'full';
 					if ( $staticimg ) {
-						echo wp_get_attachment_image( $staticimg, $size );
+						echo wp_get_attachment_image( $staticimg, $size, false, array('class' => 'full-width', 'alt' => $title) );
 					}
 				} elseif ( $contenttype == 'content' ) {
 					include 'includes/content.php';
