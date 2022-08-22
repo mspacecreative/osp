@@ -169,3 +169,6 @@ h6 ~ .archive_grid {
 .row > .col.one_col:nth-child(4n + 1):nth-last-child(-n + 4) ~ .col.one_col {
   margin-bottom: 4em;
 }
+.row > .col.one_col:last-child {
+  margin-bottom: 0;
+}

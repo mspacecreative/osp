@@ -16,6 +16,15 @@ body.block-editor-writing-flow .container {
   height: auto;
 }
 
+.editor-styles-wrapper .iconContainer {
+  width: 50px;
+  margin-bottom: 25px;
+}
+
+.editor-styles-wrapper .icon-text {
+  width: 100%;
+}
+
 h1 {
   font-size: 40px;
   margin-top: 0;
@@ -1940,6 +1949,10 @@ h6 ~ .archive_grid {
 .row > .col.one_col:nth-child(4n + 1):nth-last-child(-n + 4),
 .row > .col.one_col:nth-child(4n + 1):nth-last-child(-n + 4) ~ .col.one_col {
   margin-bottom: 4em;
+}
+
+.row > .col.one_col:last-child {
+  margin-bottom: 0;
 }
 
 .btn {
