@@ -12,17 +12,15 @@ body.block-editor-writing-flow .container {
   width: auto;
 }
 
-.editor-styles-wrapper {
-  .wp-switch-editor {
-    height: auto;
-  }
-  .iconContainer {
-    width: 50px;
-    margin-bottom: 25px;
-  }
-  .icon-text {
-    width: 100%;
-  }
+.editor-styles-wrapper .wp-switch-editor {
+  height: auto;
+}
+.editor-styles-wrapper .iconContainer {
+  width: 50px;
+  margin-bottom: 25px;
+}
+.editor-styles-wrapper .icon-text {
+  width: 100%;
 }
 
 h1 {
