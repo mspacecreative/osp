@@ -43,7 +43,7 @@ include 'includes/column-gutters.php'; ?>
 			$inlinelinks = get_sub_field('inline_links');
 			$maxwidth = get_sub_field('max_width') ? ' class="has-max-width" style="max-width: ' . get_sub_field('max_width') . '"' : ''; ?>
 			
-			<div class="bottomMarginMobile<?php echo $columns; ?>col-sm-12 col-xs-12">
+			<div class="bottomMarginMobile<?php echo $columns; ?>col-sm-6 col-xs-12">
 				
 				<?php if ($boxedcontent): ?>
 				<div class="boxed<?php echo $roundedcorners; if ($sectionbgcolor == 'dark'): echo ' light dark'; endif; ?>">
