@@ -17,7 +17,8 @@
   .topMarginMobile50 {
     margin-top: 50px;
   }
-  .row.gutterSpaceWide > .col:nth-child(2n + 1):nth-last-child(-n + 2) {
+  .row.gutterSpaceWide > .col:nth-child(2n + 1):nth-last-child(-n + 2),
+  .row.gutterSpaceWide > .col:nth-child(2n + 1):nth-last-child(-n + 2) ~ .col {
     padding-bottom: 1em;
   }
   .innerContainerOffset.topBottomPadding {
@@ -44,11 +45,6 @@
   .topBottomPadding {
     padding-top: 4em;
     padding-bottom: 4em;
-  }
-  .row.gutterSpaceWide.cards > .col,
-  .row.gutterSpaceWider.cards > .col,
-  .row.cards > .col {
-    padding-bottom: 2em;
   }
 }
 
