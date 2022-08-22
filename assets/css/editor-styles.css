@@ -128,6 +128,11 @@ ul {
 
 .inlineButtons li {
   padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.inlineButtons li:last-child {
+  margin-bottom: 0;
 }
 
 .inlineButtons .btn {
