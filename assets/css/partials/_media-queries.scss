@@ -163,9 +163,6 @@
     float: right;
     margin: 8px 0 20px 20px;
   }
-  .trp_language_switcher_shortcode {
-    margin-right: 0;
-  }
   .offsetBg {
     height: 80%;
   }
@@ -174,17 +171,27 @@
     margin-bottom: 0;
   }
   .cta {
-    padding: 3em;
+    padding: 2em;
   }
   .section,
-  .topBottomPadding {
+  .top-bottom-padding {
     padding-top: 4em;
     padding-bottom: 4em;
   }
-  .topPadding {
+  .section.no-top-bottom-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .section.no-top-padding {
+    padding-top: 0;
+  }
+  .section.no-bottom-padding {
+    padding-bottom: 0;
+  }
+  .section.top-padding {
     padding-top: 4em;
   }
-  .bottotmPadding {
+  .section.bottom-padding {
     padding-bottom: 4em;
   }
   .owl-item {
