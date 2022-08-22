@@ -4971,9 +4971,8 @@ MODAL STYLES
   .topMarginMobile50 {
     margin-top: 50px;
   }
-  .row.gutterSpaceWide > .col:nth-child(2n + 1):nth-last-child(-n + 2),
-  .row.gutterSpaceWide > .col:nth-child(2n + 1):nth-last-child(-n + 2) ~ .col {
-    padding-bottom: 1em;
+  .row.gutterSpaceWide > .col:nth-child(2n + 1):nth-last-child(-n + 2) {
+    padding-bottom: 2em;
   }
   .innerContainerOffset.topBottomPadding {
     background-image: none !important;
@@ -5005,7 +5004,8 @@ MODAL STYLES
     padding-top: 4em;
     padding-bottom: 4em;
   }
-  .col:last-of-type {
+  .col:last-of-type,
+  .row.gutterSpaceWide > .col:nth-child(2n + 1):nth-last-child(-n + 2) ~ .col {
     padding-bottom: 0;
   }
 }
