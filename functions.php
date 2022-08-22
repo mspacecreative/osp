@@ -383,7 +383,7 @@ include 'functions/osp-menus.php';
 include 'functions/acf.php';
 include 'functions/gutenberg.php';
 include 'functions/shortcodes.php';
-include 'functions/block-wrap.php';
+//include 'functions/block-wrap.php';
 include 'functions/tinymce.php';
 include 'functions/remove-ptag.php';
 include 'functions/remove-brand-slug.php';
