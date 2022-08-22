@@ -5004,11 +5004,6 @@ MODAL STYLES
     padding-top: 4em;
     padding-bottom: 4em;
   }
-  .row.gutterSpaceWider > .bottomMarginMobile.col,
-  .row.gutterSpaceWide > .bottomMarginMobile.col,
-  .row > .bottomMarginMobile.col {
-    padding-bottom: 1em;
-  }
   .row.gutterSpaceWide.cards > .col,
   .row.gutterSpaceWider.cards > .col,
   .row.cards > .col {
@@ -5111,10 +5106,8 @@ MODAL STYLES
   h1 {
     font-size: 32px;
   }
-  .row.gutterSpaceWider > .bottomMarginMobile.keepSpacing.col,
-  .row.gutterSpaceWide > .bottomMarginMobile.keepSpacing.col,
-  .row > .bottomMarginMobile.keepSpacing.col {
-    padding-bottom: 4em;
+  .bottomMarginMobile.keepSpacing {
+    margin-bottom: 30px;
   }
   .contentPortals .row:nth-of-type(2) .col:nth-of-type(2) {
     -webkit-box-ordinal-group: 2;
