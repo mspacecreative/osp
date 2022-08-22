@@ -3,6 +3,8 @@ $radar = get_field('radar');
 $heading = get_field('heading');
 $subheading = get_field('subheading');
 $showsocial = get_field('show_social_media_icons');
+
+include 'includes/section-width.php';
 ?>
 <!-- cta -->
 <section class="section fullSpanCTA lightGreyBg waveTexture overflowHidden textAlignCenter">
@@ -54,7 +56,7 @@ $showsocial = get_field('show_social_media_icons');
 	
 	<div class="innerContainer">
 
-		<div class="container">
+		<div class="container<?php echo $sectionwidth ?>">
 
 			<h2><?php echo $heading ?></h2>
 			
