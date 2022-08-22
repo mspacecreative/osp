@@ -1935,6 +1935,13 @@ h6 ~ .archive_grid {
   }
 }
 
+.row > .col.one_col:nth-child(3n + 1):nth-last-child(-n + 3),
+.row > .col.one_col:nth-child(3n + 1):nth-last-child(-n + 3) ~ .col.one_col,
+.row > .col.one_col:nth-child(4n + 1):nth-last-child(-n + 4),
+.row > .col.one_col:nth-child(4n + 1):nth-last-child(-n + 4) ~ .col.one_col {
+  margin-bottom: 4em;
+}
+
 .btn {
   display: inline-block;
   padding: 0.75em 1.5em;
