@@ -3,7 +3,6 @@ $rowheading = get_field('row_heading');
 $rowsubheading = get_field('row_sub_heading');
 $textcolor = get_field('text_colour');
 $boxedcontent = get_field('boxed_content');
-$narrow = get_field('narrow');
 $centeredtext = get_field('center_align_text') ? ' text-align-center' : '';
 $roundedcorners = get_field('rounded_corners') ? ' roundedCorners' : '';
 $centeredheading = get_field('centered_heading') ? ' class="text-align-center"' : '';
@@ -20,60 +19,64 @@ include 'includes/column-gutters.php'; ?>
 
 <div<?php if ($id): echo ' id="' . $id . '"'; endif; ?> class="section<?php echo $sectionbgcolor, $sectionpadding, esc_attr($className); ?>">
 
- 	<div class="innerContainer<?php echo $sectionwidth; ?>">
-	
-		<?php if ( $rowheading ) : ?>
-		<h2<?php echo $centeredheading; ?>>
-			<?php echo $rowheading; ?>
-		</h2>
-		<?php endif;
+ 	<div class="innerContainer">
 
-		if ($rowsubheading) : ?>
-		<h3 class="bottomMargin50<?php echo $centeredtext; ?>">
-			<?php $rowsubheading; ?>
-		</h3>
-		<?php endif;
-		
-		if( have_rows('columns_grid') ): ?>
-		
-		<div class="row<?php echo $sectiongutters, $icon, $verticalalignment; ?>">
+		<div class="container<?php echo $sectionwidth ?>">
+	
+			<?php if ( $rowheading ) : ?>
+			<h2<?php echo $centeredheading; ?>>
+				<?php echo $rowheading; ?>
+			</h2>
+			<?php endif;
+
+			if ($rowsubheading) : ?>
+			<h3 class="bottomMargin50<?php echo $centeredtext; ?>">
+				<?php $rowsubheading; ?>
+			</h3>
+			<?php endif;
 			
-			<?php while( have_rows('columns_grid') ): the_row();
+			if( have_rows('columns_grid') ): ?>
 			
-			$inlinelinks = get_sub_field('inline_links');
-			$maxwidth = get_sub_field('max_width') ? ' class="has-max-width" style="max-width: ' . get_sub_field('max_width') . '"' : ''; ?>
-			
-			<div class="bottomMarginMobile<?php echo $columns; ?>col-sm-6 col-xs-12">
+			<div class="row<?php echo $sectiongutters, $icon, $verticalalignment; ?>">
 				
-				<?php if ($boxedcontent): ?>
-				<div class="boxed<?php echo $roundedcorners; if ($sectionbgcolor == 'dark'): echo ' light dark'; endif; ?>">
-				<?php endif;
+				<?php while( have_rows('columns_grid') ): the_row();
 				
-				if ($maxwidth) : ?>
-				<div<?php echo $maxwidth; ?>>
-				<?php endif;
+				$inlinelinks = get_sub_field('inline_links');
+				$maxwidth = get_sub_field('max_width') ? ' class="has-max-width" style="max-width: ' . get_sub_field('max_width') . '"' : ''; ?>
 				
-					if ( $inlinelinks ) {
-						include 'includes/content-inline.php';
-					} else {
-						include 'includes/content-stacked.php';
-					}
+				<div class="bottomMarginMobile<?php echo $columns; ?>col-sm-6 col-xs-12">
 					
-				if ($maxwidth) : ?>
+					<?php if ($boxedcontent): ?>
+					<div class="boxed<?php echo $roundedcorners; if ($sectionbgcolor == 'dark'): echo ' light dark'; endif; ?>">
+					<?php endif;
+					
+					if ($maxwidth) : ?>
+					<div<?php echo $maxwidth; ?>>
+					<?php endif;
+					
+						if ( $inlinelinks ) {
+							include 'includes/content-inline.php';
+						} else {
+							include 'includes/content-stacked.php';
+						}
+						
+					if ($maxwidth) : ?>
+					</div>
+					<?php endif; ?>
+					
+					<?php if ($boxedcontent): ?>
+					</div>
+					<?php endif; ?>
+					
 				</div>
-				<?php endif; ?>
 				
-				<?php if ($boxedcontent): ?>
-				</div>
-				<?php endif; ?>
+				<?php endwhile; ?>
 				
 			</div>
 			
-			<?php endwhile; ?>
-			
+			<?php endif; ?>
+
 		</div>
-		
-		<?php endif; ?>
 		
 	</div>
 </div>
