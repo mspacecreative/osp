@@ -2090,16 +2090,16 @@ body.block-editor-writing-flow .container {
   width: auto;
 }
 
-.editor-styles-wrapper .wp-switch-editor {
+.wp-switch-editor {
   height: auto;
 }
 
-.editor-styles-wrapper .iconContainer {
+.iconContainer {
   width: 50px;
   margin-bottom: 25px;
 }
 
-.editor-styles-wrapper .icon-text {
+.icon-text {
   width: 100%;
 }
 
