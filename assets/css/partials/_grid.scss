@@ -162,3 +162,10 @@ h6 ~ .archive_grid {
     padding-right: 0;
   }
 }
+
+.row > .col.one_col:nth-child(3n + 1):nth-last-child(-n + 3),
+.row > .col.one_col:nth-child(3n + 1):nth-last-child(-n + 3) ~ .col.one_col,
+.row > .col.one_col:nth-child(4n + 1):nth-last-child(-n + 4),
+.row > .col.one_col:nth-child(4n + 1):nth-last-child(-n + 4) ~ .col.one_col {
+  margin-bottom: 4em;
+}

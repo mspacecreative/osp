@@ -1,7 +1,7 @@
 <?php
 $heading = get_field('heading');
 $narrow = get_field('narrow_content_column');
-$bgimg = get_field('background_image') ? get_field('background_image') : get_template_directory_uri() . '/assets/img/placeholders/ocean-bg.jpg)';
+$bgimg = get_field('background_image') ? get_field('background_image') : get_template_directory_uri() . '/assets/img/placeholders/ocean-bg.jpg';
 
 include 'includes/section-width.php';
 include 'includes/horizontal-alignment.php';
