@@ -1,24 +1,17 @@
 <?php
 $heading = get_field('heading');
 $narrow = get_field('narrow_content_column');
-$bgimg = get_field('background_image');
+$bgimg = get_field('background_image') ? get_field('background_image') : get_template_directory_uri() . '/assets/img/placeholders/ocean-bg.jpg)';
 
-if ( $bgimg ) {
+include 'includes/section-width.php';
+include 'includes/horizontal-alignment.php';
+
 echo '
 <section id="faqs" class="faqs section light" style="background-image: url(' . $bgimg . ');">';
-} else {
-echo '
-<section id="faqs" class="faqs section light" style="background-image: url(' . get_template_directory_uri() . '/assets/img/placeholders/ocean-bg.jpg);">';
-}
-	if ( $narrow ) {
-	echo '
-	<div class="innerContainer w1080">';
-	} else {
 	echo '
 	<div class="innerContainer">';
-	}
 
-		echo '<div class="container">';
+		echo '<div class="container' . $sectionwidth, $horizontalalignment . '">';
 	
 		if ( $heading ) {
 			echo '<h2>' . $heading . '</h2>';
