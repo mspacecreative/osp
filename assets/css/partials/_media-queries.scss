@@ -46,6 +46,10 @@
     padding-top: 4em;
     padding-bottom: 4em;
   }
+
+  .col:last-of-type {
+    padding-bottom: 0;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -261,20 +265,13 @@
   .contentWrap {
     margin-top: 100px;
   }
-  .row.gutterSpaceWide > .col:last-of-type,
-  .row.gutterSpaceWider > .col:last-of-type,
-  .col:last-of-type,
-  .row.gutterSpaceWide > .col:nth-child(2n + 1):nth-last-child(-n + 2),
-  .row.gutterSpaceWide > .col:nth-child(2n + 1):nth-last-child(-n + 2) ~ .col {
-    padding-bottom: 0;
-  }
   .mapContainer {
     height: 350px;
   }
   .contentPortals .row.gutterSpaceWide > .col:last-of-type,
   .contentPortals .row.gutterSpaceWider > .col:last-of-type,
   .contentPortals .col:last-of-type {
-    padding-bottom: 1rem;
+    padding-bottom: 1em;
   }
   .searchBarContainer.reveal {
     width: 100%;
