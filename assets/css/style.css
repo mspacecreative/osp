@@ -1500,6 +1500,10 @@ h6 ~ .archive_grid {
   margin-bottom: 4em;
 }
 
+.row > .col.one_col:last-child {
+  margin-bottom: 0;
+}
+
 /*
 .offsetCarousel .slick-slide {
 	margin-right: 25px;
@@ -2088,6 +2092,15 @@ body.block-editor-writing-flow .container {
 
 .editor-styles-wrapper .wp-switch-editor {
   height: auto;
+}
+
+.editor-styles-wrapper .iconContainer {
+  width: 50px;
+  margin-bottom: 25px;
+}
+
+.editor-styles-wrapper .icon-text {
+  width: 100%;
 }
 
 h1 {
