@@ -4742,19 +4742,20 @@ footer.section {
   margin-right: 50px;
 }
 
-.trp-language-switcher {
+.trp-language-switcher.trp-language-switcher > div {
   background-color: #38C3E1;
+  border: none;
 }
 
-.trp-language-switcher a {
+.trp-language-switcher.trp-language-switcher > div a {
   color: #fff;
 }
 
-.scroll .trp-language-switcher {
+.scroll .trp-language-switcher.trp-language-switcher > div {
   background-color: #fff;
 }
 
-.scroll .trp-language-switcher a {
+.scroll .trp-language-switcher.trp-language-switcher > div a {
   color: #000;
 }
 
