@@ -1386,8 +1386,8 @@ body .pb-close::before {
 }
 
 .icon.row {
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .iconContainer ~ h3 {
@@ -4721,6 +4721,10 @@ footer.section {
 
 .copyRightLink {
   text-decoration: underline;
+}
+
+.credits .row {
+  width: calc(100% + 2em);
 }
 
 .trp_language_switcher_shortcode {

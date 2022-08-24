@@ -1837,8 +1837,8 @@ section.credits {
 }
 
 .icon.row {
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .iconContainer ~ h3 {
