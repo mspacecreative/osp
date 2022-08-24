@@ -4742,6 +4742,22 @@ footer.section {
   margin-right: 50px;
 }
 
+.trp-language-switcher {
+  background-color: #38C3E1;
+}
+
+.trp-language-switcher a {
+  color: #fff;
+}
+
+.scroll .trp-language-switcher {
+  background-color: #fff;
+}
+
+.scroll .trp-language-switcher a {
+  color: #000;
+}
+
 .trp-language-switcher > div > a.trp-ls-shortcode-disabled-language {
   cursor: pointer;
 }
