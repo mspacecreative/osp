@@ -34,7 +34,9 @@ include 'includes/section-width.php'; ?>
 			
 			if ( $outro && $showoutro ) {
 				echo $outro;
-			} ?>
+			}
+			
+			include 'includes/cta-button-single.php'; ?>
 		</div>
 	</div>
 </section>
