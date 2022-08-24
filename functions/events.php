@@ -51,12 +51,7 @@ function printUpcomingEvents() {
 						</p>
 					</div>
 				</div>
-			</div>';
-			
-			if ( is_page( 51 ) ) {
-				echo '
-				<p><a class="btn dark blue" href="' . home_url( 'events' ) . '">' . __('View all events') . '</a></p>';
-			}
+			</div>'
 		}
 	
 	echo '</div>';
