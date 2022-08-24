@@ -52,25 +52,18 @@ function printUpcomingEvents() {
 					</div>
 				</div>
 			</div>';
-			
-			if ( is_page( 51 ) ) {
-				echo '
-				<p><a class="btn dark blue" href="' . home_url( 'events' ) . '">' . __('View all events') . '</a></p>';
-			}
 		}
 	
 	echo '</div>';
 	
-	}
-	if ( empty($items) ) {
-		
-		if ( is_page( 51 ) ) {
-			echo '
-			<p style="margin-bottom: 0;">There are no upcoming events. Please check back soon!</p>;
-		} else {
-			echo '
-			<p style="margin-bottom: 50px;">There are no upcoming events. Please check back soon!</p>';
-		}
+	} else {
+		echo
+		'<p style="margin-bottom:'; 
+		if ( is_page(51) ) { 
+			echo ' 0'; 
+		} else { 
+			echo ' 50px'; 
+		} echo ';">There are no upcoming events. Please check back soon.</p>';
 	}
     
     return ob_get_clean(); 
