@@ -5,7 +5,7 @@
 		
 		<ul class="actions center-items">
 			<li>
-				<a href="<?php the_sub_field('button_link'); ?>" class="light button"><?php the_sub_field('button_label'); ?></a>
+				<a href="<?php the_sub_field('button_link'); ?>" class="light btn"><?php the_sub_field('button_label'); ?></a>
 			</li>
 		</ul>
 		
@@ -15,7 +15,7 @@
 		
 		<ul class="actions center-items">
 			<li>
-				<a href="<?php the_sub_field('external_link'); ?>" class="light button" target="_blank"><?php the_sub_field('button_label'); ?></a>
+				<a href="<?php the_sub_field('external_link'); ?>" class="light btn" target="_blank"><?php the_sub_field('button_label'); ?></a>
 			</li>
 		</ul>
 		
@@ -25,7 +25,7 @@
 		
 		<ul class="actions center-items">
 			<li>
-				<a href="#<?php the_sub_field('anchor_link'); ?>" class="light button"><?php the_sub_field('button_label'); ?></a>
+				<a href="#<?php the_sub_field('anchor_link'); ?>" class="light btn"><?php the_sub_field('button_label'); ?></a>
 			</li>
 		</ul>
 		
