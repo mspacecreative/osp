@@ -19,7 +19,7 @@ function my_custom_styles( $init_array ) {
         ),  
         array(  
             'title' => 'Small Text',  
-            'block' => 'div',  
+            'block' => 'p',  
             'classes' => 'small-text',
             'wrapper' => true,
         )
