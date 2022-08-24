@@ -1,53 +1,42 @@
 <?php
 $sidebar = get_field('sidebar');
-$spacing = get_field('vertical_spacing');
 
 switch ( $sidebar ) {
 	case 'eventbrite-events':
-		$result = 'eventbrite-events';
+		$sidebar = 'eventbrite-events';
 		break;
 	case 'eventbrite-all-events':
-		$result = 'eventbrite-all-events';
+		$sidebar = 'eventbrite-all-events';
 		break;
 	case 'blog':
-		$result = 'news-posts';
+		$sidebar = 'news-posts';
 		break;
 	default:
-		$result = 'eventbrite-events';
+		$sidebar = 'eventbrite-events';
 }
-switch ( $spacing ) {
-	case 'top':
-		$padding = 'topPadding';
-		break;
-	case 'bottom':
-		$padding = 'bottomPadding';
-		break;
-	case 'both':
-		$padding = 'topBottomPadding';
-		break;
-	default:
-		$padding = '';
-} ?>
-<section>
-	<?php if ( $padding ): ?>
-	<div class="innerContainer <?php echo $padding ?>">
-	<?php else : ?>
+include 'includes/section-padding.php';
+include 'includes/section-width.php'; ?>
+
+<section class="section<?php echo $sectionpadding ?>">
 	<div class="innerContainer">
-	<?php endif; ?>
-		<?php 
-		$intro = get_field('intro_content');
-		$outro = get_field('outro_content');
-		$showintro = get_field('add_content_before_feed');
-		$showoutro = get_field('add_content_after_feed');
-		
-		if ( $intro && $showintro ) {
-			echo $intro;
-		}
-		
-		if(!function_exists('dynamic_sidebar') || !dynamic_sidebar( $result ));
-		
-		if ( $outro && $showoutro ) {
-			echo $outro;
-		} ?>
+		<div class="container<?php echo $sectionwidth ?>">
+			<?php 
+			$intro = get_field('intro_content');
+			$outro = get_field('outro_content');
+			$showintro = get_field('add_content_before_feed');
+			$showoutro = get_field('add_content_after_feed');
+			
+			if ( $intro && $showintro ) {
+				echo $intro;
+			}
+			
+			if(!function_exists('dynamic_sidebar') || !dynamic_sidebar( $sidebar ));
+			
+			if ( $outro && $showoutro ) {
+				echo $outro;
+			}
+			
+			include 'includes/cta-button-single.php'; ?>
+		</div>
 	</div>
 </section>
