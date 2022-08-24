@@ -29,9 +29,10 @@ switch ($bgcolor) {
 include 'includes/section-id.php';
 include 'includes/section-classname.php';
 include 'includes/section-width.php';
-include 'includes/horizontal-alignment.php' ?>
+include 'includes/horizontal-alignment.php';
+include 'includes/section-padding.php'; ?>
 
-<section<?php if ($id): echo ' id="' . $id . '"'; endif; ?> class="content-section<?php echo $bgimg, $bgcolor, esc_attr($className); ?>"<?php if ($bgimg): echo ' style="background-image: url(' . $bgimg . ');"'; endif; ?>>
+<section<?php if ($id): echo ' id="' . $id . '"'; endif; ?> class="content-section section<?php echo $bgimg, $sectionpadding, $bgcolor, esc_attr($className); ?>"<?php if ($bgimg): echo ' style="background-image: url(' . $bgimg . ');"'; endif; ?>>
 	<div class="innerContainer">
 		<div class="container<?php echo $sectionwidth, $horizontalalignment; ?>">
 			<?php include 'includes/section-content-loop.php'; ?>
