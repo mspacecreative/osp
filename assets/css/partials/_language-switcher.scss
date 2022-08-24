@@ -2,14 +2,15 @@
   margin-right: 50px;
 }
 
-.trp-language-switcher {
+.trp-language-switcher.trp-language-switcher > div {
   background-color: $brandBlue;
+  border: none;
   a {
     color: #fff;
   }
 }
 
-.scroll .trp-language-switcher {
+.scroll .trp-language-switcher.trp-language-switcher > div {
   background-color: #fff;
   a {
     color: #000;
