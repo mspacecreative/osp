@@ -8,13 +8,19 @@ function my_custom_styles( $init_array ) {
         array(  
             'title' => 'CTA Button',  
             'inline' => 'a',  
-            'classes' => 'button dark blue',
+            'classes' => 'btn blue',
             'wrapper' => true,
         ),  
         array(  
             'title' => 'Light CTA Button',  
             'inline' => 'a',  
-            'classes' => 'button light',
+            'classes' => 'btn light',
+            'wrapper' => true,
+        ),  
+        array(  
+            'title' => 'Small Text',  
+            'inline' => 'p',  
+            'classes' => 'small-text',
             'wrapper' => true,
         )
     );  

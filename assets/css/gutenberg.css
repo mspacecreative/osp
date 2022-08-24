@@ -1017,6 +1017,12 @@ p:last-of-type {
   line-height: 1.5em;
 }
 
+.small-text,
+.small-text a {
+  font-size: 14px;
+  line-height: 20px;
+}
+
 .cardContainer {
   -webkit-box-shadow: 0 5px 10px #d4d4d4;
           box-shadow: 0 5px 10px #d4d4d4;
