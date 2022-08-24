@@ -2,7 +2,8 @@
 include 'section-padding.php';
 include 'section-id.php';
 include 'section-classname.php';
-include 'section-gutters.php';
+include 'section-width.php';
+include 'column-gutters.php';
 
 $cols = get_field('column_count');
 $reversecol = get_field('reverse_columns') ? ' reverse-odd-rows' : '';
