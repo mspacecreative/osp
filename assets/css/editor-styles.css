@@ -259,10 +259,15 @@ p:last-of-type {
   line-height: 1.5em;
 }
 
-.small-text,
+.small-text p,
 .small-text a {
   font-size: 14px;
   line-height: 20px;
+}
+
+p > img {
+  margin-top: 8px;
+  margin-bottom: 1em;
 }
 
 .container, .container-fluid {
