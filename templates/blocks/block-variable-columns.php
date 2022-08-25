@@ -31,7 +31,7 @@ include 'includes/column-gutters.php'; ?>
 
 			if ($rowsubheading) : ?>
 			<h3 class="bottomMargin50<?php echo $centeredtext; ?>">
-				<?php $rowsubheading; ?>
+				<?php echo $rowsubheading; ?>
 			</h3>
 			<?php endif;
 			
