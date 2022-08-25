@@ -41,10 +41,10 @@ if ($displayformat == 'cards') {
         if ($queriedloop->have_posts()) {
             while ($queriedloop->have_posts()) {
                 $queriedloop->the_post();
-                $title = get_the_title($queriedloop->ID);
-                $excerpt = get_the_excerpt($queriedloop->ID);
-                $date = get_the_date( 'F j, Y', $queriedloop->ID );
-                $readmore = '<a class="readMore" href="' . get_the_permalink($queriedloop->ID) . '">' . esc_html_e('Read more', 'osp') . '</a>';
+                $title = get_the_title();
+                $excerpt = get_the_excerpt();
+                $date = get_the_date( 'F j, Y' );
+                $readmore = '<a class="readMore" href="' . get_the_permalink() . '">' . esc_html_e('Read more', 'osp') . '</a>';
                 echo 
                 '<div class="col' . $colratio . ' col-xs-12">
                     <div class="colInner cardContainer whiteBg">
