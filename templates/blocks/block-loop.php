@@ -43,7 +43,7 @@ include 'includes/column-gutters.php';
 
 echo 
 '<section class="section' . $sectionpadding . '">
-    <div class="innerContainer content-loop' . $sectionwidth; if ($layout == 'grid'): echo 'content-loop_grid'; endif; echo '">';
+    <div class="innerContainer content-loop' . $sectionwidth; if ($layout == 'grid'): echo ' content-loop_grid'; endif; echo '">';
         if ($cpt) {
             if ($layout == 'grid') {
                 echo 
