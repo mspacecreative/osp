@@ -1966,6 +1966,18 @@ h6 ~ .archive_grid {
   margin-bottom: 0;
 }
 
+.content-loop_grid > .row {
+  margin-bottom: -1rem;
+}
+
+.content-loop_grid > .row.gutterSpaceWide {
+  margin-bottom: -2em;
+}
+
+.content-loop_grid > .row.gutterSpaceWider {
+  margin-bottom: -3em;
+}
+
 .btn {
   display: inline-block;
   padding: 0.75em 1.5em;

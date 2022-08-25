@@ -1504,6 +1504,18 @@ h6 ~ .archive_grid {
   margin-bottom: 0;
 }
 
+.content-loop_grid > .row {
+  margin-bottom: -1rem;
+}
+
+.content-loop_grid > .row.gutterSpaceWide {
+  margin-bottom: -2em;
+}
+
+.content-loop_grid > .row.gutterSpaceWider {
+  margin-bottom: -3em;
+}
+
 /*
 .offsetCarousel .slick-slide {
 	margin-right: 25px;
@@ -5090,11 +5102,13 @@ MODAL STYLES
   .evenbriteEvents ul > li:nth-child(3n + 1):nth-last-child(-n + 3),
   .evenbriteEvents ul > li:nth-child(3n + 1):nth-last-child(-n + 3) ~ li,
   .feedGrid .col:nth-child(3n + 1):nth-last-child(-n + 3),
-  .feedGrid .col:nth-child(3n + 1):nth-last-child(-n + 3) ~ .col */
+  .feedGrid .col:nth-child(3n + 1):nth-last-child(-n + 3) ~ .col
   .col:nth-child(4n):nth-last-child(-n + 5) ~ .col,
   .col:nth-child(3n):nth-last-child(-n + 4) ~ .col {
+    //margin-bottom: 0;
     padding-bottom: 0;
   }
+   */
   .borderRight {
     border-right: 1px solid #c9c9c9;
   }

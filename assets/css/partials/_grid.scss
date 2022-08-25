@@ -172,3 +172,13 @@ h6 ~ .archive_grid {
 .row > .col.one_col:last-child {
   margin-bottom: 0;
 }
+
+.content-loop_grid > .row {
+  margin-bottom: -1rem;
+}
+.content-loop_grid > .row.gutterSpaceWide {
+  margin-bottom: -2em;
+}
+.content-loop_grid > .row.gutterSpaceWider {
+  margin-bottom: -3em;
+}
