@@ -4219,6 +4219,12 @@ a {
   transition: 0.25s ease-in-out;
 }
 
+.content-loop_grid .btn {
+  margin-top: auto;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -5071,7 +5077,7 @@ MODAL STYLES
   .container {
     width: 100%;
   }
-  footer .col:nth-child(3n + 1):nth-last-child(-n + 3),
+  /*footer .col:nth-child(3n + 1):nth-last-child(-n + 3),
   footer .col:nth-child(3n + 1):nth-last-child(-n + 3) ~ .col,
   .photoGrid .col:nth-child(3n + 1):nth-last-child(-n + 3),
   .photoGrid .col:nth-child(3n + 1):nth-last-child(-n + 3) ~ .col,
@@ -5084,8 +5090,9 @@ MODAL STYLES
   .evenbriteEvents ul > li:nth-child(3n + 1):nth-last-child(-n + 3),
   .evenbriteEvents ul > li:nth-child(3n + 1):nth-last-child(-n + 3) ~ li,
   .feedGrid .col:nth-child(3n + 1):nth-last-child(-n + 3),
-  .feedGrid .col:nth-child(3n + 1):nth-last-child(-n + 3) ~ .col {
-    margin-bottom: 0;
+  .feedGrid .col:nth-child(3n + 1):nth-last-child(-n + 3) ~ .col */
+  .col:nth-child(4n):nth-last-child(-n + 5) ~ .col,
+  .col:nth-child(3n):nth-last-child(-n + 4) ~ .col {
     padding-bottom: 0;
   }
   .borderRight {

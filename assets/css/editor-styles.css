@@ -2118,4 +2118,10 @@ a {
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
+
+.content-loop_grid .btn {
+  margin-top: auto;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
 /*# sourceMappingURL=editor-styles.css.map */
