@@ -184,7 +184,9 @@ switch ( $headingalignment ) {
 					}
 				} elseif ( $contenttype == 'content' ) {
 					include 'includes/content.php';
-				} ?>
+				}
+				
+				include 'includes/cta-button-single.php'; ?>
 
 				</div>
 				
