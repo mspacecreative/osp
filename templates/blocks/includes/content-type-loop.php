@@ -26,6 +26,7 @@ switch ($colratio) {
 $args = array(
     'posts_per_page' => $numposts,
     'post_type' => $contenttype,
+    'category' => 3,
 );
 $queriedloop = new WP_Query($args);
 
