@@ -67,7 +67,7 @@ switch ( $cols ) {
 				//$company = get_field('company', $post->ID);
 				$external_link = get_field('external_link', $post->ID);
 				$company = $external_link ? '<a href="' . $external_link . '" target="_blank">' . get_field('company', $post->ID) . '</a>' : get_field('company', $post->ID);
-				$featuredimg = get_field('image', $post->ID);
+				$featuredimg = wp_get_attachment_image_url($post->ID, 'full');
 				$logo = get_field('logo', $post->ID);
 				$size = 'medium'; ?>
 				
@@ -103,7 +103,7 @@ switch ( $cols ) {
 
 								<?php 
 								if ( $featuredimg ):
-								echo wp_get_attachment_image( $featuredimg, $size );
+								echo '<img src="' . $featuredimg . '" class="feat-img">';
 								elseif ( $logo ): ?>
 								<div class="testimonialLogoContainer">
 									<?php echo wp_get_attachment_image( $logo, $size ); ?>

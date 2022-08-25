@@ -424,6 +424,24 @@ function my_acf_init() {
 			'mode'				=> 'edit',
 			'supports'			=> array( 'mode' => false ),
 		));
+
+		// register sidebar block
+		acf_register_block(array(
+			'name'				=> 'posts',
+			'title'				=> __('Flexible Posts Block'),
+			'description'		=> __('Displays curated or queried content types in various formats'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'images-alt',
+			'keywords'			=> array( 'posts', 'grid layout', 'posts carousel' ),
+			'mode'				=> 'preview',
+			'supports'		=> [
+				'align'			=> false,
+				'anchor'		=> true,
+				'customClassName'	=> true,
+				'jsx' 			=> true,
+			]
+		));
 		
 		// register sidebar block
 		acf_register_block(array(
