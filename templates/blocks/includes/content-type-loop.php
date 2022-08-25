@@ -1,8 +1,9 @@
 <?php
 $numposts = get_field('number_of_posts') ? get_field('number_of_posts') : '3';
 $contenttype = get_field('content_type');
-$curated = get_field('curated');
-$queried = get_field('queried');
+$requestformat = get_field('request_format');
+//$curated = get_field('curated');
+//$queried = get_field('queried');
 $curatedposts = get_field('curated_posts');
 $colratio = get_field('number_of_columns');
 switch ($colratio) {
@@ -30,12 +31,12 @@ $queriedloop = new WP_Query($args);
 
 include 'column-gutters.php';
 
-if ($format == 'cards') {
+if ($displayformat == 'cards') {
     
     echo 
     '<div class="row cardGrid' . $sectiongutters . '">';
 
-    if ($queried) {
+    if ($requestformat == 'queried') {
         if ($queriedloop->have_posts()) {
             while ($queriedloop->have_posts()) {
                 $queriedloop->the_post();
@@ -53,7 +54,7 @@ if ($format == 'cards') {
                 </div>';
             }
         }
-    } elseif ($curated) {
+    } elseif ($requestformat == 'curated') {
         foreach ($curatedposts as $curatedpost) {
             setup_postdata($curatedpost);
             $title = get_the_title($curatedpost->ID);
