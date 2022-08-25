@@ -1,5 +1,5 @@
 <?php 
-$numposts = get_field('number_of_posts') ? get_field('number_of_posts') : '3';
+$numposts = get_field('number_of_posts') ? get_field('number_of_posts') : '5';
 $related = get_posts( array( 
 	'category' => 3, 
 	'posts_per_page' => $numposts,
