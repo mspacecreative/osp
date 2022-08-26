@@ -42,6 +42,9 @@ h2 {
 .fullSpanCTA h2 ~ ul > li > .button {
   margin-top: 0;
 }
+h3 {
+  margin: 0 0 10px;
+}
 h3,
 h3 > a {
   font-size: 22px;
@@ -60,6 +63,14 @@ menu,
 ol,
 ul {
   padding: 0 0 0 18px;
+  margin: 0 0 15px;
+}
+.btn ~ * {
+  margin-top: 15px;
+}
+p ~ ol,
+p ~ ul {
+  margin-top: 15px;
 }
 .contentPortal h3,
 .fitPortal h3 {
