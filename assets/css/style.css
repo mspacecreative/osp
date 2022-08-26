@@ -2139,8 +2139,12 @@ h2 {
   margin-top: 0;
 }
 
-h3 {
-  margin: 0 0 10px;
+.content-section h3 {
+  margin: 15px 0 10px;
+}
+
+.content-section h3:first-of-type {
+  margin-top: 0;
 }
 
 h3,
@@ -2166,7 +2170,7 @@ ul {
   margin: 0;
 }
 
-.content-section p ~ * {
+.content-section .btn ~ * {
   margin-top: 15px;
 }
 
@@ -4100,7 +4104,7 @@ body.using-mouse *:focus {
   background-color: #424242;
   font-weight: 600;
   text-decoration: none;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 p > .btn {

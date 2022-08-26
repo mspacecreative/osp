@@ -807,8 +807,12 @@ h2 {
   margin-top: 0;
 }
 
-h3 {
-  margin: 0 0 10px;
+.content-section h3 {
+  margin: 15px 0 10px;
+}
+
+.content-section h3:first-of-type {
+  margin-top: 0;
 }
 
 h3,
@@ -834,7 +838,7 @@ ul {
   margin: 0;
 }
 
-.content-section p ~ * {
+.content-section .btn ~ * {
   margin-top: 15px;
 }
 
