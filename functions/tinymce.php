@@ -22,6 +22,18 @@ function my_custom_styles( $init_array ) {
             'block' => 'div',  
             'classes' => 'small-text',
             'wrapper' => true,
+        ),  
+        array(  
+            'title' => 'Top Margin 30px',  
+            'block' => 'span',  
+            'classes' => 'top-margin--30',
+            'wrapper' => true,
+        ),  
+        array(  
+            'title' => 'Bottom Margin 30px',  
+            'block' => 'span',  
+            'classes' => 'bottom-margin--30',
+            'wrapper' => true,
         )
     );  
     // Insert the array, JSON ENCODED, into 'style_formats'
