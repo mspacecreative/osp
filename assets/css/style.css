@@ -4258,6 +4258,9 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+.full-width {
   width: 100%;
 }
 
