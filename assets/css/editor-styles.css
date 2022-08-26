@@ -49,11 +49,13 @@ h2 {
   margin-top: 0;
 }
 
-.content-section h3 {
+.content-section h3,
+.acf_content h3 {
   margin: 30px 0 10px;
 }
 
-.content-section h3:first-of-type {
+.content-section h3:first-of-type,
+.acf_content h3:first-of-type {
   margin-top: 0;
 }
 
