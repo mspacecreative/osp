@@ -4107,10 +4107,6 @@ body.using-mouse *:focus {
   margin-top: 15px;
 }
 
-.icon ~ p {
-  margin-top: 15px;
-}
-
 .btn.blue {
   background-color: #38C3E1;
   -webkit-transition: 0.25s ease-in-out;
