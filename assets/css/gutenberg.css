@@ -835,15 +835,10 @@ menu,
 ol,
 ul {
   padding: 0 0 0 18px;
-  margin: 0;
+  margin: 15px 0 0;
 }
 
 .content-section .btn ~ * {
-  margin-top: 15px;
-}
-
-p ~ ol,
-p ~ ul {
   margin-top: 15px;
 }
 
