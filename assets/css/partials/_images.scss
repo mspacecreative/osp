@@ -3,7 +3,8 @@ img {
   height: auto;
   display: block;
 }
-.full-width {
+.full-width,
+.size-full img {
   width: 100%;
 }
 .smallFooterLogo,
@@ -66,27 +67,6 @@ img.alignright {
   position: relative;
   flex-direction: column;
 }
-/*
-.fitPortal::after {
-	background: url(../img/textures/fit-point.svg);
-    right: 0;
-    background-position: bottom right;
-}
-.fitPortal::before {
-	background: url(../img/textures/fit-point-left.svg);
-    left: 0;
-    background-position: bottom left;
-}
-.fitPortal::before, .fitPortal::after {
-	position: absolute;
-    bottom: 0;
-    width: 50%;
-    height: 50px;
-    background-repeat: no-repeat;
-    background-size: cover;
-	content: "";
-}
-*/
 .fitPortal > h3 {
   flex-basis: 100%;
   margin-bottom: 0;
