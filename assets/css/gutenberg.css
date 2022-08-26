@@ -2984,6 +2984,463 @@ h6 ~ .archive_grid {
   left: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.full-width,
+.size-full img {
+  width: 100%;
+}
+
+.smallFooterLogo,
+.footerLogos .size-medium {
+  padding: 20px 0;
+  max-width: 130px;
+}
+
+.shrinkLogo {
+  max-width: 90px;
+}
+
+.cosLogo,
+.cosLogo .size-medium {
+  margin-bottom: 25px;
+}
+
+.cosLogo > div:last-of-type img {
+  max-width: 180px;
+}
+
+.cosLogo > div:first-of-type img {
+  max-width: 100px;
+}
+
+.featuredInlineImg .size-large {
+  width: 100%;
+}
+
+.alignright.wp-caption,
+img.alignright {
+  width: auto;
+  float: right;
+  margin: 8px 0 20px 20px;
+}
+
+.wp-caption-text {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35em;
+}
+
+.contentPortal {
+  position: relative;
+  min-height: 300px;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.fitPortal {
+  position: relative;
+  min-height: 300px;
+  background: #38C3E1 url(../img/textures/just-waves-blue.png);
+}
+
+.fitPortal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.fitPortal > h3 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.contentPortal a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.contentPortal img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.photoGrid .shrinkLogo img {
+  max-width: 200px;
+  margin: auto;
+}
+
+.photoGrid .shrinkLogo {
+  max-width: 100%;
+  padding: 10px 0;
+}
+
+.photoGrid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.photoGrid a:hover img {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.photoGrid a img {
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.photoGrid li {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  margin-bottom: 25px;
+}
+
+.photoGrid li img {
+  padding: 2em;
+  max-width: 250px;
+  margin: auto;
+}
+
+.photoGrid li:nth-child(odd) {
+  border-right: 1px solid #c9c9c9;
+}
+
+.photoGrid li:nth-child(2n + 1):nth-last-child(-n + 2),
+.photoGrid li:nth-child(2n + 1):nth-last-child(-n + 2) ~ li {
+  border-bottom: none;
+}
+
+.photoGrid li {
+  margin-bottom: 0;
+  padding-top: 1em;
+}
+
+.photoGrid li {
+  position: relative;
+  min-height: 150px;
+  max-height: 150px;
+}
+
+.photoGrid li {
+  border-bottom: 1px solid #c9c9c9;
+}
+
+.about-us .photoGrid li:last-of-type {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  max-width: 100%;
+  border-right: none;
+  min-height: auto;
+}
+
+.about-us .photoGrid li:last-of-type img {
+  max-width: 400px;
+}
+
+.fixedBgImg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.fixedBgImg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.iconContainer {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 25px;
+}
+
+row.imageStripContainer {
+  margin-right: -0.25rem;
+  margin-left: -0.25rem;
+}
+
+.row.imageStripContainer > .col {
+  height: 100%;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
+  padding-bottom: 0;
+}
+
+.imageStripInner {
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.imageStripInner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 1600px) {
+  .stripOuter {
+    background-color: #38C3E1;
+  }
+  .stripInner {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1600px;
+    background-color: #fff;
+    border-right: 0.75rem solid #fff;
+    border-left: 0.75rem solid #fff;
+  }
+}
+
+.st0 {
+  fill: none;
+  stroke: transparent;
+  stroke-miterlimit: 10;
+  -webkit-animation-name: sonar6;
+          animation-name: sonar6;
+  -webkit-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.st1 {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-miterlimit: 10;
+  -webkit-animation-name: sonar5;
+          animation-name: sonar5;
+  -webkit-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.st2 {
+  fill: none;
+  stroke: transparent;
+  stroke-width: 5;
+  stroke-miterlimit: 10;
+  -webkit-animation-name: sonar4;
+          animation-name: sonar4;
+  -webkit-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.st3 {
+  fill: none;
+  stroke: transparent;
+  stroke-width: 10;
+  stroke-miterlimit: 10;
+  -webkit-animation-name: sonar3;
+          animation-name: sonar3;
+  -webkit-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.st4 {
+  fill: none;
+  stroke: transparent;
+  stroke-width: 20;
+  stroke-miterlimit: 10;
+  -webkit-animation-name: sonar2;
+          animation-name: sonar2;
+  -webkit-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.st5 {
+  fill: #bcbec0;
+}
+
+@-webkit-keyframes sonar6 {
+  0% {
+    stroke: transparent;
+  }
+  50% {
+    stroke: #bcbec0;
+  }
+  100% {
+    stroke: transparent;
+  }
+}
+
+@keyframes sonar6 {
+  0% {
+    stroke: transparent;
+  }
+  50% {
+    stroke: #bcbec0;
+  }
+  100% {
+    stroke: transparent;
+  }
+}
+
+@-webkit-keyframes sonar5 {
+  0% {
+    stroke: transparent;
+  }
+  50% {
+    stroke: #bcbec0;
+  }
+  100% {
+    stroke: transparent;
+  }
+}
+
+@keyframes sonar5 {
+  0% {
+    stroke: transparent;
+  }
+  50% {
+    stroke: #bcbec0;
+  }
+  100% {
+    stroke: transparent;
+  }
+}
+
+@-webkit-keyframes sonar4 {
+  0% {
+    stroke: transparent;
+  }
+  50% {
+    stroke: #bcbec0;
+  }
+  100% {
+    stroke: transparent;
+  }
+}
+
+@keyframes sonar4 {
+  0% {
+    stroke: transparent;
+  }
+  50% {
+    stroke: #bcbec0;
+  }
+  100% {
+    stroke: transparent;
+  }
+}
+
+@-webkit-keyframes sonar3 {
+  0% {
+    stroke: transparent;
+  }
+  50% {
+    stroke: #bcbec0;
+  }
+  100% {
+    stroke: transparent;
+  }
+}
+
+@keyframes sonar3 {
+  0% {
+    stroke: transparent;
+  }
+  50% {
+    stroke: #bcbec0;
+  }
+  100% {
+    stroke: transparent;
+  }
+}
+
+@-webkit-keyframes sonar2 {
+  0% {
+    stroke: transparent;
+  }
+  50% {
+    stroke: #bcbec0;
+  }
+  100% {
+    stroke: transparent;
+  }
+}
+
+@keyframes sonar2 {
+  0% {
+    stroke: transparent;
+  }
+  50% {
+    stroke: #bcbec0;
+  }
+  100% {
+    stroke: transparent;
+  }
+}
+
 html :where(.wp-block) {
   max-width: 100%;
 }
