@@ -515,7 +515,19 @@ function my_acf_block_render_callback( $block ) {
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page( 'Theme Settings' );
-	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Archive Pages',
+		'menu_title'	=> 'Archive Page Settings',
+		'menu_slug' 	=> 'archive-page-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Page Title Alignment',
+		'menu_title'	=> 'Title Alignment',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+
 }
 
 // GET BACKGROUND IMAGE FROM FAQs BLOCK
