@@ -3713,13 +3713,17 @@ header > .innerContainer {
 
 .mobile-nav ul {
   list-style: none;
+  padding-left: 0;
+}
+
+.mobile-nav ul ul {
+  padding-left: 15px;
 }
 
 .mobile-nav ul a,
 .mobile-nav .sub-menu li a {
   padding: 0.5em 0;
   display: block;
-  color: #333;
 }
 
 .mobile-nav .sub-menu {
