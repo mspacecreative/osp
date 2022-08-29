@@ -4,13 +4,13 @@ include 'templates/blocks/includes/horizontal-alignment.php'; ?>
 
 <div id="main" class="contentWrap">
 
-	<section>
+	<section class="section no-bottom-padding">
 		<?php
 		$title = get_the_title();
 		$textalignment = (get_field('text_alignment') == 'center') ? ' text-align-center' : '';
 		$horizontalalignment = (get_field('text_alignment') == 'center') ? '' : ' horizontal-align-left'; ?>
 
-		<div class="innerContainer section4<?php echo $sectionwidth ?>">
+		<div class="innerContainer<?php echo $sectionwidth ?>">
 			<div class="container<?php echo $horizontalalignment ?>">
 				<h1 class="postTitle<?php echo $textalignment ?>"><span class="grey"><?php esc_html_e( 'Category ', 'osp' ); ?></span><?php single_cat_title(); ?></h1>
 			</div>
@@ -18,7 +18,7 @@ include 'templates/blocks/includes/horizontal-alignment.php'; ?>
 	</section>
 	
 	<section>
-		<div class="innerContainer bottomPadding">
+		<div class="innerContainer">
 			<div class="container<?php echo $sectionwidth ?>">
 				<?php 
 				get_template_part( 'templates/loops/loop-category' );
