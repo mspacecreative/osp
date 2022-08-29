@@ -428,6 +428,10 @@
   }
 }
 
+.trp-language-switcher.trp-language-switcher > div {
+  width: 50px !important;
+}
+
 @media (max-width: 480px) {
   .social_footer {
     justify-content: flex-start;
@@ -440,7 +444,7 @@
   }
   .trp-language-switcher.trp-language-switcher > div {
     background-color: #fff;
-    width: 50px !important;
+    margin-top: 15px;
   }
   .trp-language-switcher.trp-language-switcher > div a {
     color: #000;
