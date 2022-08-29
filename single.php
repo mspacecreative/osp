@@ -7,8 +7,8 @@ include 'templates/blocks/includes/horizontal-alignment.php'; ?>
 
 	<?php
 	$title = get_the_title();
-	$textalignment = (get_field('text_alignment', 'options') == 'center') ? ' text-align-center' : '';
-	$horizontalalignment = (get_field('text_alignment', 'options') == 'center') ? '' : ' horizontal-align-left'; ?>
+	$textalignment = (get_field('text_alignment_single', 'options') == 'center') ? ' text-align-center' : '';
+	$horizontalalignment = (get_field('text_alignment_single', 'options') == 'center') ? '' : ' horizontal-align-left'; ?>
 	
 	<div class="innerContainer section4">
 	
