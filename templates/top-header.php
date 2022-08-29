@@ -23,9 +23,9 @@
 		<!-- nav -->
 		<div class="mobile-nav" role="navigation">
 			<?php 
+			osp_nav();
 			echo 
-			'<div class="mobile-translation-toggle">' . do_shortcode('[language-switcher]') . '</div>';
-			osp_nav(); ?>
+			'<div class="mobile-translation-toggle">' . do_shortcode('[language-switcher]') . '</div>'; ?>
 		</div>
 		<!-- /nav -->
 	

@@ -434,6 +434,17 @@
     margin-bottom: 25px;
     order: -1;
   }
+  .trp_language_switcher_shortcode {
+    position: static;
+    right: auto;
+  }
+  .trp-language-switcher.trp-language-switcher > div {
+    background-color: #fff;
+    width: 50px !important;
+  }
+  .trp-language-switcher.trp-language-switcher > div a {
+    color: #000;
+  }
   .mobile-translation-toggle {
     display: block;
   }
