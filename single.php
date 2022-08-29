@@ -1,21 +1,20 @@
-<?php get_header();
-
-include 'templates/blocks/includes/section-width.php';
-include 'templates/blocks/includes/horizontal-alignment.php'; ?>
+<?php get_header(); ?>
 
 <div id="main" class="contentWrap">
 
 	<?php
-	$title = get_the_title();
-	$textalignment = (get_field('text_alignment_single', 'options') == 'center') ? ' text-align-center' : '';
-	$horizontalalignment = (get_field('text_alignment_single', 'options') == 'center') ? '' : ' horizontal-align-left'; ?>
+	$title = get_the_title(); ?>
 	
 	<div class="innerContainer section4">
 	
-		<div class="container<?php echo $sectionwidth ?>">
+		<div class="container">
 	
-			<h1 class="postTitle<?php echo $textalignment ?>" style="margin-bottom: 0;"><?php echo $title ?></h1>
-			<h5 class="date bottomMargin50<?php echo $textalignment ?>" style="margin-top: 0;"><?php echo the_time( 'F j, Y' ); ?><?php esc_html_e(' &nbsp;| &nbsp;'); ?><?php the_category(', '); ?></h5>
+			<div class="row">
+				<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">
+					<h1 class="postTitle" style="margin-bottom: 10px;"><?php echo $title ?></h1>
+					<h5 class="date bottomMargin50" style="margin-top: 0;"><?php echo the_time( 'F j, Y' ); ?><?php esc_html_e(' &nbsp;| &nbsp;'); ?><?php the_category(', '); ?></h5>
+				</div>
+			</div>
 
 			<?php if ( have_posts() ) : ?>
 			<div class="row gutterSpaceWide featuredInlineImg">
