@@ -5436,7 +5436,6 @@ MODAL STYLES
     text-align: center;
   }
   nav {
-    margin-right: calc(20px + 0.5em);
     margin-left: auto;
   }
   .featuredInlineImg .size-medium {
