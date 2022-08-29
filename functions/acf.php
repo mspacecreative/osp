@@ -522,8 +522,8 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'		=> false
 	));
 	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Archive Pages',
-		'menu_title'	=> 'Archive Pages',
+		'page_title' 	=> 'Template Pages',
+		'menu_title'	=> 'Template Pages',
 		'parent_slug'	=> 'theme-settings',
 	));
 
