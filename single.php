@@ -17,7 +17,7 @@
 			</div>
 
 			<?php if ( have_posts() ) : ?>
-			<div class="row gutterSpaceWide featuredInlineImg">
+			<div class="row gutterSpaceWider featuredInlineImg">
 				<?php while ( have_posts() ) : the_post();
 				$featuredimg = get_the_post_thumbnail( get_the_ID(), 'medium' );
 				$lgfeaturedimg = get_the_post_thumbnail( get_the_ID(), 'large' );
