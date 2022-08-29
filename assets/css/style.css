@@ -4141,6 +4141,10 @@ body.using-mouse *:focus {
   outline: none;
 }
 
+.mobile-translation-toggle {
+  display: none;
+}
+
 .btn {
   display: inline-block;
   padding: 0.75em 1.5em;
@@ -5229,6 +5233,11 @@ MODAL STYLES
   h1 {
     font-size: 32px;
   }
+  .trp_language_switcher_shortcode {
+    position: fixed;
+    margin-right: 0;
+    right: 125px;
+  }
   .bottomMarginMobile.keepSpacing {
     margin-bottom: 30px;
   }
@@ -5530,6 +5539,12 @@ MODAL STYLES
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+  }
+  .mobile-translation-toggle {
+    display: block;
+  }
+  .mobile-nav ~ .trp_language_switcher_shortcode {
+    display: none;
   }
   .mc-popup-form.mc-popup-form {
     height: auto;

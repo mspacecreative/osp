@@ -155,6 +155,11 @@
     //LEGACY STYLE
     //max-width: 450px;
   }
+  .trp_language_switcher_shortcode {
+    position: fixed;
+    margin-right: 0;
+    right: 125px;
+  }
   .bottomMarginMobile.keepSpacing {
     margin-bottom: 30px;
   }
@@ -428,6 +433,12 @@
     justify-content: flex-start;
     margin-bottom: 25px;
     order: -1;
+  }
+  .mobile-translation-toggle {
+    display: block;
+  }
+  .mobile-nav ~ .trp_language_switcher_shortcode {
+    display: none;
   }
   .mc-popup-form.mc-popup-form {
     height: auto;
