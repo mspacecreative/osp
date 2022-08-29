@@ -3343,6 +3343,11 @@ p > img {
   padding-bottom: 3em;
 }
 
+.row.gutterSpaceWider > .main--content,
+.row.gutterSpaceWider > .sidebar {
+  padding-bottom: 0;
+}
+
 .col .row.gutterSpaceDefault > .col {
   padding-bottom: 1rem;
 }
@@ -5086,6 +5091,12 @@ MODAL STYLES
   .col:last-of-type,
   .row.gutterSpaceWide > .col:nth-child(2n + 1):nth-last-child(-n + 2) ~ .col {
     padding-bottom: 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  .main--content {
+    margin-bottom: 50px;
   }
 }
 

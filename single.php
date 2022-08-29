@@ -37,7 +37,7 @@
 					<?php the_content(); ?>
 				</div>
 				<?php else : ?>
-				<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">
+				<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12 main--content">
 					<?php echo $featuredimg ?>
 					<?php the_content(); ?>
 				</div>

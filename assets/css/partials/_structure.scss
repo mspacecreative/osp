@@ -185,6 +185,10 @@
   padding-left: 1.5em;
   padding-bottom: 3em;
 }
+.row.gutterSpaceWider > .main--content,
+.row.gutterSpaceWider > .sidebar {
+  padding-bottom: 0;
+}
 .col .row.gutterSpaceDefault > .col {
   padding-bottom: 1rem;
 }

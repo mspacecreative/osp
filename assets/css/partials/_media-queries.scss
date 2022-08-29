@@ -52,6 +52,12 @@
   }
 }
 
+@media (max-width: 1023px) {
+  .main--content {
+    margin-bottom: 50px;
+  }
+}
+
 @media (min-width: 1024px) {
   .container {
     width: auto;
