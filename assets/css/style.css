@@ -5233,6 +5233,14 @@ MODAL STYLES
   h1 {
     font-size: 32px;
   }
+  .home header.scroll,
+  header.scroll {
+    padding: 10px 0;
+  }
+  header,
+  .home header {
+    padding: 20px 0;
+  }
   .trp_language_switcher_shortcode {
     position: fixed;
     margin-right: 0;
