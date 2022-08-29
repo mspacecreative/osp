@@ -14,8 +14,8 @@ include 'templates/blocks/includes/horizontal-alignment.php'; ?>
 	
 		<div class="container<?php echo $sectionwidth ?>">
 	
-			<h1 class="postTitle<?php echo $textalignment ?>" style="margin-bottom: 20px;"><?php echo $title ?></h1>
-			<h5 class="date bottomMargin50<?php echo $textalignment ?>"><?php echo the_time( 'F j, Y' ); ?><?php esc_html_e(' &nbsp;| &nbsp;'); ?><?php the_category(', '); ?></h5>
+			<h1 class="postTitle<?php echo $textalignment ?>" style="margin-bottom: 0;"><?php echo $title ?></h1>
+			<h5 class="date bottomMargin50<?php echo $textalignment ?>" style="margin-top: 0;"><?php echo the_time( 'F j, Y' ); ?><?php esc_html_e(' &nbsp;| &nbsp;'); ?><?php the_category(', '); ?></h5>
 
 			<?php if ( have_posts() ) : ?>
 			<div class="row gutterSpaceWide featuredInlineImg">
