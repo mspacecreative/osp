@@ -4,7 +4,7 @@ include 'templates/blocks/includes/horizontal-alignment.php'; ?>
 
 <div id="main" class="contentWrap">
 
-	<section class="section no-bottom-padding">
+	<section class="section-4 no-bottom-padding">
 		<?php
 		$title = get_the_title();
 		$textalignment = (get_field('text_alignment') == 'center') ? ' text-align-center' : '';
@@ -17,7 +17,7 @@ include 'templates/blocks/includes/horizontal-alignment.php'; ?>
 		</div>
 	</section>
 	
-	<section>
+	<section class="section no-top-padding">
 		<div class="innerContainer">
 			<div class="container<?php echo $sectionwidth ?>">
 				<?php 
