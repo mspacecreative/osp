@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php get_header();
+include 'templates/blocks/includes/section-width.php';
+include 'templates/blocks/includes/horizontal-alignment.php'; ?>
 
 <div id="main" class="contentWrap">
 
@@ -26,9 +28,13 @@
 	
 	<section>
 	
-		<div class="innerContainer bottomPadding w1080">
-			<?php get_template_part( 'templates/loops/loop-category' );
-			get_template_part( 'pagination' ); ?>
+		<div class="innerContainer bottomPadding">
+			<div class="container<?php echo $sectionwidth, $horizontalalignment ?>">
+				<?php 
+				get_template_part( 'templates/loops/loop-category' );
+				get_template_part( 'pagination' ); 
+				?>
+			</div>
 		</div>
 		
 	</section>

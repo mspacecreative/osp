@@ -2168,7 +2168,7 @@ h4 {
 menu,
 ol,
 ul {
-  padding: 0 0 0 18px;
+  padding: 0 0 0 15px;
   margin: 15px 0 0;
 }
 
@@ -5033,7 +5033,7 @@ MODAL STYLES
 
 @media (min-width: 768px) {
   .container {
-    width: 100%;
+    width: auto;
   }
   .shrinkLogo {
     margin: 0;
@@ -5091,7 +5091,7 @@ MODAL STYLES
 
 @media (min-width: 1024px) {
   .container {
-    width: 100%;
+    width: auto;
   }
   /*footer .col:nth-child(3n + 1):nth-last-child(-n + 3),
   footer .col:nth-child(3n + 1):nth-last-child(-n + 3) ~ .col,
@@ -5170,7 +5170,7 @@ MODAL STYLES
 
 @media (min-width: 1200px) {
   .container {
-    width: 100%;
+    width: auto;
   }
 }
 
