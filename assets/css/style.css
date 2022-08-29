@@ -3827,11 +3827,15 @@ header.scroll .nav li.menu-item-has-children a::after {
 .mobile-nav {
   display: none;
   position: absolute;
-  top: calc(100% + 10px);
+  top: calc(100% + 20px);
   width: 100%;
   background-color: #38C3E1;
   left: 0;
   padding: 1em 2em;
+}
+
+.scroll .mobile-nav {
+  top: calc(100% + 10px);
 }
 
 .mobile-nav a {
