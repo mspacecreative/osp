@@ -22,7 +22,8 @@
 		}
 	}
 
-	$('.read-bio').click(function() {
+	$('.read-bio').click(function(e) {
+		e.preventDefault();
 		$('body').addClass('header-tweak');
 		$(this).parent().parent().next('.bio-overlay').fadeIn();
 	});
