@@ -5084,7 +5084,7 @@ MODAL STYLES
 
 @media (min-width: 768px) {
   .container {
-    width: auto;
+    width: 100%;
   }
   .shrinkLogo {
     margin: 0;
@@ -5148,7 +5148,7 @@ MODAL STYLES
 
 @media (min-width: 1024px) {
   .container {
-    width: auto;
+    width: 100%;
   }
   /*footer .col:nth-child(3n + 1):nth-last-child(-n + 3),
   footer .col:nth-child(3n + 1):nth-last-child(-n + 3) ~ .col,
@@ -5230,7 +5230,7 @@ MODAL STYLES
 
 @media (min-width: 1200px) {
   .container {
-    width: auto;
+    width: 100%;
   }
 }
 
