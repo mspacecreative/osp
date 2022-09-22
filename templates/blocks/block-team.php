@@ -5,6 +5,7 @@ $colcount = get_field('column_count');
 $sectionwidth = get_field('section_width');
 $liststyle = get_field('list_style');
 $logoalignment = get_field('logo_alignment');
+$placeholderperson = get_template_directory_uri() . 'assets/img/placeholders/person.png';
 switch ($colcount) {
     case 'one':
         $colcount = 'col col-lg-12 col-md-12 col-sm-12 col-xs-12';
@@ -144,6 +145,9 @@ echo
                             if ($featimg) {
                                 echo 
                                 '<img src="' . $featimg . '" class="feat-img--list">';
+                            } else {
+                                echo 
+                                '<img src="' . $placeholderperson . '">';
                             }
                             echo
                             '</div>'
