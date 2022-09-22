@@ -107,41 +107,6 @@ if (function_exists('register_sidebar'))
         'before_title' => '<h3>',
         'after_title' => '</h3>'
     ));
-
-    // Define News Sidebar
-    /*
-    register_sidebar(array(
-        'name' => __('News Sidebar', 'osp'),
-        'description' => __('Content for news sidebar', 'osp'),
-        'id' => 'sidebar-news',
-        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-    
-    // Define Events Area
-    register_sidebar(array(
-        'name' => __('Eventbrite Events (News & Events)', 'osp'),
-        'description' => __('Pulls in first 10 events from Evenbrite', 'osp'),
-        'id' => 'eventbrite-events',
-        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-    
-    // Define Events Area
-    register_sidebar(array(
-        'name' => __('Eventbrite Events (Archive)', 'osp'),
-        'description' => __('Pulls in all events from Evenbrite', 'osp'),
-        'id' => 'eventbrite-all-events',
-        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-    */
     
     // Recent news releases/presentations Sidebar
     register_sidebar(array(

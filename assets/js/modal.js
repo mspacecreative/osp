@@ -17,7 +17,7 @@
         data = {
           action: "load_page_by_ajax",
           id: $(this).data("id"),
-          security: perennia.security,
+          security: modal.security,
         };
 
       //document.title = pageTitle + " | " + base_description;
