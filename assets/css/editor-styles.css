@@ -2013,6 +2013,23 @@ h6 ~ .archive_grid {
   margin-bottom: -3em;
 }
 
+.bio-overlay {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #00000075;
+  top: 0;
+  left: 0;
+}
+
+.bio-overlay--inner {
+  vertical-align: middle;
+  display: table-cell;
+  max-width: 800px;
+  padding: 2em;
+}
+
 .btn {
   display: inline-block;
   padding: 0.75em 1.5em;

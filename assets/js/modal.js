@@ -25,8 +25,7 @@
         if (response.content && response.title) {
           $(modalContainer).html(
             (response.image ? '<img src="' + response.image + '" class="modal-image">' : '') +
-            '<div class="card-content-container"><h2>' + response.title + '</h2>'
-              + response.content + '</div>'
+            '<div class="card-content-container"><h2>' + response.title + '</h2>' + response.content + '</div>'
           );
         }
 

@@ -55,8 +55,9 @@ switch ($logoalignment) {
 }
 include 'includes/section-width.php';
 include 'includes/column-gutters.php';
+include 'includes/section-padding.php';
 echo 
-'<section class="team-members">
+'<section class="team-members' . $sectionpadding . '">
     <div class="innerContainer content-loop">
         <div class="container' . $sectionwidth . '">';
         if ($cpt) {
@@ -69,7 +70,7 @@ echo
                 $title = $item->post_title ? '<h2>' . $item->post_title . '</h2>' : '';
                 $content = $item->post_content ? $item->post_content : '';
                 $featimg = get_the_post_thumbnail_url($item->ID, 'medium');
-                $readbio = '<a href="#" data-id="' . $item->ID . '" class="btn blue modal-link">' . __('Read bio') . '</a>'; 
+                $readbio = '<a href="#" data-id="' . $item->ID . '" class="btn blue read-bio">' . __('Read bio') . '</a>'; 
                 //$externallink = get_field('url', $item->ID);
                 $linklabel = get_field('button_label', $item->ID) ? get_field('button_label', $item->ID) : __('Read bio');
                 
@@ -142,6 +143,12 @@ echo
                         '</div>
                     </div>';
                 }
+            echo
+            '<div class="bio-overlay">
+                <div class="bio-overlay--inner">
+                    ' . $content . '
+                </div>
+            </div>';
             }
             if ($layout == 'grid') {
                 echo 

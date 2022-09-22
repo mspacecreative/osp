@@ -21,6 +21,12 @@
 			});
 		}
 	}
+
+	$('.read-bio').click(function() {
+		$(this).parent().parent().parent().find('.bio-overlay').fadeIn(function() {
+			$(this).css('display', 'table');
+		});
+	});
 	
 	// REMOVE OUTLINE ON CLICKABLE ITEMS WHEN USING MOUSE
 	document.body.addEventListener('mousedown', function() {
