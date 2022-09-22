@@ -24,9 +24,7 @@
 
 	$('.read-bio').click(function() {
 		$('body').addClass('header-tweak');
-		$(this).parent().parent().next('.bio-overlay').fadeIn(function() {
-			$(this).css('display', 'table');
-		});
+		$(this).parent().parent().next('.bio-overlay').fadeIn();
 	});
 
 	$('.bio-overlay').click(function() {
