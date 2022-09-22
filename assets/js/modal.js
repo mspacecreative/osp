@@ -17,11 +17,11 @@
         data = {
           action: "load_page_by_ajax",
           id: $(this).data("id"),
-          security: modal.security,
+          security: osp.security,
         };
 
       //document.title = pageTitle + " | " + base_description;
-      $.post(perennia.ajaxurl, data, function (response) {
+      $.post(osp.ajaxurl, data, function (response) {
         response = JSON.parse(response);
 
         if (response.video) {
