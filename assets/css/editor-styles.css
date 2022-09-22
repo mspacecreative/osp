@@ -2025,11 +2025,18 @@ h6 ~ .archive_grid {
 }
 
 .bio-overlay--inner {
-  vertical-align: middle;
-  display: table-cell;
+  display: table;
+  width: 100%;
+  height: 100%;
 }
 
-.bio-overlay--inner > div {
+.bio-content-table-cell {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 2em;
+}
+
+.bio-content-table-cell > div {
   max-width: 800px;
   padding: 2em;
   background-color: #fff;

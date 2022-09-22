@@ -34,7 +34,7 @@
 		$(this).fadeOut();
 	});
 
-	$('.bio-overlay--inner > div').click(function(e) {
+	$('.bio-content-table-cell > div').click(function(e) {
 		e.stopPropagation();
 	});
 	
