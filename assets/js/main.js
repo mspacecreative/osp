@@ -34,8 +34,8 @@
 		$(this).fadeOut();
 	});
 
-	$('.bio-overlay--inner').click(function() {
-		stopPropagation();
+	$('.bio-overlay--inner > div').click(function(e) {
+		e.stopPropagation();
 	});
 	
 	// REMOVE OUTLINE ON CLICKABLE ITEMS WHEN USING MOUSE
