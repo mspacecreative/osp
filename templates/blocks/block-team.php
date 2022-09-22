@@ -54,6 +54,7 @@ switch ($logoalignment) {
         break;
 }
 include 'includes/section-width.php';
+include 'includes/column-gutters.php';
 echo 
 '<section class="team-members">
     <div class="innerContainer content-loop">
@@ -61,7 +62,7 @@ echo
         if ($cpt) {
             if ($layout == 'grid') {
                 echo 
-                '<div class="row">';
+                '<div class="row' . $sectiongutters . '">';
             }
             foreach ($cpt as $item) {
                 setup_postdata($item);
