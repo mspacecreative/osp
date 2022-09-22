@@ -68,27 +68,10 @@ echo
                 $title = $item->post_title ? '<h2>' . $item->post_title . '</h2>' : '';
                 $content = $item->post_content ? $item->post_content : '';
                 $featimg = get_the_post_thumbnail_url($item->ID, 'medium');
-                $externallink = get_field('url', $item->ID);
-                $linklabel = get_field('button_label', $item->ID) ? get_field('button_label', $item->ID) : __('Visit website');
-                $location_array = get_the_terms($item, 'company_location');
-                $location = array();
-                $status = get_the_terms($item, 'company_status');
-
-                if ($location_array) {
-                    foreach ($location_array as $cat) {
-                        if ($cat->parent) {
-                            array_push($location, $cat->name);
-                        }
-                    }
-                }
-                if ($location_array) {
-                    foreach ($location_array as $cat) {
-                        if (!$cat->parent) {
-                            array_push($location, $cat->name);
-                        }
-                    }
-                }
-
+                $readbio = '<a href="#" data-id="' . $item->ID . '" class="btn blue modal-link">' . __('Read bio') . '</a>'; 
+                //$externallink = get_field('url', $item->ID);
+                $linklabel = get_field('button_label', $item->ID) ? get_field('button_label', $item->ID) : __('Read bio');
+                
                 if ($layout == 'list') {
                     echo 
                     '<div class="row extra-col-spacing bottom-border gutterSpaceWide">';
@@ -152,17 +135,8 @@ echo
                             echo
                             '</div>'
                             . $title;
-                            if ($location_array) {
-                                echo '<span style="display: block;"><strong>' . __('Location: ') . '</strong>' . implode(', ', $location) . '</span>';
-                            }
-                            if ($status) {
-                                echo '<span style="margin-bottom: 15px; display: block;"><strong>' . __('Status: ') . '</strong>' . $status[0]->name . '</span>';
-                            }
                             echo
-                            $content;
-                            if ($externallink) {
-                                echo '<a href="' . $externallink . '" target="_blank" class="btn blue external-link">' . $linklabel . '</a>';
-                            }
+                            $readbio;
                             echo 
                         '</div>
                     </div>';

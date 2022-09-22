@@ -7,7 +7,7 @@ function load_page_by_ajax_callback() {
             'company',
             'post',
             'page',
-            'team',
+            'staff_member',
         ),
         'post_status' => 'publish',
         'p' => $_POST['id'],
@@ -24,7 +24,7 @@ function load_page_by_ajax_callback() {
             $modal_content = apply_filters( 'the_content', get_the_content() );
             
         	$arr_response = array(
-                'image' => get_the_post_thumbnail_url($post->ID, 'anamorphic'),
+                'image' => get_the_post_thumbnail_url($post->ID, 'medium-square'),
                 'title' => get_the_title(),
                 'hidetitle' => get_field('hide_page_title_in_modal'),
                 'content' => $modal_content,

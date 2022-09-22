@@ -1,35 +1,11 @@
 (function ($) {
   $(function () {
-    // PREVENT SCROLLING WHEN MODAL IS OPEN
-    /*
-    function preventScroll(e){
-      e.preventDefault();
-      e.stopPropagation();
-  
-      return false;
-  }
-  
-  function disable(){
-    document.querySelector('.slide').forEach(function(item){
-      item.addEventListener('wheel', preventScroll);
-    });
-    //document.querySelector('.section').addEventListener('wheel', preventScroll);
-  }
-  
-  function enable(){
-    document.querySelector('.slide').forEach(function(item){
-      item.removeEventListener('wheel', preventScroll);
-    });
-  }
-  
-  document.querySelector('.modal-link').addEventListener('click', disable);
-  document.querySelector('.modal_container').addEventListener('click', enable);
-  */
-  var modalContainer = $(".modal_container"),
-      splash = $('.splash'),
-      closeModal = $(".closeModalButton"),
-      modalBackdrop = $(".modal"),
-      modal = modalContainer.add(modalBackdrop);
+    var 
+    modalContainer = $(".modal_container"),
+    splash = $('.splash'),
+    closeModal = $(".closeModalButton"),
+    modalBackdrop = $(".modal"),
+    modal = modalContainer.add(modalBackdrop);
 
     $(document).on("click", ".modal-link", function (e) {
       e.preventDefault();
@@ -58,6 +34,12 @@
             '<div class="card-content-container"><h2>' + response.title + '</h2>'
               + response.content + '</div>'
           );
+        } else if (response.content && response.title && response.image) {
+          $(".modal-content").html(
+            '<img src="' + response.image + '" class="modal-image">' +
+            '<div class="card-content-container"><h2>' + response.title + '</h2>'
+              + response.content + '</div>'
+          );
         } else if (response.content && response.title && response.hidetitle) {
           $(".modal-content").html(
             '<div class="card-content-container">'
@@ -72,7 +54,7 @@
           $(".modal-content").html(response.shortcode);
         }
 
-        modal.slideDown();
+        modal.fadeIn();
       });
     });
     
@@ -81,11 +63,11 @@
     });
 
     $(".nav a").click(function () {
-      modal.slideUp();
+      modal.fadeOut();
     });
 
     $(".closeModalButton, .modal_container").click(function () {
-      modal.slideUp();
+      modal.fadeOut();
       $('body').removeClass('modal-is-open');
     });
 
@@ -93,7 +75,7 @@
     $(document).keyup(function (e) {
       if (e.key === "Escape") {
         // escape key maps to keycode `27`
-        modal.slideUp();
+        modal.fadeOut();
         $('body').removeClass('modal-is-open');
       }
     });
