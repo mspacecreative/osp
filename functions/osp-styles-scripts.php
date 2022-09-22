@@ -40,7 +40,7 @@ function sona_styles()
     // Localize the script with new data
     $script_data_array = array(
         'ajaxurl' => admin_url( 'admin-ajax.php' ),
-        'security' => wp_create_nonce( 'osp' ),
+        'security' => wp_create_nonce( 'modal' ),
     );
     wp_localize_script( 'modal-script', 'osp', $script_data_array );
     wp_enqueue_script('modal-script');
