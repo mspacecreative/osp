@@ -16,10 +16,10 @@
       data = {
         action: "load_page_by_ajax",
         id: $(this).data("id"),
-        security: osp.security,
+        security: perennia.security,
       };
 
-      $.post(osp.ajaxurl, data, function (response) {
+      $.post(perennia.ajaxurl, data, function (response) {
         response = JSON.parse(response);
 
         if (response.content && response.title && response.image) {

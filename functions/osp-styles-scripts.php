@@ -40,9 +40,9 @@ function sona_styles()
     // Localize the script with new data
     $script_data_array = array(
         'ajaxurl' => admin_url( 'admin-ajax.php' ),
-        'security' => wp_create_nonce( 'view_modal' ),
+        'security' => wp_create_nonce( 'modal' ),
     );
-    wp_localize_script( 'modal-script', 'osp', $script_data_array );
+    wp_localize_script( 'modal-script', 'perennia', $script_data_array );
     wp_enqueue_script('modal-script');
 }
 add_action('wp_enqueue_scripts', 'sona_styles');

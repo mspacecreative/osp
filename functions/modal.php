@@ -1,7 +1,7 @@
 <?php
  
 function load_page_by_ajax_callback() {
-    check_ajax_referer('view_modal', 'security');
+    check_ajax_referer('modal', 'security');
     $args = array(
         'post_type' => array(
             'company',
