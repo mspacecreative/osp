@@ -23,19 +23,19 @@
         response = JSON.parse(response);
 
         if (response.content && response.title && response.image) {
-          $(".modal-content").html(
+          $(".modal_container .modal-content").html(
             '<img src="' + response.image + '" class="modal-image">' +
             '<div class="card-content-container">' +
             (!response.hidetitle ? '<h2>' + response.title + '</h2>' : '')
               + response.content + '</div>'
           );
         } else if (response.content && response.title) {
-          $(".modal-content").html(
+          $(".modal_container .modal-content").html(
             '<div class="card-content-container"><h2>' + response.title + '</h2>'
               + response.content + '</div>'
           );
         } else if (response.shortcode) {
-          $(".modal-content").html(response.shortcode);
+          $(".modal_container .modal-content").html(response.shortcode);
         }
 
         modal.fadeIn();
