@@ -2183,6 +2183,7 @@ ul ~ p {
 .contentPortal h3,
 .fitPortal h3 {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .light > *,
@@ -3892,6 +3893,10 @@ header.scroll .nav li.menu-item-has-children a::after {
   }
   .sub-menu {
     position: relative;
+  }
+  .section4 {
+    padding-top: 2em;
+    padding-bottom: 2em;
   }
 }
 
