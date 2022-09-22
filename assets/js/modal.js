@@ -12,37 +12,21 @@
       
       $('body').addClass('modal-is-open');
 
-      var //pageTitle = $(this).attr('title'),
-        //page_url = $(this).attr('href'),
-        data = {
-          action: "load_page_by_ajax",
-          id: $(this).data("id"),
-          security: osp.security,
-        };
+      var
+      data = {
+        action: "load_page_by_ajax",
+        id: $(this).data("id"),
+        security: osp.security,
+      };
 
-      //document.title = pageTitle + " | " + base_description;
       $.post(osp.ajaxurl, data, function (response) {
         response = JSON.parse(response);
 
-        if (response.video) {
-          $(".modal-content").html(
-            "<div class='video-container'>" + response.video + "</div"
-          );
-        } else if (response.content && response.title && response.image) {
+        if (response.content && response.title && response.image) {
           $(".modal-content").html(
             '<img src="' + response.image + '" class="modal-image">' +
-            '<div class="card-content-container"><h2>' + response.title + '</h2>'
-              + response.content + '</div>'
-          );
-        } else if (response.content && response.title && response.image) {
-          $(".modal-content").html(
-            '<img src="' + response.image + '" class="modal-image">' +
-            '<div class="card-content-container"><h2>' + response.title + '</h2>'
-              + response.content + '</div>'
-          );
-        } else if (response.content && response.title && response.hidetitle) {
-          $(".modal-content").html(
-            '<div class="card-content-container">'
+            '<div class="card-content-container">' +
+            (!response.hidetitle ? '<h2>' + response.title + '</h2>' : '')
               + response.content + '</div>'
           );
         } else if (response.content && response.title) {
