@@ -28,6 +28,15 @@
 			$(this).css('display', 'table');
 		});
 	});
+
+	$('.bio-overlay').click(function() {
+		$('body').addClass('header-tweak');
+		$(this).fadeOut();
+	});
+
+	$('.bio-overlay--inner').click(function() {
+		stopPropagation();
+	});
 	
 	// REMOVE OUTLINE ON CLICKABLE ITEMS WHEN USING MOUSE
 	document.body.addEventListener('mousedown', function() {
