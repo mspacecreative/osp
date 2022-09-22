@@ -146,7 +146,9 @@ echo
             echo
             '<div class="bio-overlay">
                 <div class="bio-overlay--inner">
-                    ' . $content . '
+                    <div>
+                        ' . $content . '
+                    </div>
                 </div>
             </div>';
             }

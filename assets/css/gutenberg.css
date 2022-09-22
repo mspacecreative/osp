@@ -2880,13 +2880,22 @@ h6 ~ .archive_grid {
   background-color: #00000075;
   top: 0;
   left: 0;
+  z-index: 999999;
 }
 
 .bio-overlay--inner {
   vertical-align: middle;
   display: table-cell;
+}
+
+.bio-overlay--inner > div {
   max-width: 800px;
   padding: 2em;
+  background-color: #fff;
+}
+
+.header-tweak header {
+  z-index: 1;
 }
 
 /*
