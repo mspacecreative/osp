@@ -22,23 +22,16 @@
       $.post(perennia.ajaxurl, data, function (response) {
         response = JSON.parse(response);
 
-        if (response.content && response.title && response.image) {
-          $(".modal_container .modal-content").html(
-            '<img src="' + response.image + '" class="modal-image">' +
-            '<div class="card-content-container">' +
-            (!response.hidetitle ? '<h2>' + response.title + '</h2>' : '')
-              + response.content + '</div>'
-          );
-        } else if (response.content && response.title) {
-          $(".modal_container .modal-content").html(
+        if (response.content && response.title) {
+          $(".modal-content").html(
+            (response.image ? '<img src="' + response.image + '" class="modal-image">' : '') +
             '<div class="card-content-container"><h2>' + response.title + '</h2>'
               + response.content + '</div>'
           );
-        } else if (response.shortcode) {
-          $(".modal_container .modal-content").html(response.shortcode);
         }
 
         modal.fadeIn();
+        
       });
     });
     

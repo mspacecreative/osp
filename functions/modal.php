@@ -4,9 +4,6 @@ function load_page_by_ajax_callback() {
     check_ajax_referer('modal', 'security');
     $args = array(
         'post_type' => array(
-            'company',
-            'post',
-            'page',
             'staff_member',
         ),
         'post_status' => 'publish',
@@ -26,10 +23,7 @@ function load_page_by_ajax_callback() {
         	$arr_response = array(
                 'image' => get_the_post_thumbnail_url($post->ID, 'medium-square'),
                 'title' => get_the_title(),
-                'hidetitle' => get_field('hide_page_title_in_modal'),
                 'content' => $modal_content,
-                'video' => get_field('youtube_vimeo_url'),
-                'shortcode' => get_field('shortcode'),
             );
         }
         wp_reset_postdata();
