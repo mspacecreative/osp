@@ -35,6 +35,14 @@
 	$('.bio-content-table-cell > div').click(function(e) {
 		e.stopPropagation();
 	});
+
+	$(document).keyup(function (e) {
+		if (e.key === "Escape") {
+		  // escape key maps to keycode `27`
+		  $('.bio-overlay').fadeOut();
+		  $('body').removeClass('modal-is-open header-tweak');
+		}
+	});
 	
 	// REMOVE OUTLINE ON CLICKABLE ITEMS WHEN USING MOUSE
 	document.body.addEventListener('mousedown', function() {
