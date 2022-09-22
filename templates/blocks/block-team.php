@@ -2,7 +2,6 @@
 $cpt = get_field('post_type');
 $layout = get_field('layout');
 $colcount = get_field('column_count');
-$sectionwidth = get_field('section_width');
 $liststyle = get_field('list_style');
 $logoalignment = get_field('logo_alignment');
 $placeholderperson = get_template_directory_uri() . '/assets/img/placeholders/person.png';
@@ -54,10 +53,11 @@ switch ($logoalignment) {
         $logoalignment = '';
         break;
 }
-$sectionwidth = $sectionwidth ? ' style="max-width: ' . $sectionwidth . 'px; margin-right: auto; margin-left: auto;"' : '';
+include 'includes/section-width.php';
 echo 
 '<section class="team-members">
-    <div class="innerContainer content-loop"' . $sectionwidth . '>';
+    <div class="innerContainer content-loop">
+        <div class="container' . $sectionwidth . '">';
         if ($cpt) {
             if ($layout == 'grid') {
                 echo 
@@ -146,6 +146,8 @@ echo
                 echo 
                 '</div>';
             }
+        echo
+        '</div>';
         }
     echo 
     '</div>

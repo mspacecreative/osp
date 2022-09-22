@@ -23,7 +23,7 @@
         response = JSON.parse(response);
 
         if (response.content && response.title) {
-          $(".modal-content").html(
+          $(modalContainer).html(
             (response.image ? '<img src="' + response.image + '" class="modal-image">' : '') +
             '<div class="card-content-container"><h2>' + response.title + '</h2>'
               + response.content + '</div>'
@@ -31,7 +31,7 @@
         }
 
         modal.fadeIn();
-        
+
       });
     });
     
