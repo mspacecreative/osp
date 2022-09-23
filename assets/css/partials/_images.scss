@@ -341,6 +341,14 @@ row.imageStripContainer {
   }
 }
 
+.team-members .boxed {
+  align-items: center;
+}
+
+.team-members img {
+  max-width: 100%;
+}
+
 .team-members .logo-container {
   border-radius: 50%;
   overflow: hidden;
