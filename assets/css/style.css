@@ -4809,7 +4809,7 @@ row.imageStripContainer {
 .team-members .logo-container {
   border-radius: 50%;
   overflow: hidden;
-  max-height: 150px;
+  height: 150px;
 }
 
 #buckets a:hover .overlaidText {
