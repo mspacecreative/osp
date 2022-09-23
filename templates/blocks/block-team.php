@@ -126,16 +126,18 @@ echo
                     echo 
                     '<div class="' . $colcount . '">
                         <div class="boxed">
-                            <div class="logo-container' . $logoalignment . '">';
-                            if ($featimg) {
-                                echo 
-                                '<img src="' . $featimg . '" class="feat-img--list">';
-                            } else {
-                                echo 
-                                '<img src="' . $placeholderperson . '">';
-                            }
-                            echo
-                            '</div>'
+                            <div class="logo-container' . $logoalignment . '">
+                                <a href="#" class="read-bio">';
+                                    if ($featimg) {
+                                        echo 
+                                        '<img src="' . $featimg . '" class="feat-img--list">';
+                                    } else {
+                                        echo 
+                                        '<img src="' . $placeholderperson . '">';
+                                    }
+                                echo
+                                '</a>
+                            </div>'
                             . $title;
                             echo
                             $readbio;
