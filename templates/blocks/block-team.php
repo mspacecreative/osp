@@ -73,6 +73,7 @@ echo
                 $readbio = '<a href="#" data-id="' . $item->ID . '" class="btn blue read-bio">' . __('Read bio') . '</a>'; 
                 //$externallink = get_field('url', $item->ID);
                 $linklabel = get_field('button_label', $item->ID) ? get_field('button_label', $item->ID) : __('Read bio');
+                $position = get_field('title__position', $item->ID);
                 
                 if ($layout == 'list') {
                     echo 
@@ -139,6 +140,9 @@ echo
                                 '</a>
                             </div>'
                             . $title;
+                            if ($position) {
+                                echo '<p>' . $position . '</p>';
+                            }
                             echo
                             $readbio;
                             echo 
