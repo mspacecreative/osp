@@ -35,7 +35,7 @@
 
 	$('.close-modal').click(function() {
 		$('body').removeClass('header-tweak');
-		$(this).offsetParent().fadeOut();
+		$(this).closest('.bio-overlay').fadeOut();
 	});
 
 	$('.bio-content-table-cell > div').click(function(e) {
