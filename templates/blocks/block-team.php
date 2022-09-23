@@ -127,7 +127,7 @@ echo
                     '<div class="' . $colcount . '">
                         <div class="boxed">
                             <div class="logo-container' . $logoalignment . '">
-                                <a href="#" class="read-bio">';
+                                <a href="#" class="read-bio team-member-link">';
                                     if ($featimg) {
                                         echo 
                                         '<img src="' . $featimg . '" class="feat-img--list">';

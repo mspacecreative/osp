@@ -28,6 +28,11 @@
 		$(this).parent().parent().next('.bio-overlay').fadeIn();
 	});
 
+	$('.team-member-link').click(function(e) {
+		e.preventDefault();
+		$(this).parent().parent().parent().next('.bio-overlay').fadeIn();
+	});
+
 	$('.bio-overlay').click(function() {
 		$('body').removeClass('header-tweak');
 		$(this).fadeOut();
