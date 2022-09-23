@@ -4356,6 +4356,11 @@ a {
 
 .team-members .btn {
   justify-self: flex-start;
+  margin-top: auto;
+}
+
+.team-members h2 {
+  margin-bottom: 0;
 }
 
 img {
