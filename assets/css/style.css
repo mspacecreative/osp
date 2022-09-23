@@ -4853,6 +4853,8 @@ row.imageStripContainer {
 
 footer {
   background: url(../img/osp-brand-icon.svg) no-repeat bottom right scroll;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 footer.section {
