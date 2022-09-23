@@ -1548,7 +1548,10 @@ h6 ~ .archive_grid {
 }
 
 .header-tweak header {
-  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 /*
