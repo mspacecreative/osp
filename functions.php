@@ -14,7 +14,7 @@ if (function_exists('add_theme_support'))
     add_theme_support('post-thumbnails');
     add_image_size('large', 700, '', true); // Large Thumbnail
     add_image_size('medium', 250, '', true); // Medium Thumbnail
-    add_image_size('medium-square', 250, 250, array('center', 'center')); // Medium Square Thumbnail
+    add_image_size('medium-square', 400, 400, array('center', 'center')); // Medium Square Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size( 'sidebar', 200, 200, true );
     add_image_size( 'card-feature', 600, 338, array('center', 'center') );
