@@ -3486,6 +3486,12 @@ row.imageStripContainer {
   }
 }
 
+.team-members .logo-container {
+  border-radius: 50%;
+  overflow: hidden;
+  max-height: 150px;
+}
+
 html :where(.wp-block) {
   max-width: 100%;
 }

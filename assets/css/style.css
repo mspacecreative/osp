@@ -4344,6 +4344,10 @@ a {
       align-self: flex-start;
 }
 
+.team-members .btn {
+  justify-self: flex-start;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -4800,6 +4804,12 @@ row.imageStripContainer {
   100% {
     stroke: transparent;
   }
+}
+
+.team-members .logo-container {
+  border-radius: 50%;
+  overflow: hidden;
+  max-height: 150px;
 }
 
 #buckets a:hover .overlaidText {

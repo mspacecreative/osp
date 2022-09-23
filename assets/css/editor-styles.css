@@ -2197,4 +2197,8 @@ a {
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
+
+.team-members .btn {
+  justify-self: flex-start;
+}
 /*# sourceMappingURL=editor-styles.css.map */
