@@ -57,7 +57,7 @@ include 'includes/section-width.php';
 include 'includes/column-gutters.php';
 include 'includes/section-padding.php';
 echo 
-'<section class="team-members' . $sectionpadding . '">
+'<section class="team-members section' . $sectionpadding . '">
     <div class="innerContainer content-loop">
         <div class="container' . $sectionwidth . '">';
         if ($cpt) {
