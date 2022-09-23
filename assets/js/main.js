@@ -33,6 +33,11 @@
 		$(this).fadeOut();
 	});
 
+	$('.close-modal').click(function() {
+		$('body').removeClass('header-tweak');
+		$(this).parentsUntil('.bio-overlay').fadeOut();
+	});
+
 	$('.bio-content-table-cell > div').click(function(e) {
 		e.stopPropagation();
 	});
