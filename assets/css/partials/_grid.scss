@@ -218,3 +218,8 @@ h6 ~ .archive_grid {
   visibility: hidden;
   transition: 0.5s ease-in-out;
 }
+
+.header-tweak footer {
+  transition: 0.5s ease-in-out;
+  z-index: 1;
+}

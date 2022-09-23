@@ -2909,6 +2909,12 @@ h6 ~ .archive_grid {
   transition: 0.5s ease-in-out;
 }
 
+.header-tweak footer {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  z-index: 1;
+}
+
 /*
 .offsetCarousel .slick-slide {
 	margin-right: 25px;
