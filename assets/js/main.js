@@ -22,14 +22,18 @@
 		}
 	}
 
+	var header = $('header');
+
 	$('.read-bio').click(function(e) {
 		e.preventDefault();
-		$('body').addClass('header-tweak');
+		header.fadeOut();
+		//$('body').addClass('header-tweak');
 		$(this).parent().parent().next('.bio-overlay').fadeIn();
 	});
 
 	$('.bio-overlay').click(function() {
-		$('body').removeClass('header-tweak');
+		header.fadeIn();
+		//$('body').removeClass('header-tweak');
 		$(this).fadeOut();
 	});
 
@@ -41,7 +45,8 @@
 		if (e.key === "Escape") {
 		  // escape key maps to keycode `27`
 		  $('.bio-overlay').fadeOut();
-		  $('body').removeClass('modal-is-open header-tweak');
+		  header.fadeIn();
+		  //$('body').removeClass('modal-is-open header-tweak');
 		}
 	});
 	
