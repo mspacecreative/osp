@@ -29,7 +29,7 @@
 	});
 
 	$('.bio-overlay').click(function() {
-		$('body').addClass('header-tweak');
+		$('body').removeClass('header-tweak');
 		$(this).fadeOut();
 	});
 
