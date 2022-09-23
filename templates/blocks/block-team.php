@@ -147,8 +147,8 @@ echo
             '<div class="bio-overlay">
                 <div class="bio-overlay--inner">
                     <div class="bio-content-table-cell" style="position: relative;">
-                        <span class="mc-close-window" style="background-image: url(' . get_template_directory_uri() . '/assets/img/icons/close.png); background-size: 100%;"></span>
-                        <div>    
+                        <div style="position: relative;">
+                            <span class="mc-close-window" style="background-image: url(' . get_template_directory_uri() . '/assets/img/icons/close.png); background-size: 100%;"></span>  
                             ' . $content . '
                         </div>
                     </div>
