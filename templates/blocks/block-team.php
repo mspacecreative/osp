@@ -76,6 +76,23 @@ echo
                 //$externallink = get_field('url', $item->ID);
                 $linklabel = get_field('button_label', $item->ID) ? get_field('button_label', $item->ID) : __('Read bio');
                 $position = get_field('title__position', $item->ID);
+                $location_array = get_the_terms($item, 'company_location');
+                $location = array();
+
+                if ($location_array) {
+                    foreach ($location_array as $cat) {
+                        if ($cat->parent) {
+                            array_push($location, $cat->name);
+                        }
+                    }
+                }
+                if ($location_array) {
+                    foreach ($location_array as $cat) {
+                        if (!$cat->parent) {
+                            array_push($location, $cat->name);
+                        }
+                    }
+                }
                 
                 if ($layout == 'list') {
                     echo 
@@ -147,6 +164,9 @@ echo
                             }
                             echo
                             $bluebutton;
+                            if ($location_array) {
+                                echo '<p>' . implode(', ', $location) . '</p>';
+                            }
                             echo 
                         '</div>
                     </div>';
