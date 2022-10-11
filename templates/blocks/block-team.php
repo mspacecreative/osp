@@ -63,7 +63,7 @@ echo
         if ($cpt) {
             if ($layout == 'grid') {
                 echo 
-                '<div class="row' . $sectiongutters . '">';
+                '<div class="row center-lg center-md center-sm center-xs' . $sectiongutters . '">';
             }
             foreach ($cpt as $item) {
                 setup_postdata($item);
