@@ -93,6 +93,8 @@ echo
                         }
                     }
                 }
+
+                $location_array = $location_array ? '<br>' . implode(', ', $location) : '';
                 
                 if ($layout == 'list') {
                     echo 
@@ -160,10 +162,7 @@ echo
                             </div>'
                             . $title;
                             if ($position) {
-                                echo '<p>' . $position . '</p>';
-                            }
-                            if ($location_array) {
-                                echo '<p>' . implode(', ', $location) . '</p>';
+                                echo '<p>' . $position, $location_array . '</p>';
                             }
                             echo
                             $bluebutton;
