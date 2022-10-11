@@ -71,7 +71,6 @@ echo
                 $content = $item->post_content ? $item->post_content : '';
                 $featimg = get_the_post_thumbnail_url($item->ID, 'medium-square');
                 $readbio = '<a href="#" data-id="' . $item->ID . '" class="btn blue read-bio">' . __('Read bio') . '</a>'; 
-                $bluebutton = $content ? $readbio : $email;
                 //$externallink = get_field('url', $item->ID);
                 $linklabel = get_field('button_label', $item->ID) ? get_field('button_label', $item->ID) : __('Read bio');
                 $position = get_field('title__position', $item->ID);
@@ -79,6 +78,7 @@ echo
                 $location = array();
                 $firstname = current(explode(' ', get_the_title($item->ID)));
                 $email = get_field('email_address', $item->ID) ? '<a href="mailto:' . get_field('email_address', $item->ID) . '" class="btn blue">' . __('Email ') . $firstname . '</a>' : '';
+                $bluebutton = $content ? $readbio : $email;
 
                 echo $first_word;
 
