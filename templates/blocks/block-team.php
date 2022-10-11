@@ -162,11 +162,11 @@ echo
                             if ($position) {
                                 echo '<p>' . $position . '</p>';
                             }
-                            echo
-                            $bluebutton;
                             if ($location_array) {
                                 echo '<p>' . implode(', ', $location) . '</p>';
                             }
+                            echo
+                            $bluebutton;
                             echo 
                         '</div>
                     </div>';
