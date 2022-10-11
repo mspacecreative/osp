@@ -77,9 +77,7 @@ echo
                 $position = get_field('title__position', $item->ID);
                 $location_array = get_the_terms($item, 'company_location');
                 $location = array();
-                $name = $item->post_title;
-                $nameexploded = explode(' ', $name);
-                $firstname = $nameexploded[0];
+                $firstname = current(explode(' ', get_the_title($item->ID)));
                 $email = get_field('email_address', $item->ID) ? '<a href="mailto:' . get_field('email_address', $item->ID) . '" class="btn blue">' . __('Email ') . $firstname . '</a>' : '';
 
                 echo $first_word;
