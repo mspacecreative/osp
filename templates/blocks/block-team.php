@@ -1,10 +1,29 @@
 <?php 
+$heading = get_field('heading');
+$headingtag = get_field('heading_tag');
+$headingalignment = (get_field('heading_alignment') === 'center') ? ' text-align-center' : '';
 $cpt = get_field('post_type');
 $layout = get_field('layout');
 $colcount = get_field('column_count');
 $liststyle = get_field('list_style');
 $logoalignment = get_field('logo_alignment');
 $placeholderperson = get_template_directory_uri() . '/assets/img/placeholders/person.png';
+
+switch ($headingtag) {
+    case 'h1':
+        $headingtag = 'h1';
+        break;
+    case 'h2':
+        $headingtag = 'h2';
+        break;
+    case 'h3':
+        $headingtag = 'h3';
+        break;
+    default:
+        $headingtag = 'h2';
+        break;
+}
+
 switch ($colcount) {
     case 'one':
         $colcount = 'col col-lg-12 col-md-12 col-sm-12 col-xs-12';
@@ -60,6 +79,9 @@ echo
 '<section class="team-members section' . $sectionpadding . '">
     <div class="innerContainer content-loop">
         <div class="container' . $sectionwidth . '">';
+        if ($heading) {
+            echo '<' . $headingtag . ' class="our-team-heading' . $headingalignment . '">' . $heading . '</' . $headingtag . '>';
+        }
         if ($cpt) {
             if ($layout == 'grid') {
                 echo 
