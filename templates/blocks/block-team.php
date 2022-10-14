@@ -89,7 +89,7 @@ echo
             }
             foreach ($cpt as $item) {
                 setup_postdata($item);
-                $title = $item->post_title ? '<h2>' . $item->post_title . '</h2>' : '';
+                $title = $item->post_title ? '<h3>' . $item->post_title . '</h3>' : '';
                 $content = $item->post_content ? $item->post_content : '';
                 $featimg = get_the_post_thumbnail_url($item->ID, 'medium-square');
                 $readbio = '<a href="#" data-id="' . $item->ID . '" class="btn blue read-bio">' . __('Read bio') . '</a>'; 
@@ -173,8 +173,11 @@ echo
                     echo 
                     '<div class="' . $colcount . '">
                         <div class="boxed">
-                            <div class="logo-container' . $logoalignment . '">
-                                <a href="#" class="read-bio team-member-link">';
+                            <div class="logo-container' . $logoalignment . '">';
+                                if (!empty($content)) {
+                                echo 
+                                '<a href="#" class="read-bio team-member-link">';
+                                }
                                     if ($featimg) {
                                         echo 
                                         '<img src="' . $featimg . '" class="feat-img--list">';
@@ -182,9 +185,12 @@ echo
                                         echo 
                                         '<img src="' . $placeholderperson . '">';
                                     }
+                                if (!empty($content)) {
                                 echo
-                                '</a>
-                            </div>'
+                                '</a>';
+                                }
+                            echo 
+                            '</div>'
                             . $title;
                             if ($position) {
                                 echo '<p>' . $position, $location_array . '</p>';
