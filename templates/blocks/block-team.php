@@ -87,10 +87,6 @@ $bgimg = array(
     '/2022/02/aquaculture-2.jpeg',
     '/2022/06/seaweed.png',
 );
-shuffle($bgimg);
-$upload_dir = wp_upload_dir();
-
-$bgimgresult = ' style="background-image: url(' . $upload_dir['baseurl'] . $bgimg[0] . ');"';
 
 echo 
 '<section class="team-members section' . $sectionpadding . '">
@@ -120,6 +116,11 @@ echo
                 $bluebutton = $content ? $readbio : $email;
 
                 echo $first_word;
+
+                shuffle($bgimg);
+                $upload_dir = wp_upload_dir();
+
+                $bgimgresult = ' style="background-image: url(' . $upload_dir['baseurl'] . $bgimg[0] . ');"';
 
                 if ($location_array) {
                     foreach ($location_array as $cat) {
