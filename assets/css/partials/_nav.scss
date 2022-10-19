@@ -189,6 +189,15 @@ header.scroll .nav li.menu-item-has-children a::after {
     text-align: right;
   }
 
+  .nav .sub-menu li.menu-item-has-children a {
+    padding-right: 45px;
+  }
+
+  header.scroll .nav .sub-menu li.menu-item-has-children a::after,
+  .nav .sub-menu li.menu-item-has-children a::after {
+    right: 30px;
+  }
+
   .nav .sub-menu li.menu-item-has-children > a::after {
     content: "\f105";
   }
