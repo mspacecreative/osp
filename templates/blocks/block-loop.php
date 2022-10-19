@@ -116,7 +116,12 @@ echo
                             if ($status) {
                                 echo '<span style="margin-bottom: 15px; display: inline-block;"><strong>' . __('Status: ') . '</strong>' . $status[0]->name . '</span>';
                             }
-                            echo $content;
+                            if (empty($featimg)) {
+                                echo 
+                                '<div class="margin-top: 15px;">' . $content . '</div';
+                            } else {
+                                echo $content;
+                            }
                             if ($externallink) {
                                 echo '<a href="' . $externallink . '" target="_blank" class="btn blue external-link">' . $linklabel . '</a>';
                             }
