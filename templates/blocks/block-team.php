@@ -90,10 +90,10 @@ $bgimg = array(
 $upload_dir = wp_upload_dir();
 
 foreach ($bgimg as $img) {
-    $images = ' style="background-image: url(' . $upload_dir['baseurl'] . $img . ');"';
+    $bgimg[] = ' style="background-image: url(' . $upload_dir['baseurl'] . $img[0] . ');"';
 }
-shuffle($images);
-$bgimgresult = implode('', $images);
+shuffle($bgimg);
+$bgimgresult = implode('', $bgimg);
 
 echo 
 '<section class="team-members section' . $sectionpadding . '">
