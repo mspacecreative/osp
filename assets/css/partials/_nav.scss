@@ -161,7 +161,7 @@ header.scroll .nav li.menu-item-has-children a::after {
 .mobile-nav a {
   color: #fff;
 }
-.sub-menu .sub-menu {
+.nav ul.sub-menu .sub-menu {
   background-color: #dcebf4;
 }
 
@@ -182,13 +182,14 @@ header.scroll .nav li.menu-item-has-children a::after {
 
   .nav li {
     white-space: nowrap;
+    position: relative;
   }
 
   .nav .sub-menu li a {
     text-align: right;
   }
 
-  .nav .sub-menu li.menu-item-has-children a::after {
+  .nav .sub-menu .menu-item-has-children a::after {
     content: "\f105";
   }
   .menu-item-has-children:hover > .sub-menu,
