@@ -35,7 +35,7 @@ switch ($colcount) {
         $colcount = 'col col-lg-4 col-md-4 col-sm-6 col-xs-12';
         break;
     case 'four':
-        $colcount = 'col col-lg-3 col-md-3 col-sm-6 col-xs-12';
+        $colcount = 'col col-lg-3 col-md-4 col-sm-6 col-xs-12';
         break;
     default:
     $colcount = 'col col-lg-4 col-md-4 col-sm-6 col-xs-12';
