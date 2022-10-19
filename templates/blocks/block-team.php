@@ -90,10 +90,6 @@ $bgimg = array(
 shuffle($bgimg);
 $upload_dir = wp_upload_dir();
 
-foreach ($bgimg as $img) {
-    $bgimgresult .= ' style="background-image: url(' . $upload_dir['baseurl'] . $img . ');"';
-}
-
 echo 
 '<section class="team-members section' . $sectionpadding . '">
     <div class="innerContainer content-loop">
@@ -190,9 +186,13 @@ echo
                     </div>';
                 } elseif ($layout == 'grid') {
                     echo 
-                    '<div class="' . $colcount . '">
-                        <div class="boxed"' . $bgimgresult . '>
-                            <div class="logo-container' . $logoalignment . '">';
+                    '<div class="' . $colcount . '">';
+                        foreach ($bgimg as $img) {
+                        echo
+                        '<div class="boxed" style="background-image: url(' . $upload_dir['baseurl'] . $img . ');">';
+                        }
+                            echo
+                            '<div class="logo-container' . $logoalignment . '">';
                                 if (!empty($content)) {
                                 echo 
                                 '<a href="#" class="read-bio team-member-link">';

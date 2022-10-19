@@ -1421,8 +1421,8 @@ body .pb-close::before {
 }
 
 .team-members .logo-container > img {
-  -o-object-fit: none;
-     object-fit: none;
+  -o-object-fit: unset;
+     object-fit: unset;
   max-width: 100%;
 }
 
