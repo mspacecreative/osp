@@ -116,7 +116,7 @@ echo
                 shuffle($bgimg);
 
                 for( $i = 0; $i < 3; $i++)  
-                $bgimgresult .= ' style="background-image: url(' . wp_upload_dir() . $bgimg[$i] . ');"'; 
+                $bgimgresult .= ' style="background-image: url(' . wp_upload_dir('[url') . $bgimg[$i] . ');"'; 
 
                 echo $first_word;
 
