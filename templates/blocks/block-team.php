@@ -117,7 +117,7 @@ echo
                 $upload_dir = wp_upload_dir();
 
                 foreach ($bgimg as $img) {
-                    $bgimgresult .= ' style="background-image: url(' . $upload_dir['baseurl'] . $img[0] . ');"';
+                    $bgimgresult .= ' style="background-image: url(' . $upload_dir['baseurl'] . $img . ');"';
                 }
 
                 echo $first_word;
