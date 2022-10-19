@@ -3931,6 +3931,12 @@ header.scroll .nav li.menu-item-has-children a::after {
             align-items: flex-end;
     text-align: right;
   }
+  .nav li {
+    white-space: nowrap;
+  }
+  .nav .sub-menu li a {
+    text-align: right;
+  }
   .nav li.menu-item-has-children .sub-menu li.menu-item-has-children a::after {
     content: "\f105";
   }
