@@ -165,7 +165,7 @@ echo
                             <div class="col button-top-margin col-lg-12 col-md-12 col-sm-12 col-xs-12">';
                         } else {
                             echo
-                            '<div class="col button-top-margin col-lg-9 col-md-9 col-sm-8 col-xs-12"' . $bgimgresult . '>';
+                            '<div class="col button-top-margin col-lg-9 col-md-9 col-sm-8 col-xs-12">;
                         }
                                 echo $title;
                             
@@ -188,7 +188,7 @@ echo
                 } elseif ($layout == 'grid') {
                     echo 
                     '<div class="' . $colcount . '">
-                        <div class="boxed">
+                        <div class="boxed"' . $bgimgresult . '>
                             <div class="logo-container' . $logoalignment . '">';
                                 if (!empty($content)) {
                                 echo 
