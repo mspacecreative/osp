@@ -161,6 +161,9 @@ header.scroll .nav li.menu-item-has-children a::after {
 .mobile-nav a {
   color: #fff;
 }
+.sub-menu .sub-menu {
+  background-color: #dcebf4;
+}
 
 @media (min-width: 981px) {
   .nav ul.sub-menu {
@@ -174,6 +177,7 @@ header.scroll .nav li.menu-item-has-children a::after {
     flex-direction: column;
     align-items: flex-end;
     text-align: right;
+    right: 0;
   }
 
   .nav li {
@@ -184,7 +188,7 @@ header.scroll .nav li.menu-item-has-children a::after {
     text-align: right;
   }
 
-  .nav li.menu-item-has-children .sub-menu li.menu-item-has-children a::after {
+  .nav .sub-menu li.menu-item-has-children a::after {
     content: "\f105";
   }
   .menu-item-has-children:hover > .sub-menu,

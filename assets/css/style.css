@@ -3912,6 +3912,10 @@ header.scroll .nav li.menu-item-has-children a::after {
   color: #fff;
 }
 
+.sub-menu .sub-menu {
+  background-color: #dcebf4;
+}
+
 @media (min-width: 981px) {
   .nav ul.sub-menu {
     position: absolute;
@@ -3930,6 +3934,7 @@ header.scroll .nav li.menu-item-has-children a::after {
         -ms-flex-align: end;
             align-items: flex-end;
     text-align: right;
+    right: 0;
   }
   .nav li {
     white-space: nowrap;
@@ -3937,7 +3942,7 @@ header.scroll .nav li.menu-item-has-children a::after {
   .nav .sub-menu li a {
     text-align: right;
   }
-  .nav li.menu-item-has-children .sub-menu li.menu-item-has-children a::after {
+  .nav .sub-menu li.menu-item-has-children a::after {
     content: "\f105";
   }
   .menu-item-has-children:hover > .sub-menu,
