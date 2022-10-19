@@ -91,7 +91,7 @@ shuffle($bgimg);
 $upload_dir = wp_upload_dir();
 
 foreach ($bgimg as $img) {
-    $singleimg = ' style="background-image: url(' . $upload_dir['baseurl'] . $img . ');"';
+    $singleimg = ' style="background-image: url(' . $upload_dir['baseurl'] . $img[0] . ');"';
 }
 $bgimgresult = $singleimg;
 
