@@ -114,9 +114,10 @@ echo
                     '/2022/06/seaweed.png',
                 );
                 shuffle($bgimg);
+                $upload_dir = wp_upload_dir();
 
                 for( $i = 0; $i < 3; $i++)  
-                $bgimgresult .= ' style="background-image: url(' . wp_upload_dir('[url') . $bgimg[$i] . ');"'; 
+                $bgimgresult .= ' style="background-image: url(' . $upload_dir['baseurl'] . $bgimg[$i] . ');"'; 
 
                 echo $first_word;
 
