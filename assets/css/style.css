@@ -4609,6 +4609,13 @@ img.alignright {
   margin-bottom: 25px;
 }
 
+.iconContainer img {
+  width: 100% !important;
+  height: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 row.imageStripContainer {
   margin-right: -0.25rem;
   margin-left: -0.25rem;

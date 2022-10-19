@@ -179,6 +179,12 @@ img.alignright {
   margin-bottom: 25px;
 }
 
+.iconContainer img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
 // IMAGE STRIP
 row.imageStripContainer {
   margin-right: -0.25rem;
