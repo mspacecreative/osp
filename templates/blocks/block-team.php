@@ -87,13 +87,11 @@ $bgimg = array(
     '/2022/02/aquaculture-2.jpeg',
     '/2022/06/seaweed.png',
 );
+shuffle($bgimg);
 $upload_dir = wp_upload_dir();
 
-foreach ($bgimg as $img) {
-    $singleimg = ' style="background-image: url(' . $upload_dir['baseurl'] . $img . ');"';
-}
-shuffle($singleimg);
-$bgimgresult = $singleimg;
+foreach ($bgimg as $img)
+    $bgimgresult = ' style="background-image: url(' . $upload_dir['baseurl'] . $img . ');"';
 
 echo 
 '<section class="team-members section' . $sectionpadding . '">
