@@ -90,9 +90,7 @@ $bgimg = array(
 shuffle($bgimg);
 $upload_dir = wp_upload_dir();
 
-foreach ($bgimg as $img) {
-    $bgimgresult .= ' style="background-image: url(' . $upload_dir['baseurl'] . $img . ');"';
-}
+$bgimgresult .= ' style="background-image: url(' . $upload_dir['baseurl'] . $img[0] . ');"';
 
 echo 
 '<section class="team-members section' . $sectionpadding . '">
@@ -191,7 +189,7 @@ echo
                 } elseif ($layout == 'grid') {
                     echo 
                     '<div class="' . $colcount . '">
-                        <div class="boxed"' . $bgimgresult[0] . '>
+                        <div class="boxed"' . $bgimgresult . '>
                             <div class="logo-container' . $logoalignment . '">';
                                 if (!empty($content)) {
                                 echo 
