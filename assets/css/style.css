@@ -3938,6 +3938,10 @@ header.scroll .nav li.menu-item-has-children a::after {
   }
   .nav li {
     white-space: nowrap;
+    position: relative;
+  }
+  .nav li a {
+    position: relative;
   }
   .nav .sub-menu li a {
     text-align: right;

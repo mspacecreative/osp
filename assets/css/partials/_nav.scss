@@ -185,11 +185,15 @@ header.scroll .nav li.menu-item-has-children a::after {
     position: relative;
   }
 
+  .nav li a {
+    position: relative;
+  }
+
   .nav .sub-menu li a {
     text-align: right;
   }
 
-  .nav .sub-menu .menu-item-has-children a::after {
+  .nav .sub-menu li.menu-item-has-children a::after {
     content: "\f105";
   }
   .menu-item-has-children:hover > .sub-menu,
