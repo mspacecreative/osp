@@ -187,10 +187,9 @@ echo
                 } elseif ($layout == 'grid') {
                     echo 
                     '<div class="' . $colcount . '">';
-                        foreach ($bgimg as $img) {
+                        foreach ($bgimg as $img)
                         echo
                         '<div class="boxed" style="background-image: url(' . $upload_dir['baseurl'] . $img . ');">';
-                        }
                             echo
                             '<div class="logo-container' . $logoalignment . '">';
                                 if (!empty($content)) {
