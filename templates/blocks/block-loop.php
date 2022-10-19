@@ -142,7 +142,7 @@ echo
                             }
                             if (empty($featimg)) {
                                 echo 
-                                '<div class="margin-top: 15px;">' . $content . '</div>';
+                                '<div style="margin-top: 15px;">' . $content . '</div>';
                             } else {
                                 echo $content;
                             }
