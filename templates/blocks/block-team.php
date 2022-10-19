@@ -195,24 +195,26 @@ echo
                     echo 
                     '<div class="' . $colcount . '">
                         <div class="boxed"' . $bgimgresult . '>
-                            <div class="logo-container' . $logoalignment . '">';
-                                if (!empty($content)) {
-                                echo 
-                                '<a href="#" class="read-bio team-member-link">';
-                                }
-                                    if ($featimg) {
-                                        echo 
-                                        '<img src="' . $featimg . '" class="feat-img--list">';
-                                    } else {
-                                        echo 
-                                        '<img src="' . $placeholderperson . '">';
+                            <div class="profile-img-container">
+                                <div class="logo-container' . $logoalignment . '">';
+                                    if (!empty($content)) {
+                                    echo 
+                                    '<a href="#" class="read-bio team-member-link">';
                                     }
-                                if (!empty($content)) {
-                                echo
-                                '</a>';
-                                }
-                            echo 
-                            '</div>'
+                                        if ($featimg) {
+                                            echo 
+                                            '<img src="' . $featimg . '" class="feat-img--list">';
+                                        } else {
+                                            echo 
+                                            '<img src="' . $placeholderperson . '">';
+                                        }
+                                    if (!empty($content)) {
+                                    echo
+                                    '</a>';
+                                    }
+                                echo 
+                                '</div>
+                            </div>'
                             . $title;
                             if ($position) {
                                 echo '<p>' . $position, $location_array . '</p>';

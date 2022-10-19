@@ -2906,6 +2906,7 @@ h6 ~ .archive_grid {
   padding: 2em;
   background-color: #fff;
   margin: auto;
+  text-align: left;
 }
 
 .header-tweak header {
@@ -3517,13 +3518,13 @@ row.imageStripContainer {
 
 .team-members img {
   max-width: 100%;
+  border-radius: 50%;
 }
 
 .team-members .logo-container {
-  border-radius: 50%;
-  overflow: hidden;
-  height: 200px;
-  width: 200px;
+  height: 100%;
+  width: 100%;
+  display: block;
 }
 
 html :where(.wp-block) {
