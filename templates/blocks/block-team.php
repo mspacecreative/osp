@@ -102,6 +102,22 @@ echo
                 $email = get_field('email_address', $item->ID) ? '<a href="mailto:' . get_field('email_address', $item->ID) . '" class="btn blue">' . __('Email ') . $firstname . '</a>' : '';
                 $bluebutton = $content ? $readbio : $email;
 
+                // RANDOM IMAGES
+                $bgimg = array(
+                    '/2022/02/pexels-emiliano-arano-1350197.jpg',
+                    '/2022/02/pexels-lisha-riabinina-37487.jpg',
+                    '/2020/11/AdobeStock_246493972.jpeg',
+                    '/2020/11/ivan-bandura-5cwigXmGWTo-unsplash.jpg',
+                    '/2020/11/pexels-matthew-barra-812958.jpg',
+                    '/2022/02/pexels-lisa-fotios-691858.jpg',
+                    '/2022/02/aquaculture-2.jpeg',
+                    '/2022/06/seaweed.png',
+                );
+                shuffle($bgimg);
+
+                for( $i = 0; $i < 3; $i++)  
+                $bgimgresult .= ' style="background-image: url(' . wp_upload_dir() . $bgimg[$i] . ');"'; 
+
                 echo $first_word;
 
                 if ($location_array) {
@@ -149,7 +165,7 @@ echo
                             <div class="col button-top-margin col-lg-12 col-md-12 col-sm-12 col-xs-12">';
                         } else {
                             echo
-                            '<div class="col button-top-margin col-lg-9 col-md-9 col-sm-8 col-xs-12">';
+                            '<div class="col button-top-margin col-lg-9 col-md-9 col-sm-8 col-xs-12"' . $bgimgresult . '>';
                         }
                                 echo $title;
                             
