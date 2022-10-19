@@ -3862,11 +3862,6 @@ header.scroll .nav li.menu-item-has-children a::after {
   font-weight: 500;
 }
 
-.nav li.menu-item-has-children .sub-menu a::after,
-.mobile-nav li.menu-item-has-children .sub-menu a::after {
-  display: none;
-}
-
 .nav .sub-menu li a:hover {
   color: #999;
 }
@@ -3971,7 +3966,9 @@ header.scroll .nav li.menu-item-has-children a::after {
 
 @media (max-width: 980px) {
   .mobile-nav .sub-menu,
-  .nav {
+  .nav,
+  .nav li.menu-item-has-children .sub-menu a::after,
+  .mobile-nav li.menu-item-has-children .sub-menu a::after {
     display: none;
   }
   .mobile-nav li.menu-item-has-children a::after {
