@@ -196,6 +196,7 @@ header.scroll .nav li.menu-item-has-children a::after {
   header.scroll .nav .sub-menu li.menu-item-has-children a::after,
   .nav .sub-menu li.menu-item-has-children a::after {
     right: 30px;
+    top: 9px;
   }
 
   .nav .sub-menu li.menu-item-has-children > a::after {

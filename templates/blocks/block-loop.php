@@ -126,15 +126,14 @@ echo
                 } elseif ($layout == 'grid') {
                     echo 
                     '<div class="' . $colcount . '">
-                        <div class="boxed">
-                            <div class="logo-container' . $logoalignment . '">';
-                            if ($featimg) {
-                                echo 
-                                '<img src="' . $featimg . '" class="feat-img--list">';
-                            }
+                        <div class="boxed">';
+                            if (!empty($featimg)) {
                             echo
-                            '</div>'
-                            . $title;
+                            '<div class="logo-container' . $logoalignment . '">
+                                <img src="' . $featimg . '" class="feat-img--list">
+                            </div>';
+                            }
+                            echo $title;
                             if ($location_array) {
                                 echo '<span style="display: block;"><strong>' . __('Location: ') . '</strong>' . implode(', ', $location) . '</span>';
                             }
