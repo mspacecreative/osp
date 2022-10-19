@@ -1916,6 +1916,12 @@ section.credits {
   max-width: 85%;
 }
 
+.team-members .logo-container > img {
+  -o-object-fit: none;
+     object-fit: none;
+  max-width: 100%;
+}
+
 .centred-logo > img {
   -o-object-position: center;
      object-position: center;

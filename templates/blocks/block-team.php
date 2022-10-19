@@ -75,6 +75,25 @@ switch ($logoalignment) {
 include 'includes/section-width.php';
 include 'includes/column-gutters.php';
 include 'includes/section-padding.php';
+
+// RANDOM IMAGES
+$bgimg = array(
+    '/2022/02/pexels-emiliano-arano-1350197.jpg',
+    '/2022/02/pexels-lisha-riabinina-37487.jpg',
+    '/2020/11/AdobeStock_246493972.jpeg',
+    '/2020/11/ivan-bandura-5cwigXmGWTo-unsplash.jpg',
+    '/2020/11/pexels-matthew-barra-812958.jpg',
+    '/2022/02/pexels-lisa-fotios-691858.jpg',
+    '/2022/02/aquaculture-2.jpeg',
+    '/2022/06/seaweed.png',
+);
+shuffle($bgimg);
+$upload_dir = wp_upload_dir();
+
+foreach ($bgimg as $img) {
+    $bgimgresult .= ' style="background-image: url(' . $upload_dir['baseurl'] . $img . ');"';
+}
+
 echo 
 '<section class="team-members section' . $sectionpadding . '">
     <div class="innerContainer content-loop">
@@ -101,24 +120,6 @@ echo
                 $firstname = current(explode(' ', get_the_title($item->ID)));
                 $email = get_field('email_address', $item->ID) ? '<a href="mailto:' . get_field('email_address', $item->ID) . '" class="btn blue">' . __('Email ') . $firstname . '</a>' : '';
                 $bluebutton = $content ? $readbio : $email;
-
-                // RANDOM IMAGES
-                $bgimg = array(
-                    '/2022/02/pexels-emiliano-arano-1350197.jpg',
-                    '/2022/02/pexels-lisha-riabinina-37487.jpg',
-                    '/2020/11/AdobeStock_246493972.jpeg',
-                    '/2020/11/ivan-bandura-5cwigXmGWTo-unsplash.jpg',
-                    '/2020/11/pexels-matthew-barra-812958.jpg',
-                    '/2022/02/pexels-lisa-fotios-691858.jpg',
-                    '/2022/02/aquaculture-2.jpeg',
-                    '/2022/06/seaweed.png',
-                );
-                shuffle($bgimg);
-                $upload_dir = wp_upload_dir();
-
-                foreach ($bgimg as $img) {
-                    $bgimgresult .= ' style="background-image: url(' . $upload_dir['baseurl'] . $img . ');"';
-                }
 
                 echo $first_word;
 

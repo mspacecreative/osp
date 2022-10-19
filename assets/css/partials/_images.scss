@@ -342,7 +342,7 @@ row.imageStripContainer {
 
 .team-members .boxed {
   align-items: center;
-  background-size: 100% 25%;
+  background-size: 100% calc(100px + 2em);
   background-repeat: no-repeat;
   background-position: top;
 }

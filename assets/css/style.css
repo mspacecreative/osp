@@ -1420,6 +1420,12 @@ body .pb-close::before {
   max-width: 85%;
 }
 
+.team-members .logo-container > img {
+  -o-object-fit: none;
+     object-fit: none;
+  max-width: 100%;
+}
+
 .centred-logo > img {
   -o-object-position: center;
      object-position: center;
@@ -4829,7 +4835,7 @@ row.imageStripContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-size: 100% 25%;
+  background-size: 100% calc(100px + 2em);
   background-repeat: no-repeat;
   background-position: top;
 }
