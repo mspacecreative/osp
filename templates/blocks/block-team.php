@@ -213,7 +213,7 @@ echo
                                 }
                             echo 
                             '</div>'
-                            . $title;
+                            . $title, $pronouns;
                             if ($position) {
                                 echo '<p>' . $position, $location_array . '</p>';
                             }
