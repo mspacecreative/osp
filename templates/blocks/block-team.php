@@ -105,13 +105,13 @@ echo
             }
             foreach ($cpt as $item) {
                 setup_postdata($item);
-                $title = $item->post_title ? '<h3>' . $item->post_title . $pronouns . '</h3>' : '';
                 $content = $item->post_content ? $item->post_content : '';
                 $featimg = get_the_post_thumbnail_url($item->ID, 'medium-square');
                 $readbio = '<a href="#" data-id="' . $item->ID . '" class="btn blue read-bio">' . __('Read bio') . '</a>'; 
                 //$externallink = get_field('url', $item->ID);
                 $cardbgimg = get_field('card_background_image', $item->ID);
                 $pronouns = get_field('pronouns', $item->ID) ? __(' (') . get_field('pronouns', $item->ID) . __(')') : '';
+                $title = $item->post_title ? '<h3>' . $item->post_title . $pronouns . '</h3>' : '';
                 $linklabel = get_field('button_label', $item->ID) ? get_field('button_label', $item->ID) : __('Read bio');
                 $position = get_field('title__position', $item->ID);
                 $location_array = get_the_terms($item, 'company_location');
