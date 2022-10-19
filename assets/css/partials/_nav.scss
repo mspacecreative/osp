@@ -81,6 +81,7 @@ nav ul {
 }
 nav li {
   margin-left: 30px;
+  position: relative;
 }
 nav li a {
   text-decoration: none;
@@ -171,7 +172,12 @@ header.scroll .nav li.menu-item-has-children a::after {
     background-color: #b2d7ed;
     padding: 0;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .nav li.menu-item-has-children .sub-menu li.menu-item-has-children a::after {
+    content: "\f105";
   }
   .menu-item-has-children:hover > .sub-menu,
   .menu-item-has-children.hover > .sub-menu {
@@ -184,6 +190,11 @@ header.scroll .nav li.menu-item-has-children a::after {
   }
   .wrapper ul.sub-menu li:last-of-type {
     margin-bottom: 20px;
+  }
+  .nav .sub-menu .sub-menu {
+    left: 100%;
+    top: -20px;
+    right: auto;
   }
 }
 
