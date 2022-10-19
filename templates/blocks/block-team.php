@@ -88,6 +88,9 @@ $bgimg = array(
     '/2022/06/seaweed.png',
 );
 
+// WP UPLOADS DIRECTORY
+$upload_dir = wp_upload_dir();
+
 echo 
 '<section class="team-members section' . $sectionpadding . '">
     <div class="innerContainer content-loop">
@@ -107,6 +110,7 @@ echo
                 $featimg = get_the_post_thumbnail_url($item->ID, 'medium-square');
                 $readbio = '<a href="#" data-id="' . $item->ID . '" class="btn blue read-bio">' . __('Read bio') . '</a>'; 
                 //$externallink = get_field('url', $item->ID);
+                $cardbgimg = get_field('card_background_image', $item->ID);
                 $linklabel = get_field('button_label', $item->ID) ? get_field('button_label', $item->ID) : __('Read bio');
                 $position = get_field('title__position', $item->ID);
                 $location_array = get_the_terms($item, 'company_location');
@@ -117,10 +121,9 @@ echo
 
                 echo $first_word;
 
+                // RANDOMIZE CARD BACKGROUND IMAGES
                 shuffle($bgimg);
-                $upload_dir = wp_upload_dir();
-
-                $bgimgresult = ' style="background-image: url(' . $upload_dir['baseurl'] . $bgimg[0] . ');"';
+                $bgimgresult = $cardbgimg ? ' style="background-image: url(' . $cardbgimg . ');"' : ' style="background-image: url(' . $upload_dir['baseurl'] . $bgimg[0] . ');"';
 
                 if ($location_array) {
                     foreach ($location_array as $cat) {
