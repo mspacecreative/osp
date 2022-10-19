@@ -1439,6 +1439,7 @@ body .pb-close::before {
   -o-object-fit: unset;
      object-fit: unset;
   max-width: 100%;
+  height: auto;
 }
 
 .centred-logo > img {
@@ -4864,7 +4865,7 @@ row.imageStripContainer {
 .team-members .logo-container {
   height: 100%;
   width: 100%;
-  display: block;
+  margin-bottom: 0;
 }
 
 #buckets a:hover .overlaidText {
