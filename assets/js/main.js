@@ -3,7 +3,9 @@
   var subMenuItems = $(".sub-menu a");
   $(subMenuItems).focus(function () {
     if ($(subMenuItems).is(":focus")) {
-      $(this).parent().parent().toggleClass("show");
+      $(this).parent().parent().addClass("show");
+    } else {
+      $(this).parent().parent().removeClass("show");
     }
   });
 
