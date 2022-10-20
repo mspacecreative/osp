@@ -2,14 +2,7 @@
   // ACCESSIBILITY FOR NAVIGATION
   var subMenuItems = $(".sub-menu a");
   $(subMenuItems).focus(function () {
-    $(this).parent().parent().css({
-      opacity: "1",
-      visibility: "visible",
-    });
-    $(subMenuItems).not($(this)).parent().parent().css({
-      opacity: "0",
-      visibility: "hidden",
-    });
+    $(this).parent().parent().toggleClass("show");
   });
 
   // MOBILE DOWN ARROWS FOR CHILD LINKS IN MENU
