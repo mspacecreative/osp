@@ -1,17 +1,4 @@
 (function ($) {
-  // ACCESSIBILITY FOR NAVIGATION
-  var subMenuItems = $(".sub-menu a");
-  if ($("body").hasClass("using-keyboard")) {
-    subMenuItems.each(function () {
-      $(this).focus(function () {
-        $(this).parent().parent().css({
-          opacity: "1",
-          visibility: "visible",
-        });
-      });
-    });
-  }
-
   // MOBILE DOWN ARROWS FOR CHILD LINKS IN MENU
   $(".mobile-nav .menu-item-has-children").prepend(
     '<span class="sub-toggle"><i class="fa fa-angle-down"></i></span>'
@@ -324,6 +311,19 @@
       targetedLink.css({
         cursor: "auto",
         "pointer-events": "none",
+      });
+    }
+
+    // ACCESSIBILITY FOR NAVIGATION
+    var subMenuItems = $(".sub-menu a");
+    if ($("body").hasClass("using-keyboard")) {
+      subMenuItems.each(function () {
+        $(this).focus(function () {
+          $(this).parent().parent().css({
+            opacity: "1",
+            visibility: "visible",
+          });
+        });
       });
     }
 
