@@ -169,7 +169,6 @@ header.scroll .nav li.menu-item-has-children a::after {
   right: 0;
   top: 0;
   color: #000;
-  line-height: 52px;
   background: rgba(255, 255, 255, 0.25);
   padding: 0 10px;
   z-index: 10;
@@ -177,6 +176,13 @@ header.scroll .nav li.menu-item-has-children a::after {
   width: 40px;
   text-align: center;
   font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-nav li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 @media (min-width: 981px) {
