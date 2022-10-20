@@ -181,7 +181,8 @@ header.scroll .nav li.menu-item-has-children a::after {
   justify-content: center;
 }
 
-.mobile-nav li {
+.mobile-nav > ul > li,
+.sub-menu > li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
