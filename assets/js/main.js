@@ -315,9 +315,9 @@
     }
 
     // ACCESSIBILITY FOR NAVIGATION
-    var subMenuItems = $(".sub-menu a");
+    var subMenuItems = $(".sub-menu li");
     if (subMenuItems.is(":focus")) {
-      $(this).parent().parent().css({
+      $(this).parent().css({
         opacity: "1",
         visibility: "visible",
       });
