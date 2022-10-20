@@ -4,10 +4,17 @@
 
   subMenuItems.each(function () {
     $(this).focus(function () {
-      $(this).parent().parent().css({
-        opacity: "1",
-        visibility: "visible",
-      });
+      if ($(this).is(":focus")) {
+        $(this).parent().parent().css({
+          opacity: "1",
+          visibility: "visible",
+        });
+      } else {
+        $(this).parent().parent().css({
+          opacity: "0",
+          visibility: "hidden",
+        });
+      }
     });
   });
 
