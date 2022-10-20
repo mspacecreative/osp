@@ -2,10 +2,12 @@
   // ACCESSIBILITY FOR NAVIGATION
   var subMenuItems = $(".sub-menu a");
 
-  subMenuItems.focus(function () {
-    $(this).parent().parent().css({
-      opacity: "1",
-      visibility: "visible",
+  subMenuItems.each(function () {
+    $(this).focus(function () {
+      $(this).parent().parent().css({
+        opacity: "1",
+        visibility: "visible",
+      });
     });
   });
 
