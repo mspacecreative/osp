@@ -2741,6 +2741,10 @@ section.credits {
   margin-bottom: 15px;
 }
 
+.boxed p.inline-links:last-of-type {
+  margin-bottom: 0;
+}
+
 .icon.row {
   margin-left: 0;
   margin-right: 0;
