@@ -1,7 +1,7 @@
 (function ($) {
   // ACCESSIBILITY FOR NAVIGATION
   var subMenuItems = $(".sub-menu a");
-  if ($(".using-keyboard").length) {
+  if ($("body").hasClass("using-keyboard")) {
     subMenuItems.each(function () {
       $(this).focus(function () {
         $(this).parent().parent().css({
