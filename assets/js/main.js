@@ -1,7 +1,7 @@
 (function ($) {
   // ACCESSIBILITY FOR NAVIGATION
   var subMenuItems = $(".sub-menu a");
-  $(subMenuItems).each(function () {
+  $(subMenuItems).keydown(function () {
     if ($(this).is(":focus")) {
       $(this).parent().parent().css({
         opacity: "1",
