@@ -3,7 +3,7 @@
   var subMenuItems = $(".sub-menu a");
   //if ($("body").hasClass("using-keyboard")) {
   subMenuItems.each(function () {
-    if ($(this).hasFocus) {
+    if ($(this).hasFocus()) {
       $(this).parent().parent().css({
         opacity: "1",
         visibility: "visible",
