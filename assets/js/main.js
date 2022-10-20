@@ -2,20 +2,21 @@
   // ACCESSIBILITY FOR NAVIGATION
   var subMenuItems = $(".sub-menu a");
   //if ($("body").hasClass("using-keyboard")) {
-  subMenuItems.each(function () {
-    if ($(this).hasFocus()) {
+  //subMenuItems.each(function () {
+  /*
+    $(this).focus(function () {
       $(this).parent().parent().css({
         opacity: "1",
         visibility: "visible",
       });
-    } else {
-      $(this).parent().parent().css({
-        opacity: "0",
-        visibility: "hidden",
-      });
-    }
-  });
+    });
+    */
+  //});
   //}
+  $(".sub-menu a:focus").parent().parent().css({
+    opacity: "1",
+    visibility: "visible",
+  });
 
   // MOBILE DOWN ARROWS FOR CHILD LINKS IN MENU
   $(".mobile-nav .menu-item-has-children").prepend(
