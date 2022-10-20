@@ -4000,7 +4000,7 @@ header.scroll .nav li.menu-item-has-children a::after {
   }
   .menu-item-has-children:hover > .sub-menu,
   .menu-item-has-children.hover > .sub-menu,
-  .sub-menu.show {
+  .nav ul.sub-menu.show {
     visibility: visible;
     opacity: 1;
     -webkit-transition: 0.25s ease-in-out;
