@@ -1,12 +1,14 @@
 (function ($) {
   // ACCESSIBILITY FOR NAVIGATION
-  var menuItems = $(".sub-menu a");
-  if (menuItems.is(":focus")) {
-    $(this).parent().parent().css({
-      opacity: "1",
-      visibility: "visible",
-    });
-  }
+  var subMenuItems = $(".sub-menu a");
+  $(subMenuItems).each(function () {
+    if ($(this).is(":focus")) {
+      $(this).parent().parent().css({
+        opacity: "1",
+        visibility: "visible",
+      });
+    }
+  });
 
   // MOBILE DOWN ARROWS FOR CHILD LINKS IN MENU
   $(".mobile-nav .menu-item-has-children").prepend(
