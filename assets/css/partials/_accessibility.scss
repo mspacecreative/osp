@@ -1,4 +1,4 @@
-.using-keyboard .menu-item-has-children > a:focus ~ .sub-menu {
+.using-keyboard .menu-item-has-children > a:focus-visible ~ .sub-menu {
   opacity: 1;
   visibility: visible;
 }

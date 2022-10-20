@@ -5267,6 +5267,11 @@ MODAL STYLES
   line-height: 1.25em;
 }
 
+.using-keyboard .menu-item-has-children > a:focus-visible ~ .sub-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media (min-width: 768px) {
   .container {
     width: 100%;
