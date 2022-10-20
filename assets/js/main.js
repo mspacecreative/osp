@@ -6,7 +6,7 @@
       opacity: "1",
       visibility: "visible",
     });
-    $(this).not($(this)).parent().parent().css({
+    $(this).not($(this).parent().parent()).css({
       opacity: "0",
       visibility: "hidden",
     });
