@@ -3999,7 +3999,8 @@ header.scroll .nav li.menu-item-has-children a::after {
     content: "\f105";
   }
   .menu-item-has-children:hover > .sub-menu,
-  .menu-item-has-children.hover > .sub-menu {
+  .menu-item-has-children.hover > .sub-menu,
+  .sub-menu.show {
     visibility: visible;
     opacity: 1;
     -webkit-transition: 0.25s ease-in-out;
