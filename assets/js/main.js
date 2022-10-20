@@ -4,7 +4,7 @@
     '<span class="sub-toggle"><i class="fa fa-angle-down"></i></span>'
   );
   $(".sub-toggle").click(function () {
-    $(this).siblings(".sub-menu").slideToggle();
+    $(this).siblings(".sub-menu").slideDown();
     $(this).children().toggleClass("fa-angle-down fa-angle-up");
   });
 
