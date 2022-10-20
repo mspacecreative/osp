@@ -1,17 +1,16 @@
 (function ($) {
   // ACCESSIBILITY FOR NAVIGATION
   var subMenuItems = $(".sub-menu a");
-
-  subMenuItems.each(function () {
-    if ($(".using-keyboard").length) {
+  if ($(".using-keyboard").length) {
+    subMenuItems.each(function () {
       $(this).focus(function () {
         $(this).parent().parent().css({
           opacity: "1",
           visibility: "visible",
         });
       });
-    }
-  });
+    });
+  }
 
   // MOBILE DOWN ARROWS FOR CHILD LINKS IN MENU
   $(".mobile-nav .menu-item-has-children").prepend(
