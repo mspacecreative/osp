@@ -3,12 +3,17 @@
   var subMenuItems = $(".sub-menu a");
   //if ($("body").hasClass("using-keyboard")) {
   subMenuItems.each(function () {
-    $(this).focus(function () {
+    if ($(this).hasFocus) {
       $(this).parent().parent().css({
         opacity: "1",
         visibility: "visible",
       });
-    });
+    } else {
+      $(this).parent().parent().css({
+        opacity: "0",
+        visibility: "hidden",
+      });
+    }
   });
   //}
 
