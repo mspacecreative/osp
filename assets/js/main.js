@@ -4,7 +4,7 @@
     '<span class="sub-toggle"><i class="fa fa-angle-down"></i></span>'
   );
   $(".sub-toggle").click(function () {
-    $(this).siblings(".sub-menu").slideDown();
+    $(this).siblings(".sub-menu").slideToggle();
     $(this).children().toggleClass("fa-angle-down fa-angle-up");
   });
 
@@ -243,11 +243,13 @@
     toggleMenu();
   });
 
+  /*
   $(".mobile-nav .menu-item-has-children").click(function () {
     //e.preventDefault();
     $(this).children(".sub-menu").slideToggle();
     $(this).toggleClass("open");
   });
+  */
 
   // FIX HEADER ON SCROLL
   function stickyHeader() {
