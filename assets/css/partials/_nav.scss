@@ -102,8 +102,8 @@ nav li a {
   position: relative;
   padding-right: 20px;
 }
-.nav li.menu-item-has-children > a::after,
-.mobile-nav li.menu-item-has-children > a::after {
+.nav li.menu-item-has-children > a::after
+/*.mobile-nav li.menu-item-has-children > a::after*/ {
   position: absolute;
   content: "\f107";
   top: 9px;
@@ -151,6 +151,9 @@ header.scroll .nav li.menu-item-has-children a::after {
   left: 0;
   padding: 1em 2em;
 }
+.mobile-nav .menu-item-has-children {
+  position: relative;
+}
 .scroll .mobile-nav {
   top: calc(100% + 10px);
 }
@@ -159,6 +162,21 @@ header.scroll .nav li.menu-item-has-children a::after {
 }
 .nav ul.sub-menu .sub-menu {
   background-color: #dcebf4;
+}
+
+.mobile-nav .menu-item-has-children .sub-toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #000;
+  line-height: 52px;
+  background: rgba(150, 100, 0, 0.75);
+  padding: 0 10px;
+  z-index: 10;
+  height: 46px;
+  width: 52px;
+  text-align: center;
+  font-size: 20px;
 }
 
 @media (min-width: 981px) {
