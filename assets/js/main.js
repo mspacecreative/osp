@@ -3,19 +3,14 @@
   var subMenuItems = $(".sub-menu a");
 
   subMenuItems.each(function () {
-    $(this).focus(function () {
-      if ($(this).is(":focus")) {
+    if ($(".using-keyboard").length) {
+      $(this).focus(function () {
         $(this).parent().parent().css({
           opacity: "1",
           visibility: "visible",
         });
-      } else {
-        $(this).parent().parent().css({
-          opacity: "0",
-          visibility: "hidden",
-        });
-      }
-    });
+      });
+    }
   });
 
   // MOBILE DOWN ARROWS FOR CHILD LINKS IN MENU
