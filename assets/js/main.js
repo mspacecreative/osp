@@ -1,8 +1,10 @@
 (function ($) {
   // ACCESSIBILITY FOR NAVIGATION
-  //var subMenuItems = $(".sub-menu a");
-  $(".sub-menu > .menu-item-has-children > a").focus(function () {
-    $(this).parent().parent().addClass("show");
+  var subMenuItems = $(".sub-menu a");
+  $(subMenuItems).each(function () {
+    $(this).focus(function () {
+      $(this).parent().parent().toggleClass("show");
+    });
   });
 
   // MOBILE DOWN ARROWS FOR CHILD LINKS IN MENU
