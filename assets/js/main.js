@@ -3,7 +3,7 @@
   var subMenuItems = $(".sub-menu a");
   $(subMenuItems).each(function () {
     $(this).focus(function () {
-      $(this).parent().parent().toggleClass("show");
+      $(this).parent().parent().addClass("show");
     });
   });
 
