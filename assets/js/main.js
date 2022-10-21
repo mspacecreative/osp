@@ -3,10 +3,18 @@
   var subMenuItems = $(".sub-menu a");
   $(subMenuItems).each(function () {
     $(this).focus(function () {
-      $(this).parent().parent().addClass("show");
+      $(this).parent().parent().css({
+        opacity: "1",
+        visibility: "visible",
+      });
     });
     $(this).blur(function () {
-      $(".sub-menu a").not($(this)).parent().parent().removeClass("show");
+      $(this).focus(function () {
+        $(this).parent().parent().css({
+          opacity: "inherit",
+          visibility: "inherit",
+        });
+      });
     });
   });
 
