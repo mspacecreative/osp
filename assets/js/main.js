@@ -9,11 +9,9 @@
       });
     });
     $(this).blur(function () {
-      $(this).focus(function () {
-        $(this).parent().parent().css({
-          opacity: "inherit",
-          visibility: "inherit",
-        });
+      $(this).parent().parent().css({
+        opacity: "inherit",
+        visibility: "inherit",
       });
     });
   });
