@@ -1,12 +1,10 @@
 (function ($) {
   // ACCESSIBILITY FOR NAVIGATION
   var subMenuItems = $(".sub-menu a");
-  $(subMenuItems).focus(function () {
-    if ($(subMenuItems).is(":focus")) {
+  $(subMenuItems).each(function () {
+    $(this).focus(function () {
       $(this).parent().parent().addClass("show");
-    } else {
-      $(this).parent().parent().removeClass("show");
-    }
+    });
   });
 
   // MOBILE DOWN ARROWS FOR CHILD LINKS IN MENU
