@@ -10,8 +10,7 @@
     });
     $(this).blur(function () {
       $(this).parent().parent().css({
-        opacity: "inherit",
-        visibility: "inherit",
+        return: false,
       });
     });
   });
