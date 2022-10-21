@@ -4,7 +4,7 @@
   $(subMenuItems).each(function () {
     $(this).focus(function () {
       $(this).parent().parent().addClass("show");
-      $(".sub-menu a").not($(this)).parent().parent().removeClass("show");
+      $(".sub-menu a").not($(this).parent().parent()).removeClass("show");
     });
   });
 
