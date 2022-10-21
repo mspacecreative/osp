@@ -1,4 +1,5 @@
 (function ($) {
+  /*
   // ACCESSIBILITY FOR NAVIGATION
   var subMenuItems = $(".sub-menu a");
   $(subMenuItems).each(function () {
@@ -7,6 +8,7 @@
       $(".sub-menu a").not($(this).parent().parent()).removeClass("show");
     });
   });
+  */
 
   // MOBILE DOWN ARROWS FOR CHILD LINKS IN MENU
   $(".mobile-nav .menu-item-has-children").prepend(
