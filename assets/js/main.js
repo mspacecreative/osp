@@ -4,6 +4,11 @@
   $(subMenuItems).each(function () {
     $(this).focus(function () {
       $(this).parent().parent().addClass("show");
+      $(".sub-menu > li > a")
+        .not($(this))
+        .parent()
+        .parent()
+        .removeClass("show");
     });
   });
 
