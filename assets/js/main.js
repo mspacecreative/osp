@@ -1,7 +1,7 @@
 (function ($) {
   // ACCESSIBILITY FOR NAVIGATION
   //var subMenuItems = $(".sub-menu a");
-  $(".menu-item-has-children > a").focus(function () {
+  $(".sub-menu > .menu-item-has-children > a").focus(function () {
     $(this).parent().parent().addClass("show");
   });
 
