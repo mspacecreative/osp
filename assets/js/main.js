@@ -6,7 +6,7 @@
       $(this).parent().parent().addClass("show");
     });
     $(this).blur(function () {
-      $(this).parent().parent().removeClass("show");
+      $(".sub-menu a").not($(this)).parent().parent().removeClass("show");
     });
   });
 
