@@ -1086,13 +1086,15 @@ body .pb-close::before {
       flex-basis: 100%;
 }
 
-.colInnerMed .row, .mediumContent {
+.colInnerMed .row,
+.mediumContent {
   height: 100%;
 }
 
 .colInnerMed .container {
   margin: 0;
   width: 100%;
+  overflow: hidden;
 }
 
 .mediumContent p:last-of-type {
